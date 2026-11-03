@@ -7,9 +7,10 @@
 - Ringkasan (dari deskripsi proposal): klasifikasi kondisi sel T CD4 (sehat, terinfeksi, lisis) dari citra imaging flow cytometry multi-kanal, memakai fitur bio-optik dan morfometri sel, dengan validasi Explainable AI (mis. Grad-CAM).
 - Masalah (rumusan resmi): [ISI NANTI]
 - Metode / model: [ISI NANTI] (catatan: Grad-CAM mensyaratkan model berbasis CNN)
-- Dataset: [ISI NANTI] (nama, sumber, ukuran, format, lokasi di Drive). BELUM ADA.
+- Dataset: [ISI NANTI] (nama, sumber, ukuran, format, lokasi di Drive). BELUM ADA — harus dicari sendiri (tidak disediakan pembimbing/lab); kandidat dicatat di docs/DATASET-KANDIDAT.md.
 - Metrik: [ISI NANTI]
-- Dosen pembimbing: Nopriadi, S.T., M.Sc. | preferensi: mengizinkan penggunaan AI di semua tahapan (lisan, 2026-11-03; lihat aturan 15)
+- Mahasiswa: Rahul Ghulam Hidayatulloh — NIM 23/519760/TK/57266
+- Dosen pembimbing: Nopriadi, S.T., M.Sc. | preferensi: mengizinkan penggunaan AI di semua tahapan (lihat aturan 15)
 - Dosen pembimbing pendamping: belum ada / belum dipastikan (sementara `-` di thesis/data_skripsi.tex) — konfirmasi ke Pak Nopriadi
 - Naskah: **draf di Google Docs per bab** (Drive `Project-Skripsi/naskah/`) → **final di LaTeX** (`thesis/`, memakai template resmi DTNTF: `skripsidtntf.cls` + BibTeX `skripsi.bst`; salinan asli di `thesis/template-kampus/`). Konversi per bab setelah disetujui dosen; konvensi di docs/PANDUAN-GDOCS.md
 - Panduan kampus: docs/PANDUAN-KAMPUS.md (ringkasan Panduan Pelaksanaan Skripsi TF UGM 2026: aturan AI, timeline 16 minggu, bimbingan, tata tulis, ujian, penilaian)
@@ -32,19 +33,10 @@
 12. Di Google Docs ikuti konvensi docs/PANDUAN-GDOCS.md (Heading bawaan, sitasi `[@kunci]`, persamaan `$...$`, sumber angka dari results/).
 13. **Akhir setiap sesi: tambahkan entri di docs/RIWAYAT-PENGERJAAN.md** (entri terbaru di atas).
 14. **Setiap perubahan sistem** (struktur, alur kerja, alat, lokasi file): perbarui MASTER-SKRIPSI-SETUP.md dan catat di bagian 10-nya.
-15. **PENGGUNAAN AI — mengikat semua agent.**
-    - Panduan Skripsi TF UGM 2026 §4.1 (tertulis, disahkan Kadep): AI hanya untuk penyuntingan tata bahasa & penerjemahan;
-      dilarang memproduksi substansi analisis, merangkai ide penelitian, atau membuat literatur fiktif.
-    - **Pembimbing (Nopriadi, S.T., M.Sc.) mengizinkan AI untuk semua tahapan** — konfirmasi LISAN, dilaporkan pengguna 2026-11-03,
-      **belum tercatat tertulis** (target: dicatat di SIMASTER → Catatan bimbingan). Penguji & KaProdi tetap menilai CPMK 4 (etika ilmiah).
-    - Maka agent BOLEH membantu semua tahap (kode, analisis, draf naskah), DENGAN batasan yang tetap berlaku tanpa pengecualian:
-      a. **Tidak ada literatur, sitasi, data, atau angka fiktif** — sitasi hanya dari refs.bib yang diverifikasi pengguna; angka hanya dari results/.
-      b. Draf teks dari AI ditandai jelas sebagai draf (mis. komentar "DRAF AI" di Docs/LaTeX) dan **wajib ditinjau, disunting,
-         dan disetujui pengguna** sebelum dianggap final; pengguna harus memahami dan mampu membela setiap kalimat & baris kode di sidang.
-      c. Bagian yang menyangkut ide/kontribusi penelitian (rumusan masalah, tujuan, interpretasi hasil, kesimpulan) diputuskan
-         pengguna dan pembimbing; agent menyajikan opsi + alasan, bukan memutuskan.
-      d. Setiap bantuan AI yang substansial dicatat di docs/RIWAYAT-PENGERJAAN.md (transparansi bila ditanya penguji).
-      e. Similarity check tetap wajib sebelum daftar ujian.
+15. **Penggunaan AI:** mengikuti arahan pembimbing (Nopriadi, S.T., M.Sc.) — AI **boleh dipakai untuk semua tahapan**
+    (kode, analisis, penulisan naskah). Keputusan pengguna (2026-11-03): ikuti arahan pembimbing.
+    Aturan 6 dan 7 tetap berlaku (angka hanya dari results/, sitasi hanya dari refs.bib yang terverifikasi — tidak ada
+    referensi/data fiktif). Pengguna tetap harus memahami isi karena akan diuji di sidang.
 16. Ikuti tata tulis kampus (docs/PANDUAN-KAMPUS.md): PUEBI, istilah asing miring, kalimat pasif tanpa "saya/penulis",
     persamaan bernomor dengan variabel & satuan SI didefinisikan, grafik bersatuan & berlegenda, intisari ≤ 200 kata/3 alinea.
 

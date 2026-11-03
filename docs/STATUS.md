@@ -17,9 +17,10 @@ Terakhir diperbarui: 2026-11-03
 - Menyiapkan bimbingan pertama
 
 ## Berikutnya (maks. 3)
-1. **Dataset** (blocker utama): pastikan sumber, format, jumlah sel per kelas; simpan di Drive `Project-Skripsi/data/raw/`
-2. **Jadwal mundur dari tanggal ujian**: tentukan periode ujian & tenggat pendaftaran → susun Gantt mingguan, sepakati dengan pembimbing
-3. Catat bimbingan 2026-11-03 di SIMASTER (izin AI tertulis); isi nama/NIM/NIP di `thesis/data_skripsi.tex`
+1. **Putuskan dataset & penyesuaian topik bersama Pak Nopriadi** — tidak ada dataset IFC publik sel CD4 terinfeksi HIV;
+   kandidat & opsi di docs/DATASET-KANDIDAT.md (A: Dryad CD4 memori, B: BBBC048 Jurkat)
+2. **Jadwal mundur dari tanggal ujian**: tentukan periode ujian & tenggat pendaftaran → Gantt mingguan
+3. Siapkan pipeline kode (loader IFC, baseline CNN, evaluasi, Grad-CAM) — bisa dimulai dengan BBBC048 (1,5 GB)
 
 ## Hasil konfirmasi pembimbing (2026-11-03)
 - Penggunaan AI: diizinkan untuk semua tahapan (lisan) → aturan 15 AGENTS.md diperbarui (dengan batasan: tanpa literatur/data fiktif, draf AI wajib ditinjau pengguna)
@@ -27,7 +28,9 @@ Terakhir diperbarui: 2026-11-03
 - Belum dibahas / masih terbuka: sumber dataset, rumusan masalah, model & metrik, judul Bab 3, periode ujian
 
 ## Blocker / pertanyaan terbuka
-- **Dataset belum ada** (blocker paling kritis; semua eksperimen bergantung padanya)
+- **Dataset belum ada** (blocker paling kritis). Hasil penelusuran: tidak ada dataset publik yang cocok persis dengan kelas
+  sehat/terinfeksi/lisis → perlu keputusan penyesuaian topik (mungkin lewat *fast-track approval*, panduan §1.3)
+- NIP pembimbing & pembimbing pendamping: belum diisi/dipastikan
 - Rumusan masalah, model, dan metrik belum ditentukan
 - **Risiko waktu:** target ujian akhir semester (sekitar Desember 2026). Syarat daftar ujian: draf 100% + persetujuan
   pembimbing + catatan bimbingan SIMASTER lengkap + bukti lulus similarity check. Tenggat pendaftaran: [ISI NANTI]

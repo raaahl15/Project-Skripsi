@@ -15,6 +15,20 @@
 
 ---
 
+## 2026-11-03 — Data diri, aturan AI final, penelusuran dataset
+**Oleh:** Claude Code (laptop utama) bersama pengguna
+
+**Dikerjakan:**
+- Pengguna: ikuti arahan Pak Nopriadi soal AI (boleh semua tahapan) → aturan 15 AGENTS.md disederhanakan.
+- Nama & NIM diisi di `thesis/data_skripsi.tex` (Rahul Ghulam Hidayatulloh, 23/519760/TK/57266; tahun masuk 2023 dari NIM); build lokal OK.
+- Dataset harus dicari sendiri → penelusuran web; hasil di `docs/DATASET-KANDIDAT.md`:
+  tidak ada dataset IFC publik sel CD4 terinfeksi HIV; kandidat terdekat Dryad (sel T CD4 memori, kondisi aktivasi, 125 GB),
+  BBBC048 (Jurkat, siklus sel, 1,5 GB), S-BIAD452 (tipe sel darah putih, terutama fitur).
+
+**Keputusan tertunda:** pilihan dataset & penyesuaian judul/topik — dibahas dengan pembimbing.
+
+---
+
 ## 2026-11-03 — Konfirmasi pembimbing: izin AI & pembimbing pendamping
 **Oleh:** Claude Code (laptop utama) berdasarkan laporan pengguna
 
