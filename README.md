@@ -8,14 +8,15 @@ Riwayat sesi: [docs/RIWAYAT-PENGERJAAN.md](docs/RIWAYAT-PENGERJAAN.md). Dasar si
 lalu dikonversi ke **LaTeX** (`thesis/`) per bab setelah disetujui dosen. Konvensi & cara konversi: [docs/PANDUAN-GDOCS.md](docs/PANDUAN-GDOCS.md).
 
 - Pemilik: [raaahl15](https://github.com/raaahl15)
-- Repo GitHub (private): [ISI NANTI]
+- Repo GitHub (private): [raaahl15/Project-Skripsi](https://github.com/raaahl15/Project-Skripsi)
+- Google Drive: [Project-Skripsi](https://drive.google.com/drive/folders/1L5EdiZuWsGFqOQ64QzMGHmxBUs63yKJ6)
 
 ## Arsitektur
 
 | Tempat | Isi |
 |---|---|
 | **GitHub (private)** | Sumber kebenaran: kode, naskah LaTeX, konteks agent, hasil kecil (metrik, gambar) |
-| **Google Drive** `Skripsi-ML/` | Gudang: dataset, checkpoint model, PDF paper, backup `.bundle`, bootstrap kit |
+| **Google Drive** `Project-Skripsi/` | Gudang: dataset, checkpoint model, PDF paper, backup `.bundle`, bootstrap kit |
 | **Laptop** (Antigravity + Claude Code) | Kerja berat: koding, eksperimen, penulisan |
 | **HP/iPad** (Claude app, claude.ai/code, github.dev) | Kerja ringan, revisi, bimbingan |
 | **Colab/Kaggle** | Training GPU; metrik di-commit ke repo, checkpoint ke Drive |
@@ -48,7 +49,7 @@ scripts/                setup, backup, build naskah
 | Menulis & revisi naskah | Google Docs per bab, bisa dari mana saja; dosen memberi komentar/saran langsung di Docs |
 | Bab disetujui | Konversi ke LaTeX sesuai [PANDUAN-GDOCS.md](docs/PANDUAN-GDOCS.md) |
 | Training berat | Colab/Kaggle, mount Drive, commit metrik ke `results/` |
-| GitHub bermasalah | Clone dari `.bundle` di `Drive/Skripsi-ML/backup/` |
+| GitHub bermasalah | Clone dari `.bundle` di `Drive/Project-Skripsi/backup/` |
 
 ### Revisi dari HP/iPad (tanpa laptop)
 

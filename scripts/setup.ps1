@@ -11,4 +11,4 @@ pip install -r requirements.txt
 
 New-Item -ItemType Directory -Force -Path data, results | Out-Null
 if (-not (Test-Path .env)) { Copy-Item .env.example .env }
-Write-Host "Selesai. Ambil data: rclone copy gdrive:Skripsi-ML/data ./data"
+Write-Host "Selesai. Ambil data: rclone copy gdrive:Project-Skripsi/data ./data"

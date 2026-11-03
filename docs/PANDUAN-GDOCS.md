@@ -1,6 +1,6 @@
 # Panduan Menulis di Google Docs → LaTeX
 
-Draf naskah ditulis di Google Docs (`Drive/Skripsi-ML/naskah/`, satu dokumen per bab), lalu dikonversi ke LaTeX
+Draf naskah ditulis di Google Docs (`Drive/Project-Skripsi/naskah/`, satu dokumen per bab), lalu dikonversi ke LaTeX
 (`thesis/`) **per bab setelah bab itu disetujui dosen**. Jangan menunggu semua bab selesai: konversi di akhir menumpuk
 pekerjaan tepat menjelang deadline.
 

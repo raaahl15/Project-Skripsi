@@ -56,7 +56,7 @@ def main() -> None:
 
     # TODO: load dataset from cfg["data"]["dir"] (src/data/)
     # TODO: build model from cfg["model"] (src/models/)
-    # TODO: training loop; save checkpoints OUTSIDE the repo (Drive Skripsi-ML/models/)
+    # TODO: training loop; save checkpoints OUTSIDE the repo (Drive Project-Skripsi/models/)
     raise NotImplementedError(
         "Dataset and model are not defined yet. Fill configs/ and implement src/data, src/models."
     )

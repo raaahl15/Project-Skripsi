@@ -3,7 +3,7 @@ experiment_name: baseline
 seed: 42
 
 data:
-  dir: data/processed          # local copy of Drive Skripsi-ML/data/processed
+  dir: data/processed          # local copy of Drive Project-Skripsi/data/processed
   classes: [healthy, infected, lysed]   # sehat / terinfeksi / lisis (from proposal)
   channels: null               # TODO: which IFC channels to use (brightfield, side scatter, fluorescence, ...)
   image_size: null             # TODO

@@ -15,7 +15,7 @@
 
 ## 3. Ambil repo & siapkan environment
 ```bash
-git clone https://github.com/raaahl15/[ISI NANTI: nama-repo].git skripsi-ml
+git clone https://github.com/raaahl15/Project-Skripsi.git skripsi-ml
 cd skripsi-ml
 bash scripts/setup.sh                                          # Linux/macOS/Git Bash
 powershell -ExecutionPolicy Bypass -File scripts\setup.ps1     # Windows
@@ -24,7 +24,7 @@ powershell -ExecutionPolicy Bypass -File scripts\setup.ps1     # Windows
 
 ## 4. Ambil data dari Drive
 ```bash
-rclone copy gdrive:Skripsi-ML/data ./data
+rclone copy gdrive:Project-Skripsi/data ./data
 ```
 Tanpa rclone: unduh manual dari Drive ke folder `data/`.
 

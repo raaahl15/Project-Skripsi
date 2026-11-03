@@ -1,5 +1,5 @@
 # [Judul paper]
-<!-- Salin file ini menjadi docs/literatur/<penulis-tahun>.md; PDF disimpan di Drive Skripsi-ML/papers/ -->
+<!-- Salin file ini menjadi docs/literatur/<penulis-tahun>.md; PDF disimpan di Drive Project-Skripsi/papers/ -->
 - Penulis / tahun / venue:
 - DOI / URL:
 - Masalah:

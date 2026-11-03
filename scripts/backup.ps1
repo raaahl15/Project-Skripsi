@@ -8,8 +8,8 @@ git bundle create $F --all
 if ($LASTEXITCODE -ne 0) { throw "git bundle failed." }
 
 if (Get-Command rclone -ErrorAction SilentlyContinue) {
-    rclone copy $F gdrive:Skripsi-ML/backup/
+    rclone copy $F gdrive:Project-Skripsi/backup/
     Write-Host "Backup terkirim ke Drive: $F"
 } else {
-    Write-Host "rclone tidak ada. Upload manual $F ke Drive Skripsi-ML/backup/"
+    Write-Host "rclone tidak ada. Upload manual $F ke Drive Project-Skripsi/backup/"
 }

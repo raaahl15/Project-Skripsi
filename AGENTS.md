@@ -10,9 +10,10 @@
 - Dataset: [ISI NANTI] (nama, sumber, ukuran, format, lokasi di Drive). BELUM ADA.
 - Metrik: [ISI NANTI]
 - Dosen pembimbing: Nopriadi, S.T., M.Sc. | preferensi: [ISI NANTI]
-- Naskah: **draf di Google Docs per bab** (Drive `Skripsi-ML/naskah/`) → **final di LaTeX** (`thesis/`, template kampus di `thesis/template-kampus/`). Konversi per bab setelah disetujui dosen; konvensi di docs/PANDUAN-GDOCS.md
+- Naskah: **draf di Google Docs per bab** (Drive `Project-Skripsi/naskah/`) → **final di LaTeX** (`thesis/`, template kampus di `thesis/template-kampus/`). Konversi per bab setelah disetujui dosen; konvensi di docs/PANDUAN-GDOCS.md
 - Deadline: akhir semester ini, sekitar Desember 2026 (tanggal pasti: [ISI NANTI])
-- GitHub: https://github.com/raaahl15 (repo: [ISI NANTI])
+- GitHub: https://github.com/raaahl15/Project-Skripsi (private). Folder lokal di laptop utama: `D:\rahul\Project Skripsi\skripsi-ml\`
+- Google Drive: folder `Project-Skripsi/`; folder `naskah/` dibagikan ke Pak Nopriadi (nopriadi@ugm.ac.id, akses komentar)
 
 # Aturan Kerja (berlaku untuk semua agent)
 1. Awal sesi: baca docs/STATUS.md dan docs/REVISI.md.
@@ -31,7 +32,7 @@
 14. **Setiap perubahan sistem** (struktur, alur kerja, alat, lokasi file): perbarui MASTER-SKRIPSI-SETUP.md dan catat di bagian 10-nya.
 
 # Lokasi Google Drive
-- Folder utama: [Skripsi-ML](https://drive.google.com/drive/folders/1L5EdiZuWsGFqOQ64QzMGHmxBUs63yKJ6)
+- Folder utama: [Project-Skripsi](https://drive.google.com/drive/folders/1L5EdiZuWsGFqOQ64QzMGHmxBUs63yKJ6)
 - Naskah (Google Docs): [naskah/](https://drive.google.com/drive/folders/1B0gIkugJe1yVZWEBZaS62jG9fA5LRTU7)
   - [Bab 1 - Pendahuluan](https://docs.google.com/document/d/1p69-U7fzbd2Ydz3FTPpsLzeso2VxKKuop7Wu87yZU_c/edit) | status: draf
   - [Bab 2 - Tinjauan Pustaka dan Dasar Teori](https://docs.google.com/document/d/1LrQ97_Z0-YM3Cp55wuU83Q8QE8rf2Gl69k1UEBV1nGU/edit) | status: draf

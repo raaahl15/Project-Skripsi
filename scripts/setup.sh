@@ -8,4 +8,4 @@ if [ -f .venv/bin/activate ]; then source .venv/bin/activate; else source .venv/
 pip install -r requirements.txt
 mkdir -p data results
 [ -f .env ] || cp .env.example .env
-echo "Selesai. Ambil data: rclone copy gdrive:Skripsi-ML/data ./data"
+echo "Selesai. Ambil data: rclone copy gdrive:Project-Skripsi/data ./data"

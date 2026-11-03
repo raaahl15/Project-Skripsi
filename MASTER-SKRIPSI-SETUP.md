@@ -39,7 +39,7 @@
 | 7 | OS | Laptop utama Windows 10; belum ada laptop cadangan (sementara pinjam laptop teman) |
 | 8 | Format naskah | **Draf di Google Docs** (per bab), dikonversi ke **LaTeX** setelah bab disetujui |
 | 9 | Template kampus | Ada, format LaTeX (belum dimasukkan ke repo) |
-| 10 | GitHub | Akun `raaahl15`; repo belum dibuat |
+| 10 | GitHub | Akun `raaahl15`; repo private `raaahl15/Project-Skripsi` (dibuat pengguna 2026-11-03) |
 | 11 | GPU | Belum disiapkan → rencana Colab/Kaggle |
 | 12 | Deadline | Akhir semester, sekitar Desember 2026 |
 
@@ -80,7 +80,7 @@
 
 - **GitHub (private)** = sumber kebenaran: kode, naskah, konteks agent, hasil kecil.
 - **Google Drive** = gudang: dataset, checkpoint model, PDF paper, backup, bootstrap kit.
-- **Google Docs** (`Drive/Skripsi-ML/naskah/`) = **draf naskah** per bab, tempat revisi dan komentar dosen. Konvensi: `docs/PANDUAN-GDOCS.md`.
+- **Google Docs** (`Drive/Project-Skripsi/naskah/`) = **draf naskah** per bab, tempat revisi dan komentar dosen. Konvensi: `docs/PANDUAN-GDOCS.md`.
 - **LaTeX** (`thesis/` di repo) = **naskah final**, hasil konversi bab yang sudah disetujui, memakai template kampus.
 - **Repo git TIDAK boleh berada di folder Drive yang tersinkron** (risiko `.git` korup).
 - **Antigravity + Claude Code** = kerja berat di laptop.
@@ -271,7 +271,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 mkdir -p data results
-echo "Selesai. Ambil data: rclone copy gdrive:Skripsi-ML/data ./data"
+echo "Selesai. Ambil data: rclone copy gdrive:Project-Skripsi/data ./data"
 ```
 
 `scripts/setup.ps1` adalah padanannya untuk Windows PowerShell (`python -m venv .venv`, aktivasi, `pip install -r requirements.txt`).
@@ -283,7 +283,7 @@ echo "Selesai. Ambil data: rclone copy gdrive:Skripsi-ML/data ./data"
 set -e
 F=~/skripsi-backup-$(date +%F).bundle
 git bundle create "$F" --all
-rclone copy "$F" gdrive:Skripsi-ML/backup/
+rclone copy "$F" gdrive:Project-Skripsi/backup/
 ```
 
 ### 4.11 `scripts/build-thesis.sh` (Markdown + Pandoc)
@@ -301,9 +301,9 @@ Agent tidak mengakses Drive kecuali ada konektor aktif dan pengguna menyetujui.
 **Status:** sudah dibuat oleh agent lewat konektor Google Drive pada 2026-11-03 (atas persetujuan pengguna).
 
 ```
-Drive/Skripsi-ML/
+Drive/Project-Skripsi/
 ├── 00-BOOTSTRAP/  (salinan setup.sh, setup.ps1, requirements.txt, SETUP-LAPTOP-BARU.md)
-├── naskah/        (Google Docs: Bab 1 … Bab 5 — draf naskah)
+├── naskah/        (Google Docs: Bab 1 … Bab 5 — draf naskah; dibagikan ke dosen pembimbing sebagai Commenter)
 ├── data/raw/  data/processed/
 ├── models/
 ├── papers/
@@ -372,6 +372,10 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | Langkah 0 dijalankan: repo `skripsi-ml/` dibuat (LaTeX), commit awal lokal | Setup awal |
 | 2026-11-03 | Ditambah GitHub Actions compile PDF, skrip `.ps1` untuk Windows, `.gitattributes` | Revisi dari iPad tetap menghasilkan PDF; laptop utama Windows |
 | 2026-11-03 | Naskah: draf di **Google Docs** per bab, LaTeX untuk versi final (konversi per bab setelah disetujui) | Permintaan pengguna: revisi lebih mudah |
-| 2026-11-03 | Struktur Drive `Skripsi-ML/` + folder `naskah/` + 5 Google Docs bab dibuat oleh agent | Permintaan pengguna |
+| 2026-11-03 | Struktur Drive `Skripsi-ML/` (kini `Project-Skripsi/`) + folder `naskah/` + 5 Google Docs bab dibuat oleh agent | Permintaan pengguna |
 | 2026-11-03 | Ditambah `docs/RIWAYAT-PENGERJAAN.md`; aturan wajib update riwayat & MASTER tiap sesi | Permintaan pengguna |
 | 2026-11-03 | File MASTER dipindah dari `D:\rahul\Project Skripsi\` ke root repo | Agar ter-versi git dan bisa diperbarui dari iPad/cloud |
+| 2026-11-03 | Folder Drive diganti nama `Skripsi-ML` → `Project-Skripsi` (ID/link tetap); semua rujukan & path rclone (`gdrive:Project-Skripsi/...`) diperbarui | Pilihan pengguna |
+| 2026-11-03 | Remote GitHub: `raaahl15/Project-Skripsi` (private); folder lokal tetap `skripsi-ml/` | Repo dibuat pengguna |
+| 2026-11-03 | Folder `naskah/` dibagikan ke Pak Nopriadi (nopriadi@ugm.ac.id) sebagai Commenter | Dosen bisa melihat & berkomentar langsung |
+| 2026-11-03 | Python: pakai Python 3.13 yang sudah terpasang (bukan 3.12); `.venv` dibuat dengan `setup.ps1` | Sudah tersedia, kompatibel |
