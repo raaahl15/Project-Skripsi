@@ -379,3 +379,4 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | Remote GitHub: `raaahl15/Project-Skripsi` (private); folder lokal tetap `skripsi-ml/` | Repo dibuat pengguna |
 | 2026-11-03 | Folder `naskah/` dibagikan ke Pak Nopriadi (nopriadi@ugm.ac.id) sebagai Commenter | Dosen bisa melihat & berkomentar langsung |
 | 2026-11-03 | Python: pakai Python 3.13 yang sudah terpasang (bukan 3.12); `.venv` dibuat dengan `setup.ps1` | Sudah tersedia, kompatibel |
+| 2026-11-03 | rclone dipasang (winget), remote `gdrive` dikonfigurasi; backup mingguan otomatis ke `Project-Skripsi/backup/`; bootstrap kit diisi | Backup tanpa upload manual |

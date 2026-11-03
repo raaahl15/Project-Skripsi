@@ -11,6 +11,7 @@ Terakhir diperbarui: 2026-11-03
 - Folder `naskah/` dibagikan ke Pak Nopriadi (akses komentar)
 - Repo di-push ke GitHub `raaahl15/Project-Skripsi` (private)
 - Environment Python (.venv, Python 3.13, torch CPU) siap di laptop utama
+- rclone terhubung ke Drive; `scripts/backup.ps1` mengirim backup otomatis; bootstrap kit ada di Drive `00-BOOTSTRAP/`
 
 ## Sedang dikerjakan
 - Menyiapkan bimbingan pertama
@@ -18,7 +19,7 @@ Terakhir diperbarui: 2026-11-03
 ## Berikutnya (maks. 3)
 1. Bimbingan pertama: tanyakan sumber dataset imaging flow cytometry, rumusan masalah, dan ekspektasi metode/metrik
 2. Pastikan dataset tersedia (nama, format, jumlah sel per kelas), simpan di Drive `Project-Skripsi/data/raw/`
-3. Masukkan template LaTeX kampus ke `thesis/template-kampus/`; upload backup `.bundle` ke Drive `backup/`
+3. Masukkan template LaTeX kampus ke `thesis/template-kampus/` (pengguna sedang mencari file-nya)
 
 ## Blocker / pertanyaan terbuka
 - **Dataset belum ada** (blocker paling kritis; semua eksperimen bergantung padanya)

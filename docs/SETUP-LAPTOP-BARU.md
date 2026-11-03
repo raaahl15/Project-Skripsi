@@ -8,7 +8,10 @@
 - [ ] **Claude Code**: `npm install -g @anthropic-ai/claude-code`
 - [ ] **LaTeX**: MiKTeX (Windows) atau TeX Live (Linux/macOS), pastikan `latexmk` dan `biber` tersedia.
       Opsional: cukup andalkan GitHub Actions untuk compile PDF.
-- [ ] **rclone** (untuk data dari Drive): https://rclone.org/downloads/, lalu `rclone config` dengan remote bernama `gdrive`
+- [ ] **rclone** (untuk data dari Drive): Windows `winget install -e --id Rclone.Rclone`, lalu
+      `rclone config create gdrive drive scope=drive` (browser terbuka → login Google → Allow).
+      Jika muncul error terkait client_id, buat client_id sendiri: https://rclone.org/drive/#making-your-own-client-id
+      **Di laptop teman: jangan pasang rclone** (token Drive tersimpan di laptop); unduh data manual saja.
 
 ## 2. Login akun
 - GitHub (pakai `gh auth login` atau Git Credential Manager), Google, Claude.

@@ -15,6 +15,23 @@
 
 ---
 
+## 2026-11-03 — rclone + backup otomatis ke Drive
+**Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
+
+**Dikerjakan:**
+- Pengguna menjalankan GitHub Actions (build PDF) dan meng-upload bundle backup manual ke Drive.
+- Memasang rclone v1.75.2 (winget) dan mengonfigurasi remote `gdrive` (login Google oleh pengguna; token tersimpan di `%APPDATA%\rclone\rclone.conf`, di luar repo).
+- `scripts/backup.ps1` diuji: bundle terkirim otomatis ke `Project-Skripsi/backup/`.
+- Bootstrap kit (`setup.sh`, `setup.ps1`, `requirements.txt`, `SETUP-LAPTOP-BARU.md`) disalin ke `Project-Skripsi/00-BOOTSTRAP/`.
+
+**Catatan:** rclone memperingatkan bahwa client_id bawaan untuk Google Drive akan dihentikan selama 2026. Jika backup tiba-tiba gagal, buat client_id sendiri (https://rclone.org/drive/#making-your-own-client-id).
+
+**Berikutnya:**
+1. Bimbingan pertama (dataset, rumusan masalah, model, metrik, tanggal seminar/sidang).
+2. Pengguna mencari template LaTeX kampus → masukkan ke `thesis/template-kampus/`.
+
+---
+
 ## 2026-11-03 — GitHub, berbagi naskah ke dosen, environment Python
 **Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
 
