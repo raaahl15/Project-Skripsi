@@ -54,7 +54,7 @@
 5. Jangan menjalankan `git push` atau membuat repo GitHub tanpa persetujuan eksplisit pengguna.
 6. Bahasa komunikasi dengan pengguna: Indonesia. Bahasa kode dan komentar kode: Inggris.
 7. Setelah selesai, buat ringkasan: file apa yang dibuat, apa yang masih harus dilakukan manual oleh pengguna.
-8a. **Aturan AI kampus** (Panduan Skripsi TF UGM 2026 §4.1): AI hanya untuk penyuntingan tata bahasa & penerjemahan; dilarang memproduksi substansi analisis, ide penelitian, atau literatur fiktif. Rincian penerapan: `AGENTS.md` aturan 15.
+8a. **Penggunaan AI**: panduan tertulis §4.1 membatasi AI pada penyuntingan bahasa & terjemahan; pembimbing mengizinkan AI untuk semua tahapan (lisan, 2026-11-03). Agent boleh membantu semua tahap dengan batasan di `AGENTS.md` aturan 15 (tanpa literatur/data fiktif; draf AI wajib ditinjau pengguna).
 8. **Setiap sesi pengerjaan:** tambahkan entri di `docs/RIWAYAT-PENGERJAAN.md` (tanggal, yang dikerjakan, keputusan, file/Drive yang berubah, langkah berikutnya).
 9. **Setiap perubahan sistem:** perbarui file MASTER ini dan catat di bagian 10.
 
@@ -387,4 +387,5 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | Struktur bab (LaTeX + Google Docs) mengikuti template: Bab 3 "Pelaksanaan Penelitian", Bab 5 "Kesimpulan dan Saran" | Sesuai template kampus |
 | 2026-11-03 | Ditambah `docs/PANDUAN-KAMPUS.md`; **aturan AI §4.1** jadi aturan mengikat agent (AGENTS.md no. 15): agent tidak menulis substansi naskah | Kepatuhan etika akademik kampus |
 | 2026-11-03 | Shim untuk bug class resmi di `thesis/packages.tex` (`ulem`; setter `\pembimbingpendamping`/`\nippembimbingpendamping`); class tidak diubah | Class resmi memakai makro yang tidak didefinisikannya |
+| 2026-11-03 | Aturan AI (AGENTS.md no. 15) dilonggarkan: pembimbing mengizinkan AI untuk semua tahapan (lisan); batasan tetap: tanpa literatur/data fiktif, draf AI wajib ditinjau pengguna, bantuan dicatat | Konfirmasi pembimbing |
 | 2026-11-03 | MiKTeX dipasang di laptop utama; `scripts/build-thesis.ps1` tanpa latexmk/Perl, output `thesis\build\main.pdf`; CI menampilkan error LaTeX sebagai annotation | Kompilasi & debug lokal tanpa menunggu CI |

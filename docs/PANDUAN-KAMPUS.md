@@ -8,7 +8,9 @@
 - AI generatif **boleh** hanya sebagai asisten **penyuntingan tata bahasa** atau **penerjemahan**.
 - AI **dilarang** untuk **memproduksi substansi analisis**, **merangkai ide penelitian**, atau **menciptakan literatur fiktif**.
 - Pelanggaran etika (plagiarisme, fabrikasi, falsifikasi data) dapat berakibat **pembatalan kelulusan**.
-- Implikasi untuk sistem ini: lihat aturan AI di `AGENTS.md`.
+- **Catatan 2026-11-03:** pembimbing (Pak Nopriadi) mengizinkan AI untuk semua tahapan secara lisan. Karena ini berbeda dari
+  teks panduan tertulis, sebaiknya izin tersebut **dicatat di SIMASTER → Catatan bimbingan** agar ada bukti bila ditanya penguji/KaProdi.
+- Implikasi untuk sistem ini: lihat aturan 15 di `AGENTS.md`.
 
 ## Format mata kuliah
 - Skripsi 3 SKS, diselesaikan dalam **1 semester (±16 minggu)**; beban minimal **±8,5 jam/minggu**.

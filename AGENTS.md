@@ -9,7 +9,8 @@
 - Metode / model: [ISI NANTI] (catatan: Grad-CAM mensyaratkan model berbasis CNN)
 - Dataset: [ISI NANTI] (nama, sumber, ukuran, format, lokasi di Drive). BELUM ADA.
 - Metrik: [ISI NANTI]
-- Dosen pembimbing: Nopriadi, S.T., M.Sc. | preferensi: [ISI NANTI]
+- Dosen pembimbing: Nopriadi, S.T., M.Sc. | preferensi: mengizinkan penggunaan AI di semua tahapan (lisan, 2026-11-03; lihat aturan 15)
+- Dosen pembimbing pendamping: belum ada / belum dipastikan (sementara `-` di thesis/data_skripsi.tex) — konfirmasi ke Pak Nopriadi
 - Naskah: **draf di Google Docs per bab** (Drive `Project-Skripsi/naskah/`) → **final di LaTeX** (`thesis/`, memakai template resmi DTNTF: `skripsidtntf.cls` + BibTeX `skripsi.bst`; salinan asli di `thesis/template-kampus/`). Konversi per bab setelah disetujui dosen; konvensi di docs/PANDUAN-GDOCS.md
 - Panduan kampus: docs/PANDUAN-KAMPUS.md (ringkasan Panduan Pelaksanaan Skripsi TF UGM 2026: aturan AI, timeline 16 minggu, bimbingan, tata tulis, ujian, penilaian)
 - Deadline: akhir semester ini, sekitar Desember 2026 (tanggal pasti: [ISI NANTI])
@@ -31,16 +32,19 @@
 12. Di Google Docs ikuti konvensi docs/PANDUAN-GDOCS.md (Heading bawaan, sitasi `[@kunci]`, persamaan `$...$`, sumber angka dari results/).
 13. **Akhir setiap sesi: tambahkan entri di docs/RIWAYAT-PENGERJAAN.md** (entri terbaru di atas).
 14. **Setiap perubahan sistem** (struktur, alur kerja, alat, lokasi file): perbarui MASTER-SKRIPSI-SETUP.md dan catat di bagian 10-nya.
-15. **ATURAN AI KAMPUS (Panduan Skripsi TF UGM 2026 §4.1) — mengikat semua agent.** AI generatif hanya boleh untuk
-    penyuntingan tata bahasa dan penerjemahan; DILARANG memproduksi substansi analisis, merangkai ide penelitian,
-    atau membuat literatur fiktif. Maka agent:
-    - TIDAK menulis isi naskah (latar belakang, rumusan masalah, tinjauan, analisis, pembahasan, kesimpulan) untuk pengguna,
-      dan tidak mengusulkan ide/hipotesis penelitian sebagai teks siap pakai. Jika diminta, tolak dengan sopan dan rujuk aturan ini.
-    - BOLEH: menyunting tata bahasa/ejaan (PUEBI) teks yang DITULIS PENGGUNA tanpa mengubah substansinya; menerjemahkan
-      (mis. intisari → *abstract*); format/konversi LaTeX; infrastruktur repo; memeriksa konsistensi, sitasi, dan angka terhadap results/;
-      menjelaskan konsep/teori agar pengguna paham lalu MENULIS SENDIRI.
-    - Kode program (data pipeline, model, Grad-CAM): status penggunaan AI untuk kode belum dikonfirmasi ke dosen — tanyakan ke pembimbing;
-      sampai dikonfirmasi, pengguna harus memahami dan mampu menjelaskan setiap baris yang dipakai.
+15. **PENGGUNAAN AI — mengikat semua agent.**
+    - Panduan Skripsi TF UGM 2026 §4.1 (tertulis, disahkan Kadep): AI hanya untuk penyuntingan tata bahasa & penerjemahan;
+      dilarang memproduksi substansi analisis, merangkai ide penelitian, atau membuat literatur fiktif.
+    - **Pembimbing (Nopriadi, S.T., M.Sc.) mengizinkan AI untuk semua tahapan** — konfirmasi LISAN, dilaporkan pengguna 2026-11-03,
+      **belum tercatat tertulis** (target: dicatat di SIMASTER → Catatan bimbingan). Penguji & KaProdi tetap menilai CPMK 4 (etika ilmiah).
+    - Maka agent BOLEH membantu semua tahap (kode, analisis, draf naskah), DENGAN batasan yang tetap berlaku tanpa pengecualian:
+      a. **Tidak ada literatur, sitasi, data, atau angka fiktif** — sitasi hanya dari refs.bib yang diverifikasi pengguna; angka hanya dari results/.
+      b. Draf teks dari AI ditandai jelas sebagai draf (mis. komentar "DRAF AI" di Docs/LaTeX) dan **wajib ditinjau, disunting,
+         dan disetujui pengguna** sebelum dianggap final; pengguna harus memahami dan mampu membela setiap kalimat & baris kode di sidang.
+      c. Bagian yang menyangkut ide/kontribusi penelitian (rumusan masalah, tujuan, interpretasi hasil, kesimpulan) diputuskan
+         pengguna dan pembimbing; agent menyajikan opsi + alasan, bukan memutuskan.
+      d. Setiap bantuan AI yang substansial dicatat di docs/RIWAYAT-PENGERJAAN.md (transparansi bila ditanya penguji).
+      e. Similarity check tetap wajib sebelum daftar ujian.
 16. Ikuti tata tulis kampus (docs/PANDUAN-KAMPUS.md): PUEBI, istilah asing miring, kalimat pasif tanpa "saya/penulis",
     persamaan bernomor dengan variabel & satuan SI didefinisikan, grafik bersatuan & berlegenda, intisari ≤ 200 kata/3 alinea.
 

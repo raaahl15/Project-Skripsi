@@ -17,11 +17,14 @@ Terakhir diperbarui: 2026-11-03
 - Menyiapkan bimbingan pertama
 
 ## Berikutnya (maks. 3)
-1. **Bimbingan pertama** (catat di SIMASTER → Catatan bimbingan). Agenda: sumber dataset; rumusan masalah; model & metrik;
-   judul Bab 3 ("Metodologi" vs "Pelaksanaan Penelitian"); batas penggunaan AI untuk kode program;
-   target periode ujian (tengah/akhir semester) & tenggat pendaftaran; jadwal bimbingan rutin (min. 1×/2 minggu, target > 8×)
-2. Pastikan dataset tersedia (nama, format, jumlah sel per kelas), simpan di Drive `Project-Skripsi/data/raw/`
-3. Isi `thesis/data_skripsi.tex` (nama lengkap, NIM, NIP pembimbing) dan cek PDF hasil GitHub Actions
+1. **Dataset** (blocker utama): pastikan sumber, format, jumlah sel per kelas; simpan di Drive `Project-Skripsi/data/raw/`
+2. **Jadwal mundur dari tanggal ujian**: tentukan periode ujian & tenggat pendaftaran → susun Gantt mingguan, sepakati dengan pembimbing
+3. Catat bimbingan 2026-11-03 di SIMASTER (izin AI tertulis); isi nama/NIM/NIP di `thesis/data_skripsi.tex`
+
+## Hasil konfirmasi pembimbing (2026-11-03)
+- Penggunaan AI: diizinkan untuk semua tahapan (lisan) → aturan 15 AGENTS.md diperbarui (dengan batasan: tanpa literatur/data fiktif, draf AI wajib ditinjau pengguna)
+- Pembimbing pendamping: belum dipastikan (dicatat; sementara `-`)
+- Belum dibahas / masih terbuka: sumber dataset, rumusan masalah, model & metrik, judul Bab 3, periode ujian
 
 ## Blocker / pertanyaan terbuka
 - **Dataset belum ada** (blocker paling kritis; semua eksperimen bergantung padanya)

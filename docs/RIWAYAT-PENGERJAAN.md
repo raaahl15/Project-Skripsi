@@ -15,6 +15,19 @@
 
 ---
 
+## 2026-11-03 — Konfirmasi pembimbing: izin AI & pembimbing pendamping
+**Oleh:** Claude Code (laptop utama) berdasarkan laporan pengguna
+
+**Dikerjakan:**
+- Pengguna melaporkan: Pak Nopriadi **mengizinkan penggunaan AI untuk semua tahapan** (lisan); pembimbing pendamping **dicatat dulu** (belum dipastikan).
+- AGENTS.md aturan 15 diperbarui: AI boleh membantu semua tahap dengan batasan tetap (tanpa literatur/data/angka fiktif,
+  draf AI ditandai & wajib ditinjau pengguna, keputusan ide/kontribusi oleh pengguna & pembimbing, bantuan substansial dicatat di riwayat).
+- Catatan bimbingan dibuat: `docs/bimbingan/2026-11-03.md`.
+
+**Catatan risiko:** izin lisan berbeda dari panduan tertulis §4.1 → disarankan dicatat di SIMASTER sebagai bukti.
+
+---
+
 ## 2026-11-03 — Perbaikan kompilasi template LaTeX + build lokal
 **Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
 
