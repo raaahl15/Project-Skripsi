@@ -48,6 +48,34 @@ Faculty of Engineering, Universitas Gadjah Mada, Yogyakarta, Indonesia
 [email UGM]
 Supervisor: Nopriadi, S.T., M.Sc. ([email pembimbing, bila di-CC])
 
+## Versi singkat untuk formulir "Contact Owner" heiDATA
+
+**Subject:** Request for additional raw z-stacks (doi:10.11588/DATA/MUXYRY)
+
+Dear Dr. Ananth,
+
+I am an undergraduate Engineering Physics student at Universitas Gadjah Mada (Indonesia), supervised by Nopriadi, S.T., M.Sc.
+My thesis uses machine learning and Grad-CAM to classify HIV-1-exposed resting CD4 T cells from Lamin B1 and HIV-1 CA images,
+and your dataset is the best match I found. With one field per condition, however, my classifier mostly learns field-to-field
+differences. Would it be possible to share additional raw z-stacks (+Vpx, -Vpx and mock; staining as in Fig. 1G or 3B)?
+They would be used only for this non-commercial thesis, cited, and not redistributed. I would be glad to share my code and results.
+
+Kind regards,
+Rahul Ghulam Hidayatulloh — Universitas Gadjah Mada — [email UGM]
+
+## Email pengingat (± 7 hari setelah email pertama, balas di utas yang sama)
+
+**Subject:** Re: Request for additional raw images – HIV-1 post-entry steps in resting CD4 T cells
+
+Dear Dr. Ananth,
+
+I hope you are well. I wanted to briefly follow up on my request below for additional raw z-stacks from your heiDATA dataset.
+I understand you are very busy; even a short note on whether sharing might be possible would help me plan my thesis.
+Thank you again for making the data openly available.
+
+Kind regards,
+Rahul Ghulam Hidayatulloh
+
 ## Log
 | Tanggal | Jalur | Ke | Status |
 |---|---|---|---|
