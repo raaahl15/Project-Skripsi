@@ -55,6 +55,15 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
   citra dianalisis di Fiji (titik kapsid HIV di dalam/luar batas inti dikurasi manual) → data kemungkinan besar **citra mikroskopi**, bukan IFC.
 - Kecocokan: sel T CD4 primer + HIV + Lamin B1 + citra optik (cocok dengan bidang sistem optika, CNN, Grad-CAM).
   Belum pasti: isi file, ukuran, label sel (terinfeksi/tidak), ada tidaknya kontrol tak terinfeksi, sel mati/lisis.
+- **Dari halaman heiDATA (screenshot pengguna, 2026-11-03):** lisensi **CC BY 4.0**; **40 file**; dikelompokkan per figure paper
+  (contoh tag "raw Fig 1/"); contoh file: `README.rtf` (2,8 KB), `Fig 1G +Vpx.tif` (46,5 MB), `Fig 1G -Vpx.tif` (46,5 MB),
+  `Fig 1G +Vpx cropped.tif` / `Fig 1G -Vpx cropped.tif` (1,2 MB), `Fig 1G Mask.tif`. Deskripsi & publikasi terkait belum diisi pemilik.
+  Thumbnail: citra mikroskopi fluoresens satu bidang pandang (titik-titik hijau).
+- Implikasi: label tingkat kondisi **+Vpx / −Vpx** (kemungkinan permisif vs tidak permisif infeksi pada sel istirahat — perlu dicek
+  di README/paper); jumlah bidang pandang per kondisi kemungkinan sedikit → sel tunggal harus disegmentasi dari citra besar,
+  dan pembagian train/test harus per citra (bukan per sel) untuk menghindari kebocoran data.
+- Langkah berikut: unduh semua file ke Drive `Project-Skripsi/data/raw/heidata-MUXYRY/`, lalu periksa README, jumlah kanal,
+  dimensi, dan estimasi jumlah sel per kondisi.
 
 ### 5. Dryad doi:10.7272/Q6SX6BFR — Subset sel T CD4 jaringan: kerentanan terhadap infeksi HIV & kematian
 - Luo X. (2023), Dryad; paper: Luo X. et al., *Frontiers in Immunology* (2022), DOI 10.3389/fimmu.2022.883420.
