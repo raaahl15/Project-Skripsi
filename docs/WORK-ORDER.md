@@ -6,6 +6,7 @@ Terakhir diperbarui: **2026-11-03**
 
 > Dokumen ini ditunjukkan saat bimbingan: (1) arahan dari setiap bimbingan, (2) status eksekusinya, (3) bukti/keluaran.
 > Diperbarui setiap selesai bimbingan (tambah WO baru) dan setiap ada progres (ubah status & bukti).
+> Versi Google Docs (untuk dibuka di HP/iPad saat bimbingan): https://docs.google.com/document/d/1g44jOiptFFLlyWT23MJbjdQCIzIcuGF7E2Ov2e4Ltsc/edit
 > Status: ✅ selesai · 🔄 berjalan · ⏳ belum dimulai · ❓ perlu konfirmasi mahasiswa · ⛔ terhambat · ➖ digantikan
 
 ## Ringkasan posisi

@@ -39,6 +39,7 @@ Sumber angka: `results/pilot-heidata/metrics_classify.json` (100 permutasi, seed
 | T2: terpapar HIV (±Vpx) vs Mock — Lamin B1 | 209 | LogReg / RF | 0,326 / 0,379 | 0,172 / 0,084 | 1,0 / 1,0 |
 
 Interpretasi awal:
+
 - Morfometri inti saja hampir tidak membedakan +Vpx/−Vpx antar-percobaan (sinyal lemah).
 - Menambah fitur **lokasi kapsid HIV** memberi sinyal yang **signifikan namun sedang** (AUC 0,65; p = 0,01) — sejalan dengan
   topik paper (tahap pasca-masuk HIV-1). Fitur terpenting (SHAP): panjang sumbu mayor inti dan jumlah kapsid di sekitar inti.
@@ -54,6 +55,7 @@ Interpretasi awal:
 
 ### 3b. Pilot komponen CyTOF (Luo et al.) — data tabel, tanpa citra
 Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/state_counts.csv` (subsampel 40.000 sel/file, seed 42).
+
 - 19 file FCS, 6 donor, 924.121 sel total. Kanal **HIV** ada di semua file → **status infeksi per sel**; **caspase-3 terbelah**
   (apoptosis) juga tersedia di semua file setelah nama penanda diseragamkan.
 - *Gating* sel T CD4: CD3 > 3 dan CD8 < 2 (arcsinh; CD8− dipakai karena HIV menurunkan CD4) → 185.208 sel (subsampel).
@@ -89,7 +91,9 @@ Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/stat
 | 1 | Pretraining CNN pada citra IFC Essig → *fine-tuning* pada heiDATA (+ ML klasik fitur morfometri, Grad-CAM) | ±5–6 minggu |
 | 2 | Analisis citra heiDATA + analisis CyTOF Luo (ML + SHAP) | ±6–7 minggu |
 | 3 | Gabungan 1 + 2 | ±8–10 minggu |
-Dataset tidak bisa digabung menjadi satu set latih (modalitas & label berbeda). Pilot Skema 3 sedang dijalankan untuk menilai kelayakan.
+
+Dataset tidak bisa digabung menjadi satu set latih (modalitas & label berbeda). Pilot Skema 3 telah dijalankan untuk menilai kelayakan.
+
 **Catatan keselarasan dengan bimbingan 4:** Skema 1 memakai CNN (*deep learning*), padahal bimbingan 4 memutuskan **machine learning**.
 Karena itu inti yang diusulkan = **ekstraksi fitur + ML** (heiDATA, ditambah data CyTOF bila perlu); CNN/Grad-CAM paling jauh hanya
 sebagai pembanding opsional. Pilot CNN sempat dijalankan tetapi gagal karena memori (sudah diperbaiki, tidak dijalankan ulang).
@@ -107,6 +111,7 @@ Tidak ada satu dataset yang memenuhi semua unsur judul; unsur yang paling bermas
 | Grad-CAM, Bidang II Sistem Optika | ✅ | ❌ (SHAP; spektrometri massa) | ✅ |
 
 Usulan (template: judul ≤ 15 kata):
+
 - **A — perubahan minimal, heiDATA (ekstraksi fitur + ML):** *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berdasarkan Citra Mikroskopi
   Fluoresens Menggunakan Machine Learning* (15 kata) — EN: *Classification of CD4 T Cell Conditions in HIV-1 Infection Based on
   Fluorescence Microscopy Images Using Machine Learning*
