@@ -15,6 +15,22 @@
 
 ---
 
+## 2026-11-03 — Penilaian dataset temuan pengguna + pemeriksaan heiDATA
+**Oleh:** Claude Code (laptop utama) bersama pengguna
+
+**Dikerjakan:**
+- Menilai 4 dataset temuan pengguna (detail di `docs/DATASET-KANDIDAT.md`): Dryad Luo 2023 (CyTOF HIV, tanpa citra),
+  FlowRepository Corneau (CyTOF donor sehat/HIV, tanpa citra & paper), ACTG388 (data klinis, tidak cocok),
+  heiDATA Ananth 2024 (citra mikroskopi HIV + Lamin B1 di sel T CD4 istirahat, CC BY 4.0).
+- Pengguna mengunggah heiDATA (`dataverse_files.zip`, 771 MB) ke Drive; diunduh via rclone, diekstrak ke `data/raw/heidata-MUXYRY/`.
+- Pemeriksaan metadata TIFF + README dan hitung inti otomatis kasar (skrip di `notebooks/`, keluaran di `results/eksplorasi-heidata/`):
+  z-stack 3–4 kanal 0,133 µm/px; 14 bidang pandang (1 per kondisi per figure); 178 inti terdeteksi (perkiraan nyata ±250–350);
+  sel GFP+ sangat sedikit; tidak ada penanda kematian.
+
+**Kesimpulan:** heiDATA paling cocok secara konsep tetapi kecil → perlu keputusan desain/judul bersama pembimbing; opsi menambah data via pemilik dataset.
+
+---
+
 ## 2026-11-03 — Data diri, aturan AI final, penelusuran dataset
 **Oleh:** Claude Code (laptop utama) bersama pengguna
 

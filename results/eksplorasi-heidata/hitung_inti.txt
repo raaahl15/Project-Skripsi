@@ -1,0 +1,15 @@
+﻿raw Fig 1/Fig 1G +Vpx.tif              nuclei=  8 (touching border= 1) median diam=7.9 um
+raw Fig 1/Fig 1G -Vpx.tif              nuclei= 10 (touching border= 0) median diam=7.4 um
+raw Fig 1/Fig 1G Mock.tif              nuclei= 16 (touching border= 5) median diam=8.4 um
+raw Fig 2/Fig 2A +Vpx.tif              nuclei= 14 (touching border= 1) median diam=6.0 um | GFP per-nucleus mean: min=2214 med=2269 max=3339
+raw Fig 2/Fig 2A -Vpx.tif              nuclei=  3 (touching border= 0) median diam=6.6 um | GFP per-nucleus mean: min=2241 med=2241 max=2265
+raw Fig 2/Fig 2D +Vpx.tif              nuclei=  2 (touching border= 0) median diam=7.9 um | GFP per-nucleus mean: min=2274 med=2276 max=2278
+raw Fig 2/Fig 2D -Vpx.tif              nuclei=  5 (touching border= 0) median diam=6.8 um | GFP per-nucleus mean: min=2228 med=2259 max=2286
+raw Fig 3/Fig 3B +Vpx.tif              nuclei= 17 (touching border= 0) median diam=6.7 um | GFP per-nucleus mean: min=2286 med=2339 max=3046
+raw Fig 3/Fig 3B -Vpx.tif              nuclei= 22 (touching border= 1) median diam=6.6 um | GFP per-nucleus mean: min=2267 med=2305 max=2370
+raw Fig 4/Fig 4D DMSO -Vpx.tif         nuclei= 18 (touching border= 0) median diam=7.3 um | GFP per-nucleus mean: min=2140 med=2167 max=2179
+raw Fig 4/Fig 4D SMI -Vpx.tif          nuclei=  8 (touching border= 1) median diam=7.7 um | GFP per-nucleus mean: min=2123 med=2161 max=2172
+raw Fig S3/Fig S3B +Vpx +EFV.tif       nuclei= 18 (touching border= 2) median diam=6.4 um | GFP per-nucleus mean: min=2264 med=2310 max=2348
+raw Fig S3/Fig S3B -Vpx +EFV.tif       nuclei= 10 (touching border= 0) median diam=7.4 um | GFP per-nucleus mean: min=2285 med=2317 max=2348
+raw Fig S3/Fig S3B mock.tif            nuclei= 27 (touching border= 3) median diam=6.5 um | GFP per-nucleus mean: min=2259 med=2318 max=2344
+TOTAL nuclei (rough): 178

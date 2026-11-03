@@ -17,8 +17,8 @@ Terakhir diperbarui: 2026-11-03
 - Menyiapkan bimbingan pertama
 
 ## Berikutnya (maks. 3)
-1. **Putuskan dataset & penyesuaian topik bersama Pak Nopriadi** — tidak ada dataset IFC publik sel CD4 terinfeksi HIV;
-   kandidat & opsi di docs/DATASET-KANDIDAT.md (A: Dryad CD4 memori, B: BBBC048 Jurkat)
+1. **Putuskan dataset & desain bersama Pak Nopriadi** — kandidat utama heiDATA (Ananth 2024: citra mikroskopi HIV + Lamin B1,
+   ±250–350 sel, label +Vpx/−Vpx/Mock); sekaligus minta citra tambahan ke pemilik dataset. Detail: docs/DATASET-KANDIDAT.md
 2. **Jadwal mundur dari tanggal ujian**: tentukan periode ujian & tenggat pendaftaran → Gantt mingguan
 3. Siapkan pipeline kode (loader IFC, baseline CNN, evaluasi, Grad-CAM) — bisa dimulai dengan BBBC048 (1,5 GB)
 

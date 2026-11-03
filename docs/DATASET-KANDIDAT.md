@@ -62,8 +62,26 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 - Implikasi: label tingkat kondisi **+Vpx / −Vpx** (kemungkinan permisif vs tidak permisif infeksi pada sel istirahat — perlu dicek
   di README/paper); jumlah bidang pandang per kondisi kemungkinan sedikit → sel tunggal harus disegmentasi dari citra besar,
   dan pembagian train/test harus per citra (bukan per sel) untuk menghindari kebocoran data.
-- Langkah berikut: unduh semua file ke Drive `Project-Skripsi/data/raw/heidata-MUXYRY/`, lalu periksa README, jumlah kanal,
-  dimensi, dan estimasi jumlah sel per kondisi.
+- **Hasil pemeriksaan isi (2026-11-03)** — zip `dataverse_files.zip` (771 MB) di Drive `Project-Skripsi/data/raw/`;
+  diekstrak lokal ke `data/raw/heidata-MUXYRY/`. Skrip: `notebooks/00_…metadata.py`, `notebooks/01_…hitung_inti.py`;
+  keluaran: `results/eksplorasi-heidata/`.
+  - Citra utama: **mikroskopi fluoresens 3D**, z-stack 31–36 irisan × 3–4 kanal × 512×512 px, 16-bit, **0,133 µm/px**
+    (bidang pandang ≈ 68×68 µm). Fig S1 & S2A = *western blot* (tidak dipakai); Fig S2B = 2 kanal 8-bit, 0,36 µm/px.
+  - Kanal (README): Fig 1G = SNAP-SiR, HIV-1 CA, **Lamin B1**; Fig 2A/2D = SNAP-SiR, CPSF6/SC35, HIV-1 GFP, Lamin B1;
+    Fig 3B/4D = Lamin B1, HIV-1 GFP, EdU, HIV-1 CA. Virus: HIV-1 NLENG GFP p6mod. Lamin B1 ada di semua citra utama.
+  - Bidang pandang yang dapat dipakai (masing-masing **1 citra**): +Vpx ×5 (1G, 2A, 2D, 3B, S3B+EFV), −Vpx ×7
+    (1G, 2A, 2D, 3B, 4D DMSO, 4D SMI, S3B+EFV), Mock ×2 (1G, S3B). Catatan: README menyebut "Fig 4D DMSO +Vpx",
+    tetapi file yang ada "4D DMSO -Vpx" dan "4D SMI -Vpx".
+  - Hitung inti otomatis kasar (Lamin B1, proyeksi maksimum): **178 inti** dari 14 bidang (2–27 per bidang, diameter
+    median 6–8 µm); inspeksi visual menunjukkan inti redup/di luar fokus terlewat → perkiraan nyata **±250–350 sel**.
+  - Sinyal **HIV-1 GFP per inti hampir semua setara latar** (hanya ±1–2 inti lebih terang) → sel terinfeksi produktif sangat sedikit.
+  - **Tidak ada penanda kematian/lisis.**
+- **Kesimpulan kelayakan:** sangat cocok secara konsep (sel T CD4 primer, HIV, Lamin B1, citra optik, CC BY 4.0), tetapi
+  **jumlah sel kecil** dan **1 citra per kondisi** → risiko model hanya mengenali citra/batch, bukan kondisi sel.
+  Label yang realistis: **kondisi infeksi +Vpx / −Vpx / Mock** (bukan sehat/terinfeksi/lisis per sel).
+  Pendekatan yang layak: ekstraksi fitur morfometri inti (Lamin B1) + fitur kapsid (CA) per sel → ML klasik dengan validasi
+  *leave-one-field-out*; CNN kecil/transfer learning + Grad-CAM sebagai pembanding, dengan keterbatasan dinyatakan jujur.
+  Peluang memperbesar data: minta citra tambahan ke pemilik dataset (tombol "Contact Owner" di heiDATA).
 
 ### 5. Dryad doi:10.7272/Q6SX6BFR — Subset sel T CD4 jaringan: kerentanan terhadap infeksi HIV & kematian
 - Luo X. (2023), Dryad; paper: Luo X. et al., *Frontiers in Immunology* (2022), DOI 10.3389/fimmu.2022.883420.
@@ -87,7 +105,7 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 ## Peta ringkas (per 2026-11-03)
 | Data | Citra? | HIV? | Sel CD4 primer? | Status |
 |---|---|---|---|---|
-| 4. heiDATA Ananth 2024 | ✅ mikroskopi fluoresens | ✅ (±Vpx) | ✅ istirahat | Menunggu unduhan untuk diperiksa |
+| 4. heiDATA Ananth 2024 | ✅ mikroskopi fluoresens 3D | ✅ (±Vpx, mock) | ✅ istirahat | Diperiksa: cocok konsep, **data kecil (±250–350 sel, 14 citra)** |
 | 5. Dryad Luo 2023 | ❌ CyTOF + scRNA | ✅ infected/uninfected | ✅ tonsil | Cadangan non-citra |
 | 6. FlowRepository Corneau | ❌ CyTOF | ✅ donor sehat/HIV | ✅ darah tepi | Cadangan non-citra (tanpa paper) |
 | 1. Dryad Essig 2022 | ✅ IFC | ❌ (aktivasi) | ✅ memori | Cadangan citra IFC |
