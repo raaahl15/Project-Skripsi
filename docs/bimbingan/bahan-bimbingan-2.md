@@ -44,7 +44,10 @@ Interpretasi awal:
 - Kesimpulan pilot: data heiDATA **layak tetapi terbatas**; perlu (a) normalisasi per percobaan, (b) data tambahan dari pemilik
   dataset, dan/atau (c) *pretraining* (Skema 1). CNN + Grad-CAM belum dijalankan (tahap berikutnya).
 
-[HASIL VARIASI NORMALISASI PER PERCOBAAN — diisi setelah perhitungan selesai]
+- Variasi **normalisasi fitur per percobaan** (`metrics_classify_norm-figure.json`) memperburuk semua tugas (AUC 0,17–0,44):
+  normalisasi di dalam percobaan yang berisi campuran +Vpx/−Vpx ikut menghapus perbedaan antar-kondisi, apalagi dengan hanya
+  6 percobaan (4D hanya −Vpx). → Efek *batch* tidak bisa "dikoreksi" secara statistik dengan data sekecil ini; yang dibutuhkan
+  adalah **lebih banyak bidang pandang per kondisi**.
 
 ### 3b. Pilot komponen CyTOF (Luo et al.) — data tabel, tanpa citra
 Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/state_counts.csv` (subsampel 40.000 sel/file, seed 42).
@@ -66,7 +69,14 @@ Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/stat
 - Kesimpulan: komponen CyTOF **sinyal kuat & konsisten antar-donor**, tetapi **tanpa citra** (tidak ada Grad-CAM/aspek optika).
 
 ### 3c. Komponen pretraining (Essig et al., IFC)
-- Belum dijalankan: `exp1.zip` (19,6 GB) masih diunggah. Direncanakan setelah bimbingan bila Skema 1/3 dipilih.
+- `exp1.zip` (19,58 GB, ukuran cocok dengan Dryad): **480.000 citra sel tunggal** = 2 donor × 4 kondisi (+SEA, −SEA, Isotype,
+  Teplizumab) × 60.000; tiap sel `.h5` berisi `image` (≈50–100 px × 8 kanal, uint16) + `mask`.
+  Kanal 0 = *brightfield* (diverifikasi visual); kanal 1–7 = fluoresens (nama penanda per kanal: lihat README Dryad).
+  Banyak citra berupa konjugat sel T–sel B (sinapsis imun).
+- Pilot: CNN kecil di-*pretrain* pada 24.000 sel Essig (1 kanal fluoresens acak per sel), lalu di-*fine-tune* pada potongan
+  sel tunggal heiDATA (Lamin B1) untuk +Vpx vs −Vpx (*leave-one-figure-out*), dibandingkan CNN dari nol, + Grad-CAM.
+
+[HASIL PILOT CNN — diisi setelah perhitungan selesai]
 
 ## 4. Tiga skema penggunaan dataset
 | Skema | Isi | Estimasi kerja |
