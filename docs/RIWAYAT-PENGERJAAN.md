@@ -26,6 +26,11 @@
 
 **Belum diuji di Colab** (perlu token GitHub dari pengguna). `exp1.zip` Essig belum ada di Drive.
 
+**Insiden keamanan (4 Nov):** run pertama di Colab gagal di sel clone (exit 128) dan pesan error menampilkan token GitHub karena
+token disisipkan di URL clone (kesalahan kode notebook). Pengguna diminta *revoke* token & membuat token baru (Contents: Read-only,
+hanya repo Project-Skripsi). Notebook diperbaiki: token hanya dikirim sebagai header HTTP satu perintah, keluaran/galat disensor,
+prompt interaktif dimatikan; diuji dengan token palsu (tidak bocor). Notebook di Drive ditimpa (ID tetap, tanpa output).
+
 ---
 
 ## 2026-11-04 — Dokumentasi pemrosesan data & fitur
