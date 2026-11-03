@@ -15,6 +15,21 @@
 
 ---
 
+## 2026-11-04 — Struktur dokumen bimbingan: Bahan & Hasil per bimbingan, 1 dokumen per Work Order
+**Oleh:** Claude Code (laptop utama) atas permintaan pengguna
+
+**Dikerjakan:**
+- Repo: `docs/bimbingan/B1…B5_<tanggal>/` (BAHAN.md + HASIL.md); notulensi lama → HASIL.md B1–B4; Bahan B1–B4 disusun ulang
+  dari laporan mahasiswa (hanya hal yang tercatat); Hasil B5 berupa template keputusan; `docs/work-order/WO-01…13.md` + template;
+  template Bahan/Hasil/WO.
+- Drive `bimbingan/`: 25 Google Docs baru (via rclone, konversi HTML) di folder `00 Template`, `B1…B5`, `Work Order`; 3 dokumen lama
+  dipindah (link tetap): Bahan Bimbingan 5 & Materi → `B5 - 2026-11-04`, Work Order Skripsi → `Work Order/00 Daftar Work Order`.
+- Peta ID dokumen: `docs/DRIVE-DOCS.md`; aturan 17 AGENTS.md diperbarui.
+
+**Catatan:** folder uji `bimbingan/_uji` (dokumen "Uji Konversi") masih ada — dapat dihapus pengguna.
+
+---
+
 ## 2026-11-03 — Google Docs bimbingan + draf tugas tertunda WO-02/03/05
 **Oleh:** Claude Code (laptop utama) bersama pengguna
 

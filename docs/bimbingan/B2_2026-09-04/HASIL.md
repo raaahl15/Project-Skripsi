@@ -1,4 +1,6 @@
-# Bimbingan 2 — 2026-09-04
+# Hasil Bimbingan 2 — 4 Sep 2026
+Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **Nopriadi, S.T., M.Sc.**
+
 <!-- Dicatat ulang 2026-11-03 dari laporan mahasiswa. -->
 - Pembimbing: Nopriadi, S.T., M.Sc.
 - Tercatat di SIMASTER: [ ] belum dicek

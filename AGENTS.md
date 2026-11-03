@@ -33,9 +33,15 @@
 12. Di Google Docs ikuti konvensi docs/PANDUAN-GDOCS.md (Heading bawaan, sitasi `[@kunci]`, persamaan `$...$`, sumber angka dari results/).
 13. **Akhir setiap sesi: tambahkan entri di docs/RIWAYAT-PENGERJAAN.md** (entri terbaru di atas).
 14. **Setiap perubahan sistem** (struktur, alur kerja, alat, lokasi file): perbarui MASTER-SKRIPSI-SETUP.md dan catat di bagian 10-nya.
-17. **Work Order (docs/WORK-ORDER.md) = tracker resmi untuk bimbingan.** Setelah setiap bimbingan: buat notulensi
-    `docs/bimbingan/YYYY-MM-DD.md` dan tambahkan WO baru (ID berurutan, sumber "Bn · tanggal"). Setiap ada progres: ubah status
-    & isi kolom bukti (link file/hasil). Sebelum bimbingan: perbarui bagian "Eksekusi sejak bimbingan terakhir".
+17. **Dokumen bimbingan & Work Order (struktur sejak 4 Nov 2026):**
+    - Setiap bimbingan ke-n punya folder `docs/bimbingan/B<n>_<YYYY-MM-DD>/` berisi **BAHAN.md** (disiapkan sebelum bimbingan:
+      laporan WO, yang dibawa, pertanyaan) dan **HASIL.md** (notulensi sesudah bimbingan: tanggapan, keputusan, penugasan baru).
+      Template: `docs/bimbingan/TEMPLATE-BAHAN.md`, `TEMPLATE-HASIL.md`.
+    - **1 penugasan = 1 dokumen** `docs/work-order/WO-<nn>.md` (template `TEMPLATE-WO.md`): sumber, status, arahan, definisi selesai,
+      langkah, log eksekusi, kendala, tanggapan pembimbing. `docs/WORK-ORDER.md` = dashboard ringkas semua WO.
+    - Setiap dokumen di atas punya kembaran Google Doc di Drive `Project-Skripsi/bimbingan/` (per folder B<n>, `Work Order/`,
+      `00 Template/`). Peta ID: **docs/DRIVE-DOCS.md**. Perbarui Google Doc yang sama (jangan buat file baru).
+    - Setelah bimbingan: isi HASIL, buat WO baru, perbarui dashboard & Google Docs. Sebelum bimbingan: buat BAHAN dari laporan WO.
     Sumber utama = file di repo; versi Google Docs (Drive `bimbingan/`) disalin ulang dari repo menjelang setiap bimbingan:
     [Work Order Skripsi](https://docs.google.com/document/d/1g44jOiptFFLlyWT23MJbjdQCIzIcuGF7E2Ov2e4Ltsc/edit) ·
     [Bahan Bimbingan 5](https://docs.google.com/document/d/1pO0eVly4ouybx3KnTrH25khN3zutY_9NTK0XP3wEyyU/edit) ·
