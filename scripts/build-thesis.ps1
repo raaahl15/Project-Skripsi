@@ -1,4 +1,4 @@
-# Build thesis PDF with latexmk (requires MiKTeX/TeX Live with biber).
+# Build thesis PDF with latexmk (requires MiKTeX/TeX Live with bibtex + makeindex; config in thesis/latexmkrc).
 #   powershell -ExecutionPolicy Bypass -File scripts\build-thesis.ps1
 $ErrorActionPreference = "Stop"
 Set-Location (Join-Path $PSScriptRoot "..\thesis")

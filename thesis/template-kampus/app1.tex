@@ -1,0 +1,79 @@
+\chapter{Judul Lampiran}
+
+
+
+\section{Contoh Gambar pada Lampiran}
+Gambar dan judul gambar diletakkan simetris kiri-kanan. Judul gambar ditulis di bawah
+gambar. Contoh dapat dilihat pada Gambar \ref{fig:a}.
+
+\begin{figure}[!h]
+    \centering
+    % \includegraphics[width=5cm]{logoUGM.jpg}
+    \includegraphics[width=5cm]{logoUGM.png}
+% logoUGM.jpg: 1236x1254 pixel, 300dpi, 10.46x10.62 cm, bb=0 0 297 301
+    \caption{Contoh penulisan judul gambar dan peletakkan gambar. Gambar harus dilengkapi
+dengan informasi yang memadai sehingga mudah ditafsirkan tanpa harus membaca
+isi teks (\textit{self-contained}).}
+    \label{fig:a}
+\end{figure}
+
+\section{Contoh Penulisan Tabel pada Lampiran}
+Tabel dan judul tabel diletakkan simetris kiri-kanan. Judul tabel ditulis di atas gambar.
+Contoh dapat dilihat pada Tabel \ref{tbl:b}.
+
+\begin{table}[!h]
+    \caption{Contoh penulisan tabel dan peletakkan tabel.}
+    \label{tbl:b}
+    \centering
+% use packages: array
+\begin{tabular}{|c|c|c|}
+\hline
+Header 1 & Header 2 & Header 3 \\ 
+\hline
+Isi & Isi & Isi \\ 
+\hline
+Isi & Isi & Isi \\
+\hline
+\end{tabular}
+\end{table}
+
+Jika tabel  yang lebarnya melebihi batas pengetikan, tabel diketik memanjang kertas (\textit{landscape}) seperti dicontohkan pada Tabel \ref{tbl: non-v1}.
+
+\begin{sidewaystable}
+%\begin{table}[htp]
+ \centering
+ \caption{Faktor non-$1/v$}
+  \begin{center}
+% use packages: array
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+
+$T$, $^\circ$C & Cd & In & Xe-135 & Sm-149 & \multicolumn{2}{|c|}{U-233} & \multicolumn{2}{|c|}{U-235}  & U-238 & \multicolumn{2}{|c|}{Pu-239} \\ 
+\hline
+     & $g_a$ & $g_a$& $g_a$ & $g_a$ & $g_a$ & $g_f$ & $g_a$ & $g_f$ & $g_a$  & $g_a$ & $g_f$ \\ 
+20   & 1,3203 & 1,0192 & 1,1581 & 1,6170 & 0,9983 & 1,0003 & 0,9780 & 0,9759 & 1,0017 & 1,0723 & 1,0487  \\
+100  & 1,5990 & 1,0350 & 1,2103 & 1,8874 & 0,9972 & 1,0011 & 0,9610 & 0,9581 & 1,0031 & 1,1611 & 1,1150  \\
+200  & 1,9631 & 1,0558 & 1,2360 & 2,0903 & 0,9973 & 1,0025 & 0,9457 & 0,9411 & 1,0049 & 1,3388 & 1,2528 \\
+400  & 2,5589 & 1,1011 & 1,1864 & 2,1854 & 1,0010 & 1,0068 & 0,9294 & 0,9208 & 1,0085 & 1,8905 & 1,6904 \\
+600  & 2,9031 & 1,1522 & 1,0914 & 2,0852 & 1,0072 & 1,0128 & 0,9229 & 0,9108 & 1,0122 & 2,5321 & 2,2037 \\
+800  & 3,0455 & 1,2123 & 0,9887 & 1,9246 & 1,0146 & 1,0201 & 0,9182 & 0,9036 & 1,0159 & 3,1006 & 2,6595 \\
+1000 & 3,0599 & 1,2915 & 0,8858 & 1,7568 & 1,0226 & 1,0284 & 0,9118 & 0,8956 & 1,0198 & 3,5353 & 3,0079 \\
+\hline
+  \end{tabular}
+  \end{center}
+
+ \label{tbl: non-v1}
+%\end{table}
+\end{sidewaystable}
+
+
+
+\section{Contoh Penulisan Persamaan pada Lampiran}
+
+Persamaan ditulis rata tengah dan nomor persamaan ditulis rata kanan. Nomor persamaan
+diurutkan dengan format (nomor\_lampiran.nomor\_persamaan). Contoh dapat dilihat pada Persamaan \eqref{eq:c}.
+
+\begin{equation}
+    \dfrac{Dv}{Dt} = \dfrac{\partial v}{\partial t} + \nabla \cdot \mathbf{uu}
+\label{eq:c}
+\end{equation}

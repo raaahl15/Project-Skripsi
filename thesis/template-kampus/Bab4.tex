@@ -1,0 +1,215 @@
+\chapter{HASIL DAN PEMBAHASAN}
+\label{hasil-dan-pembahasan}
+
+\section{Rangkuman Identifikasi Sistem}
+
+\section{Hasil Eksplorasi DWSim}
+
+\section{Contoh Penulisan Persamaan}
+
+Persamaan ditulis rata tengah dan nomor persamaan ditulis rata kanan. Nomor persamaan
+diurutkan dengan format (nomor\_bab.nomor\_persamaan). Contoh dapat dilihat pada Persamaan \eqref{eq:1}.
+
+\begin{equation}
+    \dfrac{Dv}{Dt} = \dfrac{\partial v}{\partial t} + \nabla \cdot \mathbf{uu}
+\label{eq:1}
+\end{equation}
+
+
+
+\section{Contoh Penulisan Acuan ke Pustaka yang Digunakan}
+Acuan ke pustaka yang terdapat pada Daftar Pustaka ditulis dengan angka di dalam kurung
+seperti ini \cite{book1}. Jika kalimat atau paragraf mengacu kepada lebih dari satu acuan, penulisannya
+adalah seperti ini \cite{book2, article1, proceeding1}.
+
+\section{Contoh Penulisan Gambar dan Acuannya}
+Gambar dan judul gambar diletakkan simetris kiri-kanan. Judul gambar ditulis di bawah
+gambar. Contoh dapat dilihat pada Gambar \ref{fig:1}. \cite{article1}
+
+\begin{figure}[!h]
+    \centering
+    % \includegraphics[width=5cm]{logoUGM.jpg}
+    \includegraphics[width=5cm]{logoUGM.png}
+% logoUGM.jpg: 1236x1254 pixel, 300dpi, 10.46x10.62 cm, bb=0 0 297 301
+    \caption{Contoh penulisan judul gambar dan peletakkan gambar. Gambar harus dilengkapi
+dengan informasi yang memadai sehingga mudah ditafsirkan tanpa harus membaca
+isi teks (\textit{self-contained}).}
+    \label{fig:1}
+\end{figure}
+
+%Gambar juga bisa ditampilan berdampingan seperti ditampilan pada Gambar \ref{fig:2}. Gambar \ref{fig:2a} menjelaskan tentang sesuatu hal dan Gambar \ref{fig:2b} menjelaskan tentang hal lain yang terkait.
+
+%\begin{figure}[!h]
+%    \centering
+%   \mbox{ \subfigure[Gambar kiri]{\includegraphics[width=5cm]{logoUGM.jpg} \label{fig:2a}} \
+%           \subfigure[Gambar kanan]{\includegraphics[width=5cm]{logoColor.jpg}\label{fig:2b}} }
+% logoUGM.jpg: 1236x1254 pixel, 300dpi, 10.46x10.62 cm, bb=0 0 297 301
+%    \caption{Contoh penulisan judul gambar dan peletakkan gambar yang berdampingan. (a) Keterangan untuk gambar sebelah kiri. (b) Keterangan untuk gambar sebelah kanan.}
+%\label{fig:2}
+%    \end{figure}
+
+
+\section{Contoh Penulisan Tabel dan Acuannya}
+Tabel dan judul tabel diletakkan simetris kiri-kanan. Judul tabel ditulis di atas gambar.
+Contoh dapat dilihat pada Tabel \ref{tbl:1}.
+
+\begin{table}[!h]
+    \caption{Contoh penulisan tabel dan peletakkan tabel.}
+    \label{tbl:1}
+    \centering
+% use packages: array
+\begin{tabular}{|c|c|c|}
+\hline
+Header 1 & Header 2 & Header 3 \\ 
+\hline
+Isi & Isi & Isi \\ 
+\hline
+Isi & Isi & Isi \\
+\hline
+\end{tabular}
+
+\hspace{-4cm}\footnotesize{Sumber: \cite{book2}}
+\end{table}
+
+Jika tabel  yang lebarnya melebihi batas pengetikan, tabel diketik memanjang kertas (\textit{landscape}) seperti dicontohkan pada Tabel \ref{tbl: non-v}.
+
+\begin{sidewaystable}
+%\begin{table}[htp]
+ \centering
+ \caption{Faktor non-$1/v$}
+  \begin{center}
+% use packages: array
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+
+$T$, $^\circ$C & Cd & In & Xe-135 & Sm-149 & \multicolumn{2}{|c|}{U-233} & \multicolumn{2}{|c|}{U-235}  & U-238 & \multicolumn{2}{|c|}{Pu-239} \\ 
+\hline
+     & $g_a$ & $g_a$& $g_a$ & $g_a$ & $g_a$ & $g_f$ & $g_a$ & $g_f$ & $g_a$  & $g_a$ & $g_f$ \\ 
+20   & 1,3203 & 1,0192 & 1,1581 & 1,6170 & 0,9983 & 1,0003 & 0,9780 & 0,9759 & 1,0017 & 1,0723 & 1,0487  \\
+100  & 1,5990 & 1,0350 & 1,2103 & 1,8874 & 0,9972 & 1,0011 & 0,9610 & 0,9581 & 1,0031 & 1,1611 & 1,1150  \\
+200  & 1,9631 & 1,0558 & 1,2360 & 2,0903 & 0,9973 & 1,0025 & 0,9457 & 0,9411 & 1,0049 & 1,3388 & 1,2528 \\
+400  & 2,5589 & 1,1011 & 1,1864 & 2,1854 & 1,0010 & 1,0068 & 0,9294 & 0,9208 & 1,0085 & 1,8905 & 1,6904 \\
+600  & 2,9031 & 1,1522 & 1,0914 & 2,0852 & 1,0072 & 1,0128 & 0,9229 & 0,9108 & 1,0122 & 2,5321 & 2,2037 \\
+800  & 3,0455 & 1,2123 & 0,9887 & 1,9246 & 1,0146 & 1,0201 & 0,9182 & 0,9036 & 1,0159 & 3,1006 & 2,6595 \\
+1000 & 3,0599 & 1,2915 & 0,8858 & 1,7568 & 1,0226 & 1,0284 & 0,9118 & 0,8956 & 1,0198 & 3,5353 & 3,0079 \\
+\hline
+  \end{tabular}
+  \end{center}
+
+ \label{tbl: non-v}
+%\end{table}
+\end{sidewaystable}
+
+
+\section{Format Penulisan Acuan Pustaka}
+
+\begin{enumerate}[label=\alph*)]
+\item Urutan penulisan pustaka berdasar kepada urutan kemunculan acuan di dalam naskah
+Bagian Utama.
+\item Pada prinsipnya, sedapat mungkin nama penulis ditulis lengkap tanpa disingkat tanpa
+gelar kesarjanaan. Jika dari pustaka yang diacu tidak diketahui nama lengkap penulis,
+penulisan nama boleh menggunakan singkatan. Urutan nama penulis tetap mengikuti
+pola \textit{nama\_depan nama\_belakang}.
+
+\item Untuk memberikan penghargaan kepada penulis pustaka yang diacu, nama semua
+penulis harus dituliskan. Dengan demikian penulisan menggunakan kata ``dkk.'' atau
+``et al.'' tidak diperbolehkan.
+
+\item Format penulisan pustaka adalah sebagai berikut:
+  
+ \begin{enumerate}[label=\roman*)]
+    \item Buku \\
+          Format: \\
+          Nama Penulisa. \textit{Judul Buku}. Nama Penerbit, Kota penerbit, tahun\_penerbitan. \\
+         Contoh penulisan di Daftar Pustaka lihat \cite{book1, book2}.
+
+    \item Artikel pada jurnal \\
+	  Format: \\
+	  Nama Penulis. ``Judul Artikel''. \textit{Judul Jurnal}, volume:nomor\_halaman, tahun\_publikasi. \\
+Contoh penulisan di Daftar Pustaka lihat \cite{article1}.
+
+     \item Artikel pada prosiding seminar \\
+	Format: \\
+	Nama Penulis. ``Judul Artikel''. \textit{Judul Prosiding}, hal. nomor\_halaman, kota penyelenggaraan seminar, waktu\_pelaksanaan. \\
+         Contoh penulisan di Daftar Pustaka lihat \cite{proceeding1}.
+
+
+	\item Skripsi (S1), tesis (S2), disertasi (S3) dan laporan Kerja Praktek \\
+		Format: \\
+		Nama Penulis. \textit{Judul Karya Ilmiah}. Jenis\_karya\_ilmiah, Nama Institusi, Kota, tahun\_penulisan.\\
+		Contoh penulisan di Daftar Pustaka lihat \cite{skripsi, tesis, disertasi, kp}.
+
+	\item Laporan Penelitian \\
+	Penelitian yang telah selesai dilaksanakan dan ditulis laporan resminya dapat
+dijadikan acuan. Akan tetapi, proposal penelitian tidak dapat dijadikan acuan
+mengingat sifatnya yang belum terdokumentasi secara resmi. \\
+Format: \\
+Nama Penulis. \textit{Judul Laporan Penelitian}. Laporan penelitian, jenis/nama
+penelitian, nama institusi, kota, tahun\_penulisan. \\
+Contoh penulisan di Daftar Pustaka lihat \cite{penelitian}.
+
+
+\item Dokumen teknis \\
+Dokumen teknis dapat berupa manual untuk pengoperasian alat atau perangkat
+lunak, informasi mengenai spesifikasi peralatan, laporan tentang tinjauan khusus
+problem keteknikan, dan sebagainya. \\
+\underline{Jika nama penulis diketahui}, \\
+Format: \\
+Nama Penulis. \textit{Judul Dokumen}. Dokumen teknis, identitas dokumen (jika ada),
+nama institusi, kota, tahun. \\
+Contoh penulisan di Daftar Pustaka lihat \cite{dokteknama}. 
+
+\vspace{0.5cm}
+\underline{Jika nama penulis tidak diketahui}, \\
+Format: \\
+\textit{Judul Dokumen}. Dokumen teknis, identitas dokumen (jika ada), nama institusi,
+kota, tahun. \\
+
+Contoh penulisan di Daftar Pustaka lihat \cite{dokteknonama}. 
+
+\item Artikel tanpa nama penulis dalam majalah atau surat kabar \\
+Format: \\
+``Judul Artikel''. \textit{Judul Majalah/Surat Kabar}, hal. halaman, waktu penerbitan. \\
+Contoh penulisan di Daftar Pustaka lihat \cite{majalah1, majalah2}. 
+
+
+\item Internet
+Pengacuan kepada sumber-sumber di internet harus mengikutsertakan dua butir
+berikut ini:
+\begin{enumerate}
+    \item Tanggal sumber tersebut diakses
+     \item \textit{Uniform Resource Locator} (URL) sumber (ditulis lengkap, tidak
+hanya tautan (link) ke halaman utamanya saja).
+\end{enumerate}
+Format: \\
+Penulis. \textit{Judul artikel}. Jenis artikel (jika ada), Nama institusi (jika ada). Diakses
+dari URL, tanggal akses. \\
+Contoh penulisan di Daftar Pustaka lihat \cite{web1, web2}. 
+
+\item Diktat \\
+Format: \\
+Nama Penulis. \textit{Judul Diktat}. Diktat, institusi, kota, tahun\_penulisan.
+Contoh penulisan di Daftar Pustaka lihat \cite{diktat}. 
+
+\item Presentasi kuliah \\
+Format: \\
+Nama Penulis. ``Judul Presentasi''. Kuliah Nama Matakuliah, nama institusi, kota,
+tanggal presentasi. \\
+Contoh penulisan di Daftar Pustaka lihat \cite{presentasi}. 
+
+\item Komunikasi pribadi (private communication)\\
+Seringkali komunikasi secara pribadi antara penulis skripsi dengan peneliti atau
+orang lain dilakukan terkait dengan tema penelitian. Dalam hal ini orang tersebut
+bertindak sebagai narasumber. Jika komunikasi tersebut tercatat, misal dalam
+bentuk surat maupun e-mail, maka komunikasi pribadi dapat dicantumkan sebagai
+acuan. \\
+Format: \\
+Nama narasumber. \textit{Komunikasi pribadi}. Tanggal\_komunikasi.\\
+Contoh penulisan di Daftar Pustaka lihat \cite{komprivat}. 
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+

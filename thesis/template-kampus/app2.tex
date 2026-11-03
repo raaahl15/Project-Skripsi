@@ -1,0 +1,89 @@
+\chapter{Listing Program}
+\singlespacing
+
+%\lstset{language=Delphi,numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\lstset{
+language=[90]fortran,
+basicstyle=\footnotesize,
+numberstyle=\tiny,
+numbers=left,
+stepnumber=1,
+numbersep=10pt,
+numberblanklines=false,
+columns=flexible,
+breaklines=true,
+breakindent=10pt
+}
+\lstset{commentstyle=\textit}
+
+\begin{lstlisting}
+program HEAT
+
+use f90_kind
+use physconst
+use sharevars
+implicit none
+
+! locals
+integer :: timestep, i, j, ikmax, jkmax, inner_iter, p, q, modval
+real(dp) :: start_time, end_time, lambda_g, Nul, Nur, kmax
+
+
+call cpu_time(start_time)
+call read_input
+call allocate
+call init
+call make_grid
+
+call map_nodes
+
+if (restart) call readdata
+
+do timestep=1,No_timesteps
+  do inner_iter=1,No_inner_iter
+
+    call calc_tau_drag
+    call calc_muturb
+    call calc_mfluxes
+    call calc_xs
+    call calc_weight
+    call calc_alpham
+    call calc_rad
+    call calc_T
+    call calc_rhog
+    call calc_u
+    call calc_v
+    call calc_corr
+    call calc_mfluxes
+    call calc_Pk
+    call calc_Gk
+    call calc_kturb
+    call calc_eps
+
+  enddo
+
+  call relchanges
+  call timecopy
+  time = time + dt
+
+  modval = mod(timestep, savint)
+  if (modval .eq. 0) then
+    if (nbr2 == 58) then
+      nbr2 = 48
+      nbr1 = nbr1 + 1
+    endif
+
+    call writeplotmtv
+    call writevarplot
+    call writedata
+    br2 = nbr2+1
+  endif
+
+enddo
+
+call cpu_time(end_time)
+print *,'#STATISTICS'
+print *,'#Runtime: ',end_time-start_time
+
+end program HEAT
+\end{lstlisting}

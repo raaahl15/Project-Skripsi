@@ -1,0 +1,70 @@
+\chapter{About \LaTeX}
+
+\section{Package yang Diperlukan}
+Pastikan packages berikut ini telah terinstall pada sistem \LaTeX Anda.
+
+\begin{enumerate}
+    \item indentfirst
+
+\item setspace
+\item times
+\item graphicx
+\item latexsym
+\item supertabular
+\item multirow
+\item rotating
+\item appendix
+\item ifthen
+\item nomencl
+\item tocloft
+\item enumitem
+\item caption
+\item color
+\item listings
+\item subfigure
+\item url
+\item science.sty (scientificpaper)
+\item abstract
+\end{enumerate}
+
+Sebagian besar dari package tersebut telah terinstall secara default. Apabila ternyata belum terinstall, bisa diunduh dari CTAN.
+
+\section{File yang diubah isinya oleh penulis}
+File-file berikut ini diubah oleh penulis sesuai dengan tugas akhir yang dikerjakan
+\begin{enumerate}
+    \item \texttt{data\_skripsi.tex} \\ berisi data mengenai skripsi, misal judul, nama penguji, nama pembimbing, tanggal ujian, dan sebagainya.
+    \item \texttt{persembahan.tex} \\ berisi kepada siapa skripsi ini dipersembahkan (\textit{dedicated}). Halaman persembahan boleh tidak ada. Jika demikian, beri comment pada file \texttt{muka\_skripsi.tex}.
+    \item \texttt{motto.tex} \\ berisi moto penulis. Halaman moto boleh tidak ada.  Jika demikian, beri comment pada file \texttt{muka\_skripsi.tex}.
+    \item \texttt{prakata.tex} \\ berisi kata pengantar.
+    \item \texttt{lambang.tex} \\ berisi input untuk menyusun daftar lambang.
+    \item \texttt{abstrakind.tex} \\ berisi abstrak dalam bahasa Indonesia.
+    \item \texttt{abstrakeng.tex} \\ berisi abstrak dalam bahasa Inggris.
+    \item \texttt{Bab1.tex, Bab2.tex, ..., Bab6.tex} \\ isi dari masing-masing bab.
+    \item \texttt{app1.tex, app2.tex, ...} \\ isi dari lampiran. Beri comment pada file \texttt{skripsi.tex} jika tidak terdapat lampiran.
+    \item \texttt{pustaka.bib} \\ isi dengan pustaka atau acuan yang digunakan.
+\end{enumerate}
+
+
+\section{Menghasilkan file PDF}
+Template ini dibuat secara langsung menggunakan \texttt{PDFLatex}. Jika Anda menggunakan jalur ``biasa'', maka alur yang digunakan adalah:
+\begin{equation*}
+    latex \longrightarrow dvips \longrightarrow pstopdf
+\end{equation*}
+
+Untuk menghasilkan Daftar Lambang, gunakan perintah berikut:
+\begin{equation*}
+    makeindex \quad skripsi.nlo\quad -s\quad nomencl.ist\quad -o\quad skripsi.nls
+\end{equation*}
+
+Jangan lupa untuk me-run latex sekali lagi. Jadi urutan perintahnya adalah
+\begin{enumerate}
+    \item latex
+    \item latex
+    \item makeindex 
+    \item latex
+\end{enumerate}
+
+Jika Anda tidak mengubah Daftar Lambang (dengan mengubah file ``lambang.tex''), maka perintah \texttt{makeindex} tidak perlu dilakukan.
+
+
+

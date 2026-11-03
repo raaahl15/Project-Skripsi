@@ -1,0 +1,145 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{packages/science}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[bahasa]{packages/babel}
+\usepackage[labelsep=period,labelfont=bf, format=hang]{caption}
+\usepackage{fontenc}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{abstract}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{url}
+\urlstyle{rm}
+ 
+\renewcommand\thesection{\Roman{section}.}
+\newcommand{\SSS}{\renewcommand{\baselinestretch}{1.5}\tiny \normalsize }
+\newcommand{\SDS}{\renewcommand{\baselinestretch}{1}\tiny \normalsize }
+\renewcommand{\abstractname}{Intisari}
+
+\textheight 250mm
+\textwidth 160mm
+\headheight 0pt
+\headsep 30pt
+\topmargin -0.5cm
+\oddsidemargin 4mm
+\evensidemargin 4mm
+\parindent 5mm
+\hoffset -7mm
+\voffset -15mm
+
+\title{\textbf{
+JUDUL SKRIPSI DALAM BAHASA INDONESIA
+}}
+\author{
+Nama Lengkap Mahasiswa \thanks{mhs@ugm.ac.id}, 
+Nama Pembimbing Utama \thanks{pembimbing@ugm.ac.id}, 
+Nama Pembimbing Pendamping \thanks{pembimbing2@ugm.ac.id} \\ \\ 
+\textit{Jurusan Teknik Fisika Fakultas Teknik} \\ \textit{Universitas Gadjah Mada}}
+
+\date{ }
+
+\begin{document}
+
+ %\twocolumn[   
+\maketitle
+
+%\begin{onecolabstract}
+\begin{abstract}
+    
+
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut,
+placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy
+eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant
+morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla
+ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium
+quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum.
+
+Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur
+auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend,
+sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+\vspace{0.5cm}
+\textbf{Kata kunci}: katakunci1, katakunci2, katakunci3, katakunci4
+
+%\end{onecolabstract}
+%]
+\end{abstract}
+
+
+\begin{body}
+\SSS
+\section{Pendahuluan}
+\lipsum[1-2]
+
+\section{Studi Pustaka}
+\lipsum[1-2]
+
+\section{Dasar Teori}
+\lipsum[5-6]
+
+\begin{equation}
+    \dfrac{Dv}{Dt} = \dfrac{\partial v}{\partial t} + \nabla \cdot \mathbf{uu}
+\label{eq:1}
+\end{equation}
+
+
+
+\section{Pelaksanaan Penelitian}
+\lipsum[50-51]
+\begin{figurehere}
+%\begin{figure}
+    \centering
+    \includegraphics[width=3cm]{logoUGM.jpg}
+    \caption{Contoh penulisan judul gambar dan peletakkan gambar. Gambar harus dilengkapi
+dengan informasi yang memadai sehingga mudah ditafsirkan tanpa harus membaca
+isi teks (\textit{self-contained}).}
+    \label{fig:1}
+\end{figurehere}
+%\end{figure}
+
+\section{Hasil dan Pembahasan}
+\lipsum[76-77]
+\begin{tablehere}
+
+%\begin{table}
+    
+
+    \caption{Contoh penulisan tabel dan peletakkan tabel.}
+    \label{tbl:1}
+    \begin{center}
+    
+
+\begin{tabular}{|c|c|c|}
+\hline
+Header 1 & Header 2 & Header 3 \\ 
+\hline
+Isi & Isi & Isi \\ 
+\hline
+Isi & Isi & Isi \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{tablehere}
+%\end{table}
+
+\section{Kesimpulan dan Saran}
+\lipsum[90-91]
+
+\cite{book1, book2, skripsi, tesis, disertasi, kp, article1, proceeding1, penelitian, dokteknama, dokteknonama, majalah1, majalah2, web1, web2, presentasi, diktat,komprivat}
+
+\SDS
+\bibliographystyle{skripsi}
+\bibliography{ringkasan}
+\end{body}
+\end{document}

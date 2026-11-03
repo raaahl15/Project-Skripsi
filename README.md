@@ -54,7 +54,7 @@ scripts/                setup, backup, build naskah
 ### Revisi dari HP/iPad (tanpa laptop)
 
 0. **Google Docs (app/browser)**: untuk bab yang masih draf, revisi langsung di dokumen bab. Claude app dengan konektor Google Docs juga bisa membaca komentar dan mengeditnya.
-1. **claude.ai/code (Claude Code di web)**: pilih repo ini, lalu beri perintah, mis. *"Kerjakan revisi #3 di docs/REVISI.md pada thesis/bab3-metodologi.tex"*. Claude mengedit, commit, dan push dari cloud.
+1. **claude.ai/code (Claude Code di web)**: pilih repo ini, lalu beri perintah, mis. *"Kerjakan revisi #3 di docs/REVISI.md pada thesis/bab3-pelaksanaan-penelitian.tex"*. Ingat aturan AI kampus: Claude hanya boleh menyunting bahasa/format, bukan menulis substansi. Claude mengedit, commit, dan push dari cloud.
 2. **github.dev**: buka repo di browser, tekan `.` untuk editor, lalu edit `.tex` dan commit. Cocok untuk perubahan kecil.
 3. **Claude app (Project)**: diskusi dan menyusun kalimat; hasilnya dimasukkan lewat cara 1 atau 2.
 

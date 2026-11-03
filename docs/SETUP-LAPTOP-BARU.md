@@ -6,7 +6,7 @@
 - [ ] **Node.js LTS**: https://nodejs.org (dibutuhkan Claude Code)
 - [ ] **Antigravity** (editor)
 - [ ] **Claude Code**: `npm install -g @anthropic-ai/claude-code`
-- [ ] **LaTeX**: MiKTeX (Windows) atau TeX Live (Linux/macOS), pastikan `latexmk` dan `biber` tersedia.
+- [ ] **LaTeX**: MiKTeX (Windows) atau TeX Live (Linux/macOS), pastikan `latexmk`, `bibtex`, dan `makeindex` tersedia.
       Opsional: cukup andalkan GitHub Actions untuk compile PDF.
 - [ ] **rclone** (untuk data dari Drive): Windows `winget install -e --id Rclone.Rclone`, lalu
       `rclone config create gdrive drive scope=drive` (browser terbuka → login Google → Allow).

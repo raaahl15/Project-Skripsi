@@ -15,6 +15,31 @@
 
 ---
 
+## 2026-11-03 — Panduan kampus + template LaTeX resmi
+**Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
+
+**Dikerjakan:**
+- Pengguna memberikan *Panduan Pelaksanaan Skripsi TF UGM 2026* (PDF) dan mengunggah folder template LaTeX resmi ke Drive
+  (`Project-Skripsi/template skripsi teknik fisika 2026`).
+- Template diunduh via rclone ke `thesis/template-kampus/` (salinan asli). `thesis/` dibangun ulang dari template:
+  `skripsidtntf.cls`, BibTeX `skripsi.bst`, halaman muka, data skripsi, lampiran, `latexmkrc` (nomencl).
+  Bug di template asli (`\nipkajur{` tanpa kurung tutup) diperbaiki di versi kita.
+- Struktur bab disesuaikan dengan template: Bab 1 (Latar Belakang, Perumusan Masalah, Tujuan, Manfaat),
+  Bab 2 Tinjauan Pustaka, Bab 3 **Pelaksanaan Penelitian** (Alat & Bahan, Tata Laksana, Rencana Analisis Hasil),
+  Bab 4 Hasil dan Pembahasan, Bab 5 **Kesimpulan dan Saran** — di LaTeX dan di 5 Google Docs (link tetap; judul dokumen diganti).
+- Ringkasan panduan: `docs/PANDUAN-KAMPUS.md`. **Aturan AI §4.1** dimasukkan sebagai aturan mengikat di `AGENTS.md`.
+
+**Keputusan:**
+- Ikuti nama bab dari template LaTeX resmi; judul Bab 3 dikonfirmasi ke dosen (panduan menyebut "Metodologi Penelitian").
+- Agent tidak menulis substansi naskah; hanya penyuntingan bahasa, terjemahan, format, kode/infrastruktur (kode menunggu konfirmasi dosen).
+- Daftar pustaka dimatikan (`\adapustakafalse`) sampai ada sitasi pertama, karena BibTeX gagal pada bibliografi kosong.
+
+**Belum terverifikasi:** kompilasi template di GitHub Actions (LaTeX tidak terpasang di laptop).
+
+**Berikutnya:** lihat `docs/STATUS.md` (bimbingan pertama, dataset, isi data_skripsi.tex).
+
+---
+
 ## 2026-11-03 — rclone + backup otomatis ke Drive
 **Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
 

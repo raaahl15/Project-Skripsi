@@ -54,6 +54,7 @@
 5. Jangan menjalankan `git push` atau membuat repo GitHub tanpa persetujuan eksplisit pengguna.
 6. Bahasa komunikasi dengan pengguna: Indonesia. Bahasa kode dan komentar kode: Inggris.
 7. Setelah selesai, buat ringkasan: file apa yang dibuat, apa yang masih harus dilakukan manual oleh pengguna.
+8a. **Aturan AI kampus** (Panduan Skripsi TF UGM 2026 §4.1): AI hanya untuk penyuntingan tata bahasa & penerjemahan; dilarang memproduksi substansi analisis, ide penelitian, atau literatur fiktif. Rincian penerapan: `AGENTS.md` aturan 15.
 8. **Setiap sesi pengerjaan:** tambahkan entri di `docs/RIWAYAT-PENGERJAAN.md` (tanggal, yang dikerjakan, keputusan, file/Drive yang berubah, langkah berikutnya).
 9. **Setiap perubahan sistem:** perbarui file MASTER ini dan catat di bagian 10.
 
@@ -136,7 +137,9 @@ Jika pengguna memilih LaTeX, ganti isi `thesis/` dengan `main.tex` + file bab `.
 **Struktur aktual (setelah Langkah 0, LaTeX dipilih)** — tambahan terhadap struktur di atas:
 - `MASTER-SKRIPSI-SETUP.md` (file ini), `.gitattributes`
 - `docs/RIWAYAT-PENGERJAAN.md`, `docs/PANDUAN-GDOCS.md`, `docs/SETUP-LAPTOP-BARU.md`
-- `thesis/main.tex`, `thesis/bab1-pendahuluan.tex` … `bab5-penutup.tex`, `thesis/refs.bib`, `thesis/figures/`, `thesis/template-kampus/`
+- `thesis/main.tex`, `thesis/bab1-pendahuluan.tex`, `bab2-tinjauan-pustaka.tex`, `bab3-pelaksanaan-penelitian.tex`, `bab4-hasil-pembahasan.tex`, `bab5-kesimpulan-saran.tex`, `thesis/refs.bib`, `thesis/figures/`
+- File template resmi di `thesis/`: `skripsidtntf.cls`, `skripsi.bst`, `logoUGM.png`, `data_skripsi.tex`, `muka_skripsi.tex`, `packages.tex`, halaman muka (`persembahan`, `motto`, `prakata`, `lambang`, `abstrakind`, `abstrakeng`), `lampiran-a.tex`, `latexmkrc`; salinan asli di `thesis/template-kampus/`
+- `docs/PANDUAN-KAMPUS.md` (ringkasan Panduan Pelaksanaan Skripsi TF UGM 2026)
 - `scripts/backup.ps1`, `scripts/build-thesis.ps1` (padanan Windows)
 - `.github/workflows/build-thesis.yml` (compile PDF otomatis saat push ke `thesis/`)
 
@@ -380,3 +383,6 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | Folder `naskah/` dibagikan ke Pak Nopriadi (nopriadi@ugm.ac.id) sebagai Commenter | Dosen bisa melihat & berkomentar langsung |
 | 2026-11-03 | Python: pakai Python 3.13 yang sudah terpasang (bukan 3.12); `.venv` dibuat dengan `setup.ps1` | Sudah tersedia, kompatibel |
 | 2026-11-03 | rclone dipasang (winget), remote `gdrive` dikonfigurasi; backup mingguan otomatis ke `Project-Skripsi/backup/`; bootstrap kit diisi | Backup tanpa upload manual |
+| 2026-11-03 | `thesis/` memakai template LaTeX resmi DTNTF (`skripsidtntf.cls`, BibTeX `skripsi.bst`, nomencl via `latexmkrc`); salinan asli di `thesis/template-kampus/`; biblatex ditinggalkan | Panduan §4.2 mewajibkan template resmi |
+| 2026-11-03 | Struktur bab (LaTeX + Google Docs) mengikuti template: Bab 3 "Pelaksanaan Penelitian", Bab 5 "Kesimpulan dan Saran" | Sesuai template kampus |
+| 2026-11-03 | Ditambah `docs/PANDUAN-KAMPUS.md`; **aturan AI §4.1** jadi aturan mengikat agent (AGENTS.md no. 15): agent tidak menulis substansi naskah | Kepatuhan etika akademik kampus |

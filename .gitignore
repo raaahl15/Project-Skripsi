@@ -40,4 +40,8 @@ thesis/build/
 *.run.xml
 *.synctex.gz
 *.toc
+*.nlo
+*.nls
+*.ilg
+*.ist
 thesis/main.pdf

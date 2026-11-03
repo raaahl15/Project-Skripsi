@@ -1,52 +1,39 @@
 % =====================================================================
-% TEMPORARY SKELETON - replace preamble/front matter with the official
-% campus template once it is placed in thesis/template-kampus/.
-% Chapter files (bab*.tex) are kept separate so they can be reused.
+% Main file, based on the official template "template skripsi teknik fisika 2026"
+% (original copy kept untouched in thesis/template-kampus/).
+% Class: skripsidtntf.cls | Bibliography: BibTeX + skripsi.bst
 % =====================================================================
-\documentclass[12pt,a4paper,oneside]{report}
+\documentclass[tugasakhir,satusetengahspasi]{skripsidtntf}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[bahasa]{babel}
-\usepackage[a4paper,left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % [ISI NANTI: follow campus template]
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{amsmath,amssymb}
-\usepackage{booktabs}
-\usepackage{csquotes}
-\usepackage[backend=biber,style=authoryear,maxcitenames=2]{biblatex} % [ISI NANTI: citation style per campus/advisor]
-\usepackage[hidelinks]{hyperref}
+\input{packages.tex}
+\input{data_skripsi.tex}
 
-\addbibresource{refs.bib}
-\graphicspath{{figures/}{../results/}}
-\onehalfspacing
-
-\title{KLASIFIKASI KONDISI SEL CD4 PADA INFEKSI HIV BERDASARKAN CITRA IMAGING FLOW CYTOMETRY MENGGUNAKAN MACHINE LEARNING}
-\author{Rahul \\ NIM: [ISI NANTI]}
-\date{[ISI NANTI]}
+% Set to \adapustakatrue once refs.bib contains at least one entry that is
+% cited with \cite{...}. (BibTeX fails on an empty bibliography.)
+\newif\ifadapustaka
+\adapustakafalse
 
 \begin{document}
 
-\maketitle
+\input{muka_skripsi.tex}
 
-\chapter*{INTISARI}
-\addcontentsline{toc}{chapter}{INTISARI}
-[ISI NANTI]
+\input{bab1-pendahuluan.tex}
+\input{bab2-tinjauan-pustaka.tex}
+\input{bab3-pelaksanaan-penelitian.tex}
+\input{bab4-hasil-pembahasan.tex}
+\input{bab5-kesimpulan-saran.tex}
 
-\chapter*{ABSTRACT}
-\addcontentsline{toc}{chapter}{ABSTRACT}
-[ISI NANTI]
+\ifadapustaka
+\begin{singlespace}
+\bibliographystyle{skripsi}
+\bibliography{refs}
+\end{singlespace}
+\fi
 
-\tableofcontents
-\listoffigures
-\listoftables
-
-\include{bab1-pendahuluan}
-\include{bab2-tinjauan-pustaka}
-\include{bab3-metodologi}
-\include{bab4-hasil-pembahasan}
-\include{bab5-penutup}
-
-\printbibliography[heading=bibintoc,title={DAFTAR PUSTAKA}]
+% Appendices (source code, raw data tables, etc. — required by the guideline)
+\appendix
+\addappheadtotoc
+\appendixpage
+\input{lampiran-a.tex}
 
 \end{document}
