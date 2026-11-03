@@ -4,6 +4,7 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 
 | Folder Drive | Google Doc | Doc ID | File repo |
 |---|---|---|---|
+| (bimbingan/) | Dokumentasi Pemrosesan Data dan Fitur | 18Xrslc9hT7uQ3t3o11CWW-eDyty79t8vxuikyFelQuo | docs/PEMROSESAN-DATA.md |
 | 00 Template | Template Bahan Bimbingan | 1l-DeETcolVgHYj-Ruk-RkTuFK2nKG3G4ZPKYPC0LfUU | docs/bimbingan/TEMPLATE-BAHAN.md |
 | 00 Template | Template Hasil Bimbingan | 1M9pjUolcbrzZhXXCPJq9G-A-rFfR6mvkGi24NtbFUs8 | docs/bimbingan/TEMPLATE-HASIL.md |
 | 00 Template | Template Work Order | 1Q1N4HI7LU4--JmdgKOsKufvOA98RN9AktYBu6ctgTUw | docs/work-order/TEMPLATE-WO.md |

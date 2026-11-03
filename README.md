@@ -2,7 +2,8 @@
 
 Repo kerja skripsi. Konteks lengkap dan aturan kerja agent: [AGENTS.md](AGENTS.md).
 Posisi pekerjaan terkini: [docs/STATUS.md](docs/STATUS.md). Daftar revisi: [docs/REVISI.md](docs/REVISI.md).
-Riwayat sesi: [docs/RIWAYAT-PENGERJAAN.md](docs/RIWAYAT-PENGERJAAN.md). **Tracker bimbingan: [docs/WORK-ORDER.md](docs/WORK-ORDER.md)**. Dasar sistem: [MASTER-SKRIPSI-SETUP.md](MASTER-SKRIPSI-SETUP.md).
+Riwayat sesi: [docs/RIWAYAT-PENGERJAAN.md](docs/RIWAYAT-PENGERJAAN.md). **Tracker bimbingan: [docs/WORK-ORDER.md](docs/WORK-ORDER.md)**.
+Pemrosesan data & definisi fitur: [docs/PEMROSESAN-DATA.md](docs/PEMROSESAN-DATA.md). Dasar sistem: [MASTER-SKRIPSI-SETUP.md](MASTER-SKRIPSI-SETUP.md).
 
 **Naskah:** draf ditulis di **Google Docs** per bab ([folder naskah](https://drive.google.com/drive/folders/1B0gIkugJe1yVZWEBZaS62jG9fA5LRTU7)),
 lalu dikonversi ke **LaTeX** (`thesis/`) per bab setelah disetujui dosen. Konvensi & cara konversi: [docs/PANDUAN-GDOCS.md](docs/PANDUAN-GDOCS.md).

@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-11-04 — Dokumentasi pemrosesan data & fitur
+**Oleh:** Claude Code (laptop utama) atas permintaan pengguna
+
+**Dikerjakan:**
+- `docs/PEMROSESAN-DATA.md` (+ Google Doc "Dokumentasi Pemrosesan Data dan Fitur" di Drive `bimbingan/`): lokasi pemrosesan
+  (laptop utama, i5-2500S 4 inti, RAM 7,9 GB, tanpa GPU; belum memakai Colab/Kaggle), lokasi data mentah/hasil, skrip, alur
+  langkah & parameter per dataset, tabel 14 fitur heiDATA (kanal, rumus, satuan, makna fisis, tugas), 29 penanda CyTOF, status Essig.
+- WO-07 & WO-10 (repo + Google Docs) dan Bahan Bimbingan 5 diberi rujukan ke dokumen tersebut.
+
+---
+
 ## 2026-11-04 — Struktur dokumen bimbingan: Bahan & Hasil per bimbingan, 1 dokumen per Work Order
 **Oleh:** Claude Code (laptop utama) atas permintaan pengguna
 
