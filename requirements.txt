@@ -1,0 +1,14 @@
+# Core (versions not pinned yet; pin with `pip freeze` once the baseline works)
+numpy
+pandas
+scikit-learn
+scikit-image
+opencv-python
+matplotlib
+pyyaml
+tqdm
+jupyter
+
+# Deep learning (CPU build by default; on Colab/Kaggle torch is preinstalled with GPU)
+torch
+torchvision

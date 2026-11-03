@@ -1,0 +1,52 @@
+% =====================================================================
+% TEMPORARY SKELETON - replace preamble/front matter with the official
+% campus template once it is placed in thesis/template-kampus/.
+% Chapter files (bab*.tex) are kept separate so they can be reused.
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage[a4paper,left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry} % [ISI NANTI: follow campus template]
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,maxcitenames=2]{biblatex} % [ISI NANTI: citation style per campus/advisor]
+\usepackage[hidelinks]{hyperref}
+
+\addbibresource{refs.bib}
+\graphicspath{{figures/}{../results/}}
+\onehalfspacing
+
+\title{KLASIFIKASI KONDISI SEL CD4 PADA INFEKSI HIV BERDASARKAN CITRA IMAGING FLOW CYTOMETRY MENGGUNAKAN MACHINE LEARNING}
+\author{Rahul \\ NIM: [ISI NANTI]}
+\date{[ISI NANTI]}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{INTISARI}
+\addcontentsline{toc}{chapter}{INTISARI}
+[ISI NANTI]
+
+\chapter*{ABSTRACT}
+\addcontentsline{toc}{chapter}{ABSTRACT}
+[ISI NANTI]
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{bab1-pendahuluan}
+\include{bab2-tinjauan-pustaka}
+\include{bab3-metodologi}
+\include{bab4-hasil-pembahasan}
+\include{bab5-penutup}
+
+\printbibliography[heading=bibintoc,title={DAFTAR PUSTAKA}]
+
+\end{document}

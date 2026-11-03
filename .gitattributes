@@ -1,0 +1,8 @@
+# Keep shell scripts with LF endings so they run on Linux/Colab/Git Bash
+*.sh   text eol=lf
+*.ps1  text eol=crlf
+*.tex  text
+*.bib  text
+*.md   text
+*.py   text
+*.yaml text

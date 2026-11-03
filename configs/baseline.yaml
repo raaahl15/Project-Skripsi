@@ -1,0 +1,30 @@
+# Baseline experiment config. Copy this file for each new experiment (e.g. configs/exp01-cnn.yaml).
+experiment_name: baseline
+seed: 42
+
+data:
+  dir: data/processed          # local copy of Drive Skripsi-ML/data/processed
+  classes: [healthy, infected, lysed]   # sehat / terinfeksi / lisis (from proposal)
+  channels: null               # TODO: which IFC channels to use (brightfield, side scatter, fluorescence, ...)
+  image_size: null             # TODO
+  split:
+    train: 0.7
+    val: 0.15
+    test: 0.15
+    stratify: true
+    group_by: null             # TODO: e.g. donor/sample id to avoid data leakage
+
+model:
+  name: null                   # TODO: decide with advisor (e.g. CNN for Grad-CAM, or classical ML on morphometric features)
+  params: {}
+
+train:
+  epochs: null
+  batch_size: null
+  learning_rate: null
+
+evaluation:
+  metrics: []                  # TODO: e.g. accuracy, macro_f1, per-class precision/recall, confusion_matrix
+
+output:
+  results_dir: results
