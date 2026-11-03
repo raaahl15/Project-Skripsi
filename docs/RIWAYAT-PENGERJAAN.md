@@ -15,6 +15,19 @@
 
 ---
 
+## 2026-11-04 — Run Colab pertama berhasil + uji reproduksibilitas
+**Oleh:** pengguna (Colab) + Claude Code (perbandingan)
+
+**Dikerjakan:**
+- Pengguna membuat token GitHub baru (Contents: Read-only) dan menjalankan notebook Colab sampai selesai → hasil di Drive
+  `results-colab/20261103-2339/`.
+- Perbandingan dengan run laptop: fitur heiDATA & CyTOF identik; Logistic Regression identik (T1b AUC 0,651, p = 0,010);
+  Random Forest sedikit berbeda (kesimpulan sama). Diarsipkan di `results/colab-runs/20261103-2339/` (+ README perbandingan).
+
+**Tindak lanjut:** kunci versi pustaka & catat versi di keluaran sebelum run final; angka naskah dari satu lingkungan.
+
+---
+
 ## 2026-11-04 — Notebook Google Colab
 **Oleh:** Claude Code (laptop utama) atas permintaan pengguna
 

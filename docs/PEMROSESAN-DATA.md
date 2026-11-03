@@ -99,5 +99,8 @@ Semua skrip memakai *seed* tetap (42) agar hasil dapat direproduksi.
 - Keuntungan dibanding laptop: RAM lebih besar (±12 GB versi gratis vs 7,9 GB), laptop bebas dipakai, bisa dipantau dari iPad, GPU tersedia
   bila suatu saat diperlukan. Untuk ekstraksi fitur + ML (CPU), kecepatan kurang lebih setara laptop.
 - Batasan Colab gratis: sesi terputus bila idle/±12 jam; disk sementara (data diekstrak ulang tiap sesi); kuota GPU terbatas.
+- **Diuji 4 Nov 2026 (run 20261103-2339 UTC): berhasil.** Fitur heiDATA & semua hasil CyTOF identik dengan laptop; Logistic
+  Regression identik; Random Forest sedikit berbeda (versi pustaka/paralelisme) — rincian `results/colab-runs/20261103-2339/README.md`.
+  → Angka naskah diambil dari **satu lingkungan** dengan versi pustaka yang dicatat.
 - Essig (`exp1.zip`, 19,6 GB) harus ada di `Drive/Project-Skripsi/data/raw/` dan bagian Essig di notebook nonaktif secara bawaan
   (`RUN_ESSIG_CNN = False`) sesuai keputusan bimbingan 4.

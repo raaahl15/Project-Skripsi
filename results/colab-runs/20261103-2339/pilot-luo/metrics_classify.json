@@ -1,0 +1,148 @@
+{
+  "n_cd4t_cells_subsampled": 185208,
+  "hiv_pos_threshold": 2.0,
+  "casp3_threshold": 1.894,
+  "n_infected_culture_cells": 103341,
+  "n_hiv_pos": 7405,
+  "features": {
+    "withCD4": [
+      "HLADR",
+      "CTLA4",
+      "CD69",
+      "CXCR3",
+      "CXCR5",
+      "CD27",
+      "CD8",
+      "CD3",
+      "CD2",
+      "CD62L",
+      "CCR6",
+      "CD29",
+      "OX40",
+      "CD28",
+      "CD127",
+      "CXCR4",
+      "CD45RA",
+      "CCR5",
+      "ICOS",
+      "CD19",
+      "CD7",
+      "CCR4",
+      "CD45RO",
+      "CCR7",
+      "CD25",
+      "PD1",
+      "CD38",
+      "CD4",
+      "CD57"
+    ],
+    "noCD4": [
+      "HLADR",
+      "CTLA4",
+      "CD69",
+      "CXCR3",
+      "CXCR5",
+      "CD27",
+      "CD8",
+      "CD3",
+      "CD2",
+      "CD62L",
+      "CCR6",
+      "CD29",
+      "OX40",
+      "CD28",
+      "CD127",
+      "CXCR4",
+      "CD45RA",
+      "CCR5",
+      "ICOS",
+      "CD19",
+      "CD7",
+      "CCR4",
+      "CD45RO",
+      "CCR7",
+      "CD25",
+      "PD1",
+      "CD38",
+      "CD57"
+    ]
+  },
+  "tasks": {
+    "L1_withCD4_logreg": {
+      "roc_auc": 0.9,
+      "pr_auc": 0.623,
+      "pr_auc_chance": 0.0717,
+      "balanced_accuracy": 0.843,
+      "roc_auc_per_held_out_donor": {
+        "Donor1": 0.961,
+        "Donor2": 0.988,
+        "Donor3": 0.885,
+        "Donor4": 0.881,
+        "Donor5": 0.951,
+        "Donor6": 0.947
+      }
+    },
+    "L1_withCD4_hgb": {
+      "roc_auc": 0.915,
+      "pr_auc": 0.702,
+      "pr_auc_chance": 0.0717,
+      "balanced_accuracy": 0.852,
+      "roc_auc_per_held_out_donor": {
+        "Donor1": 0.977,
+        "Donor2": 0.991,
+        "Donor3": 0.862,
+        "Donor4": 0.864,
+        "Donor5": 0.966,
+        "Donor6": 0.971
+      }
+    },
+    "L1_noCD4_logreg": {
+      "roc_auc": 0.833,
+      "pr_auc": 0.394,
+      "pr_auc_chance": 0.0717,
+      "balanced_accuracy": 0.78,
+      "roc_auc_per_held_out_donor": {
+        "Donor1": 0.906,
+        "Donor2": 0.934,
+        "Donor3": 0.752,
+        "Donor4": 0.826,
+        "Donor5": 0.877,
+        "Donor6": 0.901
+      }
+    },
+    "L1_noCD4_hgb": {
+      "roc_auc": 0.847,
+      "pr_auc": 0.531,
+      "pr_auc_chance": 0.0717,
+      "balanced_accuracy": 0.779,
+      "roc_auc_per_held_out_donor": {
+        "Donor1": 0.938,
+        "Donor2": 0.955,
+        "Donor3": 0.739,
+        "Donor4": 0.837,
+        "Donor5": 0.916,
+        "Donor6": 0.952
+      }
+    }
+  },
+  "shap_top8_withCD4": {
+    "CD4": 1.2292,
+    "PD1": 0.4689,
+    "CD29": 0.3649,
+    "CTLA4": 0.3607,
+    "CD19": 0.331,
+    "CD2": 0.2777,
+    "CD127": 0.2721,
+    "CXCR3": 0.2044
+  },
+  "shap_top8_noCD4": {
+    "PD1": 0.5562,
+    "CD127": 0.5293,
+    "CD2": 0.4586,
+    "CD62L": 0.3822,
+    "HLADR": 0.3446,
+    "CTLA4": 0.3411,
+    "CD29": 0.3114,
+    "CD19": 0.2944
+  }
+}
