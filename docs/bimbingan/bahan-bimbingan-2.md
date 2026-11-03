@@ -1,0 +1,91 @@
+# Bahan Bimbingan 2 — Dataset, Hasil Pilot, dan Usulan Penyesuaian Topik
+Mahasiswa: Rahul Ghulam Hidayatulloh (23/519760/TK/57266) · Pembimbing: Nopriadi, S.T., M.Sc.
+Judul (Simaster): Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra *Imaging Flow Cytometry* Menggunakan *Machine Learning*
+
+## 1. Masalah: dataset sesuai judul tidak tersedia
+- Dataset harus dicari sendiri. Penelusuran repositori publik (BBBC, BioStudies, Dryad, FlowRepository, heiDATA, literatur):
+  **tidak ada dataset citra *imaging flow cytometry* (IFC) sel T CD4 terinfeksi HIV** dengan label sehat/terinfeksi/lisis.
+- Yang tersedia terbagi tiga jenis:
+
+| Dataset | Bentuk data | HIV? | Sel CD4 primer? | Catatan |
+|---|---|---|---|---|
+| **heiDATA – Ananth et al. 2024** (*Cell Reports*), CC BY 4.0 | **Citra mikroskopi fluoresens 3D** (Lamin B1, kapsid HIV-1, GFP) | ✅ +Vpx / −Vpx / Mock | ✅ sel T CD4 istirahat | Paling cocok konsep; data kecil |
+| Dryad – Essig et al. 2022 | Citra IFC (ImageStream), > 2,8 juta citra | ❌ (kondisi stimulasi) | ✅ sel T CD4 memori | Cocok untuk *pretraining* |
+| Dryad – Luo et al. 2023 (*Front. Immunol.* 2022) | Tabel CyTOF (FCS), tanpa citra | ✅ kultur terinfeksi vs tidak | ✅ sel tonsil | Bukan optika; tanpa citra |
+
+Detail lengkap: `docs/DATASET-KANDIDAT.md`.
+
+## 2. Dataset utama yang diusulkan: heiDATA (Ananth et al. 2024)
+- Sel T CD4 istirahat terinfeksi HIV-1 (NLENG GFP p6mod), dengan/tanpa Vpx, dan kontrol Mock.
+- Citra z-stack 31–36 irisan × 3–4 kanal × 512×512 px, 16-bit, 0,133 µm/px. **Kanal Lamin B1 ada di semua citra** (sesuai proposal).
+- Kanal lain: kapsid HIV-1 (CA), reporter GFP, CPSF6/SC35, EdU.
+- Keterbatasan: **14 bidang pandang** (1 per kondisi per figure paper); sel GFP+ (terinfeksi produktif) sangat sedikit; tanpa penanda kematian/lisis.
+
+## 3. Hasil pilot (studi kelayakan, bukan hasil akhir)
+- Segmentasi inti otomatis dari kanal Lamin B1 → **209 sel** (+Vpx 77, −Vpx 93, Mock 39). Contoh overlay: `results/pilot-heidata/overlays/`.
+- Fitur per sel: morfometri inti (luas, keliling, eksentrisitas, soliditas, sirkularitas), intensitas & rasio tepi/inti Lamin B1,
+  jumlah titik kapsid HIV di dalam inti dan di sekitar inti.
+- Klasifikasi dengan validasi *leave-one-figure-out* (sel dari satu percobaan tidak pernah dipakai saat latih) + uji permutasi label:
+
+Sumber angka: `results/pilot-heidata/metrics_classify.json` (100 permutasi, seed 42).
+
+| Tugas | n sel | Model | *Balanced accuracy* | ROC AUC | p (permutasi) |
+|---|---|---|---|---|---|
+| T1a: +Vpx vs −Vpx — morfometri Lamin B1 saja | 170 | LogReg / RF | 0,544 / 0,559 | 0,544 / 0,584 | 0,248 / 0,059 |
+| T1b: +Vpx vs −Vpx — Lamin B1 + titik kapsid HIV | 132 | LogReg / RF | 0,617 / 0,626 | **0,651** / 0,566 | **0,010** / 0,149 |
+| T2: terpapar HIV (±Vpx) vs Mock — Lamin B1 | 209 | LogReg / RF | 0,326 / 0,379 | 0,172 / 0,084 | 1,0 / 1,0 |
+
+Interpretasi awal:
+- Morfometri inti saja hampir tidak membedakan +Vpx/−Vpx antar-percobaan (sinyal lemah).
+- Menambah fitur **lokasi kapsid HIV** memberi sinyal yang **signifikan namun sedang** (AUC 0,65; p = 0,01) — sejalan dengan
+  topik paper (tahap pasca-masuk HIV-1). Fitur terpenting (SHAP): panjang sumbu mayor inti dan jumlah kapsid di sekitar inti.
+- T2 gagal (AUC jauh < 0,5): Mock hanya ada di 2 bidang pandang dari 2 percobaan berbeda, sehingga model mempelajari
+  **perbedaan antar-percobaan (efek *batch*)**, bukan kondisi sel. → Data Mock terlalu sedikit; efek *batch* harus ditangani.
+- Kesimpulan pilot: data heiDATA **layak tetapi terbatas**; perlu (a) normalisasi per percobaan, (b) data tambahan dari pemilik
+  dataset, dan/atau (c) *pretraining* (Skema 1). CNN + Grad-CAM belum dijalankan (tahap berikutnya).
+
+[HASIL VARIASI NORMALISASI PER PERCOBAAN — diisi setelah perhitungan selesai]
+
+### 3b. Pilot komponen CyTOF (Luo et al.) — data tabel, tanpa citra
+Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/state_counts.csv` (subsampel 40.000 sel/file, seed 42).
+- 19 file FCS, 6 donor, 924.121 sel total. Kanal **HIV** ada di semua file → **status infeksi per sel**; **caspase-3 terbelah**
+  (apoptosis) juga tersedia di semua file setelah nama penanda diseragamkan.
+- *Gating* sel T CD4: CD3 > 3 dan CD8 < 2 (arcsinh; CD8− dipakai karena HIV menurunkan CD4) → 185.208 sel (subsampel).
+- Ambang HIV+ = 2,0: kultur tak terinfeksi hanya 0–5 sel "HIV+" per donor vs 682–1.677 per donor di kultur terinfeksi.
+- **Kelas per sel yang bisa dibentuk**: sehat (HIV−, Casp3−), **terinfeksi (HIV+)**, **apoptosis (Casp3+ HIV−)** — mendekati
+  konsep proposal sehat/terinfeksi/lisis (kelas apoptosis kecil: 31–265 sel per donor pada kultur terinfeksi).
+- Klasifikasi HIV+ vs HIV− dari penanda permukaan (kanal HIV/p24/penanda status tidak dipakai), validasi *leave-one-donor-out*:
+
+| Varian fitur | Model | ROC AUC | PR AUC (acak = 0,072) | *Balanced accuracy* |
+|---|---|---|---|---|
+| Dengan CD4 | LogReg / HistGB | 0,900 / **0,915** | 0,623 / 0,702 | 0,843 / 0,852 |
+| Tanpa CD4 | LogReg / HistGB | 0,833 / **0,847** | 0,394 / 0,531 | 0,780 / 0,779 |
+
+- SHAP (HistGB, tanpa CD4): PD1, CD127, CD2, CD62L, HLA-DR, CTLA4 terpenting. Catatan: CD19 ikut muncul pada sel yang di-*gating*
+  sebagai sel T → kemungkinan *doublet*/limpahan sinyal; perlu diperiksa.
+- Kesimpulan: komponen CyTOF **sinyal kuat & konsisten antar-donor**, tetapi **tanpa citra** (tidak ada Grad-CAM/aspek optika).
+
+### 3c. Komponen pretraining (Essig et al., IFC)
+- Belum dijalankan: `exp1.zip` (19,6 GB) masih diunggah. Direncanakan setelah bimbingan bila Skema 1/3 dipilih.
+
+## 4. Tiga skema penggunaan dataset
+| Skema | Isi | Estimasi kerja |
+|---|---|---|
+| 1 | Pretraining CNN pada citra IFC Essig → *fine-tuning* pada heiDATA (+ ML klasik fitur morfometri, Grad-CAM) | ±5–6 minggu |
+| 2 | Analisis citra heiDATA + analisis CyTOF Luo (ML + SHAP) | ±6–7 minggu |
+| 3 | Gabungan 1 + 2 | ±8–10 minggu |
+Dataset tidak bisa digabung menjadi satu set latih (modalitas & label berbeda). Pilot Skema 3 sedang dijalankan untuk menilai kelayakan.
+
+## 5. Usulan penyesuaian judul (draf untuk didiskusikan)
+- A (heiDATA): *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berdasarkan Citra Mikroskopi Fluoresens Lamin B1 Menggunakan Machine Learning dan Explainable AI*
+- B (Skema 1): *… Menggunakan Transfer Learning dari Citra Imaging Flow Cytometry dan Explainable AI*
+- C (Skema 2): *Analisis Kondisi Sel T CD4 pada Infeksi HIV-1 Berbasis Citra Mikroskopi Fluoresens dan Mass Cytometry Menggunakan Machine Learning*
+
+## 6. Keputusan yang diminta dari pembimbing
+1. Setuju dataset utama heiDATA (citra mikroskopi, bukan IFC)? Perlukah perubahan judul diajukan ulang di Simaster (*fast-track*)?
+2. Kelas klasifikasi: +Vpx / −Vpx / Mock (kondisi infeksi) sebagai pengganti sehat/terinfeksi/lisis — dapat diterima?
+3. Skema yang dipilih: 1, 2, atau 3?
+4. Perlukah menghubungi pemilik dataset heiDATA untuk meminta citra tambahan?
+5. Target periode ujian (tengah/akhir semester) dan tenggat pendaftaran.
+6. Pembimbing pendamping: ada atau tidak? NIP pembimbing untuk halaman pengesahan.
+7. Judul Bab 3: "Metodologi Penelitian" atau "Pelaksanaan Penelitian" (template)?

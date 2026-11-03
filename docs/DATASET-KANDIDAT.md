@@ -111,6 +111,20 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 | 1. Dryad Essig 2022 | ✅ IFC | ❌ (aktivasi) | ✅ memori | Cadangan citra IFC |
 | 2. BBBC048 | ✅ IFC | ❌ (siklus sel) | ❌ Jurkat | Prototipe pipeline |
 
+## Skema kombinasi dataset (dicatat 2026-11-03)
+Dataset **tidak bisa digabung menjadi satu set latih**: modalitas berbeda (citra mikroskopi 3D vs citra IFC vs tabel CyTOF)
+dan label berbeda → model akan mengenali *asal dataset*, bukan kondisi sel. Kombinasi yang masuk akal = peran berbeda:
+
+| Skema | Isi | Kelebihan | Risiko |
+|---|---|---|---|
+| **1. Pretraining + fine-tuning** | CNN dilatih awal pada citra sel T CD4 IFC **Essig (Dryad 2022)**, di-*fine-tune* pada **heiDATA** | Mengatasi data heiDATA yang kecil; ada eksperimen ablasi (dengan vs tanpa pretraining) | Beda domain (IFC vs konfokal; Essig tanpa Lamin B1); unduhan ±20 GB/eksperimen |
+| **2. Dua analisis, satu benang merah** | A: citra **heiDATA** (morfometri Lamin B1 + kapsid HIV, ±Vpx, Grad-CAM); B: CyTOF **Luo (Dryad 2023)** (CD4 terinfeksi vs tidak, ML + SHAP) | Mencakup konsep proposal lebih lengkap (citra/Lamin B1 + terinfeksi vs sehat) | Beban ±2×; Luo sudah di-*gating* sel hidup (tanpa kelas lisis); CyTOF bukan optika |
+| **3. Gabungan 1 + 2** | Pretraining Essig → heiDATA + CyTOF Luo | Paling lengkap | Estimasi ±8–10 minggu kerja vs ±6 minggu tersedia (s.d. Desember); risiko bertumpuk; kedalaman CPMK 3 bisa turun |
+
+- Rekomendasi awal: heiDATA utama + Skema 1; Luo sebagai pustaka terkait/perluasan. Bergantung pada tanggal ujian.
+- **Keputusan pengguna (2026-11-03): jalankan Skema 3 sebagai *pilot* sebelum bimbingan minggu ini**, lalu putuskan
+  skema final bersama Pak Nopriadi berdasarkan hasil pilot. Hasil pilot = studi kelayakan, bukan hasil akhir skripsi.
+
 ## Opsi penyesuaian topik (diputuskan bersama Pak Nopriadi)
 | Opsi | Data | Pertanyaan riset yang mungkin | Dampak ke judul |
 |---|---|---|---|

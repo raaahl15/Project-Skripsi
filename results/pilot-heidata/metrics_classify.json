@@ -1,0 +1,162 @@
+{
+  "T1a_vpx_lamin": {
+    "description": "+Vpx vs -Vpx, Lamin B1 morphometry only (all figures)",
+    "n_cells": 170,
+    "n_positive": 77,
+    "figures(groups)": [
+      "1G",
+      "2A",
+      "2D",
+      "3B",
+      "4D",
+      "S3B"
+    ],
+    "models": {
+      "logreg": {
+        "balanced_accuracy": 0.544,
+        "roc_auc": 0.544,
+        "perm_auc_mean": 0.498,
+        "perm_p_value": 0.248,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            54,
+            39
+          ],
+          [
+            38,
+            39
+          ]
+        ]
+      },
+      "rf": {
+        "balanced_accuracy": 0.559,
+        "roc_auc": 0.584,
+        "perm_auc_mean": 0.489,
+        "perm_p_value": 0.059,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            58,
+            35
+          ],
+          [
+            39,
+            38
+          ]
+        ]
+      }
+    },
+    "shap_mean_abs_top5": {
+      "major_axis_um": 0.0661,
+      "eq_diameter_um": 0.0591,
+      "area_um2": 0.0457,
+      "lamin_std": 0.0369,
+      "perimeter_um": 0.0362
+    }
+  },
+  "T1b_vpx_lamin_ca": {
+    "description": "+Vpx vs -Vpx, Lamin B1 + HIV-1 CA puncta (figures with CA channel)",
+    "n_cells": 132,
+    "n_positive": 49,
+    "figures(groups)": [
+      "1G",
+      "3B",
+      "4D",
+      "S3B"
+    ],
+    "models": {
+      "logreg": {
+        "balanced_accuracy": 0.617,
+        "roc_auc": 0.651,
+        "perm_auc_mean": 0.496,
+        "perm_p_value": 0.01,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            55,
+            28
+          ],
+          [
+            21,
+            28
+          ]
+        ]
+      },
+      "rf": {
+        "balanced_accuracy": 0.626,
+        "roc_auc": 0.566,
+        "perm_auc_mean": 0.492,
+        "perm_p_value": 0.149,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            65,
+            18
+          ],
+          [
+            26,
+            23
+          ]
+        ]
+      }
+    },
+    "shap_mean_abs_top5": {
+      "major_axis_um": 0.0655,
+      "ca_puncta_perinuclear": 0.0542,
+      "area_um2": 0.0358,
+      "circularity": 0.0339,
+      "perimeter_um": 0.0289
+    }
+  },
+  "T2_infected_vs_mock": {
+    "description": "HIV-exposed (+/-Vpx) vs Mock, Lamin B1 morphometry only",
+    "n_cells": 209,
+    "n_positive": 170,
+    "figures(groups)": [
+      "1G",
+      "2A",
+      "2D",
+      "3B",
+      "4D",
+      "S3B"
+    ],
+    "models": {
+      "logreg": {
+        "balanced_accuracy": 0.326,
+        "roc_auc": 0.172,
+        "perm_auc_mean": 0.491,
+        "perm_p_value": 1.0,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            0,
+            39
+          ],
+          [
+            59,
+            111
+          ]
+        ]
+      },
+      "rf": {
+        "balanced_accuracy": 0.379,
+        "roc_auc": 0.084,
+        "perm_auc_mean": 0.481,
+        "perm_p_value": 1.0,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            0,
+            39
+          ],
+          [
+            41,
+            129
+          ]
+        ]
+      }
+    },
+    "shap_mean_abs_top5": {
+      "eq_diameter_um": 0.0535,
+      "area_um2": 0.0481,
+      "minor_axis_um": 0.04,
+      "lamin_rim_core_ratio": 0.0378,
+      "lamin_std": 0.0358
+    }
+  }
+}
