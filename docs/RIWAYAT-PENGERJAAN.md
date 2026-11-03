@@ -15,6 +15,24 @@
 
 ---
 
+## 2026-11-03 — Pilot Skema 3, riwayat bimbingan 1–4, Work Order
+**Oleh:** Claude Code (laptop utama) bersama pengguna
+
+**Dikerjakan:**
+- Pilot Skema 3: heiDATA (segmentasi klasik 209 sel, 13 fitur, LogReg/RF *leave-one-figure-out*, uji permutasi, SHAP; variasi
+  normalisasi per percobaan memperburuk hasil); CyTOF Luo (gating sel T CD4, ambang HIV+, kelas sehat/HIV+/apoptosis, HistGB
+  *leave-one-donor-out* AUC 0,85–0,91, SHAP); Essig exp1 (480.000 sel, 8 kanal, ch0 brightfield) → pilot CNN gagal karena RAM
+  (diperbaiki, tidak dijalankan ulang). Cellpose dihentikan (terlalu lambat di CPU).
+- Draf email permintaan data ke Heidelberg (kontak: O. T. Fackler, dari Europe PMC).
+- Usulan judul pengganti + tabel kecocokan judul vs dataset.
+- **Riwayat bimbingan 1–4 dicatat** (`docs/bimbingan/2026-09-02/04/09/23.md`) dan **Work Order** dibuat (`docs/WORK-ORDER.md`).
+  Bahan bimbingan diganti nama menjadi `bahan-bimbingan-5.md`.
+
+**Temuan penting:** bimbingan 3–4 menetapkan arah **ekstraksi fitur + machine learning (bukan deep learning)** → Skema 1 (CNN)
+dan judul berbasis *transfer learning* tidak dipakai; aturan 17–18 ditambahkan di AGENTS.md.
+
+---
+
 ## 2026-11-03 — Penilaian dataset temuan pengguna + pemeriksaan heiDATA
 **Oleh:** Claude Code (laptop utama) bersama pengguna
 

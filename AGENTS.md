@@ -33,6 +33,12 @@
 12. Di Google Docs ikuti konvensi docs/PANDUAN-GDOCS.md (Heading bawaan, sitasi `[@kunci]`, persamaan `$...$`, sumber angka dari results/).
 13. **Akhir setiap sesi: tambahkan entri di docs/RIWAYAT-PENGERJAAN.md** (entri terbaru di atas).
 14. **Setiap perubahan sistem** (struktur, alur kerja, alat, lokasi file): perbarui MASTER-SKRIPSI-SETUP.md dan catat di bagian 10-nya.
+17. **Work Order (docs/WORK-ORDER.md) = tracker resmi untuk bimbingan.** Setelah setiap bimbingan: buat notulensi
+    `docs/bimbingan/YYYY-MM-DD.md` dan tambahkan WO baru (ID berurutan, sumber "Bn · tanggal"). Setiap ada progres: ubah status
+    & isi kolom bukti (link file/hasil). Sebelum bimbingan: perbarui bagian "Eksekusi sejak bimbingan terakhir".
+18. **Arah penelitian dari pembimbing (B3 9 Sep, B4 23 Sep):** fokus = **ekstraksi fitur fisik/bio-optik** yang membedakan sel
+    normal / terinfeksi / mati, lalu klasifikasi dengan **machine learning (bukan deep learning)**. Jangan menjadikan CNN/deep learning
+    sebagai metode utama tanpa persetujuan pembimbing.
 15. **Penggunaan AI:** mengikuti arahan pembimbing (Nopriadi, S.T., M.Sc.) — AI **boleh dipakai untuk semua tahapan**
     (kode, analisis, penulisan naskah). Keputusan pengguna (2026-11-03): ikuti arahan pembimbing.
     Aturan 6 dan 7 tetap berlaku (angka hanya dari results/, sitasi hanya dari refs.bib yang terverifikasi — tidak ada

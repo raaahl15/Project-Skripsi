@@ -3,7 +3,9 @@ Terakhir diperbarui: 2026-11-03
 
 ## Posisi saat ini
 - Tahap: proposal (disetujui di Simaster), menuju bimbingan awal & pengumpulan data
-- Minggu ke- [ISI NANTI] dari ±16 minggu semester (tanggal mulai semester: [ISI NANTI])
+- Minggu ke-10 dari ±16 minggu semester (asumsi mulai 1 Sep 2026; bimbingan 1 = 2 Sep)
+- Bimbingan formal: 4 (2, 4, 9, 23 Sep); bimbingan 5 direncanakan 4–5 Nov. Tracker: docs/WORK-ORDER.md
+- Arah dari pembimbing: ekstraksi fitur fisik/bio-optik (normal/terinfeksi/mati) + machine learning (bukan deep learning)
 
 ## Sudah selesai
 - Proposal TA ke-1 disetujui di Simaster UGM (pembimbing: Nopriadi, S.T., M.Sc.)

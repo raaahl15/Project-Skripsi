@@ -1,4 +1,7 @@
-# Bahan Bimbingan 2 — Dataset, Hasil Pilot, dan Usulan Penyesuaian Topik
+# Bahan Bimbingan 5 — Dataset, Hasil Pilot, dan Usulan Penyesuaian Topik
+> Status eksekusi tugas dari bimbingan 1–4: lihat **`docs/WORK-ORDER.md`** (ditunjukkan di awal bimbingan).
+> Arah penelitian mengikuti bimbingan 3–4: **ekstraksi fitur fisik/bio-optik** pembeda sel normal/terinfeksi/mati +
+> **machine learning** (bukan deep learning).
 Mahasiswa: Rahul Ghulam Hidayatulloh (23/519760/TK/57266) · Pembimbing: Nopriadi, S.T., M.Sc.
 Judul (Simaster): Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra *Imaging Flow Cytometry* Menggunakan *Machine Learning*
 
@@ -41,8 +44,8 @@ Interpretasi awal:
   topik paper (tahap pasca-masuk HIV-1). Fitur terpenting (SHAP): panjang sumbu mayor inti dan jumlah kapsid di sekitar inti.
 - T2 gagal (AUC jauh < 0,5): Mock hanya ada di 2 bidang pandang dari 2 percobaan berbeda, sehingga model mempelajari
   **perbedaan antar-percobaan (efek *batch*)**, bukan kondisi sel. → Data Mock terlalu sedikit; efek *batch* harus ditangani.
-- Kesimpulan pilot: data heiDATA **layak tetapi terbatas**; perlu (a) normalisasi per percobaan, (b) data tambahan dari pemilik
-  dataset, dan/atau (c) *pretraining* (Skema 1). CNN + Grad-CAM belum dijalankan (tahap berikutnya).
+- Kesimpulan pilot: data heiDATA **layak tetapi terbatas**; jalan keluar utama = **data tambahan dari pemilik dataset** dan
+  penambahan fitur bio-optik (tekstur, multi-kanal, 3D) untuk ML.
 
 - Variasi **normalisasi fitur per percobaan** (`metrics_classify_norm-figure.json`) memperburuk semua tugas (AUC 0,17–0,44):
   normalisasi di dalam percobaan yang berisi campuran +Vpx/−Vpx ikut menghapus perbedaan antar-kondisi, apalagi dengan hanya
@@ -76,7 +79,9 @@ Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/stat
 - Pilot: CNN kecil di-*pretrain* pada 24.000 sel Essig (1 kanal fluoresens acak per sel), lalu di-*fine-tune* pada potongan
   sel tunggal heiDATA (Lamin B1) untuk +Vpx vs −Vpx (*leave-one-figure-out*), dibandingkan CNN dari nol, + Grad-CAM.
 
-[HASIL PILOT CNN — diisi setelah perhitungan selesai]
+- Hasil: pretraining berjalan, tetapi proses berhenti saat evaluasi karena memori RAM tidak cukup (bug sudah diperbaiki).
+  **Tidak dijalankan ulang** karena bimbingan 4 sudah memutuskan *machine learning*, bukan *deep learning*. Data Essig tetap
+  berguna bila nanti diperlukan sebagai sumber fitur bio-optik IFC (brightfield + fluoresens) untuk pembanding.
 
 ## 4. Tiga skema penggunaan dataset
 | Skema | Isi | Estimasi kerja |
@@ -85,6 +90,9 @@ Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/stat
 | 2 | Analisis citra heiDATA + analisis CyTOF Luo (ML + SHAP) | ±6–7 minggu |
 | 3 | Gabungan 1 + 2 | ±8–10 minggu |
 Dataset tidak bisa digabung menjadi satu set latih (modalitas & label berbeda). Pilot Skema 3 sedang dijalankan untuk menilai kelayakan.
+**Catatan keselarasan dengan bimbingan 4:** Skema 1 memakai CNN (*deep learning*), padahal bimbingan 4 memutuskan **machine learning**.
+Karena itu inti yang diusulkan = **ekstraksi fitur + ML** (heiDATA, ditambah data CyTOF bila perlu); CNN/Grad-CAM paling jauh hanya
+sebagai pembanding opsional. Pilot CNN sempat dijalankan tetapi gagal karena memori (sudah diperbaiki, tidak dijalankan ulang).
 
 ## 5. Kecocokan judul & usulan judul pengganti (draf untuk didiskusikan)
 Tidak ada satu dataset yang memenuhi semua unsur judul; unsur yang paling bermasalah adalah **"citra imaging flow cytometry"**.
@@ -99,15 +107,14 @@ Tidak ada satu dataset yang memenuhi semua unsur judul; unsur yang paling bermas
 | Grad-CAM, Bidang II Sistem Optika | ✅ | ❌ (SHAP; spektrometri massa) | ✅ |
 
 Usulan (template: judul ≤ 15 kata):
-- **A — perubahan minimal, heiDATA (Skema 1):** *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berdasarkan Citra Mikroskopi
+- **A — perubahan minimal, heiDATA (ekstraksi fitur + ML):** *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berdasarkan Citra Mikroskopi
   Fluoresens Menggunakan Machine Learning* (15 kata) — EN: *Classification of CD4 T Cell Conditions in HIV-1 Infection Based on
   Fluorescence Microscopy Images Using Machine Learning*
-- **A′ — menonjolkan transfer learning:** *Klasifikasi Sel T CD4 Terpapar HIV-1 pada Citra Mikroskopi Fluoresens Menggunakan Transfer Learning* (13 kata)
 - **B — dua sumber data (Skema 2/3):** *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berbasis Citra Mikroskopi Fluoresens dan Mass Cytometry* (15 kata)
 - **C — fokus CyTOF (sinyal pilot terkuat; tanpa citra, Bidang II perlu diganti):** *Klasifikasi Kondisi Sel T CD4 Terinfeksi HIV-1
   Berbasis Data Mass Cytometry Menggunakan Explainable Machine Learning* (15 kata)
 
-Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1 + Grad-CAM tetap) dengan upaya menambah data heiDATA;
+Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1 + fitur bio-optik + ML sesuai arahan B3–B4) dengan upaya menambah data heiDATA;
 **B** bila pembimbing mengutamakan hasil kuat & konsep sehat/terinfeksi/apoptosis. Prosedur perubahan judul (*fast-track*) ditanyakan.
 
 ## 6. Keputusan yang diminta dari pembimbing

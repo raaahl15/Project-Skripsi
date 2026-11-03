@@ -62,9 +62,12 @@ def train(model, X, y, epochs, lr, batch=64, weight=None):
 
 
 @torch.no_grad()
-def predict_proba(model, X):
+def predict_proba(model, X, batch=256):
+    """Batched inference (predicting ~12k images at once needs ~3 GB RAM and crashed the first pilot run)."""
     model.eval()
-    return torch.softmax(model(torch.from_numpy(X[:, None])), dim=1).numpy()
+    out = [torch.softmax(model(torch.from_numpy(X[i:i + batch, None])), dim=1).numpy()
+           for i in range(0, len(X), batch)]
+    return np.concatenate(out)
 
 
 def heidata_crops(root: Path, labels_dir: Path, box_um: float = 17.0) -> pd.DataFrame:
