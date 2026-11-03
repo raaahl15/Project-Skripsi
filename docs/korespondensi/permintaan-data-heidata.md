@@ -13,9 +13,26 @@ Paper terkait: *Cell Reports* (2024), "Spatial resolution of HIV-1 post-entry st
 3. Pakai **email UGM** (bukan Gmail) agar identitas akademik jelas.
 4. Catat tanggal kirim di bawah; bila belum ada balasan dalam ±7 hari, kirim satu email pengingat singkat.
 
-## Draf email (bahasa Inggris)
+## Kontak yang ditemukan (2026-11-03)
+- **Oliver T. Fackler** (last author; Heidelberg University, Medical Faculty, Dept. of Infectious Diseases, Integrative Virology, CIID)
+  — **oliver.fackler@med.uni-heidelberg.de**. Sumber: metadata Europe PMC/PubMed (PMID 38478523), tercantum sebagai
+  "Electronic address" afiliasinya. Koleksi heiDATA dataset ini juga bernama "Integrative Virology".
+  Belum terverifikasi sebagai "Lead contact" (teks lengkap paper berbayar) → cek di https://doi.org/10.1016/j.celrep.2024.113941.
+- **Swetha Ananth** (first author, pemilik dataset): email tidak ditemukan → hubungi via tombol "Contact Owner" heiDATA.
+- Penulis: Ananth S, Ambiel I, Schifferdecker S, Müller TG, Wratil PR, Mejias-Perez E, Kräusslich HG, Müller B, Keppler OT, Fackler OT.
+  *Cell Reports* 43(3):113941 (2024), DOI 10.1016/j.celrep.2024.113941.
+
+## Draf email utama (bahasa Inggris) — ke oliver.fackler@med.uni-heidelberg.de
 
 **Subject:** Request for additional raw images – HIV-1 post-entry steps in resting CD4 T cells (heiDATA doi:10.11588/DATA/MUXYRY)
+
+Dear Dr. Fackler,
+
+(Alinea pembuka khusus untuk Dr. Fackler — gantikan alinea kedua di bawah:)
+Your group's dataset on heiDATA by Dr. Swetha Ananth, accompanying your *Cell Reports* paper on HIV-1 post-entry steps in
+resting CD4 T cells, is the closest match to this question that I could find, and I am very grateful that it is openly available.
+
+(Teks dasar — juga dipakai bila menulis langsung ke Dr. Ananth:)
 
 Dear Dr. Ananth,
 
