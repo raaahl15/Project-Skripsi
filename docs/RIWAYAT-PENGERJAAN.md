@@ -26,6 +26,9 @@
 
 **Belum diuji di Colab** (perlu token GitHub dari pengguna). `exp1.zip` Essig belum ada di Drive.
 
+**Essig di Drive (4 Nov):** unggahan browser dihentikan pengguna; `exp1.zip` diunggah via rclone (±28 menit, ±11 MiB/s) ke
+`Project-Skripsi/data/raw/exp1.zip`; ukuran sama (19.581.330.572 B), MD5 `60289a8ada11216a7e11558577a857e6`.
+
 **Insiden keamanan (4 Nov):** run pertama di Colab gagal di sel clone (exit 128) dan pesan error menampilkan token GitHub karena
 token disisipkan di URL clone (kesalahan kode notebook). Pengguna diminta *revoke* token & membuat token baru (Contents: Read-only,
 hanya repo Project-Skripsi). Notebook diperbaiki: token hanya dikirim sebagai header HTTP satu perintah, keluaran/galat disensor,
