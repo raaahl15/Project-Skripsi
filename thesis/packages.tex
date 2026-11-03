@@ -3,5 +3,9 @@
 \usepackage{amscd}
 \usepackage{amstext}
 
+% skripsidtntf.cls uses \uline (halaman pengesahan) but does not load ulem.
+% normalem keeps \emph as italics.
+\usepackage[normalem]{ulem}
+
 % Figures: thesis/figures/ and experiment outputs in results/
 \graphicspath{{figures/}{../results/}}

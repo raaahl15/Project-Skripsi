@@ -7,6 +7,8 @@ Naskah kita di `thesis/` dibangun dari template ini:
 - `skripsidtntf.cls`, `skripsi.bst`, `logoUGM.png` disalin ke `thesis/`.
 - `main.tex` = adaptasi `skripsi.tex`; `muka_skripsi.tex`, `data_skripsi.tex` (diisi data skripsi kita;
   bug kurung kurawal `\nipkajur{` yang tidak tertutup di template asli sudah diperbaiki di versi kita).
+- `skripsidtntf.cls` memakai `\uline` tanpa memuat paket `ulem` → di `thesis/packages.tex` ditambah
+  `\usepackage[normalem]{ulem}` (class resmi tidak diubah).
 - File bab mengikuti judul & subbab `Bab1.tex`–`Bab5.tex`.
 - `Bab4.tex` dan `app1.tex` di sini berguna sebagai **contoh format** persamaan, gambar, tabel, sitasi,
   dan format daftar pustaka (`pustaka.bib`).
