@@ -45,6 +45,30 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
   Cytometry", *Cytometry A* 97(3) (2020), PMID 31688997.
 - Kecocokan: rendah untuk "kondisi sel"; berguna sebagai pembanding fitur morfometri.
 
+## Kandidat temuan pengguna (dinilai 2026-11-03)
+
+### 4. heiDATA doi:10.11588/DATA/MUXYRY — HIV-1 di sel T CD4 istirahat (Lamin B1) ⭐ paling relevan dengan proposal
+- Metadata DataCite: "Spatial resolution of HIV-1 post-entry steps in resting CD4 T cells [data]", Ananth, Swetha, 2024, heiDATA.
+  Deskripsi, lisensi, ukuran, format: **tidak diisi di metadata**; halaman heiDATA memblokir akses otomatis (bot-check) → perlu dibuka di browser.
+- Paper terkait: *Cell Reports* (2024), "Spatial resolution of HIV-1 post-entry steps in resting CD4 T cells"
+  (https://www.cell.com/cell-reports/fulltext/S2211-1247(24)00269-9). Paper memakai **Lamin B1** sebagai penanda selubung inti;
+  citra dianalisis di Fiji (titik kapsid HIV di dalam/luar batas inti dikurasi manual) → data kemungkinan besar **citra mikroskopi**, bukan IFC.
+- Kecocokan: sel T CD4 primer + HIV + Lamin B1 + citra optik (cocok dengan bidang sistem optika, CNN, Grad-CAM).
+  Belum pasti: isi file, ukuran, label sel (terinfeksi/tidak), ada tidaknya kontrol tak terinfeksi, sel mati/lisis.
+
+### 5. Dryad doi:10.7272/Q6SX6BFR — Subset sel T CD4 jaringan: kerentanan terhadap infeksi HIV & kematian
+- Luo X. (2023), Dryad; paper: Luo X. et al., *Frontiers in Immunology* (2022), DOI 10.3389/fimmu.2022.883420.
+- Data: **mass cytometry (CyTOF) berformat FCS** + scRNA-seq (CSV) — **bukan citra**. Sel limfoid tonsil manusia (sel T CD4 primer), 6 donor.
+- Label: kondisi kultur di nama file (`..._Infected1_...fcs` vs `..._Uninfected_...fcs`); sudah di-*gating* sel hidup (live singlets);
+  penanda per kanal ada di dalam file FCS (belum dicek). Ukuran total 1,33 GB; unduhan langsung.
+- Kecocokan: HIV + CD4 + ML tabular + XAI (mis. SHAP), tetapi **tidak ada citra** → Grad-CAM & aspek "sistem optika"/IFC hilang.
+
+### 6. FlowRepository FR-FCM-ZZSZ — belum bisa dinilai
+- Sertifikat SSL situs kedaluwarsa → halaman tidak terbaca. FlowRepository umumnya berisi file FCS flow cytometry konvensional.
+
+### 7. ACTG388 (UTHealth) — tidak cocok
+- Data **klinis longitudinal jumlah CD4** pasien HIV (tabel teks), bukan data sel tunggal/citra.
+
 ## Opsi penyesuaian topik (diputuskan bersama Pak Nopriadi)
 | Opsi | Data | Pertanyaan riset yang mungkin | Dampak ke judul |
 |---|---|---|---|
