@@ -72,11 +72,26 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
   penanda per kanal ada di dalam file FCS (belum dicek). Ukuran total 1,33 GB; unduhan langsung.
 - Kecocokan: HIV + CD4 + ML tabular + XAI (mis. SHAP), tetapi **tidak ada citra** → Grad-CAM & aspek "sistem optika"/IFC hilang.
 
-### 6. FlowRepository FR-FCM-ZZSZ — belum bisa dinilai
-- Sertifikat SSL situs kedaluwarsa → halaman tidak terbaca. FlowRepository umumnya berisi file FCS flow cytometry konvensional.
+### 6. FlowRepository FR-FCM-ZZSZ — CD4+ CyTOF-2 HIV (dari screenshot pengguna, 2026-11-03)
+- Experiment name: "CD4+ CyTOF-2 HIV"; primary researcher/PI: Aurélien Corneau; experiment dates 2015-12-17 – 2016-02-04;
+  diunggah Jun 2016, diperbarui Aug 2016. MIFlowCyt score 18,00%. Manuscripts: tidak dicantumkan. Keywords/organisasi: None.
+- Purpose: "Comprehensive mass cytometry analysis of activation, cell cycle and immune check points expression in peripheral
+  blood CD4 T cells in healthy and HIV-infected individuals".
+- Data: **semua file FCS (mass cytometry)** — bukan citra. Label tingkat **donor**: sehat vs terinfeksi HIV (bukan per sel).
+- Catatan: situs menampilkan pemberitahuan masalah kapasitas yang memengaruhi unggah & unduh; sertifikat SSL kedaluwarsa.
+- Kecocokan: HIV + sel T CD4 + ML tabular (+ SHAP); tanpa citra → tanpa Grad-CAM/aspek optika. Tidak ada paper terkait untuk disitasi.
 
 ### 7. ACTG388 (UTHealth) — tidak cocok
 - Data **klinis longitudinal jumlah CD4** pasien HIV (tabel teks), bukan data sel tunggal/citra.
+
+## Peta ringkas (per 2026-11-03)
+| Data | Citra? | HIV? | Sel CD4 primer? | Status |
+|---|---|---|---|---|
+| 4. heiDATA Ananth 2024 | ✅ mikroskopi fluoresens | ✅ (±Vpx) | ✅ istirahat | Menunggu unduhan untuk diperiksa |
+| 5. Dryad Luo 2023 | ❌ CyTOF + scRNA | ✅ infected/uninfected | ✅ tonsil | Cadangan non-citra |
+| 6. FlowRepository Corneau | ❌ CyTOF | ✅ donor sehat/HIV | ✅ darah tepi | Cadangan non-citra (tanpa paper) |
+| 1. Dryad Essig 2022 | ✅ IFC | ❌ (aktivasi) | ✅ memori | Cadangan citra IFC |
+| 2. BBBC048 | ✅ IFC | ❌ (siklus sel) | ❌ Jurkat | Prototipe pipeline |
 
 ## Opsi penyesuaian topik (diputuskan bersama Pak Nopriadi)
 | Opsi | Data | Pertanyaan riset yang mungkin | Dampak ke judul |
