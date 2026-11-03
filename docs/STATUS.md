@@ -7,6 +7,7 @@ Terakhir diperbarui: 2026-11-03
 ## Sudah selesai
 - Proposal TA ke-1 disetujui di Simaster UGM (pembimbing: Nopriadi, S.T., M.Sc.)
 - Repo skripsi + sistem kerja (Langkah 0) disiapkan
+- Struktur Google Drive `Skripsi-ML/` + 5 Google Docs bab (kerangka) dibuat; draf naskah ditulis di Docs, final di LaTeX
 
 ## Sedang dikerjakan
 - Menyiapkan bimbingan pertama
@@ -14,7 +15,7 @@ Terakhir diperbarui: 2026-11-03
 ## Berikutnya (maks. 3)
 1. Bimbingan pertama: tanyakan sumber dataset imaging flow cytometry, rumusan masalah, dan ekspektasi metode/metrik
 2. Pastikan dataset tersedia (nama, format, jumlah sel per kelas), simpan di Drive `Skripsi-ML/data/raw/`
-3. Masukkan template LaTeX kampus ke `thesis/template-kampus/` dan sesuaikan `thesis/main.tex`
+3. Buat repo private GitHub `raaahl15/skripsi-ml` dan push; masukkan template LaTeX kampus ke `thesis/template-kampus/`
 
 ## Blocker / pertanyaan terbuka
 - **Dataset belum ada** (blocker paling kritis; semua eksperimen bergantung padanya)

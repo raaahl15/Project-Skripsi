@@ -2,6 +2,10 @@
 
 Repo kerja skripsi. Konteks lengkap dan aturan kerja agent: [AGENTS.md](AGENTS.md).
 Posisi pekerjaan terkini: [docs/STATUS.md](docs/STATUS.md). Daftar revisi: [docs/REVISI.md](docs/REVISI.md).
+Riwayat sesi: [docs/RIWAYAT-PENGERJAAN.md](docs/RIWAYAT-PENGERJAAN.md). Dasar sistem: [MASTER-SKRIPSI-SETUP.md](MASTER-SKRIPSI-SETUP.md).
+
+**Naskah:** draf ditulis di **Google Docs** per bab ([folder naskah](https://drive.google.com/drive/folders/1B0gIkugJe1yVZWEBZaS62jG9fA5LRTU7)),
+lalu dikonversi ke **LaTeX** (`thesis/`) per bab setelah disetujui dosen. Konvensi & cara konversi: [docs/PANDUAN-GDOCS.md](docs/PANDUAN-GDOCS.md).
 
 - Pemilik: [raaahl15](https://github.com/raaahl15)
 - Repo GitHub (private): [ISI NANTI]
@@ -40,12 +44,15 @@ scripts/                setup, backup, build naskah
 | Laptop utama | Antigravity + Claude Code, commit dan push rutin |
 | Laptop lain / laptop teman | Clone repo, bootstrap kit dari Drive, rclone data. Lihat [docs/SETUP-LAPTOP-BARU.md](docs/SETUP-LAPTOP-BARU.md) |
 | Hanya HP/iPad | Lihat bagian **Revisi dari HP/iPad** di bawah |
-| Bimbingan | Naskah (PDF) terbuka di iPad, tanya Claude via Project, catat ke `docs/bimbingan/` dan `docs/REVISI.md` |
+| Bimbingan | Naskah terbuka di iPad (Google Docs/PDF), tanya Claude via Project, catat ke `docs/bimbingan/` dan `docs/REVISI.md` |
+| Menulis & revisi naskah | Google Docs per bab, bisa dari mana saja; dosen memberi komentar/saran langsung di Docs |
+| Bab disetujui | Konversi ke LaTeX sesuai [PANDUAN-GDOCS.md](docs/PANDUAN-GDOCS.md) |
 | Training berat | Colab/Kaggle, mount Drive, commit metrik ke `results/` |
 | GitHub bermasalah | Clone dari `.bundle` di `Drive/Skripsi-ML/backup/` |
 
 ### Revisi dari HP/iPad (tanpa laptop)
 
+0. **Google Docs (app/browser)**: untuk bab yang masih draf, revisi langsung di dokumen bab. Claude app dengan konektor Google Docs juga bisa membaca komentar dan mengeditnya.
 1. **claude.ai/code (Claude Code di web)**: pilih repo ini, lalu beri perintah, mis. *"Kerjakan revisi #3 di docs/REVISI.md pada thesis/bab3-metodologi.tex"*. Claude mengedit, commit, dan push dari cloud.
 2. **github.dev**: buka repo di browser, tekan `.` untuk editor, lalu edit `.tex` dan commit. Cocok untuk perubahan kecil.
 3. **Claude app (Project)**: diskusi dan menyusun kalimat; hasilnya dimasukkan lewat cara 1 atau 2.
@@ -55,7 +62,7 @@ Setelah push, **GitHub Actions** meng-compile LaTeX otomatis. PDF diunduh dari t
 ### Ritme
 
 - **Awal sesi:** baca `docs/STATUS.md`.
-- **Akhir sesi:** update `docs/STATUS.md`, lalu commit dan push.
+- **Akhir sesi:** update `docs/STATUS.md` dan tambah entri di `docs/RIWAYAT-PENGERJAAN.md`, lalu commit dan push. Jika sistem berubah, update juga `MASTER-SKRIPSI-SETUP.md`.
 - **H-1 bimbingan:** unduh PDF terbaru, lalu upload ke Claude Project.
 - **Setelah bimbingan:** isi `docs/bimbingan/YYYY-MM-DD.md` dan pindahkan revisi ke `docs/REVISI.md`.
 - **Mingguan:** jalankan backup (`scripts/backup.ps1` atau `scripts/backup.sh`).
