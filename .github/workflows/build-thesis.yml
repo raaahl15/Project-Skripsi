@@ -1,5 +1,6 @@
 # Compiles the LaTeX thesis on every push that touches thesis/, so the PDF
 # is available even when editing from a phone/iPad (Actions > run > Artifacts).
+# On failure, the first LaTeX/BibTeX/makeindex errors are shown as annotations.
 name: Build thesis PDF
 
 on:
@@ -13,14 +14,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
           working_directory: thesis
-          latexmk_use_lualatex: false
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
@@ -28,3 +28,35 @@ jobs:
           name: skripsi-pdf
           path: thesis/main.pdf
           retention-days: 30
+
+      - name: Show LaTeX errors
+        if: failure()
+        working-directory: thesis
+        run: |
+          annotate() { # $1 = title, stdin = text -> one multi-line error annotation
+            msg=$(sed -e 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')
+            [ -n "$msg" ] && echo "::error title=$1::$msg"
+          }
+          if [ -f main.log ]; then
+            grep -m3 -A5 -E '^!|^\./?[^ ]+\.tex:[0-9]+:' main.log | head -n 30 | annotate "LaTeX error (main.log)"
+            echo "----- main.log (errors with context) -----"
+            grep -n -B2 -A8 -E '^!|^\./?[^ ]+\.tex:[0-9]+:' main.log | head -n 120 || true
+          else
+            echo "::error title=No main.log::pdflatex did not run (check the Compile LaTeX step output)"
+          fi
+          for f in main.blg main.ilg; do
+            if [ -f "$f" ] && grep -qiE 'error|warning--' "$f"; then
+              grep -iE -A3 'error|warning--' "$f" | head -n 15 | annotate "$f"
+            fi
+          done
+
+      - name: Upload logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-logs
+          path: |
+            thesis/*.log
+            thesis/*.blg
+            thesis/*.ilg
+          retention-days: 7
