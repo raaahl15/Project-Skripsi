@@ -86,10 +86,29 @@ Sumber angka: `results/pilot-luo/metrics_classify.json`, `results/pilot-luo/stat
 | 3 | Gabungan 1 + 2 | ±8–10 minggu |
 Dataset tidak bisa digabung menjadi satu set latih (modalitas & label berbeda). Pilot Skema 3 sedang dijalankan untuk menilai kelayakan.
 
-## 5. Usulan penyesuaian judul (draf untuk didiskusikan)
-- A (heiDATA): *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berdasarkan Citra Mikroskopi Fluoresens Lamin B1 Menggunakan Machine Learning dan Explainable AI*
-- B (Skema 1): *… Menggunakan Transfer Learning dari Citra Imaging Flow Cytometry dan Explainable AI*
-- C (Skema 2): *Analisis Kondisi Sel T CD4 pada Infeksi HIV-1 Berbasis Citra Mikroskopi Fluoresens dan Mass Cytometry Menggunakan Machine Learning*
+## 5. Kecocokan judul & usulan judul pengganti (draf untuk didiskusikan)
+Tidak ada satu dataset yang memenuhi semua unsur judul; unsur yang paling bermasalah adalah **"citra imaging flow cytometry"**.
+
+| Unsur judul/proposal | heiDATA | CyTOF Luo | IFC Essig |
+|---|---|---|---|
+| Sel (T) CD4 | ✅ | ✅ | ✅ |
+| Infeksi HIV | ✅ | ✅ | ❌ |
+| Citra IFC | ❌ (mikroskopi fluoresens) | ❌ (tanpa citra) | ✅ |
+| Kondisi sehat/terinfeksi/lisis | ⚠️ +Vpx/−Vpx/Mock | ✅ sehat/HIV+/apoptosis per sel | ❌ |
+| Lamin B1, morfometri | ✅ | ❌ | ⚠️ |
+| Grad-CAM, Bidang II Sistem Optika | ✅ | ❌ (SHAP; spektrometri massa) | ✅ |
+
+Usulan (template: judul ≤ 15 kata):
+- **A — perubahan minimal, heiDATA (Skema 1):** *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berdasarkan Citra Mikroskopi
+  Fluoresens Menggunakan Machine Learning* (15 kata) — EN: *Classification of CD4 T Cell Conditions in HIV-1 Infection Based on
+  Fluorescence Microscopy Images Using Machine Learning*
+- **A′ — menonjolkan transfer learning:** *Klasifikasi Sel T CD4 Terpapar HIV-1 pada Citra Mikroskopi Fluoresens Menggunakan Transfer Learning* (13 kata)
+- **B — dua sumber data (Skema 2/3):** *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV-1 Berbasis Citra Mikroskopi Fluoresens dan Mass Cytometry* (15 kata)
+- **C — fokus CyTOF (sinyal pilot terkuat; tanpa citra, Bidang II perlu diganti):** *Klasifikasi Kondisi Sel T CD4 Terinfeksi HIV-1
+  Berbasis Data Mass Cytometry Menggunakan Explainable Machine Learning* (15 kata)
+
+Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1 + Grad-CAM tetap) dengan upaya menambah data heiDATA;
+**B** bila pembimbing mengutamakan hasil kuat & konsep sehat/terinfeksi/apoptosis. Prosedur perubahan judul (*fast-track*) ditanyakan.
 
 ## 6. Keputusan yang diminta dari pembimbing
 1. Setuju dataset utama heiDATA (citra mikroskopi, bukan IFC)? Perlukah perubahan judul diajukan ulang di Simaster (*fast-track*)?
