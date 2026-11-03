@@ -15,6 +15,27 @@
 
 ---
 
+## 2026-11-03 — Perbaikan kompilasi template LaTeX + build lokal
+**Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
+
+**Dikerjakan:**
+- CI (GitHub Actions) gagal 2× pada class resmi `skripsidtntf.cls`:
+  1. `\uline` tak terdefinisi (halaman pengesahan) → `\usepackage[normalem]{ulem}` di `thesis/packages.tex`.
+  2. `\@pembimbingpendamping` tak terdefinisi saat `\end{intisari}`; class juga memakai `\@nippembimbingpendamping`
+     di `\halamantugas` tanpa definisi → setter + default ditambah di `packages.tex` (pola sama dengan pembimbing utama);
+     `data_skripsi.tex`: `\pembimbingpendamping{-}`, `\nippembimbingpendamping{-}` (Simaster: hanya 1 pembimbing).
+  Pengecekan seluruh class: tidak ada makro metadata lain yang dipakai tanpa definisi.
+- CI diperbaiki: error LaTeX/BibTeX/makeindex tampil sebagai *annotation*, log diunggah saat gagal, `actions/checkout@v5`.
+- MiKTeX 25.12 dipasang (winget, scope user, auto-install paket aktif) → kompilasi lokal **berhasil: 21 halaman,
+  0 error, 0 undefined control sequence**; teks halaman intisari/abstract diverifikasi ("Pembimbing Pendamping : -").
+- `scripts/build-thesis.ps1` ditulis ulang: tanpa latexmk/Perl (pdflatex → bibtex bila ada pustaka → makeindex → pdflatex ×2),
+  diuji dari build bersih.
+
+**Catatan:** 4 *overfull hbox* kecil di halaman muka bawaan template (tidak fatal). Peringatan babel `bahasa` deprecated berasal dari class resmi.
+Tampilan visual PDF belum diperiksa (renderer PDF tidak tersedia); pengguna diminta membuka `thesis\build\main.pdf`.
+
+---
+
 ## 2026-11-03 — Panduan kampus + template LaTeX resmi
 **Oleh:** Claude Code (laptop utama, Windows) bersama pengguna
 

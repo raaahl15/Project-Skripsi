@@ -6,7 +6,10 @@
 - [ ] **Node.js LTS**: https://nodejs.org (dibutuhkan Claude Code)
 - [ ] **Antigravity** (editor)
 - [ ] **Claude Code**: `npm install -g @anthropic-ai/claude-code`
-- [ ] **LaTeX**: MiKTeX (Windows) atau TeX Live (Linux/macOS), pastikan `latexmk`, `bibtex`, dan `makeindex` tersedia.
+- [ ] **LaTeX**: Windows → `winget install -e --id MiKTeX.MiKTeX --scope user`, lalu
+      `initexmf --set-config-value="[MPM]AutoInstall=1"` (paket diunduh otomatis saat compile);
+      build: `powershell -ExecutionPolicy Bypass -File scripts\build-thesis.ps1` (tidak butuh Perl).
+      Linux/macOS → TeX Live dengan `latexmk`, `bibtex`, `makeindex`.
       Opsional: cukup andalkan GitHub Actions untuk compile PDF.
 - [ ] **rclone** (untuk data dari Drive): Windows `winget install -e --id Rclone.Rclone`, lalu
       `rclone config create gdrive drive scope=drive` (browser terbuka → login Google → Allow).

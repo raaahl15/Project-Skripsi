@@ -386,3 +386,5 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | `thesis/` memakai template LaTeX resmi DTNTF (`skripsidtntf.cls`, BibTeX `skripsi.bst`, nomencl via `latexmkrc`); salinan asli di `thesis/template-kampus/`; biblatex ditinggalkan | Panduan §4.2 mewajibkan template resmi |
 | 2026-11-03 | Struktur bab (LaTeX + Google Docs) mengikuti template: Bab 3 "Pelaksanaan Penelitian", Bab 5 "Kesimpulan dan Saran" | Sesuai template kampus |
 | 2026-11-03 | Ditambah `docs/PANDUAN-KAMPUS.md`; **aturan AI §4.1** jadi aturan mengikat agent (AGENTS.md no. 15): agent tidak menulis substansi naskah | Kepatuhan etika akademik kampus |
+| 2026-11-03 | Shim untuk bug class resmi di `thesis/packages.tex` (`ulem`; setter `\pembimbingpendamping`/`\nippembimbingpendamping`); class tidak diubah | Class resmi memakai makro yang tidak didefinisikannya |
+| 2026-11-03 | MiKTeX dipasang di laptop utama; `scripts/build-thesis.ps1` tanpa latexmk/Perl, output `thesis\build\main.pdf`; CI menampilkan error LaTeX sebagai annotation | Kompilasi & debug lokal tanpa menunggu CI |

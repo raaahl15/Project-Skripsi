@@ -7,5 +7,16 @@
 % normalem keeps \emph as italics.
 \usepackage[normalem]{ulem}
 
+% skripsidtntf.cls prints \@pembimbingpendamping (intisari, abstract, halaman tugas) and
+% \@nippembimbingpendamping (halaman tugas) but never defines them nor their setters.
+% Same pattern as \pembimbingutama/\nippembimbingutama in the class; \providecommand
+% avoids a clash if a future class version defines them. Default: empty.
+\makeatletter
+\providecommand{\pembimbingpendamping}[1]{\gdef\@pembimbingpendamping{#1}}
+\providecommand{\@pembimbingpendamping}{}
+\providecommand{\nippembimbingpendamping}[1]{\gdef\@nippembimbingpendamping{#1}}
+\providecommand{\@nippembimbingpendamping}{}
+\makeatother
+
 % Figures: thesis/figures/ and experiment outputs in results/
 \graphicspath{{figures/}{../results/}}

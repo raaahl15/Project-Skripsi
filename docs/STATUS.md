@@ -28,5 +28,5 @@ Terakhir diperbarui: 2026-11-03
 - Rumusan masalah, model, dan metrik belum ditentukan
 - **Risiko waktu:** target ujian akhir semester (sekitar Desember 2026). Syarat daftar ujian: draf 100% + persetujuan
   pembimbing + catatan bimbingan SIMASTER lengkap + bukti lulus similarity check. Tenggat pendaftaran: [ISI NANTI]
-- Kompilasi template LaTeX belum terverifikasi (menunggu hasil GitHub Actions)
+- Kompilasi template LaTeX: **berhasil secara lokal** (MiKTeX, 21 halaman, 0 error); hasil CI setelah push perlu dicek di tab Actions
 - Tidak ada GPU lokal (torch versi CPU) → training berat di Colab/Kaggle

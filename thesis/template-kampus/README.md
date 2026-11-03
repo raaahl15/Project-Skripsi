@@ -9,6 +9,11 @@ Naskah kita di `thesis/` dibangun dari template ini:
   bug kurung kurawal `\nipkajur{` yang tidak tertutup di template asli sudah diperbaiki di versi kita).
 - `skripsidtntf.cls` memakai `\uline` tanpa memuat paket `ulem` → di `thesis/packages.tex` ditambah
   `\usepackage[normalem]{ulem}` (class resmi tidak diubah).
+- `skripsidtntf.cls` mencetak `\@pembimbingpendamping` (intisari, abstract, `\halamantugas`) dan
+  `\@nippembimbingpendamping` (`\halamantugas`) tetapi tidak pernah mendefinisikannya maupun setter-nya
+  → di `thesis/packages.tex` ditambah `\pembimbingpendamping` / `\nippembimbingpendamping` (pola sama dengan
+  `\pembimbingutama`, via `\providecommand`, default kosong). Di `data_skripsi.tex` diisi `-` karena Simaster
+  hanya mencantumkan satu pembimbing.
 - File bab mengikuti judul & subbab `Bab1.tex`–`Bab5.tex`.
 - `Bab4.tex` dan `app1.tex` di sini berguna sebagai **contoh format** persamaan, gambar, tabel, sitasi,
   dan format daftar pustaka (`pustaka.bib`).
