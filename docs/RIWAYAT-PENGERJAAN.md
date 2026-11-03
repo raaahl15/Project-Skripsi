@@ -15,6 +15,19 @@
 
 ---
 
+## 2026-11-03 — Google Docs bimbingan + draf tugas tertunda WO-02/03/05
+**Oleh:** Claude Code (laptop utama) bersama pengguna
+
+**Dikerjakan:**
+- Google Docs di Drive `bimbingan/`: Work Order Skripsi, Bahan Bimbingan 5, Materi Persiapan Bimbingan 5.
+- Pengguna: WO-02, WO-03, WO-05 belum dikerjakan → draf dibuat dengan bantuan AI di `docs/materi/` (gambaran Bab 1, posisi
+  Teknik Fisika vs Teknik Biomedis/TI, materi biologi sel/CD4/HIV + optika). Status WO → 🔄; mahasiswa wajib mempelajari.
+- Perbaikan hitungan status di Work Order (✅ 4 · 🔄 7 · ⏳ 1 · ➖ 1).
+
+**Catatan:** materi biologi berisi pengetahuan umum yang masih perlu sitasi buku teks; hanya Ananth 2024 & Luo 2022 yang terverifikasi.
+
+---
+
 ## 2026-11-03 — Pilot Skema 3, riwayat bimbingan 1–4, Work Order
 **Oleh:** Claude Code (laptop utama) bersama pengguna
 

@@ -38,7 +38,8 @@
     & isi kolom bukti (link file/hasil). Sebelum bimbingan: perbarui bagian "Eksekusi sejak bimbingan terakhir".
     Sumber utama = file di repo; versi Google Docs (Drive `bimbingan/`) disalin ulang dari repo menjelang setiap bimbingan:
     [Work Order Skripsi](https://docs.google.com/document/d/1g44jOiptFFLlyWT23MJbjdQCIzIcuGF7E2Ov2e4Ltsc/edit) ·
-    [Bahan Bimbingan 5](https://docs.google.com/document/d/1pO0eVly4ouybx3KnTrH25khN3zutY_9NTK0XP3wEyyU/edit)
+    [Bahan Bimbingan 5](https://docs.google.com/document/d/1pO0eVly4ouybx3KnTrH25khN3zutY_9NTK0XP3wEyyU/edit) ·
+    [Materi Persiapan B5 (WO-02/03/05)](https://docs.google.com/document/d/1LJr7OYx56ouTIlyGJgfq5LuLz1JYFqk0Ku3RCMIINkE/edit)
 18. **Arah penelitian dari pembimbing (B3 9 Sep, B4 23 Sep):** fokus = **ekstraksi fitur fisik/bio-optik** yang membedakan sel
     normal / terinfeksi / mati, lalu klasifikasi dengan **machine learning (bukan deep learning)**. Jangan menjadikan CNN/deep learning
     sebagai metode utama tanpa persetujuan pembimbing.
