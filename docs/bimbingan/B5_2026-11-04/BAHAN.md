@@ -122,10 +122,60 @@ Usulan (template: judul ≤ 15 kata):
 Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1 + fitur bio-optik + ML sesuai arahan B3–B4) dengan upaya menambah data heiDATA;
 **B** bila pembimbing mengutamakan hasil kuat & konsep sehat/terinfeksi/apoptosis. Prosedur perubahan judul (*fast-track*) ditanyakan.
 
+## 5b. Opsi tambahan (disusun 4 Nov 2026): D — Essig sebagai inti, E — satu kerangka ML untuk tiga dataset
+
+### Opsi D — Essig (citra IFC) dengan ekstraksi fitur + machine learning
+- Essig **dapat diolah dengan ML** (bukan hanya *deep learning*): tiap sel sudah memiliki **mask** dari peneliti asli, sehingga tidak
+  perlu segmentasi. Pilot CNN sebelumnya gagal karena metodenya (DL + RAM laptop), bukan karena datanya.
+- **Fitur per sel (8 kanal: kanal 0 *brightfield*, kanal 1–7 fluoresens):** morfometri dari mask (luas, keliling, eksentrisitas,
+  soliditas, sirkularitas); intensitas per kanal (rata-rata, simpangan baku, maksimum, total); tekstur GLCM/Haralick (kontras,
+  homogenitas, entropi) pada *brightfield* & fluoresens; distribusi spasial (rasio tepi/tengah sel); kolokalisasi antar-kanal (korelasi Pearson).
+- **Metode:** Random Forest / gradient boosting / SVM / Logistic Regression; validasi *leave-one-donor-out* (exp1 = 2 donor;
+  exp2–exp4 menambah donor); interpretasi SHAP / *permutation importance*. Sampel ±2.000–10.000 sel per kondisi (Colab/laptop).
+- **Kelas:** kondisi stimulasi/aktivasi sel T CD4 (+SEA, −SEA, Isotype, Teplizumab) — **bukan infeksi HIV**.
+- **Kecocokan judul:** paling dekat dengan judul Simaster (citra IFC + sel CD4 + ML); yang hilang hanya unsur infeksi HIV.
+- Judul D (14 kata): *Klasifikasi Kondisi Aktivasi Sel T CD4 Berdasarkan Citra Imaging Flow Cytometry Menggunakan Machine Learning*.
+- Kekurangan informasi: nama penanda per kanal tercantum di README Dryad (belum diunduh) — diperlukan untuk tafsiran fisis per kanal.
+
+### Opsi E — satu pipeline ML, tiga studi, satu benang merah
+Ketiga dataset **tidak dapat digabung menjadi satu model/tabel** (fitur, label, dan sel berbeda → model akan mengenali asal dataset).
+Yang dapat dilakukan: **pipeline ML yang sama** (segmentasi/mask → ekstraksi fitur → klasifikasi → SHAP → tafsiran fisis)
+diterapkan pada tiga studi yang saling melengkapi:
+
+```
+            SATU PIPELINE ML (dipakai di tiap dataset)
+  segmentasi/mask → ekstraksi fitur → klasifikasi ML → SHAP → tafsiran fisis
+        │                     │                        │
+   [A] Essig (IFC)       [B] CyTOF Luo            [C] heiDATA (mikroskopi)
+   fitur bio-optik       penanda protein          fitur inti (Lamin B1) &
+   sel T CD4 teraktivasi pembeda sel HIV+ /       kapsid pada sel istirahat
+   vs istirahat          apoptosis                terpapar HIV
+        └──────────────────────┴────────────────────────┘
+        Benang merah: AKTIVASI SEL T CD4 ↔ KERENTANAN TERHADAP HIV
+```
+
+- Dasar benang merah: HIV lebih mudah menginfeksi sel T CD4 teraktivasi, sel istirahat lebih sulit (antara lain karena SAMHD1;
+  karena itu heiDATA memakai Vpx) — perlu disitasi dari literatur. Pilot CyTOF: penanda terpenting untuk sel HIV+ adalah PD1, HLA-DR,
+  CTLA4, CD127 (aktivasi/memori).
+- Pertanyaan pemersatu: *karakteristik fisik/bio-optik apa yang menandai kondisi sel T CD4 dan kaitannya dengan infeksi HIV?*
+- Hasil gabungan = **perbandingan lintas studi** (mis. apakah fitur pembeda aktivasi di Essig sejalan dengan penanda aktivasi yang
+  memprediksi infeksi di CyTOF) — berupa **hipotesis** yang dilaporkan apa adanya, bukan satu angka akurasi.
+
+| Aspek | Opsi E |
+|---|---|
+| Arahan pembimbing (B3–B4) | ✅ ekstraksi fitur + ML di semua studi; kelas terinfeksi & mati tersedia di CyTOF |
+| Kecocokan judul | Sebagian: citra IFC (Essig), HIV (CyTOF, heiDATA); judul perlu diarahkan ke "aktivasi & infeksi" |
+| Beban kerja | ±6–8 minggu (pipeline sama; CyTOF & heiDATA sudah dipilot) + Bab 2 mencakup IFC, mikroskopi, CyTOF → **sangat ketat** untuk Desember |
+| Risiko | Benang merah belum tentu terlihat di data; cakupan bisa dinilai terlalu lebar |
+
+Saran: bila opsi E dipilih, tetapkan **satu studi sebagai inti** (mis. Essig karena sesuai judul IFC + ML), CyTOF sebagai penghubung
+ke HIV, heiDATA sebagai pendukung singkat — cakupan akhir diputuskan pembimbing.
+
 ## 6. Keputusan yang diminta dari pembimbing
 1. Setuju dataset utama heiDATA (citra mikroskopi, bukan IFC)? Perlukah perubahan judul diajukan ulang di Simaster (*fast-track*)?
 2. Kelas klasifikasi: +Vpx / −Vpx / Mock (kondisi infeksi) sebagai pengganti sehat/terinfeksi/lisis — dapat diterima?
-3. Skema yang dipilih: 1, 2, atau 3?
+3. Opsi/skema yang dipilih: A (heiDATA), B (heiDATA + CyTOF), C (CyTOF), **D (Essig, citra IFC + ML)**, atau
+   **E (satu kerangka ML untuk tiga studi; tentukan studi inti)**?
 4. Perlukah menghubungi pemilik dataset heiDATA untuk meminta citra tambahan?
 5. Target periode ujian (tengah/akhir semester) dan tenggat pendaftaran.
 6. Pembimbing pendamping: ada atau tidak? NIP pembimbing untuk halaman pengesahan.

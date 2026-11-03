@@ -15,6 +15,18 @@
 
 ---
 
+## 2026-11-04 — Opsi D & E untuk bimbingan 5
+**Oleh:** Claude Code atas permintaan pengguna (pengguna berangkat kuliah; diminta langsung dikerjakan)
+
+**Dikerjakan:**
+- Bahan Bimbingan 5 §5b (repo + Google Doc, sisipan terverifikasi): **opsi D** — Essig diolah dengan ekstraksi fitur + ML
+  (mask tersedia, fitur morfometri/intensitas/tekstur/spasial/kolokalisasi, RF/GB/SVM/LogReg, leave-one-donor-out, SHAP;
+  judul D 14 kata) dan **opsi E** — satu pipeline ML untuk tiga studi (Essig, CyTOF, heiDATA) dengan benang merah
+  aktivasi ↔ kerentanan HIV (hipotesis), konsekuensi & risiko.
+- Pertanyaan keputusan no. 3 (Bahan & Hasil Bimbingan 5) diperbarui ke opsi A–E; log WO-09.
+
+---
+
 ## 2026-11-04 — Run Colab pertama berhasil + uji reproduksibilitas
 **Oleh:** pengguna (Colab) + Claude Code (perbandingan)
 

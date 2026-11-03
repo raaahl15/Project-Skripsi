@@ -21,7 +21,7 @@ Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **N
 |---|---|---|
 | 1 | Dataset final (heiDATA / lainnya) & perubahan judul (fast-track Simaster?) | |
 | 2 | Kelas klasifikasi (+Vpx/−Vpx/Mock atau sehat/terinfeksi/apoptosis) | |
-| 3 | Skema (inti ekstraksi fitur + ML; tambah CyTOF?) | |
+| 3 | Opsi/skema: A heiDATA, B heiDATA + CyTOF, C CyTOF, D Essig (citra IFC + ML), E satu kerangka ML tiga studi (studi inti?) | |
 | 4 | Izin menghubungi pemilik dataset heiDATA (WO-12) | |
 | 5 | Target periode ujian & tenggat pendaftaran | |
 | 6 | Pembimbing pendamping & NIP pembimbing | |
