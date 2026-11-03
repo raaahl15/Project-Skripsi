@@ -15,6 +15,19 @@
 
 ---
 
+## 2026-11-04 — Notebook Google Colab
+**Oleh:** Claude Code (laptop utama) atas permintaan pengguna
+
+**Dikerjakan:**
+- `notebooks/colab/pilot_skripsi_colab.ipynb` (20 sel, tervalidasi nbformat) + salinan di Drive `Project-Skripsi/colab/`:
+  mount Drive → clone repo privat (token di Colab Secrets) → ekstrak data heiDATA & Luo → jalankan pipeline → simpan ke `results-colab/`.
+  Bagian Essig opsional & nonaktif (`RUN_ESSIG_CNN = False`).
+- `docs/PEMROSESAN-DATA.md` §7, `docs/DRIVE-DOCS.md`, MASTER diperbarui.
+
+**Belum diuji di Colab** (perlu token GitHub dari pengguna). `exp1.zip` Essig belum ada di Drive.
+
+---
+
 ## 2026-11-04 — Dokumentasi pemrosesan data & fitur
 **Oleh:** Claude Code (laptop utama) atas permintaan pengguna
 

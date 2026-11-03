@@ -36,6 +36,10 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 
 Link dokumen: `https://docs.google.com/document/d/<Doc ID>/edit`
 
+**Notebook Colab** (bukan Google Doc): Drive `Project-Skripsi/colab/pilot_skripsi_colab.ipynb` — ID `1wA0L4gVQlFzlwyZs938vvqVkNbCXCEJC`
+— buka: https://colab.research.google.com/drive/1wA0L4gVQlFzlwyZs938vvqVkNbCXCEJC · sumber: `notebooks/colab/pilot_skripsi_colab.ipynb`.
+Setelah notebook di repo diubah, unggah ulang: `rclone copy notebooks\colab\pilot_skripsi_colab.ipynb gdrive:Project-Skripsi/colab`.
+
 ## Cara menambah dokumen baru
 - Bimbingan baru: salin template ke `docs/bimbingan/B<n>_<tanggal>/BAHAN.md` & `HASIL.md`, lalu unggah sebagai Google Doc ke
   folder Drive `B<n> - <tanggal>/` (`rclone copy <html> ... --drive-import-formats html --drive-allow-import-name-change`),

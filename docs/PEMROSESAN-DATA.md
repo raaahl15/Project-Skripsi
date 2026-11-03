@@ -11,7 +11,7 @@ Terakhir diperbarui: **4 Nov 2026** · Terkait: WO-07 (ekstraksi fitur), WO-08 (
 | Lokasi kode | Repo `skripsi-ml/` (GitHub `raaahl15/Project-Skripsi`): `src/`, `notebooks/` |
 | Lokasi data mentah | Laptop: `data/raw/` (tidak di-commit). Cadangan zip: Google Drive `Project-Skripsi/data/raw/` |
 | Lokasi hasil | Repo `results/` (angka, tabel, gambar — boleh dikutip di naskah) |
-| Cloud (Colab/Kaggle) | **Belum dipakai** — semua pilot berjalan di CPU laptop |
+| Cloud (Colab/Kaggle) | Pilot 3 Nov dijalankan di CPU laptop. **Sejak 4 Nov tersedia notebook Google Colab** yang menjalankan pipeline yang sama (lihat §7) |
 
 ## 2. Ringkasan per dataset
 | Dataset | Data mentah (laptop) | Skrip | Keluaran | Waktu proses (perkiraan) |
@@ -88,3 +88,16 @@ Catatan: fitur CyTOF adalah **ekspresi protein**, bukan fitur optik/citra.
 .\.venv\Scripts\python.exe src\pilot_cnn_transfer.py --essig-zip <path ke exp1.zip>   # tidak dianjurkan di laptop 8 GB RAM
 ```
 Semua skrip memakai *seed* tetap (42) agar hasil dapat direproduksi.
+
+## 7. Menjalankan di Google Colab
+- Notebook: `notebooks/colab/pilot_skripsi_colab.ipynb` (salinan di Drive `Project-Skripsi/colab/`).
+  Buka: https://colab.research.google.com/drive/1wA0L4gVQlFzlwyZs938vvqVkNbCXCEJC (atau di Drive: klik kanan → *Open with* → Google Colaboratory).
+- Alur: *mount* Google Drive → *clone* repo GitHub privat (token dari **Colab Secrets** `GITHUB_TOKEN`, akses *Contents: Read-only*;
+  token tidak pernah ditulis di notebook/repo) → ekstrak zip dari `Drive/Project-Skripsi/data/raw/` ke disk Colab → jalankan skrip yang sama
+  dengan laptop → salin `results/` ke `Drive/Project-Skripsi/results-colab/<waktu>/`.
+- Hasil Colab dimasukkan ke repo dari laptop: `rclone copy "gdrive:Project-Skripsi/results-colab/<waktu>" results`, lalu commit.
+- Keuntungan dibanding laptop: RAM lebih besar (±12 GB versi gratis vs 7,9 GB), laptop bebas dipakai, bisa dipantau dari iPad, GPU tersedia
+  bila suatu saat diperlukan. Untuk ekstraksi fitur + ML (CPU), kecepatan kurang lebih setara laptop.
+- Batasan Colab gratis: sesi terputus bila idle/±12 jam; disk sementara (data diekstrak ulang tiap sesi); kuota GPU terbatas.
+- Essig (`exp1.zip`, 19,6 GB) harus ada di `Drive/Project-Skripsi/data/raw/` dan bagian Essig di notebook nonaktif secara bawaan
+  (`RUN_ESSIG_CNN = False`) sesuai keputusan bimbingan 4.
