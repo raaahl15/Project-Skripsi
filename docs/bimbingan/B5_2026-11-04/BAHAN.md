@@ -135,7 +135,10 @@ Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1
 - **Kelas:** kondisi stimulasi/aktivasi sel T CD4 (+SEA, −SEA, Isotype, Teplizumab) — **bukan infeksi HIV**.
 - **Kecocokan judul:** paling dekat dengan judul Simaster (citra IFC + sel CD4 + ML); yang hilang hanya unsur infeksi HIV.
 - Judul D (14 kata): *Klasifikasi Kondisi Aktivasi Sel T CD4 Berdasarkan Citra Imaging Flow Cytometry Menggunakan Machine Learning*.
-- Kekurangan informasi: nama penanda per kanal tercantum di README Dryad (belum diunduh) — diperlukan untuk tafsiran fisis per kanal.
+- Kanal (dicek 4 Nov; README Dryad tidak memuat nama kanal, urutan diambil dari notebook penulis): 0 brightfield · 1 Antibody · 2 CD18 · 3 F-Actin ·
+  4 MHCII · 5 CD3 · 6 P-CD3ζ · 7 Live-Dead. Setiap citra = konjugat sel T CD4 memori + sel B (sinapsis imunologis). Kanal Live-Dead membuka kemungkinan kelas sel mati.
+- Catatan kebaruan: paper aslinya (Shetab Boushehri dkk., Nat Commun 14:7888, 2023) sudah memakai ekstraksi fitur + ML (XGBoost, F1-macro 0,92).
+  Karena itu skripsi perlu sudut sendiri, misalnya tafsiran fisis/bio-optik, kelas hidup vs mati dari Live-Dead, atau fitur brightfield saja (label-free).
 
 ### Opsi E — satu pipeline ML, tiga studi, satu benang merah
 Ketiga dataset **tidak dapat digabung menjadi satu model/tabel** (fitur, label, dan sel berbeda → model akan mengenali asal dataset).

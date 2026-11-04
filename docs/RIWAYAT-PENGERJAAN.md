@@ -15,6 +15,22 @@
 
 ---
 
+## 2026-11-04 — Persiapan tambahan B5: README & kanal Essig
+**Oleh:** Claude Code bersama pengguna (pengguna memberikan README Dryad)
+
+**Dikerjakan:**
+- Membaca README Dryad Essig (disimpan di `docs/dataset/essig-dryad-README.md`). README **tidak memuat nama kanal**.
+- Urutan 8 kanal diambil dari notebook penulis (`scifAI-notebooks`): BF, Antibody, CD18, F-Actin, MHCII, CD3, P-CD3ζ, Live-Dead.
+  Paper: Shetab Boushehri dkk., Nat Commun 14:7888 (2023), DOI 10.1038/s41467-023-43429-2.
+- Memeriksa exp1: citra = konjugat sel T–B, mask biner per kanal, `label` hanya ada di sebagian kecil file.
+  Jumlah label dihitung → `results/eksplorasi-essig/label_counts_exp1.json`.
+- Temuan penting: paper sudah memakai ekstraksi fitur + ML (XGBoost F1-macro 0,92) → opsi D perlu sudut kebaruan sendiri.
+- Memperbarui DATASET-KANDIDAT §1, `src/data/essig.py` (CHANNEL_NAMES), Bahan B5 §5b (repo + Google Doc), dan log WO-09.
+
+**Berikutnya:** pilot ML Essig, lembar keputusan 1 halaman, dan pustaka benang merah (menunggu persetujuan pengguna).
+
+---
+
 ## 2026-11-04 — Opsi D & E untuk bimbingan 5
 **Oleh:** Claude Code atas permintaan pengguna (pengguna berangkat kuliah; diminta langsung dikerjakan)
 

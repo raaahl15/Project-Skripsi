@@ -18,7 +18,17 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 - Sel: **sel T CD4+ memori manusia** (9 donor sehat) dikokultur dengan sel B-LCL. Instrumen: Amnis ImageStreamX Mark II, 60×.
 - Kelas/kondisi: −SEA, +SEA, Teplizumab, CD19-TCB, CD20-TCB (kondisi stimulasi/aktivasi, bukan infeksi).
 - Kanal: brightfield + fluoresens (CD3-BV421, HLA-DR-PE-Cy7, Phalloidin AF594, P-CD3ζ Y142-AF647); viability dye eF780.
-  Gating memakai "in-focus live+ CD3+ MHCII+ cells" → kemungkinan **sel mati tidak disertakan** (README belum terbaca, 403).
+  Gating memakai "in-focus live+ CD3+ MHCII+ cells" → kemungkinan **sel mati tidak disertakan**.
+- **Diperiksa 4 Nov 2026.** README Dryad sudah dibaca (salinan: `docs/dataset/essig-dryad-README.md`), tetapi tidak memuat nama kanal.
+  - **Urutan 8 kanal** (sumber: notebook penulis `scifAI-notebooks`, `Data exploration.ipynb`): 0 BF · 1 Antibody · 2 CD18 · 3 F-Actin · 4 MHCII ·
+    5 CD3 · 6 P-CD3ζ · 7 Live-Dead. Kanal 0 = BF sudah dicek visual. Pemetaan Ch1–8 ke indeks 0–7 masih asumsi.
+  - Setiap citra adalah **konjugat sel T–B (sinapsis imunologis)**: sel T CD4 memori + sel B-LCL (EBV-transformed, bukan Raji). SEA = superantigen
+    *Staphylococcal enterotoxin A*. Mask tersedia per kanal (biner).
+  - **Label ahli** (`label`, str) hanya ada pada sebagian kecil citra. Di paper ada 5.221 citra beranotasi, dengan 9 kelas: single B-LCL, single T cell
+    dengan/tanpa sinyal, synapse dengan/tanpa sinyal, multi-synapse, dll. Jumlah per kelas di exp1: lihat `results/eksplorasi-essig/label_counts_exp1.json`.
+  - **Paper sudah melakukan ekstraksi fitur + ML** dan memakai paket scifAI (LogReg, LDA, SVM, RF, XGBoost). Yang terbaik XGBoost dengan
+    F1-macro 0,92 ± 0,01, memakai fitur morfologi, intensitas/tekstur, kolokalisasi, dan sinaptik. → Skripsi dengan data ini perlu
+    sudut pandang sendiri, misalnya fokus fisis/bio-optik, kanal Live-Dead untuk kelas sel mati, atau fitur brightfield saja (*label-free*).
 - Jumlah: > 2,8 juta citra; format `.h5` (key `image`, `mask`, `label`); ukuran total **124,94 GB** (exp1 19,6 GB … exp4 42,7 GB).
 - Lisensi: tidak disebutkan spesifik (footer Dryad: "licensed for reuse"). Unduhan langsung per file.
 - Sitasi: Essig K., Shetab Boushehri S., Marr C. et al. (2022), Dryad, DOI 10.5061/dryad.ht76hdrk7;

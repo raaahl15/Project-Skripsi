@@ -2,7 +2,10 @@
 
 Layout: Experiment_1/Donor_<d>/<condition>/<...>.h5 with datasets 'image' (H, W, 8) uint16 and 'mask' (H, W, 8).
 Observed (pilot, exp1): 2 donors x 4 conditions (+SEA, -SEA, Isotype, Teplizumab) x 60,000 cells.
-Channel 0 = brightfield (verified visually); channels 1-7 = fluorescence (marker per channel: see Dryad README.md).
+Channel 0 = brightfield (verified visually); channels 1-7 = fluorescence.
+Channel names from the authors' notebook (marrlab/scifAI-notebooks, 'Data exploration.ipynb', Ch1..Ch8 -> index 0..7;
+index mapping assumed, not stated by the authors). The Dryad README itself lists no channel names.
+Each image is a T cell - B-LCL conjugate (immunological synapse); expert 'label' (str) exists only for a small subset.
 """
 from __future__ import annotations
 
@@ -17,6 +20,7 @@ from skimage.transform import resize
 
 CONDITIONS = ["+SEA", "-SEA", "Isotype", "Teplizumab"]
 FLUO_CHANNELS = list(range(1, 8))
+CHANNEL_NAMES = ["BF", "Antibody", "CD18", "F-Actin", "MHCII", "CD3", "P-CD3zeta", "Live-Dead"]
 
 
 def to_square64(img: np.ndarray, size: int = 64) -> np.ndarray:
