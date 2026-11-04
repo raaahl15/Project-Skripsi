@@ -15,6 +15,16 @@
 
 ---
 
+## 2026-11-04 — Kerja dari iPad (Remote Control) + aturan cek koneksi
+**Oleh:** Claude Code bersama pengguna
+- Menjelaskan tiga jalur kerja dari iPad: aplikasi Claude + Drive untuk naskah, claude.ai/code untuk repo,
+  dan Remote Control ke laptop untuk pengolahan data.
+- Aturan baru AGENTS.md no. 19: pertanyaan "terhubung ke laptop?" dijawab dengan pengecekan nyata
+  (host `DESKTOP-2I1K2HA`, folder, `data/raw`, git), bukan dari ingatan. MASTER §10 diperbarui.
+- FlowRepository FR-FCM-Z8VC: unduhan otomatis tidak bisa (CAPTCHA/login), jadi menunggu pengguna mengunduh lewat browser.
+
+---
+
 ## 2026-11-04 — Persiapan tambahan B5: README & kanal Essig
 **Oleh:** Claude Code bersama pengguna (pengguna memberikan README Dryad)
 

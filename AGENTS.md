@@ -55,6 +55,12 @@
     referensi/data fiktif). Pengguna tetap harus memahami isi karena akan diuji di sidang.
 16. Ikuti tata tulis kampus (docs/PANDUAN-KAMPUS.md): PUEBI, istilah asing miring, kalimat pasif tanpa "saya/penulis",
     persamaan bernomor dengan variabel & satuan SI didefinisikan, grafik bersatuan & berlegenda, intisari ≤ 200 kata/3 alinea.
+19. **Cek koneksi iPad ↔ laptop (sejak 4 Nov 2026).** Bila pengguna bertanya apakah sesi ini terhubung ke komputer/laptop,
+    **jangan menjawab dari ingatan**. Jalankan pengecekan ini lalu laporkan hasilnya apa adanya:
+    `$env:COMPUTERNAME`, folder kerja, `Test-Path data\raw\heidata-MUXYRY`, `git log -1`, `git status -sb`.
+    - **Terhubung ke laptop** bila host = `DESKTOP-2I1K2HA`, folder = `D:\rahul\Project Skripsi\skripsi-ml`, dan data mentah ada.
+    - Bila perintah PowerShell/Windows tidak ada, host berbeda, atau `data/raw` kosong, ini **sesi cloud** (claude.ai/code).
+      Katakan terus terang bahwa sesi ini tidak bisa mengolah data mentah, lalu sarankan Remote Control (`/remote-control` di laptop).
 
 # Lokasi Google Drive
 - Folder utama: [Project-Skripsi](https://drive.google.com/drive/folders/1L5EdiZuWsGFqOQ64QzMGHmxBUs63yKJ6)
