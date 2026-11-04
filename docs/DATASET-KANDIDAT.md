@@ -35,6 +35,22 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
   paper: Shetab Boushehri S. et al., *Nature Communications* (2023), DOI 10.1038/s41467-023-43429-2 (juga memakai *explainable ML*).
 - Kecocokan: sel CD4 asli + IFC multi-kanal + ada preseden XAI; tetapi kelas = kondisi aktivasi, bukan infeksi/lisis.
 
+- **Pilot ML (4 Nov 2026, `results/pilot-essig/`):**
+  - Label kondisi (+SEA/−SEA/…) per sel **gagal** (AUC sekitar 0,5).
+  - **Sel mati dari brightfield saja**: AUC 0,92–0,96 dengan *leave-one-donor-out*, tervalidasi dengan label ahli
+    (354 T hidup vs 348 Dead_Cell, p = 0,02). Fitur teratas: gradient RMS brightfield.
+  - Label ahli exp1: 2.641 dari 480.000 citra (0,55%), termasuk 348 Dead_Cell.
+
+### 1b. FlowRepository FR-FCM-Z8VC — infeksi HIV pada sel T CD4 primer (flow cytometry spektral)
+- Judul: "Analyzing NK cell ligand expression after HIV infection in human primary CD4 T cells".
+  Peneliti: Ruoxi Pi; PI: Catherine Blish (Stanford). Eksperimen 2024-09-30 s.d. 2024-11-22. MIFlowCyt 97%. Belum ada manuskrip.
+- Desain: 6 donor (RP51–RP58); strain HIV CH106, THRO, Q23-17, NL4-3, Mock, dan Freshly-isolated; 24/48/72 jam pascainfeksi.
+  Satu tabung = satu ligan NK atau isotipe. Workspace FlowJo memakai gate **Gag p24⁺ CD4⁻**, jadi label terinfeksi per sel tersedia.
+- Ukuran: 1.152 FCS (`_Unmixed.fcs`), 2,2 GB. Unduhan lewat http://flowrepository.org/experiments/9196/download_ziped_files
+  (perlu CAPTCHA; unduhan per file perlu login).
+- **Belum dicek:** pewarna live/dead dan FSC/SSC di panel.
+- Kecocokan: kelas normal vs terinfeksi ✅ (mati: belum pasti); bukan citra.
+
 ### 2. BBBC048 — Siklus sel Jurkat (paling ringan, cepat dipakai)
 - Judul: "Cell Cycle Jurkat Cells" (Broad Bioimage Benchmark Collection).
 - Sel: **Jurkat (garis sel limfosit T)**, terfiksasi, diwarnai PI dan MPM2; ImageStream.

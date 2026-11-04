@@ -27,7 +27,16 @@
 - Temuan penting: paper sudah memakai ekstraksi fitur + ML (XGBoost F1-macro 0,92) → opsi D perlu sudut kebaruan sendiri.
 - Memperbarui DATASET-KANDIDAT §1, `src/data/essig.py` (CHANNEL_NAMES), Bahan B5 §5b (repo + Google Doc), dan log WO-09.
 
-**Berikutnya:** pilot ML Essig, lembar keputusan 1 halaman, dan pustaka benang merah (menunggu persetujuan pengguna).
+- **Pilot ML Essig** (`src/pilot_essig_features.py`, `pilot_essig_classify.py`, `pilot_essig_labeled.py`, `pilot_essig_validate_dead.py`):
+  - 12.000 sel dan 153 fitur, 2 donor, *leave-one-donor-out*.
+  - Label kondisi gagal (AUC sekitar 0,5).
+  - **Sel mati dari brightfield saja: AUC 0,94/0,96** (label Live-Dead) dan **0,92/0,95 dengan label ahli** (p = 0,02).
+  - Fitur teratas: gradient RMS brightfield.
+- Bahan B5 §5b (repo + Google Doc): hasil pilot D, usulan judul D′, dan kandidat FlowRepository FR-FCM-Z8VC.
+- FR-FCM-Z8VC: halaman dibaca lewat HTTP biasa. Unduhan otomatis gagal (zip butuh CAPTCHA, per file butuh login),
+  jadi pengguna diminta mengunduh sampel lewat browser.
+
+**Berikutnya:** cek panel Z8VC (p24, live/dead, FSC/SSC) setelah sampel diunduh; lembar keputusan 1 halaman; pustaka.
 
 ---
 

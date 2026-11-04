@@ -140,6 +140,28 @@ Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1
 - Catatan kebaruan: paper aslinya (Shetab Boushehri dkk., Nat Commun 14:7888, 2023) sudah memakai ekstraksi fitur + ML (XGBoost, F1-macro 0,92).
   Karena itu skripsi perlu sudut sendiri, misalnya tafsiran fisis/bio-optik, kelas hidup vs mati dari Live-Dead, atau fitur brightfield saja (label-free).
 
+#### Hasil pilot D (4 Nov 2026; exp1, 2 donor, validasi *leave-one-donor-out*; `results/pilot-essig/`)
+- **Label kondisi stimulasi gagal.** +SEA vs −SEA menghasilkan AUC 0,44–0,49 (acak = 0,5). Untuk 4 kondisi, *balanced accuracy* dengan brightfield
+  0,25–0,27 (acak = 0,25). Dengan semua kanal naik ke 0,56–0,59, tetapi kenaikan itu didorong kanal *Antibody* (artefak pewarnaan).
+  Penyebabnya, label kondisi berlaku per tabung, bukan per sel, dan hanya sebagian kecil sel yang membentuk sinapsis. → Judul D ("kondisi aktivasi") **tidak disarankan**.
+- **Sel mati dikenali dari brightfield saja (tanpa pewarnaan).**
+  - Pada 12.000 sel dengan label dari ambang Live-Dead: AUC 0,94 (LogReg) / 0,96 (RF).
+  - **Validasi dengan label ahli** (354 sel T hidup vs 348 *Dead_Cell*): AUC **0,92 / 0,95**, uji permutasi p = 0,02.
+    Label ambang Live-Dead cocok 96% dengan label ahli (kappa 0,92).
+- **Fitur terpenting:** *gradient RMS* brightfield (ketajaman tepi/kontras optik sel), intensitas maksimum dan simpangan baku brightfield,
+  serta ukuran citra (proksi ukuran objek). Tafsiran fisis yang mungkin: perubahan membran/struktur sel mati mengubah kontras fase/hamburan
+  pada brightfield (hipotesis, perlu pustaka).
+- **Usulan judul D′ (16 kata):** *Identifikasi Sel T CD4 Mati Berdasarkan Fitur Bio-Optik Citra Brightfield Imaging Flow Cytometry Menggunakan Machine Learning*.
+- **Keterbatasan:**
+  - Belum ada kelas terinfeksi HIV.
+  - Baru 2 donor (exp2–exp4 menambah 7 donor).
+  - Kebaruan terhadap paper asli ada pada fokus *label-free* brightfield + tafsiran fisis; paper asli memakai semua kanal untuk tipe sinapsis.
+- **Catatan rekomendasi:** dari sisi data, D′ sekarang kandidat terkuat: efeknya besar, tervalidasi antar-donor dan dengan label ahli, serta sesuai
+  "citra IFC + ML + fitur fisik". Keputusan tetap pada pembimbing.
+- **Kandidat pelengkap kelas terinfeksi: FlowRepository FR-FCM-Z8VC.**
+  - Isi: sel T CD4 primer diinfeksi 4 strain HIV vs mock, 6 donor, 24/48/72 jam, gate Gag p24⁺CD4⁻, 1.152 FCS (2,2 GB).
+  - Flow cytometry, bukan citra. Panel live/dead dan FSC/SSC belum dicek (unduhan butuh CAPTCHA/login).
+
 ### Opsi E — satu pipeline ML, tiga studi, satu benang merah
 Ketiga dataset **tidak dapat digabung menjadi satu model/tabel** (fitur, label, dan sel berbeda → model akan mengenali asal dataset).
 Yang dapat dilakukan: **pipeline ML yang sama** (segmentasi/mask → ekstraksi fitur → klasifikasi → SHAP → tafsiran fisis)

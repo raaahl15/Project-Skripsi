@@ -1,0 +1,103 @@
+{
+ "n": {
+  "live_T": 354,
+  "dead": 348
+ },
+ "per_donor": "{('Donor_1', 0): 243, ('Donor_1', 1): 228, ('Donor_2', 0): 111, ('Donor_2', 1): 120}",
+ "otsu_vs_expert": {
+  "confusion[expert][otsu]": [
+   [
+    354,
+    0
+   ],
+   [
+    28,
+    320
+   ]
+  ],
+  "agreement": 0.96,
+  "cohen_kappa": 0.92
+ },
+ "BF_only": {
+  "LogReg": {
+   "mean_auc": 0.921,
+   "folds": [
+    {
+     "test_donor": "Donor_1",
+     "auc": 0.905
+    },
+    {
+     "test_donor": "Donor_2",
+     "auc": 0.938
+    }
+   ],
+   "perm_p": 0.02,
+   "perm_null_mean": 0.497
+  },
+  "RF": {
+   "mean_auc": 0.95,
+   "folds": [
+    {
+     "test_donor": "Donor_1",
+     "auc": 0.958
+    },
+    {
+     "test_donor": "Donor_2",
+     "auc": 0.942
+    }
+   ],
+   "top_features": {
+    "BF_gradient_rms": 0.0269,
+    "BF_max": 0.0145,
+    "img_w": 0.0084,
+    "img_h": 0.0074,
+    "BF_std": 0.0073,
+    "BF_sum": 0.0049,
+    "BF_glcm_energy": 0.0027,
+    "BF_rim_inner_ratio": 0.0026,
+    "BF_p90": 0.002,
+    "BF_mean": 0.0008
+   }
+  }
+ },
+ "ALL": {
+  "LogReg": {
+   "mean_auc": 0.99,
+   "folds": [
+    {
+     "test_donor": "Donor_1",
+     "auc": 0.995
+    },
+    {
+     "test_donor": "Donor_2",
+     "auc": 0.985
+    }
+   ]
+  },
+  "RF": {
+   "mean_auc": 0.998,
+   "folds": [
+    {
+     "test_donor": "Donor_1",
+     "auc": 0.999
+    },
+    {
+     "test_donor": "Donor_2",
+     "auc": 0.998
+    }
+   ],
+   "top_features": {
+    "Live-Dead_p90": 0.0015,
+    "Live-Dead_std": 0.0015,
+    "Live-Dead_sum": 0.0014,
+    "Live-Dead_max": 0.0013,
+    "Live-Dead_major_axis": 0.0013,
+    "Live-Dead_solidity": 0.0013,
+    "Live-Dead_mean": 0.0012,
+    "Live-Dead_area": 0.0012,
+    "Live-Dead_glcm_homogeneity": 0.0012,
+    "Live-Dead_glcm_correlation": 0.0012
+   }
+  }
+ }
+}

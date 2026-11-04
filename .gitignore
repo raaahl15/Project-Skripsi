@@ -45,3 +45,7 @@ thesis/build/
 *.ilg
 *.ist
 thesis/main.pdf
+
+# large per-cell feature tables (regenerable)
+results/pilot-essig/features*.csv
+results/pilot-essig/classify_log.txt

@@ -1,0 +1,247 @@
+{
+ "n_cells": 12000,
+ "n_features": {
+  "BF": 21,
+  "ALL": 153
+ },
+ "cells_per_group": "{('Donor_1', '+SEA'): 1500, ('Donor_1', '-SEA'): 1500, ('Donor_1', 'Isotype'): 1500, ('Donor_1', 'Teplizumab'): 1500, ('Donor_2', '+SEA'): 1500, ('Donor_2', '-SEA'): 1500, ('Donor_2', 'Isotype'): 1500, ('Donor_2', 'Teplizumab'): 1500}",
+ "versions": {
+  "scikit-learn": "1.9.1",
+  "numpy": "2.5.4",
+  "scikit-image": "0.26.0",
+  "pandas": "3.1.0"
+ },
+ "T1_SEA": {
+  "BF": {
+   "LogReg": {
+    "mean_auc": 0.444,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "auc": 0.463
+     },
+     {
+      "test_donor": "Donor_2",
+      "auc": 0.425
+     }
+    ],
+    "perm_p": 1.0,
+    "perm_null_mean": 0.503
+   },
+   "RF": {
+    "mean_auc": 0.466,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "auc": 0.481
+     },
+     {
+      "test_donor": "Donor_2",
+      "auc": 0.451
+     }
+    ],
+    "top_features": {
+     "BF_circularity": 0.0065,
+     "BF_glcm_contrast": 0.004,
+     "BF_minor_axis": 0.0038,
+     "img_h": 0.0028,
+     "BF_area": 0.0027,
+     "BF_glcm_correlation": 0.0027,
+     "BF_perimeter": 0.0022,
+     "BF_solidity": 0.0021,
+     "BF_eccentricity": 0.0019,
+     "BF_rim_inner_ratio": 0.0017
+    }
+   }
+  },
+  "ALL": {
+   "LogReg": {
+    "mean_auc": 0.475,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "auc": 0.488
+     },
+     {
+      "test_donor": "Donor_2",
+      "auc": 0.462
+     }
+    ],
+    "perm_p": 1.0,
+    "perm_null_mean": 0.498
+   },
+   "RF": {
+    "mean_auc": 0.492,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "auc": 0.515
+     },
+     {
+      "test_donor": "Donor_2",
+      "auc": 0.47
+     }
+    ],
+    "top_features": {
+     "MHCII_max": 0.0038,
+     "Live-Dead_sum": 0.0026,
+     "Live-Dead_mean": 0.0023,
+     "F-Actin_mean": 0.0022,
+     "P-CD3zeta_glcm_homogeneity": 0.0021,
+     "BF_solidity": 0.0021,
+     "Live-Dead_minor_axis": 0.0018,
+     "MHCII_std": 0.0018,
+     "F-Actin_glcm_contrast": 0.0017,
+     "MHCII_p90": 0.0017
+    }
+   }
+  }
+ },
+ "T2_4cond": {
+  "BF": {
+   "LogReg": {
+    "mean_bal_acc": 0.254,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "bal_acc": 0.259,
+      "f1_macro": 0.257
+     },
+     {
+      "test_donor": "Donor_2",
+      "bal_acc": 0.248,
+      "f1_macro": 0.244
+     }
+    ],
+    "mean_f1_macro": 0.251
+   },
+   "RF": {
+    "mean_bal_acc": 0.265,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "bal_acc": 0.273,
+      "f1_macro": 0.271
+     },
+     {
+      "test_donor": "Donor_2",
+      "bal_acc": 0.256,
+      "f1_macro": 0.254
+     }
+    ],
+    "mean_f1_macro": 0.263,
+    "top_features": {
+     "BF_minor_axis": 0.0124,
+     "BF_glcm_energy": 0.0073,
+     "BF_perimeter": 0.0068,
+     "BF_area": 0.0063,
+     "BF_solidity": 0.0056,
+     "BF_max": 0.0026,
+     "BF_major_axis": 0.0025,
+     "BF_circularity": 0.0024,
+     "img_w": 0.0022,
+     "BF_eccentricity": 0.0017
+    }
+   }
+  },
+  "ALL": {
+   "LogReg": {
+    "mean_bal_acc": 0.559,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "bal_acc": 0.544,
+      "f1_macro": 0.548
+     },
+     {
+      "test_donor": "Donor_2",
+      "bal_acc": 0.575,
+      "f1_macro": 0.569
+     }
+    ],
+    "mean_f1_macro": 0.558
+   },
+   "RF": {
+    "mean_bal_acc": 0.588,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "bal_acc": 0.569,
+      "f1_macro": 0.575
+     },
+     {
+      "test_donor": "Donor_2",
+      "bal_acc": 0.607,
+      "f1_macro": 0.601
+     }
+    ],
+    "mean_f1_macro": 0.588,
+    "top_features": {
+     "Antibody_minor_axis": 0.0083,
+     "Live-Dead_sum": 0.0057,
+     "Antibody_major_axis": 0.005,
+     "F-Actin_sum": 0.0049,
+     "pearson_CD3_P-CD3zeta": 0.0048,
+     "F-Actin_mean": 0.0045,
+     "F-Actin_max": 0.0045,
+     "BF_minor_axis": 0.0044,
+     "BF_rim_inner_ratio": 0.0041,
+     "CD3_std": 0.0038
+    }
+   }
+  }
+ },
+ "T2_classes": [
+  "+SEA",
+  "-SEA",
+  "Isotype",
+  "Teplizumab"
+ ],
+ "T3_dead_from_BF": {
+  "label_rule": "dead = log1p(Live-Dead_mean) > Otsu threshold 3.006",
+  "dead_fraction_per_condition": "{('Donor_1', '+SEA'): 0.253, ('Donor_1', '-SEA'): 0.253, ('Donor_1', 'Isotype'): 0.259, ('Donor_1', 'Teplizumab'): 0.227, ('Donor_2', '+SEA'): 0.257, ('Donor_2', '-SEA'): 0.275, ('Donor_2', 'Isotype'): 0.267, ('Donor_2', 'Teplizumab'): 0.25}",
+  "dead_fraction_total": 0.255,
+  "BF": {
+   "LogReg": {
+    "mean_auc": 0.937,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "auc": 0.939
+     },
+     {
+      "test_donor": "Donor_2",
+      "auc": 0.935
+     }
+    ],
+    "perm_p": 0.048,
+    "perm_null_mean": 0.502
+   },
+   "RF": {
+    "mean_auc": 0.957,
+    "folds": [
+     {
+      "test_donor": "Donor_1",
+      "auc": 0.956
+     },
+     {
+      "test_donor": "Donor_2",
+      "auc": 0.958
+     }
+    ],
+    "top_features": {
+     "BF_gradient_rms": 0.0283,
+     "BF_std": 0.0199,
+     "BF_mean": 0.0096,
+     "BF_max": 0.0082,
+     "img_h": 0.0074,
+     "BF_p90": 0.0055,
+     "BF_glcm_energy": 0.0047,
+     "BF_minor_axis": 0.0027,
+     "BF_sum": 0.002,
+     "BF_glcm_contrast": 0.002
+    }
+   }
+  }
+ }
+}
