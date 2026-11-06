@@ -50,6 +50,7 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
   (perlu CAPTCHA; unduhan per file perlu login).
 - **Belum dicek:** pewarna live/dead dan FSC/SSC di panel.
 - Kecocokan: kelas normal vs terinfeksi ✅ (mati: belum pasti); bukan citra.
+- **Status 5 Nov 2026: ditunda (skip)** atas keputusan mahasiswa — unduhan terlalu sulit. Dibuka lagi hanya bila pembimbing meminta kelas terinfeksi dari data ini.
 
 ### 2. BBBC048 — Siklus sel Jurkat (paling ringan, cepat dipakai)
 - Judul: "Cell Cycle Jurkat Cells" (Broad Bioimage Benchmark Collection).

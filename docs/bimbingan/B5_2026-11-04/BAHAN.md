@@ -161,6 +161,7 @@ Rekomendasi mahasiswa: **A** (perubahan minimal, bidang keilmuan tetap, Lamin B1
 - **Kandidat pelengkap kelas terinfeksi: FlowRepository FR-FCM-Z8VC.**
   - Isi: sel T CD4 primer diinfeksi 4 strain HIV vs mock, 6 donor, 24/48/72 jam, gate Gag p24⁺CD4⁻, 1.152 FCS (2,2 GB).
   - Flow cytometry, bukan citra. Panel live/dead dan FSC/SSC belum dicek (unduhan butuh CAPTCHA/login).
+  - **Status 5 Nov 2026: ditunda** — unduhan terlalu sulit (CAPTCHA/login); tidak dipakai untuk bimbingan 5.
 
 ### Opsi E — satu pipeline ML, tiga studi, satu benang merah
 Ketiga dataset **tidak dapat digabung menjadi satu model/tabel** (fitur, label, dan sel berbeda → model akan mengenali asal dataset).

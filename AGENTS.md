@@ -5,10 +5,11 @@
 - Bidang: Instrumentasi (Implementasi Kecerdasan Buatan) & Multifisika (Implementasi Sistem Optika)
 - Keywords: Sel T CD4, Infeksi HIV, Imaging Flow Cytometry, Machine Learning, Analisis Bio-Optik, Morfometri Sel, Explainable AI
 - Ringkasan (dari deskripsi proposal): klasifikasi kondisi sel T CD4 (sehat, terinfeksi, lisis) dari citra imaging flow cytometry multi-kanal, memakai fitur bio-optik dan morfometri sel, dengan validasi Explainable AI (mis. Grad-CAM).
-- Masalah (rumusan resmi): [ISI NANTI]
-- Metode / model: [ISI NANTI] (catatan: Grad-CAM mensyaratkan model berbasis CNN)
-- Dataset: [ISI NANTI] (nama, sumber, ukuran, format, lokasi di Drive). BELUM ADA — harus dicari sendiri (tidak disediakan pembimbing/lab); kandidat dicatat di docs/DATASET-KANDIDAT.md.
-- Metrik: [ISI NANTI]
+- Masalah (rumusan resmi): Klasifikasi status kondisi sel T CD4 pada infeksi HIV berbasis citra visual (fitur bio-optik dan morfometri inti).
+- Metode / model: Ekstraksi fitur fisik/bio-optik (luas, keliling, circularity, solidity, intensitas Lamin B1, sebaran kapsid HIV) + Machine Learning klasik (LogReg, Random Forest, SVM) dengan validasi baku: **Training, Validation, Testing (K-Fold Cross-Validation 5-fold/10-fold)**. Wajib menguasai formulasi matematis & arti fisis setiap fitur.
+- Dataset: **heiDATA (Ananth et al. 2024)** — Citra mikroskopi fluoresensi 3D sel T CD4 terpapar HIV-1 (Lamin B1 + kapsid HIV, kondisi +Vpx / −Vpx / Mock). Diputuskan di B5 (6 Nov 2026); data non-citra (CyTOF) ditinggalkan.
+- Judul SIMASTER: Sedang dalam proses koordinasi penyesuaian dari *imaging flow cytometry* ke citra mikroskopi fluoresensi (disetujui pembimbing di B5).
+- Metrik: Accuracy, Balanced Accuracy, Precision, Recall, F1-Score, ROC-AUC (dengan K-Fold Cross-Validation).
 - Mahasiswa: Rahul Ghulam Hidayatulloh — NIM 23/519760/TK/57266
 - Dosen pembimbing: Nopriadi, S.T., M.Sc. | preferensi: mengizinkan penggunaan AI di semua tahapan (lihat aturan 15)
 - Dosen pembimbing pendamping: belum ada / belum dipastikan (sementara `-` di thesis/data_skripsi.tex) — konfirmasi ke Pak Nopriadi

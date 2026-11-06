@@ -15,6 +15,43 @@
 
 ---
 
+## 2026-11-06 — Hasil Bimbingan 5 (Tatap Muka bersama Pak Nopriadi)
+**Oleh:** Antigravity bersama pengguna (transkripsi rekaman bimbingan tatap muka 11:13 menit)
+- **Pelaksanaan B5:** Berlangsung tatap muka. Mahasiswa memaparkan hasil pilot ML Google Colab Pro dan dilema ketiadaan citra pada dataset flow cytometry.
+- **Keputusan Pembimbing:**
+  1. **Batasan Data:** Fokus murni pada dataset berbasis **citra visual** (mikroskopi fluoresens heiDATA). Data non-citra/tabular (CyTOF) ditinggalkan karena skripsi berada di bawah ranah instrumentasi sistem visual/optika.
+  2. **Identitas Teknik Fisika:** Mahasiswa wajib memahami dan menyajikan landasan fisis serta rumus matematis dari seluruh fitur morfometri/bio-optik (seperti *circularity*, *solidity*, rasio intensitas), bukan sekadar black-box ML.
+  3. **Validasi Baku ML:** Wajib menerapkan pembagian data Training, Validation, dan Testing dengan metode **K-Fold Cross-Validation** (5-fold / 10-fold).
+  4. **Perubahan Judul:** Disetujui untuk disesuaikan di SIMASTER dari *imaging flow cytometry* ke citra mikroskopi fluoresensi. Prosedur akan dikonsultasikan ke pengajaran.
+  5. **Komputasi & Rekan Bimbingan:** Penggunaan Google Colab Pro UGM diapresiasi; mahasiswa diminta menginfokan akses Colab ke Luna.
+- **File/Dokumen Diperbarui:**
+  - `docs/bimbingan/B5_2026-11-04/HASIL.md`: diisi lengkap sesuai rekaman.
+  - `docs/work-order/WO-14.md`: dibuat untuk penugasan K-Fold Cross-Validation dan formularium fitur fisis/matematis.
+  - `docs/work-order/WO-09.md`: ditandai selesai (fiksasi dataset citra fluoresens disepakati).
+  - `docs/WORK-ORDER.md`: ringkasan diperbarui (WO selesai: 5, berjalan: 7, total: 14).
+  - `docs/STATUS.md`: status semester dan tahap pasca-B5 diperbarui.
+- **Berikutnya:**
+  - Implementasi 5-fold / 10-fold CV di Colab/repo dan dokumentasi rumus matematis fitur untuk bimbingan berikutnya pada **Senin, 9 November 2026** (bersama Luna).
+  - Input catatan bimbingan 5 ke SIMASTER UGM.
+
+---
+
+## 2026-11-05 — Persiapan bimbingan 5 (dijadwalkan 6 Nov)
+**Oleh:** Claude Code bersama pengguna
+- Rekap status WO; daftar persiapan B5 disampaikan ke pengguna.
+- **Keputusan pengguna:** FlowRepository FR-FCM-Z8VC **ditunda** (unduhan terlalu sulit). Dicatat di DATASET-KANDIDAT §1b,
+  Bahan B5 §5b (repo; Google Doc belum disinkronkan), WO-09.
+- **Keputusan pengguna:** rekomendasi awal opsi A, lalu **diganti ke opsi E (tiga dataset)**. Benang merah E diubah dari
+  "aktivasi ↔ kerentanan HIV" (tidak didukung pilot: klasifikasi aktivasi Essig gagal) menjadi pembeda **normal / terinfeksi / mati**
+  (arahan B3): heiDATA = terpapar HIV ±Vpx, CyTOF = normal vs terinfeksi, Essig = hidup vs mati. Draf judul (15 kata, usulan):
+  *Klasifikasi Sel T CD4 Normal, Terinfeksi HIV, dan Mati Menggunakan Ekstraksi Fitur dan Machine Learning*. A/B = cadangan.
+- PDF slide (12 hlm, dibuat dari HTML via Edge headless karena artifact tidak terbuka di iPadOS lama) di Drive
+  `bimbingan/B5 - 2026-11-04/Bimbingan5_Skripsi_Rahul.pdf`.
+- Slide deck B5 (11 slide, gaya template "Bimbingan6_Area1_DME"): https://claude.ai/artifact/WSgAp7rJRFPUcS8PJj53is
+- **Berikutnya:** isi HASIL.md B5 setelah bimbingan; ganti nama folder B5 ke tanggal 6 Nov.
+
+---
+
 ## 2026-11-04 — Kerja dari iPad (Remote Control) + aturan cek koneksi
 **Oleh:** Claude Code bersama pengguna
 - Menjelaskan tiga jalur kerja dari iPad: aplikasi Claude + Drive untuk naskah, claude.ai/code untuk repo,

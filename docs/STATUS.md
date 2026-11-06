@@ -1,40 +1,40 @@
 # STATUS (update di akhir setiap sesi)
-Terakhir diperbarui: 2026-11-04
+Terakhir diperbarui: 2026-11-06
 
 ## Posisi saat ini
-- Tahap: proposal (disetujui di Simaster), menuju bimbingan awal & pengumpulan data
+- Tahap: Pengolahan Data & Eksperimen Model ML (Pasca-Bimbingan 5)
 - Minggu ke-10 dari ±16 minggu semester (asumsi mulai 1 Sep 2026; bimbingan 1 = 2 Sep)
-- Bimbingan formal: 4 (2, 4, 9, 23 Sep); bimbingan 5 = 4 Nov 2026. Tracker: docs/WORK-ORDER.md (+ docs/work-order/WO-xx.md, docs/bimbingan/B<n>_*/)
-- Arah dari pembimbing: ekstraksi fitur fisik/bio-optik (normal/terinfeksi/mati) + machine learning (bukan deep learning)
+- Bimbingan formal terlaksana: **5** (2, 4, 9, 23 Sep; 6 Nov). Bimbingan berikutnya: **Senin, 9 Nov 2026** (bersama Luna)
+- Arah dari pembimbing (B5): **Fokus murni ke citra visual** (mikroskopi fluoresens heiDATA), tinggalkan data non-citra. Pahami dasar fisis & rumus matematis fitur morfometri (identitas Teknik Fisika). Terapkan evaluasi baku: Training, Validation (K-Fold CV), Testing.
 
 ## Sudah selesai
+- Bimbingan 5 terlaksana (6 Nov 2026) tatap muka: keputusan dataset citra visual disepakati & perubahan judul disetujui
+- Hasil Bimbingan 5 (`docs/bimbingan/B5_2026-11-04/HASIL.md`) dan penugasan baru WO-14 (`docs/work-order/WO-14.md`) didokumentasikan
 - Proposal TA ke-1 disetujui di Simaster UGM (pembimbing: Nopriadi, S.T., M.Sc.)
 - Repo skripsi + sistem kerja (Langkah 0) disiapkan; GitHub `raaahl15/Project-Skripsi` (private)
 - Struktur Google Drive `Project-Skripsi/` + 5 Google Docs bab; folder `naskah/` dibagikan ke Pak Nopriadi (Commenter)
-- Environment Python (.venv, Python 3.13, torch CPU); rclone + backup otomatis ke Drive
-- Panduan Skripsi TF 2026 dirangkum (docs/PANDUAN-KAMPUS.md); template LaTeX resmi dipasang di `thesis/`;
-  kerangka Google Docs & LaTeX disesuaikan dengan struktur bab template
+- Environment Python (.venv, Python 3.13); Google Colab Pro UGM aktif untuk pelatihan ML
+- Panduan Skripsi TF 2026 dirangkum (docs/PANDUAN-KAMPUS.md); template LaTeX resmi dipasang di `thesis/`
 
 ## Sedang dikerjakan
-- Persiapan bimbingan 5 (4 Nov 2026): Bahan Bimbingan 5, Work Order, Materi Persiapan (WO-02/03/05)
+- **WO-14:** Implementasi K-Fold Cross-Validation (5-fold / 10-fold) pada pipeline ML citra heiDATA
+- **WO-14:** Dokumentasi formularium matematis dan tafsiran fisis seluruh fitur morfometri inti (*circularity*, *solidity*, dll.)
+- Koordinasi ke bagian Pengajaran/Akademik mengenai mekanisme administratif pergantian judul SIMASTER
 
 ## Berikutnya (maks. 3)
-1. **Putuskan dataset & desain bersama Pak Nopriadi** — kandidat utama heiDATA (Ananth 2024: citra mikroskopi HIV + Lamin B1,
-   ±250–350 sel, label +Vpx/−Vpx/Mock); sekaligus minta citra tambahan ke pemilik dataset. Detail: docs/DATASET-KANDIDAT.md
-2. **Jadwal mundur dari tanggal ujian**: tentukan periode ujian & tenggat pendaftaran → Gantt mingguan
-3. Lanjutkan ekstraksi fitur + ML (WO-07/08/10) pada dataset yang diputuskan; isi Hasil Bimbingan 5 & WO baru
+1. **Selesaikan evaluasi K-Fold CV & tabel fitur fisis:** Siapkan bahan untuk bimbingan berikutnya pada **Senin, 9 Nov 2026**
+2. **Input catatan bimbingan 5 ke SIMASTER:** Masukkan ringkasan B5 agar log bimbingan resmi kampus terisi
+3. **Penyusunan draf Bab 3 (Metodologi):** Masukkan alur pemisahan data (Training, Validation K-Fold, Testing) dan rumus matematis fitur
 
-## Hasil konfirmasi pembimbing (2026-11-03)
-- Penggunaan AI: diizinkan untuk semua tahapan (lisan) → aturan 15 AGENTS.md diperbarui (dengan batasan: tanpa literatur/data fiktif, draf AI wajib ditinjau pengguna)
-- Pembimbing pendamping: belum dipastikan (dicatat; sementara `-`)
-- Belum dibahas / masih terbuka: sumber dataset, rumusan masalah, model & metrik, judul Bab 3, periode ujian
+## Hasil konfirmasi & keputusan Bimbingan 5 (2026-11-06)
+- **Dataset:** Fokus ke citra visual mikroskopi fluoresens (heiDATA - Ananth et al. 2024). Data tabel non-citra (CyTOF) ditinggalkan.
+- **Identitas Keilmuan:** Wajib memahami dan menyajikan rumus matematis serta arti fisis setiap fitur (mis. *circularity*, *solidity*), bukan sekadar black-box ML.
+- **Validasi ML:** Wajib menerapkan pembagian Training, Validation, Testing dengan K-Fold Cross-Validation.
+- **Judul SIMASTER:** Pergantian judul dari *imaging flow cytometry* ke citra mikroskopi fluoresensi disetujui pembimbing.
+- **Rekan Bimbingan:** Bagikan info Google Colab Pro UGM ke Luna.
 
 ## Blocker / pertanyaan terbuka
-- **Dataset belum ada** (blocker paling kritis). Hasil penelusuran: tidak ada dataset publik yang cocok persis dengan kelas
-  sehat/terinfeksi/lisis → perlu keputusan penyesuaian topik (mungkin lewat *fast-track approval*, panduan §1.3)
+- Prosedur teknis pergantian judul di SIMASTER (apakah form fast-track atau saat pendaftaran ujian) perlu dikonfirmasi ke pengajaran
 - NIP pembimbing & pembimbing pendamping: belum diisi/dipastikan
-- Rumusan masalah, model, dan metrik belum ditentukan
-- **Risiko waktu:** target ujian akhir semester (sekitar Desember 2026). Syarat daftar ujian: draf 100% + persetujuan
-  pembimbing + catatan bimbingan SIMASTER lengkap + bukti lulus similarity check. Tenggat pendaftaran: [ISI NANTI]
-- Kompilasi template LaTeX: **berhasil secara lokal** (MiKTeX, 21 halaman, 0 error); hasil CI setelah push perlu dicek di tab Actions
-- Tidak ada GPU lokal (torch versi CPU) → training berat di Colab/Kaggle
+- **Risiko waktu:** Target ujian akhir semester (Desember 2026). Perlu percepatan penulisan draf Bab 1–3 seiring eksperimen ML selesai
+- Akses GPU: Menggunakan Google Colab Pro UGM (sudah terbukti cepat dan stabil)
