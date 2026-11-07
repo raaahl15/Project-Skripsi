@@ -68,6 +68,9 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
 
 - Selisih kedua skema kecil → sinyal berlaku pada donor baru. Fitur utama: **gradien RMS brightfield** (ketajaman tepi/kontras refraktif),
   sebaran intensitas, dan tekstur GLCM.
+- **Validasi tambahan (8 Nov):** uji permutasi p = 0,005; IK 95 % AUC donor baru 0,87–0,97; tetap 0,92–0,95 dengan **mask buatan
+  sendiri** (tanpa mask dataset) dan saat mask diubah ±1–2 piksel; label ahli sesuai pewarna Live-Dead (AUC 0,99). Galeri sel hidup/mati
+  & salah klasifikasi (sel ganda, terpotong, buram): `results/b6/B_gallery_live_dead.png`. Rincian: `results/b6/README.md` Bagian B2.
 
 ### Alternatif Bagian A: Illinois Data Bank IDB-8103861 (Lu dkk., *PNAS* 2021)
 - Sel T Jurkat dengan sirkuit gen HIV minimal (reporter GFP), citra fluoresensi time-lapse 48 jam (1 bingkai / 15 menit), 384 sumur

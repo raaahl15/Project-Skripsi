@@ -1,0 +1,58 @@
+﻿permutation {'logreg_C1_lodo_auc': 0.922, 'null_mean': 0.499, 'null_max': 0.578, 'n_perm': 200, 'p': 0.005}
+bootstrap {'logreg_C1_test_Donor_1': {'auc': 0.904, 'ci95': [0.871, 0.932]}, 'logreg_C1_test_Donor_2': {'auc': 0.94, 'ci95': [0.908, 0.968]}, 'rf_test_Donor_1': {'auc': 0.948, 'ci95': [0.929, 0.966]}, 'rf_test_Donor_2': {'auc': 0.929, 'ci95': [0.893, 0.959]}}
+tanpa fitur shape 0.93 hanya fitur shape 0.745
+tanpa fitur intensity 0.911 hanya fitur intensity 0.919
+tanpa fitur texture 0.913 hanya fitur texture 0.877
+tanpa fitur gradient 0.921 hanya fitur gradient 0.864
+recompute 0/702 0s
+recompute 200/702 7s
+recompute 400/702 13s
+recompute 600/702 20s
+{'variant': 'mask erode1', 'logreg': 0.917, 'rf': 0.939, 'svm': 0.909, 'logreg_folds': [0.901, 0.933], 'rf_folds': [0.946, 0.931], 'svm_folds': [0.905, 0.914], 'bacc_range': [0.865, 0.879]}
+{'variant': 'mask dilate1', 'logreg': 0.921, 'rf': 0.943, 'svm': 0.91, 'logreg_folds': [0.904, 0.937], 'rf_folds': [0.949, 0.937], 'svm_folds': [0.898, 0.922], 'bacc_range': [0.854, 0.88]}
+{'variant': 'mask dilate2', 'logreg': 0.917, 'rf': 0.933, 'svm': 0.915, 'logreg_folds': [0.9, 0.934], 'rf_folds': [0.936, 0.93], 'svm_folds': [0.916, 0.913], 'bacc_range': [0.855, 0.881]}
+{'variant': 'mask own_mask', 'logreg': 0.923, 'rf': 0.95, 'svm': 0.929, 'logreg_folds': [0.926, 0.919], 'rf_folds': [0.951, 0.95], 'svm_folds': [0.923, 0.936], 'bacc_range': [0.865, 0.897], 'median_iou_vs_dataset_mask': 0.609}
+{
+ "permutation": {
+  "logreg_C1_lodo_auc": 0.922,
+  "null_mean": 0.499,
+  "null_max": 0.578,
+  "n_perm": 200,
+  "p": 0.005
+ },
+ "bootstrap_ci95": {
+  "logreg_C1_test_Donor_1": {
+   "auc": 0.904,
+   "ci95": [
+    0.871,
+    0.932
+   ]
+  },
+  "logreg_C1_test_Donor_2": {
+   "auc": 0.94,
+   "ci95": [
+    0.908,
+    0.968
+   ]
+  },
+  "rf_test_Donor_1": {
+   "auc": 0.948,
+   "ci95": [
+    0.929,
+    0.966
+   ]
+  },
+  "rf_test_Donor_2": {
+   "auc": 0.929,
+   "ci95": [
+    0.893,
+    0.959
+   ]
+  }
+ },
+ "live_dead_stain_auc_vs_expert": {
+  "Live-Dead_mean": 0.99,
+  "Live-Dead_max": 0.999,
+  "Live-Dead_sum": 0.991
+ }
+}

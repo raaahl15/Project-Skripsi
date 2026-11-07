@@ -31,6 +31,10 @@
   Paket `nd2` 0.12.0 dipasang di .venv. Bug pelacakan (array read-only) diperbaiki + cache segmentasi.
 - Uji ketahanan heiDATA kapsid vs Mock (`src/b6_capsid_robustness.py`): 28 pengaturan detektor → AUC 0,86–0,97 (median 0,91),
   IK 95 % fold S3B 0,74–0,88; ambang rendah = sensitivitas ↑, titik palsu Mock ↑ (maks. 2 sel). `results/b6/README.md` Bagian A3.
+- Validasi tambahan Essig (`src/b6_essig_validation.py`, fitur dihitung ulang dari `exp1.zip`): permutasi p = 0,005; IK 95 % donor baru
+  0,87–0,97; mask sendiri (gradien + Otsu) AUC 0,92–0,95; mask ±1–2 px tidak berpengaruh; label ahli vs pewarna Live-Dead AUC 0,99;
+  galeri hidup/mati/salah klasifikasi. `results/b6/README.md` Bagian B2.
+- Rekomendasi dataset (dibahas dengan pengguna): utama heiDATA + Essig, Illinois sebagai alternatif teruji.
 - **Berikutnya:** BAHAN & slide B6; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---

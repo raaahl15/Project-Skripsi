@@ -98,3 +98,40 @@ ROC AUC rata-rata fold. *Balanced accuracy* donor baru 0,86–0,88.
 - Fitur paling membedakan (Cohen's d mati − hidup, konsisten di kedua donor): **gradien RMS brightfield** (d 1,5–1,8; ketajaman tepi /
   kontras refraktif), simpangan baku dan maksimum intensitas brightfield, energi GLCM (tekstur), eksentrisitas.
 - Keterbatasan: hanya 2 donor berlabel ahli (2 fold berkelompok); kelas Dead_Cell dari anotator tidak dipastikan seluruhnya sel T.
+
+## Bagian B2 — Essig: validasi tambahan (8 Nov)
+Skrip: `src/b6_essig_validation.py` → `B_validation.json`, `B_robustness.csv`, `B_gallery_live_dead.png`, `log_essig_validation.txt`.
+Fitur ulang dihitung langsung dari citra `.h5` di `exp1.zip`.
+
+**1. Uji permutasi** (label diacak di dalam tiap donor, *leave-one-donor-out*, LogReg C = 1, 200 permutasi):
+AUC teramati **0,922**; distribusi acak rata-rata 0,499, maksimum 0,578 → **p = 0,005** (batas terkecil untuk 200 permutasi).
+
+**2. Rentang kepercayaan 95 % (*bootstrap* 1000×, donor uji)**
+| Model | Uji di donor 1 | Uji di donor 2 |
+|---|---|---|
+| LogReg | 0,904 (0,871 – 0,932) | 0,940 (0,908 – 0,968) |
+| RF | 0,948 (0,929 – 0,966) | 0,929 (0,893 – 0,959) |
+
+**3. Uji ketahanan** (protokol WO-14, *leave-one-donor-out*; AUC LogReg / RF / SVM)
+| Varian | LogReg | RF | SVM |
+|---|---|---|---|
+| *Baseline* (mask dataset, 19 fitur BF) | 0,921 | 0,935 | 0,909 |
+| Mask dikecilkan 1 piksel | 0,917 | 0,939 | 0,909 |
+| Mask dibesarkan 1 / 2 piksel | 0,921 / 0,917 | 0,943 / 0,933 | 0,910 / 0,915 |
+| **Mask buatan sendiri** (gradien + Otsu, tanpa mask dataset; IoU median vs mask dataset 0,61) | **0,923** | **0,950** | **0,929** |
+| Tanpa fitur bentuk / intensitas / tekstur / gradien | 0,91 – 0,93 | 0,92 – 0,94 | 0,91 – 0,93 |
+| Hanya fitur bentuk | 0,745 | 0,786 | 0,764 |
+| Hanya fitur intensitas | 0,919 | 0,917 | 0,913 |
+| Hanya fitur tekstur | 0,877 | 0,887 | 0,901 |
+| Hanya gradien RMS (1 fitur) | 0,864 | 0,828 | 0,861 |
+
+- Hasil **tidak bergantung pada mask dataset**: segmentasi sendiri memberi hasil setara/lebih baik → pipeline bisa sepenuhnya mandiri.
+- Tidak ada satu kelompok fitur yang mutlak diperlukan (menghapus satu kelompok: AUC tetap ≥ 0,91). Informasi utama ada di
+  **sebaran intensitas *brightfield*** (kontras refraktif); bentuk saja lemah (0,75–0,79).
+
+**4. Pemeriksaan visual & label**
+- Label ahli vs intensitas pewarna Live-Dead (kanal fluoresensi viabilitas): AUC **0,99** → label "mati" konsisten dengan pewarna.
+  (Pewarna tidak dipakai sebagai fitur; model hanya *brightfield*.)
+- Galeri (`B_gallery_live_dead.png`): sel hidup bulat, tepi halus, pusat terang (halo refraktif); sel mati bergranula, tidak beraturan.
+  Salah klasifikasi (LogReg, ambang 0,5): 20 hidup → mati, 61 mati → hidup; banyak berupa sel ganda (*doublet*), sel terpotong di tepi
+  citra, atau citra buram → kandidat filter kualitas citra.
