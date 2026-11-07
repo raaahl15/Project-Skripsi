@@ -1,0 +1,62 @@
+{
+ "n_authors": 59,
+ "n_own_all": 404,
+ "n_own_bright": 120,
+ "bright_threshold_I_mean": 813.9,
+ "features": {
+  "I_mean": {
+   "authors_median": 1008.34,
+   "own_all_median": 768.683,
+   "own_bright_median": 877.948,
+   "ks_p_bright_vs_authors": 0.0
+  },
+  "I_std": {
+   "authors_median": 68.762,
+   "own_all_median": 42.979,
+   "own_bright_median": 76.398,
+   "ks_p_bright_vs_authors": 0.059
+  },
+  "I_cv": {
+   "authors_median": 0.068,
+   "own_all_median": 0.057,
+   "own_bright_median": 0.084,
+   "ks_p_bright_vs_authors": 0.276
+  },
+  "I_slope": {
+   "authors_median": 7.221,
+   "own_all_median": 6.337,
+   "own_bright_median": 13.152,
+   "ks_p_bright_vs_authors": 0.03
+  },
+  "I_start": {
+   "authors_median": 907.8,
+   "own_all_median": 719.003,
+   "own_bright_median": 795.294,
+   "ks_p_bright_vs_authors": 0.0
+  },
+  "I_end": {
+   "authors_median": 1079.785,
+   "own_all_median": 813.453,
+   "own_bright_median": 990.907,
+   "ks_p_bright_vs_authors": 0.009
+  },
+  "I_fold": {
+   "authors_median": 1.154,
+   "own_all_median": 1.126,
+   "own_bright_median": 1.237,
+   "ks_p_bright_vs_authors": 0.093
+  },
+  "I_resid_std": {
+   "authors_median": 45.464,
+   "own_all_median": 18.698,
+   "own_bright_median": 26.8,
+   "ks_p_bright_vs_authors": 0.0
+  },
+  "I_ac1": {
+   "authors_median": 0.777,
+   "own_all_median": 0.763,
+   "own_bright_median": 0.684,
+   "ks_p_bright_vs_authors": 0.009
+  }
+ }
+}

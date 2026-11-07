@@ -24,8 +24,12 @@
   Koreksi: angka TEMNet dari pengguna benar (Zenodo 5149062).
 - heiDATA HIV vs Mock dari kapsid (1G, S3B), latih-uji lintas percobaan: AUC 0,91, *balanced accuracy* 0,78–0,90, p = 0,01
   (`src/b6_capsid_hiv_vs_mock.py`, `results/b6/README.md` Bagian A2). Lamin B1 saja < 0,3.
-- Pengguna mengunduh citra demo Illinois (1,72 GB) untuk uji ekstraksi citra sendiri.
-- **Berikutnya:** cek citra demo Illinois; BAHAN & slide B6.
+- Pengguna mengunggah citra demo Illinois ke Drive (zip 1,08 GB; isi `.nd2` 1,62 GB, sumur K16 DivSet3 Plate2, sumur senyawa).
+  Isi: 192 bingkai × 2044 × 2048, 1 kanal GFP, 0,646 µm/piksel. Ekstraksi sendiri (`src/illinois_extract_demo.py`: koreksi latar,
+  ambang MAD k 5/3, watershed, pelacakan tetangga terdekat) → 404/528 lintasan lengkap; rata-rata sumur vs data penulis **r = 0,985**,
+  jendela cocok = jam 1–19 (sesuai README). Fitur relatif sebanding, intensitas absolut kita lebih rendah. `results/pilot-illinois/demo/`.
+  Paket `nd2` 0.12.0 dipasang di .venv. Bug pelacakan (array read-only) diperbaiki + cache segmentasi.
+- **Berikutnya:** BAHAN & slide B6; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---
 

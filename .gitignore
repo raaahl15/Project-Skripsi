@@ -49,3 +49,5 @@ thesis/main.pdf
 # large per-cell feature tables (regenerable)
 results/pilot-essig/features*.csv
 results/pilot-essig/classify_log.txt
+
+results/pilot-illinois/demo/objects_*.csv.gz

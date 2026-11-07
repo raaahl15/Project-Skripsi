@@ -75,6 +75,10 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
   (1,72 GB). Citra penuh 271–585 GB per plate → tidak realistis; data per frame lengkap 18,8 GB.
 - Kekurangan: Jurkat (lini sel, bukan CD4 primer); reporter, bukan virus utuh; kanal kemungkinan hanya GFP; fitur untuk banyak sumur
   berasal dari ekstraksi citra oleh peneliti (NIS Elements), ekstraksi sendiri hanya dari 1 sumur demo.
+- **Uji ekstraksi citra sendiri (8 Nov, sumur demo K16):** segmentasi + pelacakan sel dari citra `.nd2` mentah di laptop
+  (±17 menit/sumur) → 404 lintasan sel lengkap; rata-rata sumur hampir identik dengan data penulis (**r = 0,985**), fitur relatif
+  (CV, rasio akhir/awal) sebanding → **ekstraksi fitur dari citra bisa dilakukan sendiri**. Untuk klasifikasi masih perlu citra sumur
+  kontrol (arsip besar → Colab). Rincian: `results/pilot-illinois/demo/README.md`.
 - **Pertanyaan:** apakah data ini (berasal dari citra, tetapi diolah sebagai tabel fitur per sel) masih sesuai arahan "data citra"?
   Jika ya, Illinois dapat **menggantikan heiDATA** sebagai bagian HIV (bukan dataset ketiga).
 
