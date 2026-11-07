@@ -44,13 +44,13 @@ Terakhir diperbarui: **2026-11-07**
 2. **Arah kelas:** terinfeksi vs tidak terinfeksi.
 3. **Identitas Teknik Fisika:** kuasai arti fisis dan rumus matematis tiap fitur (*circularity*, *solidity*, dst.).
 4. **Validasi:** training / validation / testing dengan k-fold cross-validation (5 atau 10 fold).
-5. **Judul:** boleh diganti; prosedur perlu dipastikan.
+5. **Judul:** boleh diganti; prosedur (dicek 7 Nov): surat persetujuan dosen pembimbing — surat sudah diselesaikan mahasiswa.
 6. Belum terbahas: izin email Heidelberg, periode ujian, pembimbing pendamping & NIP, judul Bab 3.
 
 ## Keputusan yang dibutuhkan di bimbingan berikutnya (B6)
 1. Pakai Essig sebagai pelengkap (sel mati) atau heiDATA saja?
 2. Kelas heiDATA untuk "terinfeksi vs tidak": (+Vpx dan −Vpx) vs Mock, atau +Vpx vs −Vpx?
-3. Rumusan judul baru dan prosedurnya.
+3. Rumusan judul baru (prosedur sudah jelas: surat persetujuan dospem).
 4. Izin mengirim email permintaan citra ke Heidelberg (WO-12).
 5. Target periode ujian & tenggat; pembimbing pendamping & NIP; judul Bab 3.
 

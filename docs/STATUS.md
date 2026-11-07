@@ -20,9 +20,11 @@ Terakhir diperbarui: 2026-11-07
 - **WO-14:** tabel arti fisis & rumus 13 fitur heiDATA; validasi k-fold (biasa dan berkelompok per figure)
 
 ## Berikutnya (maks. 3)
-1. Selesaikan WO-14 untuk bimbingan berikutnya
+1. Pelajari tabel fitur & hasil k-fold WO-14 untuk bimbingan 9 Nov
 2. Input catatan Bimbingan 5 ke SIMASTER
-3. Pastikan prosedur penggantian judul ke bagian pengajaran
+3. Siapkan bahan Bimbingan 6 (keputusan Essig, kelas, judul baru, izin email Heidelberg)
+
+Catatan: prosedur ganti judul = surat persetujuan dospem (dicek 7 Nov; surat sudah diselesaikan).
 
 ## Blocker / pertanyaan terbuka
 - Essig dipakai atau tidak; kelas heiDATA untuk terinfeksi vs tidak; rumusan judul baru

@@ -15,6 +15,13 @@
 
 ---
 
+## 2026-11-07 — Prosedur penggantian judul
+**Oleh:** pengguna (dicatat Claude Code)
+- Pengguna menanyakan ke bagian pengajaran: penggantian judul memerlukan **surat persetujuan dari dosen pembimbing**. Surat sudah diselesaikan pengguna.
+- WO-14 butir "prosedur judul" dicentang; WORK-ORDER, STATUS diperbarui. Rumusan judul baru tetap dibahas di B6.
+
+---
+
 ## 2026-11-07 — WO-14: validasi k-fold dan tabel fitur
 **Oleh:** Claude Code (laptop)
 - Pengguna mengonfirmasi: bimbingan 6 = Senin 9 Nov bersama Luna; info Colab sudah dikirim ke Luna. Tanda "perlu konfirmasi" dihapus.
