@@ -133,10 +133,24 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 - Terverifikasi lewat pencarian web (halaman databank menolak akses otomatis, HTTP 403): lab Roy D. Dar; citra fluoresensi time-lapse
   48 jam, sel T **Jurkat** (lini sel, bukan CD4 primer) dengan **sirkuit gen HIV minimal** (reporter, bukan infeksi virus utuh),
   1.806 senyawa; termasuk lintasan intensitas & *noise* ekspresi per sel. v1, 2022-02-11. Paper: Lu dkk., *PNAS* 2021 (5 *latency-promoting agents*).
-- Menurut pengguna: ratusan file ±10 GB; README ±217 KB (belum dibaca).
-- Belum diketahui: ada kanal brightfield/non-reporter atau tidak (kalau hanya kanal reporter, label aktif/laten = intensitas reporter → sirkular);
-  tata letak sumur/plate (risiko efek *batch* per sumur seperti heiDATA).
-- Status: kandidat pengganti Bagian A (HIV) — perlu README dulu.
+- **README dibaca 2026-11-08** (PDF dari pengguna; paper DOI 10.1073/pnas.2012191118):
+  - Citra `.nd2` + layer segmentasi biner, per plate 384 sumur, 1 bingkai / 15 menit. Ukuran setelah unzip: **demo 1 sumur
+    (Plate 2, K16) 1,72 GB**; Plate 1 271 GB; Plate 2–5, Oncology set, Plate 1 repeat masing-masing ±580 GB (arsip 10 GB × 17–38).
+    → hanya sumur demo yang realistis untuk laptop.
+  - Segmentasi NIS Elements: *Bright Spot Detection* pada kanal **"Widefield GFP" (470 nm)**, diameter 10,75 µm, erosi 2 µm.
+    Kanal brightfield **tidak disebut** → kemungkinan hanya kanal reporter GFP; sel yang tidak menyala kemungkinan tidak tersegmentasi.
+  - Data per sel (tabular, semua plate): frame-ke-frame `.xlsx` (ID, ND.T, Time, MeanIntensity, …) di `SingleCellData_allPlates.zip.001–.002`;
+    lintasan intensitas rata-rata & *noise* (jam 1–19) di `intensityTrajectories.zip`, `noiseTrajectories.zip`; versi demo tersedia.
+    Ukuran arsip tabular belum diketahui.
+  - Kontrol per plate (`plateNSClookup.xlsx`): kolom 1 = TNF-α (kontrol positif, aktivasi), kolom 2 & 23 = tanpa perlakuan,
+    kolom 24 = alsterpaullone (kontrol negatif); kolom 3–22 = senyawa (tanpa NSC = tanpa perlakuan).
+- Penilaian:
+  - Tugas yang masuk akal: **TNF (aktivasi) vs tanpa perlakuan vs alsterpaullone** per sel, fitur = rerata & *noise* ekspresi
+    (fluktuasi stokastik — sisi fisika kuat) ± morfologi dari citra demo. Validasi berkelompok per sumur (16–32 sumur kontrol per
+    kelas per plate) dan per plate → jauh lebih kuat dari heiDATA.
+  - Kelemahan: Jurkat (bukan CD4 primer), reporter (bukan virus utuh); fitur citra sendiri hanya bisa dari 1 sumur demo — fitur untuk
+    banyak sumur berasal dari ekstraksi NIS Elements (tabular), perlu dicek apakah masih memenuhi arahan "data citra" (B5).
+- Status: alternatif Bagian A (HIV) untuk dibahas di B6; perlu ukuran arsip tabular sebelum mengunduh.
 
 ### 9. TEMNet (Perilla lab) — citra TEM virion HIV-1 (temuan pengguna, dinilai 2026-11-08)
 - Paper: Rey dkk. (2021), *Comput. Struct. Biotechnol. J.* 19:5688–5700, DOI 10.1016/j.csbj.2021.10.001. Kelas: immature, mature, eccentric.
