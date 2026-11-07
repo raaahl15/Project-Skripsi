@@ -4,7 +4,7 @@ Terakhir diperbarui: 2026-11-07
 ## Posisi saat ini
 - Tahap: pengolahan data & eksperimen ML (pasca-Bimbingan 5)
 - Minggu ke-10 dari ±16 minggu semester (asumsi mulai 1 Sep 2026; bimbingan 1 = 2 Sep)
-- Bimbingan formal terlaksana: **5** (2, 4, 9, 23 Sep; 6 Nov). Bimbingan berikutnya: Senin, 9 Nov 2026 bersama Luna (**perlu konfirmasi**)
+- Bimbingan formal terlaksana: **5** (2, 4, 9, 23 Sep; 6 Nov). Bimbingan berikutnya: **Senin, 9 Nov 2026** bersama Luna
 - Arah dari pembimbing (B5): **data citra saja** (data utama heiDATA; CyTOF ditinggalkan; status Essig belum diputuskan), kelas terinfeksi vs
   tidak; kuasai arti fisis & rumus matematis fitur; validasi training/validation/testing dengan k-fold.
 

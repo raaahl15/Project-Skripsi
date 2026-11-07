@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-11-07 — WO-14: validasi k-fold dan tabel fitur
+**Oleh:** Claude Code (laptop)
+- Pengguna mengonfirmasi: bimbingan 6 = Senin 9 Nov bersama Luna; info Colab sudah dikirim ke Luna. Tanda "perlu konfirmasi" dihapus.
+- `docs/materi/WO-14-fitur-heidata.md`: definisi, rumus, satuan, arti fisis 13 fitur + 5 latihan (draf AI; klaim biologi ditandai [perlu pustaka]).
+- `src/wo14_kfold_heidata.py` → `results/wo14-kfold/`: LogReg/RF/SVM, GridSearch 3-fold di dalam data latih, fold luar k=5, k=10 per sel
+  dan berkelompok per figure. **Temuan:** per sel AUC 0,65–0,80; berkelompok 0,27–0,58 (T2 HIV vs Mock < 0,5) → skor k-fold per sel
+  terutama dari kebocoran efek *batch*. Data tambahan (WO-12) menjadi kebutuhan utama.
+- **Berikutnya:** mahasiswa mempelajari tabel fitur & hasil; bahan B6; tanyakan izin email Heidelberg di B6.
+
+---
+
 ## 2026-11-07 — Verifikasi catatan B5 dari rekaman
 **Oleh:** Claude Code (laptop) atas permintaan pengguna
 - Rekaman B5 (11:12) ditranskripsi ulang dengan faster-whisper *small* (venv sementara di scratchpad, bukan di repo).

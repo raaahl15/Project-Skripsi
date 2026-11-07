@@ -16,9 +16,9 @@ Terakhir diperbarui: **2026-11-07**
 |---|---|
 | Minggu semester (asumsi mulai 1 Sep 2026) | **Minggu ke-10 dari 16** (panduan: minggu 7–10 = pengambilan data tahap akhir) |
 | Bimbingan formal tercatat | **5** (2 Sep, 4 Sep, 9 Sep, 23 Sep, 6 Nov) · target rubrik CPMK 2 "Sangat Baik": **> 8** |
-| Jeda sejak bimbingan terakhir | B5 6 Nov 2026; bimbingan berikutnya: Senin, 9 Nov 2026 bersama Luna (**perlu konfirmasi**) |
+| Jeda sejak bimbingan terakhir | B5 6 Nov 2026; bimbingan berikutnya: **Senin, 9 Nov 2026** bersama Luna |
 | Ujian (perkiraan) | Periode akhir semester ±minggu 15–16 (pertengahan–akhir Des 2026); tanggal & tenggat daftar: **[ISI NANTI]** |
-| Status WO | ✅ 4 · 🔄 7 · ⏳ 2 · ➖ 1 (total 14) |
+| Status WO | ✅ 4 · 🔄 8 · ⏳ 1 · ➖ 1 (total 14) |
 
 ## Daftar Work Order
 
@@ -37,7 +37,7 @@ Terakhir diperbarui: **2026-11-07**
 | WO-11 | Inisiatif | Sistem kerja skripsi (repo GitHub, Google Drive, naskah Google Docs + LaTeX template kampus, backup) | ✅ | `README.md`, `MASTER-SKRIPSI-SETUP.md`, `thesis/` (PDF 21 hlm ter-*compile*) | — |
 | WO-12 | Inisiatif | Permintaan citra tambahan ke pemilik dataset heiDATA (Heidelberg) | ⏳ | Draf email: `docs/korespondensi/permintaan-data-heidata.md` | Belum dibahas di B5; makin penting karena heiDATA kini data utama |
 | WO-13 | Inisiatif | Ringkasan Panduan Skripsi TF 2026 | ✅ | `docs/PANDUAN-KAMPUS.md` | — |
-| WO-14 | B5 · 6 Nov | **Validasi k-fold + arti fisis & rumus matematis fitur citra** | ⏳ | — | Laporkan k-fold biasa dan berkelompok per figure (cegah kebocoran); `docs/work-order/WO-14.md` |
+| WO-14 | B5 · 6 Nov | **Validasi k-fold + arti fisis & rumus matematis fitur citra** | 🔄 | Tabel 13 fitur → `docs/materi/WO-14-fitur-heidata.md`; k-fold → `results/wo14-kfold/`: per sel AUC 0,65–0,80, per percobaan 0,27–0,58 | Selisih = kebocoran efek *batch*; data tambahan (WO-12) jadi kebutuhan utama |
 
 ## Hasil Bimbingan 5 (6 Nov 2026) — rincian: `docs/bimbingan/B5_2026-11-04/HASIL.md`
 1. **Data citra saja:** data non-citra (CyTOF) ditinggalkan → opsi E tidak dipakai; data utama heiDATA. Status Essig belum diputuskan.

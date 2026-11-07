@@ -39,7 +39,7 @@ baik model), serta meminta **k-fold cross-validation** (mis. 5-fold atau 10-fold
 uji permutasi, yaitu bentuk *cross-validation* berkelompok. Perlu diluruskan di bimbingan berikutnya.
 
 **f. Komputasi.** Mahasiswa menjelaskan komputasi dipindah dari laptop ke Google Colab (Pro gratis setahun lewat akun UGM). Pembimbing
-menyinggung Luna (rekan satu pembimbing) yang laptopnya tidak kuat → info Colab UGM dibagikan ke Luna **[perlu konfirmasi]**.
+menyinggung Luna (rekan satu pembimbing) yang laptopnya tidak kuat → info Colab UGM sudah dibagikan ke Luna (dikonfirmasi mahasiswa, 7 Nov).
 
 **g. Judul.** Mahasiswa menjelaskan bahwa citra *imaging flow cytometry* untuk infeksi HIV tidak tersedia. Pembimbing: **pergantian judul
 sepertinya tidak masalah**. Prosedur (ajukan ulang di Simaster / tanya bagian pengajaran / saat ujian) **tidak terdengar jelas [perlu konfirmasi]**.
@@ -65,7 +65,7 @@ sepertinya tidak masalah**. Prosedur (ajukan ulang di Simaster / tanya bagian pe
 - Bab 3: subbab definisi dan rumus fitur; alur pembagian data training/validation/testing dan k-fold.
 
 ## 6. Jadwal bimbingan berikutnya
-- Senin, 9 Nov 2026, bersama Luna, untuk melihat hasil k-fold **[perlu konfirmasi: tidak terdengar jelas di rekaman]**.
+- Senin, 9 Nov 2026, bersama Luna, untuk melihat hasil k-fold (dikonfirmasi mahasiswa, 7 Nov).
 
 ## 7. Catatan untuk mahasiswa
 - Luruskan tiga jawaban di bimbingan berikutnya: (1) validasi pilot sudah ada (*leave-one-figure-out*), (2) 0,65 adalah AUC, (3) penanda citra
