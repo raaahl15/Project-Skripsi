@@ -29,7 +29,7 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
 | Bagian | Data | Jenis citra | Klasifikasi | Hasil awal |
 |---|---|---|---|---|
 | A | heiDATA (Ananth dkk., 2024) | Mikroskop fluoresensi (Lamin B1, kapsid HIV-1) | Sel terpapar HIV-1 vs tidak / ±Vpx | Lihat tabel di atas (lintas percobaan ≈ acak) |
-| B | Essig dkk. (Dryad 2022) | Imaging flow cytometry (brightfield) | Sel T CD4 hidup vs mati | Pilot 4 Nov: AUC 0,92–0,96, *leave-one-donor-out* |
+| B | Essig dkk. (Dryad 2022) | Imaging flow cytometry (brightfield) | Sel T CD4 hidup vs mati | Protokol WO-14: AUC 0,91–0,94 pada donor baru |
 
 - Metode keduanya sama: segmentasi → **ekstraksi fitur fisis** (morfometri, intensitas, tekstur) → ML (LogReg, RF, SVM) → k-fold
   berkelompok (per percobaan / per donor) → interpretasi fitur.
@@ -37,6 +37,23 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
 - **Kaitan Essig dengan HIV:** data Essig tidak berisi HIV. Kaitannya lewat pustaka — berkurangnya sel T CD4 pada infeksi HIV-1 terutama
   terjadi melalui kematian sel (apoptosis dan piroptosis, termasuk pada sel *bystander* yang tidak terinfeksi produktif)
   (Doitsh dkk., 2014; Cummins & Badley, 2010). Kemampuan mengenali sel mati dari citra karena itu relevan untuk konteks infeksi HIV.
+
+### Hasil analisis kedua dataset (7 Nov) — rincian: `results/b6/README.md`
+**Bagian A — heiDATA, konsistensi efek per percobaan (tanpa ML)**
+- Sel +Vpx punya inti **lebih konveks (soliditas, arah sama di 5 dari 5 percobaan, d median 0,59)** dan **lebih bulat (sirkularitas,
+  4 dari 5, d 0,54)**. Arah konsisten, efek sedang, tetapi belum signifikan (uji tanda p = 0,06; sampel per percobaan kecil).
+- Fitur ukuran & intensitas berubah arah antar-percobaan → sumber efek *batch*.
+- **Temuan kontrol kualitas:** di percobaan 1G, sel Mock (tanpa virus) justru terhitung paling banyak titik kapsid (median 124 vs 10–19)
+  → fitur kapsid belum andal, perlu diperiksa ulang.
+
+**Bagian B — Essig, sel T CD4 hidup vs mati (brightfield saja, label ahli 354 vs 348 sel)**
+| Skema | LogReg | RF | SVM |
+|---|---|---|---|
+| k-fold 5 per sel | 0,945 | 0,961 | 0,954 |
+| Leave-one-donor-out (donor baru) | 0,921 | 0,935 | 0,909 |
+
+- Selisih kedua skema kecil → sinyal berlaku pada donor baru. Fitur utama: **gradien RMS brightfield** (ketajaman tepi/kontras refraktif),
+  sebaran intensitas, dan tekstur GLCM.
 
 ## 3. Opsi judul
 | | Judul | Kelebihan | Catatan |
@@ -57,7 +74,8 @@ Judul Simaster saat ini: *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasark
 2. Opsi judul mana yang dipilih: Opsi 1 atau Opsi 2?
 3. Kelas Bagian A: (+Vpx dan −Vpx) vs Mock, atau +Vpx vs −Vpx? (Mock hanya ada di 2 dari 6 percobaan.)
 4. Apakah hasil k-fold berkelompok (yang jujur tetapi rendah) boleh dilaporkan sebagai temuan, berdampingan dengan k-fold per sel?
-5. Administrasi: target periode ujian & tenggat; pembimbing pendamping & NIP; judul Bab 3.
+5. Untuk Bagian A, apakah analisis konsistensi fitur per percobaan (soliditas/sirkularitas) boleh menjadi hasil utama, mengingat ML lintas percobaan belum berhasil?
+6. Administrasi: target periode ujian & tenggat; pembimbing pendamping & NIP; judul Bab 3.
 
 ## 5. Pustaka (sudah diperiksa keberadaannya)
 - Doitsh G., dkk. (2014). Cell death by pyroptosis drives CD4 T-cell depletion in HIV-1 infection. *Nature*, 505, 509–514. DOI 10.1038/nature12940.

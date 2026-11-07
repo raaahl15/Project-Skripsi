@@ -1,0 +1,10 @@
+figure,condition,n,ca_nucleus_median,ca_perinuclear_median
+1G,+Vpx,7,19.0,4.0
+1G,-Vpx,14,10.5,5.0
+1G,Mock,11,124.0,86.0
+3B,+Vpx,22,8.5,1.0
+3B,-Vpx,24,4.5,0.0
+4D,-Vpx,25,24.0,7.0
+S3B,+Vpx,20,2.5,0.0
+S3B,-Vpx,20,3.5,3.0
+S3B,Mock,28,6.0,3.0

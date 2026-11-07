@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-11-07 — Analisis kedua dataset untuk B6
+**Oleh:** Claude Code (laptop)
+- `src/b6_analyses.py` → `results/b6/` (README berisi tabel & tafsiran).
+- heiDATA: konsistensi Cohen's d per percobaan — soliditas +Vpx > −Vpx di 5/5 percobaan (d median 0,59), sirkularitas 4/5; belum signifikan.
+  **Kontrol kualitas:** Mock 1G punya titik kapsid terbanyak (median 124) → fitur kapsid belum andal; ide label infeksi dari kapsid dibatalkan.
+- Essig: protokol WO-14 (LogReg/RF/SVM, GridSearch dalam) hidup vs mati dari brightfield → AUC donor baru 0,91–0,94 (per sel 0,95–0,97).
+- BAHAN B6 diperbarui dengan hasil ini + pertanyaan baru.
+- **Berikutnya:** periksa overlay kanal kapsid 1G Mock; slide/PDF B6 bila diminta.
+
+---
+
 ## 2026-11-07 — Bahan B6: usulan heiDATA + Essig dan dua opsi judul
 **Oleh:** Claude Code (laptop)
 - Pengguna memilih arah: tetap ada HIV dan memakai dua dataset citra (heiDATA = paparan HIV; Essig = hidup vs mati).
