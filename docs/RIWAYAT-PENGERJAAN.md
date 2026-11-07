@@ -19,6 +19,7 @@
 **Oleh:** pengguna (dicatat Claude Code)
 - Pengguna menanyakan ke bagian pengajaran: penggantian judul memerlukan **surat persetujuan dari dosen pembimbing**. Surat sudah diselesaikan pengguna.
 - WO-14 butir "prosedur judul" dicentang; WORK-ORDER, STATUS diperbarui. Rumusan judul baru tetap dibahas di B6.
+- Pengguna juga sudah mengirim email ke Heidelberg (WO-12 → 🔄), tetapi tidak mengharapkan balasan; rencana tidak bergantung pada data tambahan.
 
 ---
 

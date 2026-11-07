@@ -18,7 +18,7 @@ Terakhir diperbarui: **2026-11-07**
 | Bimbingan formal tercatat | **5** (2 Sep, 4 Sep, 9 Sep, 23 Sep, 6 Nov) · target rubrik CPMK 2 "Sangat Baik": **> 8** |
 | Jeda sejak bimbingan terakhir | B5 6 Nov 2026; bimbingan berikutnya: **Senin, 9 Nov 2026** bersama Luna |
 | Ujian (perkiraan) | Periode akhir semester ±minggu 15–16 (pertengahan–akhir Des 2026); tanggal & tenggat daftar: **[ISI NANTI]** |
-| Status WO | ✅ 4 · 🔄 8 · ⏳ 1 · ➖ 1 (total 14) |
+| Status WO | ✅ 4 · 🔄 9 · ➖ 1 (total 14) |
 
 ## Daftar Work Order
 
@@ -35,7 +35,7 @@ Terakhir diperbarui: **2026-11-07**
 | WO-09 | B4 · 23 Sep | **Fiksasi dataset** | 🔄 | B5 (6 Nov): opsi E (tiga dataset) diajukan; pembimbing **membatasi data pada citra**, data non-citra (CyTOF) ditinggalkan → data utama heiDATA; judul boleh diganti | Masih terbuka: status Essig, kelas terinfeksi vs tidak, rumusan judul baru |
 | WO-10 | B4 · 23 Sep | Tentukan **fitur yang diekstrak** | 🔄 | 11 fitur morfometri/intensitas + 2 fitur kapsid di `src/data/heidata_cells.py` | B5: wajib rumuskan definisi fisis & rumus matematisnya |
 | WO-11 | Inisiatif | Sistem kerja skripsi (repo GitHub, Google Drive, naskah Google Docs + LaTeX template kampus, backup) | ✅ | `README.md`, `MASTER-SKRIPSI-SETUP.md`, `thesis/` (PDF 21 hlm ter-*compile*) | — |
-| WO-12 | Inisiatif | Permintaan citra tambahan ke pemilik dataset heiDATA (Heidelberg) | ⏳ | Draf email: `docs/korespondensi/permintaan-data-heidata.md` | Belum dibahas di B5; makin penting karena heiDATA kini data utama |
+| WO-12 | Inisiatif | Permintaan citra tambahan ke pemilik dataset heiDATA (Heidelberg) | 🔄 | Email sudah dikirim mahasiswa (dicatat 7 Nov); draf: `docs/korespondensi/permintaan-data-heidata.md` | Balasan tidak diharapkan → rencana tidak bergantung pada data tambahan |
 | WO-13 | Inisiatif | Ringkasan Panduan Skripsi TF 2026 | ✅ | `docs/PANDUAN-KAMPUS.md` | — |
 | WO-14 | B5 · 6 Nov | **Validasi k-fold + arti fisis & rumus matematis fitur citra** | 🔄 | Tabel 13 fitur → `docs/materi/WO-14-fitur-heidata.md`; k-fold → `results/wo14-kfold/`: per sel AUC 0,65–0,80, per percobaan 0,27–0,58 | Selisih = kebocoran efek *batch*; data tambahan (WO-12) jadi kebutuhan utama |
 
@@ -48,10 +48,10 @@ Terakhir diperbarui: **2026-11-07**
 6. Belum terbahas: izin email Heidelberg, periode ujian, pembimbing pendamping & NIP, judul Bab 3.
 
 ## Keputusan yang dibutuhkan di bimbingan berikutnya (B6)
-1. Pakai Essig sebagai pelengkap (sel mati) atau heiDATA saja?
+1. Pakai Essig sebagai pelengkap (sel mati; Essig tanpa infeksi HIV) atau heiDATA saja?
 2. Kelas heiDATA untuk "terinfeksi vs tidak": (+Vpx dan −Vpx) vs Mock, atau +Vpx vs −Vpx?
 3. Rumusan judul baru (prosedur sudah jelas: surat persetujuan dospem).
-4. Izin mengirim email permintaan citra ke Heidelberg (WO-12).
+4. Laporkan bahwa email ke Heidelberg (WO-12) sudah dikirim; balasan tidak diharapkan.
 5. Target periode ujian & tenggat; pembimbing pendamping & NIP; judul Bab 3.
 
 ## Arsip: eksekusi B4 → B5 (23 Sep → 3 Nov, disampaikan di B5)

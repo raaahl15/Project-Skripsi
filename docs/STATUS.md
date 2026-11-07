@@ -28,6 +28,6 @@ Catatan: prosedur ganti judul = surat persetujuan dospem (dicek 7 Nov; surat sud
 
 ## Blocker / pertanyaan terbuka
 - Essig dipakai atau tidak; kelas heiDATA untuk terinfeksi vs tidak; rumusan judul baru
-- Izin email permintaan citra ke Heidelberg (WO-12) — heiDATA kecil (14 bidang pandang)
+- Email ke Heidelberg (WO-12) sudah dikirim, balasan tidak diharapkan → heiDATA tetap kecil (14 bidang pandang)
 - NIP pembimbing & pembimbing pendamping; target periode ujian & tenggat; judul Bab 3
 - **Risiko waktu:** ujian ±Desember 2026; draf Bab 1–3 perlu dipercepat
