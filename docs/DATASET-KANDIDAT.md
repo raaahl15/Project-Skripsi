@@ -129,6 +129,21 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 ### 7. ACTG388 (UTHealth) — tidak cocok
 - Data **klinis longitudinal jumlah CD4** pasien HIV (tabel teks), bukan data sel tunggal/citra.
 
+### 8. Illinois Data Bank IDB-8103861 — Jurkat + sirkuit gen HIV minimal, time-lapse (temuan pengguna, dinilai 2026-11-08)
+- Terverifikasi lewat pencarian web (halaman databank menolak akses otomatis, HTTP 403): lab Roy D. Dar; citra fluoresensi time-lapse
+  48 jam, sel T **Jurkat** (lini sel, bukan CD4 primer) dengan **sirkuit gen HIV minimal** (reporter, bukan infeksi virus utuh),
+  1.806 senyawa; termasuk lintasan intensitas & *noise* ekspresi per sel. v1, 2022-02-11. Paper: Lu dkk., *PNAS* 2021 (5 *latency-promoting agents*).
+- Menurut pengguna: ratusan file ±10 GB; README ±217 KB (belum dibaca).
+- Belum diketahui: ada kanal brightfield/non-reporter atau tidak (kalau hanya kanal reporter, label aktif/laten = intensitas reporter → sirkular);
+  tata letak sumur/plate (risiko efek *batch* per sumur seperti heiDATA).
+- Status: kandidat pengganti Bagian A (HIV) — perlu README dulu.
+
+### 9. TEMNet (Perilla lab) — citra TEM virion HIV-1 (temuan pengguna, dinilai 2026-11-08)
+- Paper: Rey dkk. (2021), *Comput. Struct. Biotechnol. J.* 19:5688–5700, DOI 10.1016/j.csbj.2021.10.001. Kelas: immature, mature, eccentric.
+- README GitHub: **59 mikrograf TEM** → ±10 ribu potongan setelah augmentasi (±19 GB); unduh via Google Drive; lisensi tidak disebut.
+  Angka "1.806 citra, train 1.443 / val 363" dari pesan pengguna **tidak terkonfirmasi** di README.
+- Kecocokan rendah: objek = **virion**, bukan sel CD4; modalitas TEM (bukan fluoresensi/IFC); repo berbasis deep learning (Faster R-CNN).
+
 ## Peta ringkas (per 2026-11-03)
 | Data | Citra? | HIV? | Sel CD4 primer? | Status |
 |---|---|---|---|---|
