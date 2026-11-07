@@ -57,6 +57,18 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
 - Selisih kedua skema kecil → sinyal berlaku pada donor baru. Fitur utama: **gradien RMS brightfield** (ketajaman tepi/kontras refraktif),
   sebaran intensitas, dan tekstur GLCM.
 
+### Alternatif Bagian A: Illinois Data Bank IDB-8103861 (Lu dkk., *PNAS* 2021)
+- Sel T Jurkat dengan sirkuit gen HIV minimal (reporter GFP), citra fluoresensi time-lapse 48 jam (1 bingkai / 15 menit), 384 sumur
+  per plate, 1.806 senyawa. Kontrol di setiap plate: **TNF-α (aktivasi HIV)**, **tanpa perlakuan (laten)**, **alsterpaullone (penekan)**.
+- Kemungkinan klasifikasi: sel HIV **teraktivasi vs laten vs ditekan** dari fitur rerata & ***noise* ekspresi** (fluktuasi stokastik
+  intensitas per sel — besaran fisis-statistik), divalidasi berkelompok per sumur/plate (16–32 sumur kontrol per kelas per plate).
+- Data yang realistis diunduh: lintasan intensitas (54,8 MB) & *noise* (125 MB) per sel, tabel senyawa (14,5 MB), citra demo 1 sumur
+  (1,72 GB). Citra penuh 271–585 GB per plate → tidak realistis; data per frame lengkap 18,8 GB.
+- Kekurangan: Jurkat (lini sel, bukan CD4 primer); reporter, bukan virus utuh; kanal kemungkinan hanya GFP; fitur untuk banyak sumur
+  berasal dari ekstraksi citra oleh peneliti (NIS Elements), ekstraksi sendiri hanya dari 1 sumur demo.
+- **Pertanyaan:** apakah data ini (berasal dari citra, tetapi diolah sebagai tabel fitur per sel) masih sesuai arahan "data citra"?
+  Jika ya, Illinois dapat **menggantikan heiDATA** sebagai bagian HIV (bukan dataset ketiga).
+
 ## 3. Opsi judul
 | | Judul | Kelebihan | Catatan |
 |---|---|---|---|
@@ -72,6 +84,7 @@ Judul Simaster saat ini: *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasark
 4. Menafsirkan fitur yang paling berpengaruh beserta arti fisisnya.
 
 ## 4. Pertanyaan & keputusan yang diminta dari pembimbing
+0. Bagian HIV: tetap heiDATA, atau diganti data Illinois (lihat alternatif di atas)?
 1. Bolehkah data Essig dipakai sebagai Bagian B (hidup vs mati), mengingat data dari Heidelberg kemungkinan tidak didapat?
 2. Opsi judul mana yang dipilih: Opsi 1 atau Opsi 2?
 3. Kelas Bagian A: (+Vpx dan −Vpx) vs Mock, atau +Vpx vs −Vpx? (Mock hanya ada di 2 dari 6 percobaan.)

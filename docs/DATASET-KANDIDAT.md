@@ -141,7 +141,8 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
     Kanal brightfield **tidak disebut** → kemungkinan hanya kanal reporter GFP; sel yang tidak menyala kemungkinan tidak tersegmentasi.
   - Data per sel (tabular, semua plate): frame-ke-frame `.xlsx` (ID, ND.T, Time, MeanIntensity, …) di `SingleCellData_allPlates.zip.001–.002`;
     lintasan intensitas rata-rata & *noise* (jam 1–19) di `intensityTrajectories.zip`, `noiseTrajectories.zip`; versi demo tersedia.
-    Ukuran arsip tabular belum diketahui.
+    Ukuran (dari pengguna, 8 Nov): SingleCellData .001 10 GB + .002 8,81 GB; intensityTrajectories 54,8 MB; noiseTrajectories 125 MB;
+    plateNSClookup.xlsx 14,5 MB.
   - Kontrol per plate (`plateNSClookup.xlsx`): kolom 1 = TNF-α (kontrol positif, aktivasi), kolom 2 & 23 = tanpa perlakuan,
     kolom 24 = alsterpaullone (kontrol negatif); kolom 3–22 = senyawa (tanpa NSC = tanpa perlakuan).
 - Penilaian:
