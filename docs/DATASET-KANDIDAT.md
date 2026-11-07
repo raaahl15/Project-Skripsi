@@ -170,6 +170,17 @@ berisi sel T CD4 terinfeksi HIV vs tidak terinfeksi. Petunjuk yang tersisa:
 - Sandmeyer dkk. 2022 *iScience*: transfer HIV-1 antar-sel T hidup (sinaps virologis); deposit data mentah belum diketahui.
 - Kesimpulan: untuk "terinfeksi vs tidak" pada sel T, heiDATA (HIV vs Mock) tetap satu-satunya data citra publik yang ditemukan.
 
+Perluasan (semua jenis sel), 2026-11-08:
+- **Zenodo 10.5281/zenodo.7215750** (Sandmeyer dkk. 2022, CC-BY 4.0, 20,9 GB, 8 file): sel Jurkat terinfeksi memindahkan HIV-1 ke
+  sel T primer yang belum terinfeksi; 6 tumpukan SIM (.dv, 3 sampel + rekonstruksi) + 2 film dekonvolusi (.tif, 8,5 GB). Jumlah sel tidak
+  disebut (kemungkinan puluhan). Masalah: terinfeksi = Jurkat, tidak terinfeksi = sel primer → **jenis sel identik dengan label**
+  (model akan belajar Jurkat vs primer); penanda infeksi = kanal fluoresens (sirkular jika dipakai). Tidak cocok.
+- GHOST Hi-5 HCS (LuPone dkk. 2025, bioRxiv / PLOS ONE): reporter LTR-GFP pada sel osteosarkoma, CellInsight CX7 — **tidak ada
+  pernyataan ketersediaan data** di versi preprint.
+- Lain-lain: EMPIAR-12454 (cryo-ET makrofag terinfeksi, tanpa label klasifikasi), Cell Image Library CIL:41568 (1 video),
+  Genovesio dkk. 2011 (RNAi HeLa LTR-GFP, data tidak ditemukan di IDR).
+- Kesimpulan tetap: tidak ada dataset citra publik siap pakai untuk klasifikasi sel terinfeksi vs tidak terinfeksi HIV.
+
 ## Peta ringkas (per 2026-11-03)
 | Data | Citra? | HIV? | Sel CD4 primer? | Status |
 |---|---|---|---|---|
