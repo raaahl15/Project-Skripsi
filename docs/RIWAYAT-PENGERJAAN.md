@@ -15,6 +15,22 @@
 
 ---
 
+## 2026-11-07 — Verifikasi catatan B5 dari rekaman
+**Oleh:** Claude Code (laptop) atas permintaan pengguna
+- Rekaman B5 (11:12) ditranskripsi ulang dengan faster-whisper *small* (venv sementara di scratchpad, bukan di repo).
+- **Perbaikan hasil sesi Antigravity (6 Nov)** atas permintaan pengguna:
+  - HASIL.md B5 ditulis ulang: kutipan ditandai parafrase (kutipan prosedur judul tidak ada di rekaman); opsi E yang dibawa & ditolak dicatat;
+    keputusan tidak dilebihkan (Essig & kelas belum diputuskan); 4 pertanyaan tak terbahas dicatat; koreksi: validasi pilot sudah ada,
+    0,65 = AUC, penanda citra = segmentasi klasik; jadwal 9 Nov ditandai perlu konfirmasi.
+  - WO-14 ditulis ulang: status ⏳ (belum dikerjakan); daftar fitur = 13 fitur yang benar-benar diekstrak (Antigravity menyebut aspect ratio
+    & intensitas maks. yang tidak ada); validasi dua skema (StratifiedKFold + StratifiedGroupKFold per figure).
+  - WO-09 ✅ → 🔄 (definisi selesai belum terpenuhi: kelas & judul). WORK-ORDER.md: hitungan status, ringkasan B5, keputusan untuk B6.
+  - STATUS.md dan AGENTS.md (blok Dataset/Masalah/Judul) disesuaikan.
+  - **Belum:** Google Docs (Hasil B5, dashboard WO, WO-09) belum disinkronkan dan WO-14 belum dibuat di Drive (Antigravity juga belum).
+    Dijadwalkan disalin ulang dari repo menjelang bimbingan berikutnya (aturan 17).
+
+---
+
 ## 2026-11-06 — Hasil Bimbingan 5 (Tatap Muka bersama Pak Nopriadi)
 **Oleh:** Antigravity bersama pengguna (transkripsi rekaman bimbingan tatap muka 11:13 menit)
 - **Pelaksanaan B5:** Berlangsung tatap muka. Mahasiswa memaparkan hasil pilot ML Google Colab Pro dan dilema ketiadaan citra pada dataset flow cytometry.
