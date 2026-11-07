@@ -20,15 +20,25 @@ lalu dilihat apakah arah perubahannya sama di semua percobaan. Keluaran: `A_effe
 - HIV vs Mock hanya bisa dibandingkan di 2 percobaan (1G, S3B) → terlalu sedikit untuk menyimpulkan.
 - Tafsiran biologis (mengapa inti lebih bulat pada +Vpx) **belum ada pustakanya** — jangan diklaim dulu.
 
-**Pemeriksaan kanal kapsid (`A_capsid_sanity.csv`) — temuan penting**
-| Percobaan | Kondisi | Median titik kapsid di inti |
-|---|---|---|
-| 1G | +Vpx / −Vpx / **Mock** | 19 / 10,5 / **124** |
-| S3B | +Vpx / −Vpx / Mock | 2,5 / 3,5 / 6 |
+**Pemeriksaan kanal kapsid — kesalahan ditemukan dan diperbaiki (7 Nov)**
+- Gejala: sel Mock (tanpa virus) di 1G terhitung paling banyak titik kapsid (median 124 per inti vs 10–19 pada sel terpapar).
+- Penyebab: detektor menormalisasi **tiap citra ke rentangnya sendiri** (persentil 1–99,95). Citra Mock tidak punya kapsid, sehingga
+  derau latarnya teregang ke rentang penuh dan terdeteksi sebagai titik. Bukti (`A_capsid_channel_qc.csv`, `src/check_ca_channel.py`):
 
-Sel Mock (tidak diberi virus) seharusnya hampir tanpa kapsid, tetapi di 1G justru paling banyak. Artinya detektor titik (LoG) menghitung
-derau/latar, atau kanal Mock 1G berbeda. **Fitur kapsid belum dapat dipercaya** → hasil pilot T1b dan SHAP "kapsid di sekitar inti"
-perlu diperiksa ulang (lihat overlay citra), dan label "terinfeksi per sel dari kapsid" (ide 2b) **tidak dijalankan**.
+| Bidang pandang | Persentil 99,95 mentah | Titik (skala per citra, lama) | Titik (skala bersama per percobaan, baru) |
+|---|---|---|---|
+| 1G +Vpx | 7.151 | 216 | 113 |
+| 1G −Vpx | 12.741 | 292 | 417 |
+| **1G Mock** | **2.644** | **8.325** | **0** |
+| **S3B Mock** | 4.139 | 480 | **0** |
+
+- Perbaikan: `detect_puncta(..., scale=...)` dengan skala bersama per figure; fitur dihitung ulang (`cells.csv`; versi lama disimpan sebagai
+  `cells_v1_skala-per-citra.csv`). Fitur non-kapsid identik. Median kapsid di inti setelah perbaikan (`A_capsid_sanity.csv`):
+  Mock = 0 di kedua percobaan; 1G +Vpx 11 / −Vpx 18; 3B +Vpx 8,5 / −Vpx 0; S3B +Vpx 3 / −Vpx 2,5.
+- Keterbatasan sisa: di 3B, 4D, S3B banyak piksel jenuh (65.535), sehingga skala bersama ditentukan bidang pandang tercerah.
+- **Dampak ke hasil B5:** pilot T1b (*leave-one-figure-out*, LogReg) yang dilaporkan AUC **0,65, p = 0,01** menjadi **AUC 0,57, p = 0,14
+  (tidak signifikan)**; RF 0,53 (p = 0,28). Klaim "signifikan tetapi sedang" di B5 **gugur**. SHAP: sumbu mayor inti tetap teratas.
+- Label "terinfeksi per sel dari kapsid" (ide 2b) belum dijalankan; bisa dipertimbangkan lagi setelah kanal kapsid diperbaiki.
 Normalisasi fitur per percobaan (ide 2a) sudah diuji di pilot (`results/pilot-heidata/metrics_classify_norm-figure.json`): AUC 0,17–0,44, tidak membantu.
 
 ## Bagian B — Essig IFC: sel T CD4 hidup vs mati (label ahli)

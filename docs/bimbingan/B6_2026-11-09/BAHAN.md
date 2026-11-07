@@ -20,7 +20,7 @@ Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **N
 |---|---|---|
 | Terpapar HIV vs Mock | 0,74–0,80 | 0,27–0,46 |
 | +Vpx vs −Vpx (Lamin B1) | 0,66–0,72 | 0,52–0,58 |
-| +Vpx vs −Vpx (Lamin B1 + kapsid) | 0,65–0,74 | 0,45–0,58 |
+| +Vpx vs −Vpx (Lamin B1 + kapsid, setelah perbaikan) | 0,66–0,79 | 0,46–0,53 |
 
 Selisih kedua skema = **kebocoran efek *batch***: pada k-fold per sel, sel dari percobaan yang sama ada di data latih dan uji, sehingga
 model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pandang), hasil lintas percobaan masih setara acak.
@@ -43,8 +43,10 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
 - Sel +Vpx punya inti **lebih konveks (soliditas, arah sama di 5 dari 5 percobaan, d median 0,59)** dan **lebih bulat (sirkularitas,
   4 dari 5, d 0,54)**. Arah konsisten, efek sedang, tetapi belum signifikan (uji tanda p = 0,06; sampel per percobaan kecil).
 - Fitur ukuran & intensitas berubah arah antar-percobaan → sumber efek *batch*.
-- **Temuan kontrol kualitas:** di percobaan 1G, sel Mock (tanpa virus) justru terhitung paling banyak titik kapsid (median 124 vs 10–19)
-  → fitur kapsid belum andal, perlu diperiksa ulang.
+- **Koreksi atas hasil B5 (kontrol kualitas):** sel Mock (tanpa virus) di 1G terhitung paling banyak titik kapsid. Penyebabnya:
+  setiap citra dinormalisasi ke rentangnya sendiri, sehingga derau citra Mock teregang menjadi ribuan titik palsu (8.325 titik).
+  Setelah dinormalisasi dengan skala yang sama per percobaan, Mock = 0 titik. Akibatnya hasil B5 "+Vpx vs −Vpx dengan kapsid,
+  AUC 0,65, p = 0,01" **menjadi AUC 0,57, p = 0,14 (tidak signifikan)**. Fitur Lamin B1/morfometri tidak terdampak.
 
 **Bagian B — Essig, sel T CD4 hidup vs mati (brightfield saja, label ahli 354 vs 348 sel)**
 | Skema | LogReg | RF | SVM |

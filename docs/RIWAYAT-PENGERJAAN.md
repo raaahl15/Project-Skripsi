@@ -15,6 +15,18 @@
 
 ---
 
+## 2026-11-07 — Perbaikan deteksi kapsid HIV-1 (heiDATA)
+**Oleh:** Claude Code (laptop)
+- Penyebab Mock 1G penuh "kapsid": `detect_puncta` menormalisasi tiap citra ke persentil 1–99,95 miliknya sendiri → derau citra Mock
+  teregang (8.325 titik palsu). Bukti: `src/check_ca_channel.py` → `results/b6/A_capsid_channel_qc.csv`, `A_capsid_1G_same_scale.png`.
+- Perbaikan: skala bersama per figure (`shared_scale`, `detect_puncta(scale=...)`); `pilot_heidata_features.py` dijalankan ulang
+  (cells lama → `cells_v1_skala-per-citra.csv`; fitur non-kapsid identik). Mock = 0 titik.
+- Dijalankan ulang: WO-14 (T1b berkelompok 0,46–0,53), b6_analyses, pilot LOFO: **T1b AUC 0,651 p 0,01 → 0,573 p 0,14** (klaim B5 gugur).
+- Dokumen dikoreksi: results/b6 & wo14 README, BAHAN B6, WORK-ORDER (arsip B5), PEMROSESAN-DATA, materi WO-14.
+- Catatan: hasil Colab run 20261103-2339 memakai versi lama.
+
+---
+
 ## 2026-11-07 — Analisis kedua dataset untuk B6
 **Oleh:** Claude Code (laptop)
 - `src/b6_analyses.py` → `results/b6/` (README berisi tabel & tafsiran).

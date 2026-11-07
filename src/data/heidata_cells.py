@@ -61,11 +61,28 @@ def _filter_labels(lab: np.ndarray) -> np.ndarray:
     return out
 
 
-def detect_puncta(ch_mip: np.ndarray, threshold: float = 0.08) -> np.ndarray:
-    """Spot (puncta) coordinates (row, col) with a Laplacian-of-Gaussian detector."""
-    img = normalize(ch_mip, 1, 99.95)
+def detect_puncta(ch_mip: np.ndarray, threshold: float = 0.08,
+                  scale: tuple[float, float] | None = None) -> np.ndarray:
+    """Spot (puncta) coordinates (row, col) with a Laplacian-of-Gaussian detector.
+
+    scale: (low, high) raw intensities mapped to 0..1. Pass a range SHARED by all fields of one experiment
+    (see shared_scale). Without it the image is rescaled to its own 1-99.95 percentiles, which turns the
+    background noise of a puncta-free image (Mock) into thousands of false spots (QC 7 Nov 2026).
+    """
+    if scale is None:
+        img = normalize(ch_mip, 1, 99.95)
+    else:
+        lo, hi = scale
+        img = np.clip((ch_mip.astype(np.float32) - lo) / max(hi - lo, 1e-6), 0, 1)
     blobs = feature.blob_log(img, min_sigma=1, max_sigma=3, num_sigma=5, threshold=threshold)
     return blobs[:, :2] if len(blobs) else np.zeros((0, 2))
+
+
+def shared_scale(images: list[np.ndarray], low: float = 1.0, high: float = 99.95) -> tuple[float, float]:
+    """Percentile range of the pooled pixels of several images (one experiment/figure)."""
+    pooled = np.concatenate([im.ravel() for im in images])
+    lo, hi = np.percentile(pooled, [low, high])
+    return float(lo), float(hi)
 
 
 def cell_features(lab: np.ndarray, lamin_mip: np.ndarray, extra: dict[str, np.ndarray] | None = None,

@@ -18,7 +18,7 @@ import pandas as pd
 
 from src.data.heidata import FIELDS, field_id, load_stack, max_projection
 from src.data.heidata_cells import (cell_features, detect_puncta, segment_nuclei_cellpose,
-                                    segment_nuclei_classical)
+                                    segment_nuclei_classical, shared_scale)
 
 
 def main() -> None:
@@ -36,6 +36,15 @@ def main() -> None:
         from cellpose import models
         cp_model = models.CellposeModel(gpu=False)
 
+    # CA puncta: one intensity scale per figure (experiment), shared by all its fields, so that a Mock field
+    # without capsids is not stretched to full range (QC 7 Nov 2026, src/check_ca_channel.py).
+    ca_mips = {}
+    for f in FIELDS:
+        if "ca" in f.channels:
+            ca_mips[field_id(f)] = max_projection(load_stack(Path(args.root), f), f.channels["ca"])
+    ca_scale = {fig: shared_scale([ca_mips[field_id(f)] for f in FIELDS if f.figure == fig and "ca" in f.channels])
+                for fig in {f.figure for f in FIELDS if "ca" in f.channels}}
+
     rows, summary = [], []
     for f in FIELDS:
         fid = field_id(f)
@@ -48,7 +57,7 @@ def main() -> None:
         extra = {k: max_projection(stack, f.channels[k]) for k in ("gfp",) if k in f.channels}
         puncta = {}
         if "ca" in f.channels:
-            puncta["ca"] = detect_puncta(max_projection(stack, f.channels["ca"]))
+            puncta["ca"] = detect_puncta(ca_mips[fid], scale=ca_scale[f.figure])
         feats = cell_features(lab, lam, extra, puncta)
         for r in feats:
             r.update(field=fid, figure=f.figure, condition=f.condition, treatment=f.treatment)

@@ -65,44 +65,44 @@
     ],
     "models": {
       "logreg": {
-        "balanced_accuracy": 0.617,
-        "roc_auc": 0.651,
-        "perm_auc_mean": 0.496,
-        "perm_p_value": 0.01,
+        "balanced_accuracy": 0.56,
+        "roc_auc": 0.573,
+        "perm_auc_mean": 0.494,
+        "perm_p_value": 0.139,
         "confusion_matrix[[TN,FP],[FN,TP]]": [
           [
-            55,
-            28
+            49,
+            34
           ],
           [
-            21,
-            28
+            23,
+            26
           ]
         ]
       },
       "rf": {
-        "balanced_accuracy": 0.626,
-        "roc_auc": 0.566,
+        "balanced_accuracy": 0.549,
+        "roc_auc": 0.532,
         "perm_auc_mean": 0.492,
-        "perm_p_value": 0.149,
+        "perm_p_value": 0.277,
         "confusion_matrix[[TN,FP],[FN,TP]]": [
           [
-            65,
-            18
+            59,
+            24
           ],
           [
-            26,
-            23
+            30,
+            19
           ]
         ]
       }
     },
     "shap_mean_abs_top5": {
-      "major_axis_um": 0.0655,
-      "ca_puncta_perinuclear": 0.0542,
-      "area_um2": 0.0358,
-      "circularity": 0.0339,
-      "perimeter_um": 0.0289
+      "major_axis_um": 0.0677,
+      "ca_puncta_nucleus": 0.0407,
+      "ca_puncta_perinuclear": 0.0404,
+      "area_um2": 0.0367,
+      "circularity": 0.0313
     }
   },
   "T2_infected_vs_mock": {

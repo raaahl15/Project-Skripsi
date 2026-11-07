@@ -10,7 +10,8 @@
    (*closing*, *fill holes*, *opening*), lalu *watershed* pada transformasi jarak untuk memisahkan inti yang bersentuhan. Objek dengan diameter
    di luar 3–12 µm, soliditas < 0,88, atau terpotong tepi citra dibuang. Hasilnya: mask biner M tiap inti.
 4. **Deteksi titik kapsid HIV-1** pada kanal CA: detektor *Laplacian of Gaussian* (σ = 1–3 piksel). Titik terang berukuran kira-kira PSF
-   mikroskop terdeteksi sebagai satu kapsid/klaster.
+   mikroskop terdeteksi sebagai satu kapsid/klaster. Sebelum deteksi, intensitas dinormalisasi dengan **skala yang sama untuk semua
+   bidang pandang satu percobaan** (bukan per citra), agar derau citra Mock tidak teregang menjadi titik palsu (perbaikan 7 Nov 2026).
 
 Notasi: N = jumlah piksel dalam mask M; A = luas; P = keliling; I(x, y) = intensitas MIP (satuan a.u., hitungan detektor 16-bit).
 

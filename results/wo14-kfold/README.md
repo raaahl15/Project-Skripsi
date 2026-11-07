@@ -14,7 +14,10 @@ Keluaran: `metrics_kfold.json` (per fold, termasuk hiperparameter terpilih), `su
 |---|---|---|---|---|
 | T2 terpapar HIV vs Mock (Lamin B1) | 209 | 0,74–0,79 | 0,75–0,80 | 0,27–0,46 (2 fold berisi Mock) |
 | T1a +Vpx vs −Vpx (Lamin B1) | 170 | 0,66–0,72 | 0,67–0,72 | 0,52–0,58 |
-| T1b +Vpx vs −Vpx (Lamin B1 + kapsid) | 132 | 0,65–0,72 | 0,69–0,74 | 0,45–0,58 |
+| T1b +Vpx vs −Vpx (Lamin B1 + kapsid) | 132 | 0,66–0,77 | 0,69–0,79 | 0,46–0,53 |
+
+T1b dihitung ulang 7 Nov setelah perbaikan deteksi kapsid (skala bersama per percobaan; lihat `results/b6/README.md`).
+T2 dan T1a tidak memakai fitur kapsid sehingga tidak berubah.
 
 Rentang = tiga model. Rincian simpangan baku, *balanced accuracy*, dan F1 ada di `summary_kfold.csv`.
 

@@ -31,6 +31,10 @@ Terakhir diperbarui: **4 Nov 2026** · Terkait: WO-07 (ekstraksi fitur), WO-08 (
 5. **Filter objek**: diameter setara 3–12 µm, **soliditas ≥ 0,88** (inti sel T istirahat kompak/cembung), objek terpotong tepi citra dibuang
    → **209 sel** (+Vpx 77, −Vpx 93, Mock 39). Validasi visual: `results/pilot-heidata/overlays/`.
 6. **Deteksi titik kapsid HIV-1** (kanal CA; Fig 1G, 3B, 4D, S3B): *Laplacian of Gaussian* (σ 1–3 px, ambang 0,08 pada citra ternormalisasi).
+   **Sejak 7 Nov 2026** normalisasi memakai **skala bersama per figure** (persentil 1–99,95 dari gabungan piksel semua bidang pandang
+   satu percobaan). Versi lama menormalisasi tiap citra sendiri-sendiri, sehingga derau latar citra Mock (tanpa kapsid) teregang dan
+   terhitung ribuan titik palsu (Mock 1G: 8.325 → 0 titik). QC: `src/check_ca_channel.py`, `results/b6/A_capsid_channel_qc.csv`.
+   Catatan: di 3B/4D/S3B banyak piksel jenuh (65.535), sehingga skala bersama ditentukan oleh bidang pandang tercerah.
 7. **Ekstraksi fitur per sel** (`cell_features`) → `results/pilot-heidata/cells.csv` (1 baris = 1 sel).
 8. **Klasifikasi** (`pilot_heidata_classify.py`): Logistic Regression & Random Forest; imputasi median; validasi
    *leave-one-figure-out*; 100 permutasi label; SHAP (Random Forest).

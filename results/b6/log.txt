@@ -22,15 +22,15 @@
 20   HIV_vs_Mock          perimeter_um          2     -0.10          1             2  -0.86   0.65
 18   HIV_vs_Mock         major_axis_um          2      0.09          1             2  -0.52   0.70
   figure condition   n  ca_nucleus_median  ca_perinuclear_median
-0     1G      +Vpx   7               19.0                    4.0
-1     1G      -Vpx  14               10.5                    5.0
-2     1G      Mock  11              124.0                   86.0
+0     1G      +Vpx   7               11.0                    3.0
+1     1G      -Vpx  14               18.0                    7.5
+2     1G      Mock  11                0.0                    0.0
 3     3B      +Vpx  22                8.5                    1.0
-4     3B      -Vpx  24                4.5                    0.0
+4     3B      -Vpx  24                0.0                    0.0
 5     4D      -Vpx  25               24.0                    7.0
-6    S3B      +Vpx  20                2.5                    0.0
-7    S3B      -Vpx  20                3.5                    3.0
-8    S3B      Mock  28                6.0                    3.0
+6    S3B      +Vpx  20                3.0                    0.0
+7    S3B      -Vpx  20                2.5                    2.5
+8    S3B      Mock  28                0.0                    0.0
 BF_tanpa_ukuran_citra kfold5_per_sel logreg {'mean': 0.945, 'sd': 0.006, 'n_folds_scored': 5}
 BF_tanpa_ukuran_citra kfold5_per_sel rf {'mean': 0.961, 'sd': 0.014, 'n_folds_scored': 5}
 BF_tanpa_ukuran_citra kfold5_per_sel svm {'mean': 0.954, 'sd': 0.02, 'n_folds_scored': 5}

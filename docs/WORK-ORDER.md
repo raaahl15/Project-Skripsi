@@ -60,7 +60,9 @@ Usulan mahasiswa: heiDATA (paparan HIV) + Essig (hidup vs mati); dua opsi judul 
    terinfeksi HIV; 3 kandidat diperiksa langsung dan diuji coba (pilot).
 2. **Ekstraksi fitur (WO-07, WO-10):** 209 sel heiDATA disegmentasi otomatis; 13 fitur fisik/bio-optik per sel diekstrak.
 3. **Metode ML (WO-08):** klasifikasi +Vpx vs −Vpx dengan fitur Lamin B1 + kapsid HIV → AUC 0,65 (p = 0,01, signifikan tetapi sedang);
-   fitur paling berpengaruh: panjang sumbu mayor inti & kapsid di sekitar inti. Data CyTOF: prediksi sel HIV+ pada donor baru AUC 0,85–0,91.
+   fitur paling berpengaruh: panjang sumbu mayor inti & kapsid di sekitar inti.
+   **Koreksi 7 Nov:** deteksi kapsid salah normalisasi (Mock terhitung ribuan titik palsu); setelah diperbaiki AUC 0,57, p = 0,14 (tidak
+   signifikan) → `results/b6/README.md`. Data CyTOF: prediksi sel HIV+ pada donor baru AUC 0,85–0,91.
 4. **Temuan keterbatasan:** heiDATA hanya 14 bidang pandang (1 per kondisi) → efek *batch* kuat; tidak ada kelas sel mati.
 5. **Tugas bimbingan 1–2 yang tertunda (WO-02, WO-03, WO-05):** baru dikerjakan menjelang B5 — draf gambaran Bab 1, posisi
    keilmuan Teknik Fisika vs Teknik Biomedis/TI, dan materi biologi sel/CD4/HIV (`docs/materi/`).
