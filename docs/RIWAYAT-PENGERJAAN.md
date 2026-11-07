@@ -29,6 +29,8 @@
   ambang MAD k 5/3, watershed, pelacakan tetangga terdekat) → 404/528 lintasan lengkap; rata-rata sumur vs data penulis **r = 0,985**,
   jendela cocok = jam 1–19 (sesuai README). Fitur relatif sebanding, intensitas absolut kita lebih rendah. `results/pilot-illinois/demo/`.
   Paket `nd2` 0.12.0 dipasang di .venv. Bug pelacakan (array read-only) diperbaiki + cache segmentasi.
+- Uji ketahanan heiDATA kapsid vs Mock (`src/b6_capsid_robustness.py`): 28 pengaturan detektor → AUC 0,86–0,97 (median 0,91),
+  IK 95 % fold S3B 0,74–0,88; ambang rendah = sensitivitas ↑, titik palsu Mock ↑ (maks. 2 sel). `results/b6/README.md` Bagian A3.
 - **Berikutnya:** BAHAN & slide B6; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---

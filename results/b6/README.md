@@ -61,6 +61,26 @@ Validasi utama: **latih di satu percobaan, uji di percobaan lain** (2 fold), Gri
   memang tidak terinfeksi); kapsid adalah penanda virus yang diwarnai, sehingga tugas ini relatif langsung — tantangannya ada pada deteksi
   titik dan normalisasi intensitas (lihat perbaikan 7 Nov).
 
+## Bagian A3 — Uji ketahanan hasil A2 terhadap pengaturan detektor (8 Nov)
+Skrip: `src/b6_capsid_robustness.py` → `A_capsid_robustness.csv`, `A_capsid_robustness.json`, `log_capsid_robustness.txt`.
+Titik kapsid dideteksi ulang dengan 28 pengaturan (segmentasi inti tetap). Model: LogReg C = 1 (tanpa GridSearch, agar cepat),
+latih di satu percobaan, uji di percobaan lain. Pengaturan *baseline* mereproduksi hasil A2 (AUC 0,906).
+
+| Divariasikan | Rentang | AUC rata-rata (2 fold) | Aturan ≥ 1 titik: bAcc S3B | Sel Mock dengan titik |
+|---|---|---|---|---|
+| Ambang LoG | 0,03 – 0,20 (*baseline* 0,08) | 0,86 – 0,97 | 0,71 – 0,93 | 0 – 2 dari 39 |
+| Skala titik maks. (σ) | 2 – 5 piksel | 0,906 (tidak berubah) | 0,81 | 0 |
+| Lebar cincin perinuklear | 0,75 – 3,5 µm | 0,91 – 0,93 | 0,81 | 0 |
+| Persentil atas skala bersama | 99,5 – 99,99 | 0,90 – 0,97 | 0,76 – 0,93 | 0 – 2 |
+
+- **Semua 28 pengaturan: AUC 0,86 – 0,97 (median 0,91)**; fold uji 1G 0,95 – 1,00. IK 95 % *bootstrap* *baseline* fold S3B: 0,74 – 0,88.
+- Pola fisis yang konsisten: ambang lebih rendah → lebih banyak kapsid redup terdeteksi (sel terpapar tanpa kapsid di inti turun dari
+  46 % ke 10 %), tetapi mulai muncul titik palsu pada Mock (2 sel). Ini kompromi **sensitivitas vs spesifisitas** yang diatur oleh
+  rasio sinyal-derau. Persentil atas skala bekerja serupa (skala lebih rendah = setara ambang lebih rendah; pengaruh piksel jenuh).
+- Ambang 0,08 berasal dari pilot sebelum tugas ini dan **bukan yang terbaik** (0,03 – 0,04 memberi AUC lebih tinggi) → hasil A2 tidak
+  bergantung pada pemilihan ambang yang menguntungkan. Ukuran σ tidak berpengaruh.
+- Keterbatasan tetap: 2 percobaan, 100 sel.
+
 ## Bagian B — Essig IFC: sel T CD4 hidup vs mati (label ahli)
 Protokol WO-14: LogReg, RF, SVM; GridSearch 3-fold di dalam data latih (validation), fold luar = testing.
 Data: label ahli exp1 — 354 sel T hidup (T_cell, T_cell_with_signaling) vs 348 Dead_Cell, 2 donor. Fitur: brightfield saja.

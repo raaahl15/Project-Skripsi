@@ -1,0 +1,67 @@
+﻿{'threshold': 0.03, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.909, 'auc_test_S3B': 0.938, 'rule_bacc_S3B': 0.925, 'auc_mean': 0.969, 'mock_cells_with_puncta': 2, 'exposed_zero_nuc_frac': 0.098}
+{'threshold': 0.04, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.909, 'auc_test_S3B': 0.912, 'rule_bacc_S3B': 0.9, 'auc_mean': 0.956, 'mock_cells_with_puncta': 2, 'exposed_zero_nuc_frac': 0.131}
+{'threshold': 0.06, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.909, 'auc_test_S3B': 0.85, 'rule_bacc_S3B': 0.838, 'auc_mean': 0.925, 'mock_cells_with_puncta': 2, 'exposed_zero_nuc_frac': 0.213}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246, 'auc_test_1G_ci95': [1.0, 1.0], 'auc_test_S3B_ci95': [0.737, 0.884]}
+{'threshold': 0.1, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.787, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.279}
+{'threshold': 0.12, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.775, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.295}
+{'threshold': 0.16, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.952, 'auc_test_S3B': 0.787, 'rule_bacc_S3B': 0.738, 'auc_mean': 0.893, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.377}
+{'threshold': 0.2, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold', 'n_cells': 100, 'auc_test_1G': 0.952, 'rule_bacc_1G': 0.881, 'auc_test_S3B': 0.775, 'rule_bacc_S3B': 0.713, 'auc_mean': 0.863, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.459}
+{'threshold': 0.08, 'max_sigma': 2, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 4, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 5, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 0.75, 'high_pct': 99.95, 'varied': 'ring_um', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'ring_um', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 2.5, 'high_pct': 99.95, 'varied': 'ring_um', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.825, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.912, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 3.5, 'high_pct': 99.95, 'varied': 'ring_um', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.863, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.931, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.5, 'varied': 'high_pct', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.909, 'auc_test_S3B': 0.938, 'rule_bacc_S3B': 0.925, 'auc_mean': 0.969, 'mock_cells_with_puncta': 2, 'exposed_zero_nuc_frac': 0.098}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.9, 'varied': 'high_pct', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.955, 'auc_test_S3B': 0.85, 'rule_bacc_S3B': 0.825, 'auc_mean': 0.925, 'mock_cells_with_puncta': 1, 'exposed_zero_nuc_frac': 0.23}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'high_pct', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 3, 'ring_um': 1.5, 'high_pct': 99.99, 'varied': 'high_pct', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.8, 'rule_bacc_S3B': 0.762, 'auc_mean': 0.9, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.311}
+{'threshold': 0.04, 'max_sigma': 2, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.909, 'auc_test_S3B': 0.912, 'rule_bacc_S3B': 0.9, 'auc_mean': 0.956, 'mock_cells_with_puncta': 2, 'exposed_zero_nuc_frac': 0.131}
+{'threshold': 0.04, 'max_sigma': 4, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.909, 'auc_test_S3B': 0.912, 'rule_bacc_S3B': 0.9, 'auc_mean': 0.956, 'mock_cells_with_puncta': 2, 'exposed_zero_nuc_frac': 0.131}
+{'threshold': 0.08, 'max_sigma': 2, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.08, 'max_sigma': 4, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.812, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.246}
+{'threshold': 0.12, 'max_sigma': 2, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.787, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.279}
+{'threshold': 0.12, 'max_sigma': 4, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 1.0, 'auc_test_S3B': 0.812, 'rule_bacc_S3B': 0.775, 'auc_mean': 0.906, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.295}
+{'threshold': 0.16, 'max_sigma': 2, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.952, 'auc_test_S3B': 0.787, 'rule_bacc_S3B': 0.738, 'auc_mean': 0.893, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.377}
+{'threshold': 0.16, 'max_sigma': 4, 'ring_um': 1.5, 'high_pct': 99.95, 'varied': 'threshold x max_sigma', 'n_cells': 100, 'auc_test_1G': 1.0, 'rule_bacc_1G': 0.952, 'auc_test_S3B': 0.775, 'rule_bacc_S3B': 0.725, 'auc_mean': 0.887, 'mock_cells_with_puncta': 0, 'exposed_zero_nuc_frac': 0.393}
+{
+ "n_settings": 28,
+ "auc_mean_min": 0.863,
+ "auc_mean_max": 0.969,
+ "auc_mean_median": 0.906,
+ "rule_bacc_S3B_range": [
+  0.713,
+  0.925
+ ],
+ "rule_bacc_1G_range": [
+  0.881,
+  1.0
+ ],
+ "mock_cells_with_puncta_max": 2,
+ "baseline": {
+  "threshold": 0.08,
+  "max_sigma": 3,
+  "ring_um": 1.5,
+  "high_pct": 99.95,
+  "varied": "threshold",
+  "n_cells": 100,
+  "auc_test_1G": 1.0,
+  "rule_bacc_1G": 1.0,
+  "auc_test_S3B": 0.812,
+  "rule_bacc_S3B": 0.812,
+  "auc_mean": 0.906,
+  "mock_cells_with_puncta": 0,
+  "exposed_zero_nuc_frac": 0.246,
+  "auc_test_1G_ci95": [
+   1.0,
+   1.0
+  ],
+  "auc_test_S3B_ci95": [
+   0.737,
+   0.884
+  ],
+  "ci": true
+ }
+}

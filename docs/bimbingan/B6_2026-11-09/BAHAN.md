@@ -55,6 +55,9 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
 | Lamin B1 / bentuk inti | 0,19–0,26 | 0,36–0,48 |
 
 - Sesuai arahan B5 (terinfeksi vs tidak). Mock: 0 titik kapsid pada semua sel; 15 dari 40 sel terpapar di S3B tanpa kapsid di inti.
+- **Uji ketahanan:** 28 variasi pengaturan detektor (ambang 0,03–0,20, ukuran titik, lebar cincin, skala intensitas) → AUC tetap
+  **0,86–0,97**; ambang 0,08 bukan hasil "memilih yang terbaik". Ambang rendah menangkap kapsid redup tetapi mulai memberi titik palsu
+  pada Mock (kompromi sensitivitas–spesifisitas yang diatur rasio sinyal-derau). Rincian: `results/b6/README.md` Bagian A3.
 - Keterbatasan: hanya 2 percobaan yang punya Mock (100 sel).
 
 **Bagian B — Essig, sel T CD4 hidup vs mati (brightfield saja, label ahli 354 vs 348 sel)**
