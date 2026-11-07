@@ -15,6 +15,20 @@
 
 ---
 
+## 2026-11-08 — Dataset Illinois, penelusuran citra HIV, dan heiDATA kapsid vs Mock
+**Oleh:** Claude Code (laptop)
+- Illinois IDB-8103861: README dibaca; data lintasan disalin dari Drive; `src/pilot_illinois.py` → `results/pilot-illinois/`:
+  TNF vs tanpa perlakuan AUC 0,85–0,87, alsterpaullone 0,93–0,95 pada plate baru (fitur sel saja). Temuan: lintasan *noise* peneliti
+  = intensitas dipusatkan ganda per sumur → bocor (AUC 1,00), tidak dipakai.
+- Penelusuran web citra HIV terinfeksi vs tidak (semua jenis sel): tidak ada dataset publik siap pakai → `DATASET-KANDIDAT.md`.
+  Koreksi: angka TEMNet dari pengguna benar (Zenodo 5149062).
+- heiDATA HIV vs Mock dari kapsid (1G, S3B), latih-uji lintas percobaan: AUC 0,91, *balanced accuracy* 0,78–0,90, p = 0,01
+  (`src/b6_capsid_hiv_vs_mock.py`, `results/b6/README.md` Bagian A2). Lamin B1 saja < 0,3.
+- Pengguna mengunduh citra demo Illinois (1,72 GB) untuk uji ekstraksi citra sendiri.
+- **Berikutnya:** cek citra demo Illinois; BAHAN & slide B6.
+
+---
+
 ## 2026-11-07 — Perbaikan deteksi kapsid HIV-1 (heiDATA)
 **Oleh:** Claude Code (laptop)
 - Penyebab Mock 1G penuh "kapsid": `detect_puncta` menormalisasi tiap citra ke persentil 1–99,95 miliknya sendiri → derau citra Mock

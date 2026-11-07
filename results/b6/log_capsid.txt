@@ -1,0 +1,82 @@
+﻿CA leave_one_figure_out logreg AUC 0.906 [1.0, 0.812] bAcc 0.819 perm_p 0.01
+CA leave_one_figure_out rf AUC 0.906 [1.0, 0.812] bAcc 0.9 perm_p None
+CA leave_one_figure_out svm AUC 0.906 [1.0, 0.812] bAcc 0.781 perm_p None
+CA kfold5_per_sel logreg AUC 0.876 [0.962, 0.875, 0.875, 0.75, 0.917] bAcc 0.794 perm_p None
+CA kfold5_per_sel rf AUC 0.876 [0.962, 0.875, 0.875, 0.75, 0.917] bAcc 0.876 perm_p None
+CA kfold5_per_sel svm AUC 0.876 [0.962, 0.875, 0.875, 0.75, 0.917] bAcc 0.786 perm_p None
+CA+Lamin leave_one_figure_out logreg AUC 0.613 [0.848, 0.379] bAcc 0.538 perm_p 0.119
+CA+Lamin leave_one_figure_out rf AUC 0.803 [0.857, 0.75] bAcc 0.603 perm_p None
+CA+Lamin leave_one_figure_out svm AUC 0.267 [0.19, 0.343] bAcc 0.506 perm_p None
+CA+Lamin kfold5_per_sel logreg AUC 0.953 [0.901, 0.979, 0.906, 0.979, 1.0] bAcc 0.907 perm_p None
+CA+Lamin kfold5_per_sel rf AUC 0.961 [1.0, 0.99, 0.896, 0.927, 0.99] bAcc 0.907 perm_p None
+CA+Lamin kfold5_per_sel svm AUC 0.927 [0.967, 0.979, 0.885, 0.854, 0.948] bAcc 0.859 perm_p None
+Lamin leave_one_figure_out logreg AUC 0.187 [0.078, 0.296] bAcc 0.36 perm_p 1.0
+Lamin leave_one_figure_out rf AUC 0.257 [0.225, 0.288] bAcc 0.446 perm_p None
+Lamin leave_one_figure_out svm AUC 0.196 [0.152, 0.24] bAcc 0.476 perm_p None
+Lamin kfold5_per_sel logreg AUC 0.595 [0.692, 0.552, 0.406, 0.583, 0.74] bAcc 0.565 perm_p None
+Lamin kfold5_per_sel rf AUC 0.807 [0.868, 0.75, 0.688, 0.917, 0.812] bAcc 0.716 perm_p None
+Lamin kfold5_per_sel svm AUC 0.796 [0.813, 0.792, 0.698, 0.896, 0.781] bAcc 0.737 perm_p None
+{
+ "n": {
+  "1G_+Vpx": 7,
+  "1G_-Vpx": 14,
+  "1G_Mock": 11,
+  "S3B_+Vpx": 20,
+  "S3B_-Vpx": 20,
+  "S3B_Mock": 28
+ },
+ "rule_nucleus_puncta>=1": {
+  "1G": {
+   "balanced_accuracy": 1.0,
+   "confusion[[TN,FP],[FN,TP]]": [
+    [
+     11,
+     0
+    ],
+    [
+     0,
+     21
+    ]
+   ]
+  },
+  "S3B": {
+   "balanced_accuracy": 0.812,
+   "confusion[[TN,FP],[FN,TP]]": [
+    [
+     28,
+     0
+    ],
+    [
+     15,
+     25
+    ]
+   ]
+  }
+ },
+ "per_figure_condition_ca_nucleus": {
+  "1G_+Vpx": {
+   "median": 11.0,
+   "frac_zero": 0.0
+  },
+  "1G_-Vpx": {
+   "median": 18.0,
+   "frac_zero": 0.0
+  },
+  "1G_Mock": {
+   "median": 0.0,
+   "frac_zero": 1.0
+  },
+  "S3B_+Vpx": {
+   "median": 3.0,
+   "frac_zero": 0.45
+  },
+  "S3B_-Vpx": {
+   "median": 2.5,
+   "frac_zero": 0.3
+  },
+  "S3B_Mock": {
+   "median": 0.0,
+   "frac_zero": 1.0
+  }
+ }
+}

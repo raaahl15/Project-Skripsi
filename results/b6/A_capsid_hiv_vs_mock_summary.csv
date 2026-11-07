@@ -1,0 +1,19 @@
+features,scheme,model,auc_mean,fold_auc,bacc_mean,pooled_auc,perm_p
+CA,leave_one_figure_out,logreg,0.906,"[1.0, 0.812]",0.819,0.838,0.01
+CA,leave_one_figure_out,rf,0.906,"[1.0, 0.812]",0.9,0.838,
+CA,leave_one_figure_out,svm,0.906,"[1.0, 0.812]",0.781,0.842,
+CA,kfold5_per_sel,logreg,0.876,"[0.962, 0.875, 0.875, 0.75, 0.917]",0.794,0.853,
+CA,kfold5_per_sel,rf,0.876,"[0.962, 0.875, 0.875, 0.75, 0.917]",0.876,0.843,
+CA,kfold5_per_sel,svm,0.876,"[0.962, 0.875, 0.875, 0.75, 0.917]",0.786,0.856,
+CA+Lamin,leave_one_figure_out,logreg,0.613,"[0.848, 0.379]",0.538,0.585,0.119
+CA+Lamin,leave_one_figure_out,rf,0.803,"[0.857, 0.75]",0.603,0.706,
+CA+Lamin,leave_one_figure_out,svm,0.267,"[0.19, 0.343]",0.506,0.427,
+CA+Lamin,kfold5_per_sel,logreg,0.953,"[0.901, 0.979, 0.906, 0.979, 1.0]",0.907,0.952,
+CA+Lamin,kfold5_per_sel,rf,0.961,"[1.0, 0.99, 0.896, 0.927, 0.99]",0.907,0.953,
+CA+Lamin,kfold5_per_sel,svm,0.927,"[0.967, 0.979, 0.885, 0.854, 0.948]",0.859,0.923,
+Lamin,leave_one_figure_out,logreg,0.187,"[0.078, 0.296]",0.36,0.23,1.0
+Lamin,leave_one_figure_out,rf,0.257,"[0.225, 0.288]",0.446,0.351,
+Lamin,leave_one_figure_out,svm,0.196,"[0.152, 0.24]",0.476,0.351,
+Lamin,kfold5_per_sel,logreg,0.595,"[0.692, 0.552, 0.406, 0.583, 0.74]",0.565,0.607,
+Lamin,kfold5_per_sel,rf,0.807,"[0.868, 0.75, 0.688, 0.917, 0.812]",0.716,0.799,
+Lamin,kfold5_per_sel,svm,0.796,"[0.813, 0.792, 0.698, 0.896, 0.781]",0.737,0.791,

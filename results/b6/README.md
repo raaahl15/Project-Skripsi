@@ -41,6 +41,26 @@ lalu dilihat apakah arah perubahannya sama di semua percobaan. Keluaran: `A_effe
 - Label "terinfeksi per sel dari kapsid" (ide 2b) belum dijalankan; bisa dipertimbangkan lagi setelah kanal kapsid diperbaiki.
 Normalisasi fitur per percobaan (ide 2a) sudah diuji di pilot (`results/pilot-heidata/metrics_classify_norm-figure.json`): AUC 0,17–0,44, tidak membantu.
 
+## Bagian A2 — heiDATA: terpapar HIV-1 vs Mock dari kapsid terdeteksi optik (8 Nov)
+Skrip: `src/b6_capsid_hiv_vs_mock.py` → `A_capsid_hiv_vs_mock.json`, `A_capsid_hiv_vs_mock_summary.csv`, `log_capsid.txt`.
+Hanya 1G dan S3B yang punya Mock + kanal kapsid: 1G 21 terpapar / 11 Mock; S3B 40 terpapar (+EFV) / 28 Mock (100 sel).
+Validasi utama: **latih di satu percobaan, uji di percobaan lain** (2 fold), GridSearch 3-fold di data latih.
+
+| Fitur | Lintas percobaan: AUC (fold 1G, S3B) | *Balanced accuracy* | k-fold 5 per sel (pembanding) |
+|---|---|---|---|
+| **Kapsid saja (2 fitur)** | **0,91 (1,00; 0,81)** — LogReg/RF/SVM sama | **0,78–0,90** | 0,88 |
+| Kapsid + Lamin B1 | 0,27–0,80 | 0,51–0,60 | 0,93–0,96 |
+| Lamin B1 saja | 0,19–0,26 | 0,36–0,48 | 0,60–0,81 |
+
+- Uji permutasi (LogReg, kapsid, 100 permutasi): **p = 0,01** (batas terkecil untuk 100 permutasi).
+- Aturan tanpa pelatihan "terinfeksi bila ≥ 1 titik kapsid di inti": 1G *balanced accuracy* 1,00; S3B 0,81 (0 Mock salah;
+  15 dari 40 sel terpapar tanpa kapsid di inti — 45% sel +Vpx dan 30% sel −Vpx). Mock: 0 titik pada 100% sel di kedua percobaan.
+- Tafsiran: kapsid HIV-1 yang terdeteksi secara optik **membedakan sel terpapar dari Mock lintas percobaan**. Menambah fitur Lamin B1
+  justru menurunkan hasil lintas percobaan (efek *batch*), padahal menaikkan k-fold per sel → contoh lain kebocoran.
+- Keterbatasan: 2 percobaan, 100 sel; label = kondisi paparan, bukan status infeksi per sel (sel terpapar tanpa kapsid di inti mungkin
+  memang tidak terinfeksi); kapsid adalah penanda virus yang diwarnai, sehingga tugas ini relatif langsung — tantangannya ada pada deteksi
+  titik dan normalisasi intensitas (lihat perbaikan 7 Nov).
+
 ## Bagian B — Essig IFC: sel T CD4 hidup vs mati (label ahli)
 Protokol WO-14: LogReg, RF, SVM; GridSearch 3-fold di dalam data latih (validation), fold luar = testing.
 Data: label ahli exp1 — 354 sel T hidup (T_cell, T_cell_with_signaling) vs 348 Dead_Cell, 2 donor. Fitur: brightfield saja.

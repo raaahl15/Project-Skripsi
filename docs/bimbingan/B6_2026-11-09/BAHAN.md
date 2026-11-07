@@ -48,6 +48,15 @@ model mengenali percobaan, bukan kondisi sel. Dengan heiDATA saja (14 bidang pan
   Setelah dinormalisasi dengan skala yang sama per percobaan, Mock = 0 titik. Akibatnya hasil B5 "+Vpx vs −Vpx dengan kapsid,
   AUC 0,65, p = 0,01" **menjadi AUC 0,57, p = 0,14 (tidak signifikan)**. Fitur Lamin B1/morfometri tidak terdampak.
 
+**Bagian A2 — heiDATA, terpapar HIV-1 vs Mock dari kapsid terdeteksi optik (latih di satu percobaan, uji di percobaan lain)**
+| Fitur | AUC lintas percobaan | *Balanced accuracy* |
+|---|---|---|
+| Kapsid HIV-1 (jumlah titik di dalam & sekitar inti) | **0,91** (p permutasi = 0,01) | **0,78–0,90** |
+| Lamin B1 / bentuk inti | 0,19–0,26 | 0,36–0,48 |
+
+- Sesuai arahan B5 (terinfeksi vs tidak). Mock: 0 titik kapsid pada semua sel; 15 dari 40 sel terpapar di S3B tanpa kapsid di inti.
+- Keterbatasan: hanya 2 percobaan yang punya Mock (100 sel).
+
 **Bagian B — Essig, sel T CD4 hidup vs mati (brightfield saja, label ahli 354 vs 348 sel)**
 | Skema | LogReg | RF | SVM |
 |---|---|---|---|
