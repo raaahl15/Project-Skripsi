@@ -15,6 +15,15 @@
 
 ---
 
+## 2026-11-07 — Bahan B6: usulan heiDATA + Essig dan dua opsi judul
+**Oleh:** Claude Code (laptop)
+- Pengguna memilih arah: tetap ada HIV dan memakai dua dataset citra (heiDATA = paparan HIV; Essig = hidup vs mati).
+- `docs/bimbingan/B6_2026-11-09/BAHAN.md`: laporan WO, hasil k-fold, usulan dua bagian, Opsi judul 1 (perubahan minimal) & Opsi 2,
+  gambaran tujuan, pertanyaan untuk pembimbing, pustaka kaitan HIV–kematian sel CD4 (Doitsh 2014; Cummins & Badley 2010, diperiksa via web).
+- **Berikutnya:** slide/PDF B6 bila diminta; sinkron Google Docs sebelum B6.
+
+---
+
 ## 2026-11-07 — Prosedur penggantian judul
 **Oleh:** pengguna (dicatat Claude Code)
 - Pengguna menanyakan ke bagian pengajaran: penggantian judul memerlukan **surat persetujuan dari dosen pembimbing**. Surat sudah diselesaikan pengguna.

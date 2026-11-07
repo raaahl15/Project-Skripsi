@@ -47,7 +47,8 @@ Terakhir diperbarui: **2026-11-07**
 5. **Judul:** boleh diganti; prosedur (dicek 7 Nov): surat persetujuan dosen pembimbing — surat sudah diselesaikan mahasiswa.
 6. Belum terbahas: izin email Heidelberg, periode ujian, pembimbing pendamping & NIP, judul Bab 3.
 
-## Keputusan yang dibutuhkan di bimbingan berikutnya (B6)
+## Keputusan yang dibutuhkan di bimbingan berikutnya (B6) — bahan: `docs/bimbingan/B6_2026-11-09/BAHAN.md`
+Usulan mahasiswa: heiDATA (paparan HIV) + Essig (hidup vs mati); dua opsi judul disiapkan.
 1. Pakai Essig sebagai pelengkap (sel mati; Essig tanpa infeksi HIV) atau heiDATA saja?
 2. Kelas heiDATA untuk "terinfeksi vs tidak": (+Vpx dan −Vpx) vs Mock, atau +Vpx vs −Vpx?
 3. Rumusan judul baru (prosedur sudah jelas: surat persetujuan dospem).
