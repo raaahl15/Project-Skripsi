@@ -156,8 +156,19 @@ Panduan §1.3 mengizinkan penggantian topik lewat *fast-track approval* jika top
 ### 9. TEMNet (Perilla lab) — citra TEM virion HIV-1 (temuan pengguna, dinilai 2026-11-08)
 - Paper: Rey dkk. (2021), *Comput. Struct. Biotechnol. J.* 19:5688–5700, DOI 10.1016/j.csbj.2021.10.001. Kelas: immature, mature, eccentric.
 - README GitHub: **59 mikrograf TEM** → ±10 ribu potongan setelah augmentasi (±19 GB); unduh via Google Drive; lisensi tidak disebut.
-  Angka "1.806 citra, train 1.443 / val 363" dari pesan pengguna **tidak terkonfirmasi** di README.
+- **Koreksi 8 Nov:** Zenodo 10.5281/zenodo.5149062 (CC-BY 4.0, 1,6 GB) memuat `HIV-1_virion_classification_backbone_dataset.zip`:
+  **1.806 citra .tif virion terisolasi, train 1.443 / val 363**, kelas eccentric/immature/mature — angka dari pengguna **benar**;
+  plus 59 mikrograf + anotasi kotak (train 46 / val 13).
 - Kecocokan rendah: objek = **virion**, bukan sel CD4; modalitas TEM (bukan fluoresensi/IFC); repo berbasis deep learning (Faster R-CNN).
+
+### Penelusuran ulang 2026-11-08: citra sel CD4 terinfeksi vs tidak
+Pencarian web (IDR, BioImage Archive, Zenodo, figshare, literatur QPI/holografi/IFC) → **tidak ditemukan dataset citra publik baru**
+berisi sel T CD4 terinfeksi HIV vs tidak terinfeksi. Petunjuk yang tersisa:
+- VAIruScope (bioRxiv 2026.01.15.699499): deteksi sel terinfeksi dari brightfield/fase kontras, termasuk HIV-1, tetapi pada **TZM-bl**
+  (bukan sel T); ketersediaan data belum diketahui (bioRxiv menolak akses otomatis).
+- IDR idr0103: fusi HIV-1 pada sel TZM-bl (FLIM), bukan sel T.
+- Sandmeyer dkk. 2022 *iScience*: transfer HIV-1 antar-sel T hidup (sinaps virologis); deposit data mentah belum diketahui.
+- Kesimpulan: untuk "terinfeksi vs tidak" pada sel T, heiDATA (HIV vs Mock) tetap satu-satunya data citra publik yang ditemukan.
 
 ## Peta ringkas (per 2026-11-03)
 | Data | Citra? | HIV? | Sel CD4 primer? | Status |
