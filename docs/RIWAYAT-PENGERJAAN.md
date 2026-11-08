@@ -44,8 +44,8 @@
 - Sinkron Google Docs dengan skrip baru `scripts/sync_gdocs.py` (pembaruan di tempat, ID tetap — diuji di `_uji/Uji Konversi`):
   diperbarui Dokumentasi Pemrosesan Data, 00 Daftar WO, WO-09, WO-12, Bahan & Hasil B5; dibuat baru Bahan B6, WO-14, Materi WO-14
   (ID di `docs/DRIVE-DOCS.md`).
-- Temuan: repo GitHub `raaahl15/Project-Skripsi` **publik** (API GitHub, 8 Nov), sedangkan MASTER mencatat private → push ditahan
-  menunggu keputusan pengguna.
+- Temuan: repo GitHub `raaahl15/Project-Skripsi` **publik** (API GitHub, 8 Nov), sedangkan MASTER mencatat private → push ditahan;
+  pengguna memutuskan **tetap publik** → MASTER dikoreksi, lalu push ke origin/main.
 - **Berikutnya:** keputusan visibilitas repo lalu push; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---

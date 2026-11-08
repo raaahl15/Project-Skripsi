@@ -39,7 +39,7 @@
 | 7 | OS | Laptop utama Windows 10; belum ada laptop cadangan (sementara pinjam laptop teman) |
 | 8 | Format naskah | **Draf di Google Docs** (per bab), dikonversi ke **LaTeX** setelah bab disetujui |
 | 9 | Template kampus | Ada, format LaTeX (belum dimasukkan ke repo) |
-| 10 | GitHub | Akun `raaahl15`; repo private `raaahl15/Project-Skripsi` (dibuat pengguna 2026-11-03) |
+| 10 | GitHub | Akun `raaahl15`; repo **publik** `raaahl15/Project-Skripsi` (dibuat pengguna 2026-11-03; dicek via API 2026-11-08, pengguna memilih tetap publik) |
 | 11 | GPU | Belum disiapkan → rencana Colab/Kaggle |
 | 12 | Deadline | Akhir semester, sekitar Desember 2026 |
 
@@ -79,7 +79,7 @@
 
 ## 2. Prinsip Arsitektur
 
-- **GitHub (private)** = sumber kebenaran: kode, naskah, konteks agent, hasil kecil.
+- **GitHub (publik — jangan commit data mentah, token, atau data pribadi selain nama/NIM)** = sumber kebenaran: kode, naskah, konteks agent, hasil kecil.
 - **Google Drive** = gudang: dataset, checkpoint model, PDF paper, backup, bootstrap kit.
 - **Google Docs** (`Drive/Project-Skripsi/naskah/`) = **draf naskah** per bab, tempat revisi dan komentar dosen. Konvensi: `docs/PANDUAN-GDOCS.md`.
 - **LaTeX** (`thesis/` di repo) = **naskah final**, hasil konversi bab yang sudah disetujui, memakai template kampus.
@@ -380,6 +380,7 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | File MASTER dipindah dari `D:\rahul\Project Skripsi\` ke root repo | Agar ter-versi git dan bisa diperbarui dari iPad/cloud |
 | 2026-11-03 | Folder Drive diganti nama `Skripsi-ML` → `Project-Skripsi` (ID/link tetap); semua rujukan & path rclone (`gdrive:Project-Skripsi/...`) diperbarui | Pilihan pengguna |
 | 2026-11-03 | Remote GitHub: `raaahl15/Project-Skripsi` (private); folder lokal tetap `skripsi-ml/` | Repo dibuat pengguna |
+| 2026-11-08 | Koreksi: repo ternyata **publik** (API GitHub); pengguna memutuskan tetap publik | Keputusan pengguna |
 | 2026-11-03 | Folder `naskah/` dibagikan ke Pak Nopriadi (nopriadi@ugm.ac.id) sebagai Commenter | Dosen bisa melihat & berkomentar langsung |
 | 2026-11-03 | Python: pakai Python 3.13 yang sudah terpasang (bukan 3.12); `.venv` dibuat dengan `setup.ps1` | Sudah tersedia, kompatibel |
 | 2026-11-03 | rclone dipasang (winget), remote `gdrive` dikonfigurasi; backup mingguan otomatis ke `Project-Skripsi/backup/`; bootstrap kit diisi | Backup tanpa upload manual |
