@@ -108,14 +108,18 @@ Alat, objek yang dicitrakan (inti vs sel utuh), kanal, resolusi, dan label berbe
   Jika ya, Illinois dapat **menggantikan heiDATA** sebagai bagian HIV (bukan dataset ketiga).
 
 ## 3. Opsi judul
-| | Judul | Kelebihan | Catatan |
-|---|---|---|---|
-| **Opsi 1** | *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra Mikroskop Fluoresensi dan Imaging Flow Cytometry Menggunakan Machine Learning* | Perubahan minimal dari judul Simaster (hanya menambah "Mikroskop Fluoresensi dan") → prosedur paling mudah | "Kondisi sel" = terpapar HIV (A) dan hidup/mati (B) |
-| **Opsi 2** | *Ekstraksi Fitur Morfometri dan Bio-Optik Citra Sel T CD4 untuk Klasifikasi Paparan HIV-1 dan Viabilitas Sel Menggunakan Machine Learning* | Paling jelas menggambarkan isi dan menonjolkan sisi Teknik Fisika (ekstraksi fitur fisis) | Perubahan judul lebih besar |
-
 Judul Simaster saat ini: *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra Imaging Flow Cytometry Menggunakan Machine Learning*.
+Semua opsi hanya mengubah sedikit judul Simaster.
 
-### Gambaran tujuan penelitian (berlaku untuk kedua opsi)
+| | Untuk dataset | Judul | Yang berubah | Catatan |
+|---|---|---|---|---|
+| **Opsi 1** | heiDATA + Essig | *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra Mikroskop Fluoresensi dan Imaging Flow Cytometry Menggunakan Machine Learning* | Tambah "Mikroskop Fluoresensi dan" | Kedua alat disebut eksplisit; "kondisi sel" = terpapar HIV (A) dan hidup/mati (B) |
+| **Opsi 2** | Illinois | *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra Mikroskop Fluoresensi Time-Lapse Menggunakan Machine Learning* | Jenis citra diganti | Jurkat = lini sel T CD4+, bukan sel primer → dijelaskan di Bab 1/3; "kondisi" = ekspresi HIV aktif/laten/ditekan |
+| **Opsi 3** | Semua opsi | *Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV Berdasarkan Citra Mikroskopi Optik Menggunakan Machine Learning* | "Sel CD4" → "Sel T CD4"; jenis citra → "Mikroskopi Optik" | 14 kata; tidak perlu diganti lagi apa pun dataset yang dipilih; menonjolkan sisi optika. IFC = *flow cytometry* dengan optik mikroskop → dijelaskan di Bab 2/3 |
+
+"CD4" dipertahankan di semua opsi karena HIV secara khusus menyerang sel T CD4 (reseptor CD4 = pintu masuk virus).
+
+### Gambaran tujuan penelitian (untuk dataset heiDATA + Essig; Opsi 1 atau 3)
 1. Mengekstraksi fitur fisis (morfometri dan intensitas/bio-optik) dari citra sel T CD4 pada dua modalitas: mikroskop fluoresensi dan IFC.
 2. Membangun dan membandingkan model ML (LogReg, RF, SVM) untuk mengklasifikasikan (a) sel terpapar HIV-1 vs tidak dan (b) sel hidup vs mati.
 3. Mengevaluasi model dengan validasi k-fold berkelompok untuk menghindari kebocoran efek *batch*.
@@ -124,7 +128,7 @@ Judul Simaster saat ini: *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasark
 ## 4. Pertanyaan & keputusan yang diminta dari pembimbing
 0. **Dataset:** setuju usulan utama heiDATA (A) + Essig (B)? Atau Bagian HIV diganti Illinois (alternatif teruji)?
 1. Bolehkah data Essig (tanpa HIV, dikaitkan lewat pustaka kematian sel CD4) dipakai sebagai Bagian B?
-2. Opsi judul mana yang dipilih: Opsi 1 atau Opsi 2?
+2. Opsi judul mana yang dipilih: Opsi 1 / Opsi 2 (sesuai dataset) atau Opsi 3 (berlaku untuk semua dataset)?
 3. Kelas Bagian A: usulan **terpapar HIV-1 vs Mock dari kapsid** sebagai hasil utama; +Vpx vs −Vpx (Lamin B1) cukup sebagai analisis
    konsistensi fitur (ML lintas percobaan ≈ acak). Setuju?
 4. Apakah hasil k-fold berkelompok (jujur tetapi lebih rendah) boleh dilaporkan berdampingan dengan k-fold per sel sebagai temuan
