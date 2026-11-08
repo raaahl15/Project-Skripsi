@@ -10,7 +10,7 @@ Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **N
 | Bimbingan ke- | 5 |
 | Tanggal | 6 Nov 2026 (folder bernama 2026-11-04 = rencana semula) |
 | Bentuk | Tatap muka |
-| Tercatat di SIMASTER | [ ] |
+| Tercatat di SIMASTER | [x] 8 Nov 2026 — sebagai bimbingan ke-1 setelah persetujuan judul (form "Bimbingan Tugas Akhir Ke 2"); dokumen: `Bimbingan5_Skripsi_Rahul.pdf` |
 
 ## 1. Yang dibawa
 - Slide Bimbingan 5 (PDF 12 halaman, Drive `bimbingan/B5 - 2026-11-04/`), dengan usulan **opsi E** (tiga dataset: heiDATA, CyTOF Luo, Essig).

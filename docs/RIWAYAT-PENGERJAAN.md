@@ -48,6 +48,8 @@
   pengguna memutuskan **tetap publik** → MASTER dikoreksi, lalu push ke origin/main.
 - Materi WO-14 diperluas ke Essig (19 fitur BF) dan Illinois (9 fitur deret waktu) + perbandingan + latihan 6–11; disinkronkan ke
   Google Doc "Materi WO-14 Fitur heiDATA" (ID tetap).
+- Status WO-14 di BAHAN B6 + slide 2 + PDF diperbarui (draf lengkap 3 dataset).
+- B5 dicatat pengguna di SIMASTER (penomoran SIMASTER: B5 = bimbingan 1 setelah persetujuan judul; form bertanda "Ke 2").
 - **Berikutnya:** keputusan visibilitas repo lalu push; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---
