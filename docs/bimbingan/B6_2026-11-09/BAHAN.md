@@ -10,7 +10,7 @@ Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **N
 ## 1. Laporan Work Order dari Bimbingan 5
 | WO | Tugas | Status | Ringkasan eksekusi / bukti |
 |---|---|---|---|
-| WO-14 | Arti fisis & rumus fitur | 🔄 | Tabel 13 fitur (definisi, rumus, satuan, arti fisis) → `docs/materi/WO-14-fitur-heidata.md` |
+| WO-14 | Arti fisis & rumus fitur | 🔄 draf lengkap | Rumus, satuan, arti fisis: 13 fitur heiDATA, 19 fitur *brightfield* Essig, 9 fitur deret waktu Illinois + perbandingan & latihan; beberapa pernyataan masih [perlu pustaka] → `docs/materi/WO-14-fitur-heidata.md` |
 | WO-14 | Validasi k-fold (training/validation/testing) | ✅ | LogReg, RF, SVM; hiperparameter dipilih di data latih (3-fold), diuji di fold luar → `results/wo14-kfold/` |
 | WO-14 | Prosedur ganti judul | ✅ | Perlu surat persetujuan dosen pembimbing; surat sudah disiapkan |
 | WO-12 | Email permintaan citra ke Heidelberg | 🔄 | Sudah dikirim; balasan tidak diharapkan → rencana tidak bergantung pada data tambahan |
