@@ -35,7 +35,11 @@
   0,87–0,97; mask sendiri (gradien + Otsu) AUC 0,92–0,95; mask ±1–2 px tidak berpengaruh; label ahli vs pewarna Live-Dead AUC 0,99;
   galeri hidup/mati/salah klasifikasi. `results/b6/README.md` Bagian B2.
 - Rekomendasi dataset (dibahas dengan pengguna): utama heiDATA + Essig, Illinois sebagai alternatif teruji.
-- **Berikutnya:** BAHAN & slide B6; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
+- BAHAN B6 diperbarui: usulan utama heiDATA + Essig (alasan), bagian integrasi dua dataset (pertanyaan, pipeline, fisika kontras
+  optik, perbandingan temuan), rencana Essig exp2–4, pertanyaan untuk dosen disesuaikan.
+- Slide B6 (13 slide, gaya B5): https://claude.ai/artifact/9yoN1xEZE36hEViH6xiq1g ; PDF `docs/bimbingan/B6_2026-11-09/Bimbingan6_Skripsi_Rahul.pdf`
+  (Edge headless), juga di Drive `bimbingan/B6 - 2026-11-09/`.
+- **Berikutnya:** sinkron Google Docs; push GitHub (perlu izin); tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---
 
