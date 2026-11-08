@@ -46,6 +46,8 @@
   (ID di `docs/DRIVE-DOCS.md`).
 - Temuan: repo GitHub `raaahl15/Project-Skripsi` **publik** (API GitHub, 8 Nov), sedangkan MASTER mencatat private → push ditahan;
   pengguna memutuskan **tetap publik** → MASTER dikoreksi, lalu push ke origin/main.
+- Materi WO-14 diperluas ke Essig (19 fitur BF) dan Illinois (9 fitur deret waktu) + perbandingan + latihan 6–11; disinkronkan ke
+  Google Doc "Materi WO-14 Fitur heiDATA" (ID tetap).
 - **Berikutnya:** keputusan visibilitas repo lalu push; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---
