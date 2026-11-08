@@ -39,7 +39,14 @@
   optik, perbandingan temuan), rencana Essig exp2–4, pertanyaan untuk dosen disesuaikan.
 - Slide B6 (13 slide, gaya B5): https://claude.ai/artifact/9yoN1xEZE36hEViH6xiq1g ; PDF `docs/bimbingan/B6_2026-11-09/Bimbingan6_Skripsi_Rahul.pdf`
   (Edge headless), juga di Drive `bimbingan/B6 - 2026-11-09/`.
-- **Berikutnya:** sinkron Google Docs; push GitHub (perlu izin); tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
+- Opsi judul B6 diganti: 1 (heiDATA + Essig), 2 (Illinois), 3 "Klasifikasi Kondisi Sel T CD4 pada Infeksi HIV Berdasarkan Citra
+  Mikroskopi Optik Menggunakan Machine Learning" (berlaku semua dataset); slide 10/12, BAHAN, PDF diperbarui.
+- Sinkron Google Docs dengan skrip baru `scripts/sync_gdocs.py` (pembaruan di tempat, ID tetap — diuji di `_uji/Uji Konversi`):
+  diperbarui Dokumentasi Pemrosesan Data, 00 Daftar WO, WO-09, WO-12, Bahan & Hasil B5; dibuat baru Bahan B6, WO-14, Materi WO-14
+  (ID di `docs/DRIVE-DOCS.md`).
+- Temuan: repo GitHub `raaahl15/Project-Skripsi` **publik** (API GitHub, 8 Nov), sedangkan MASTER mencatat private → push ditahan
+  menunggu keputusan pengguna.
+- **Berikutnya:** keputusan visibilitas repo lalu push; tahap 2 Illinois (sumur kontrol, Colab) setelah keputusan pembimbing.
 
 ---
 

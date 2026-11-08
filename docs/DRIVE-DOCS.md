@@ -19,6 +19,8 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 | B5 - 2026-11-04 | Bahan Bimbingan 5 | 1pO0eVly4ouybx3KnTrH25khN3zutY_9NTK0XP3wEyyU | docs/bimbingan/B5_2026-11-04/BAHAN.md |
 | B5 - 2026-11-04 | Materi Persiapan Bimbingan 5 (WO-02, WO-03, WO-05) | 1LJr7OYx56ouTIlyGJgfq5LuLz1JYFqk0Ku3RCMIINkE | docs/materi/WO-02/03/05-*.md |
 | B5 - 2026-11-04 | Hasil Bimbingan 5 | 1ioOvLGaFdhQ069VtpZbYidA9vUJjwff35eryCB2ZQck | docs/bimbingan/B5_2026-11-04/HASIL.md |
+| B6 - 2026-11-09 | Bahan Bimbingan 6 | 1JI3cJ6YyWEMwLKCn0LzER8r3Cf2T4_HPHIb_nZw3mZo | docs/bimbingan/B6_2026-11-09/BAHAN.md |
+| B6 - 2026-11-09 | Materi WO-14 Fitur heiDATA | 1KpP4Ly4hlI4lhEh3bfzcyJ8R5UarrnpprpTEMi4fxxE | docs/materi/WO-14-fitur-heidata.md |
 | Work Order | 00 Daftar Work Order (dashboard) | 1g44jOiptFFLlyWT23MJbjdQCIzIcuGF7E2Ov2e4Ltsc | docs/WORK-ORDER.md |
 | Work Order | WO-01 Cari dataset | 1YeGpWoV-HOIl1iYomqyeJw8OC5CaeJIF7bQ55Bb4Tzo | docs/work-order/WO-01.md |
 | Work Order | WO-02 Gambaran Bab 1 | 1Yg55dX53eKpOMEJoHMR0EWc2eVZRRLTMxniYKayDaqI | docs/work-order/WO-02.md |
@@ -33,6 +35,7 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 | Work Order | WO-11 Sistem kerja skripsi | 16fNA53xI7vlkvwk5oALKHYNShCGO7K2D-c5QNzCIfUU | docs/work-order/WO-11.md |
 | Work Order | WO-12 Permintaan data tambahan heiDATA | 1kfsO8T-teQNEBF_N3SaBharEiDZfWy_5ih4xgY5_ABk | docs/work-order/WO-12.md |
 | Work Order | WO-13 Ringkasan panduan skripsi | 1f7LmFaDFFwFiILqoLLM5qOtkNfYPlGxrtbcySF6NjnE | docs/work-order/WO-13.md |
+| Work Order | WO-14 Validasi k-fold dan arti fisis fitur | 1j_-_D9wvKN2BzarX__Z90POTJ1aBkCfZOnFh6Xq0Pw0 | docs/work-order/WO-14.md |
 
 Link dokumen: `https://docs.google.com/document/d/<Doc ID>/edit`
 
@@ -46,4 +49,11 @@ Setelah notebook di repo diubah, unggah ulang: `rclone copy notebooks\colab\pilo
   dan catat ID-nya di tabel ini.
 - WO baru: salin `docs/work-order/TEMPLATE-WO.md` → `WO-<nn>.md`, unggah ke folder Drive `Work Order/`, catat ID di sini,
   dan tambahkan barisnya di `docs/WORK-ORDER.md` (dashboard).
-- Perubahan dokumen yang sudah ada: edit di dokumen Google yang sama (Docs API), bukan membuat file baru.
+- Perubahan dokumen yang sudah ada: edit di dokumen Google yang sama, bukan membuat file baru.
+
+## Sinkron otomatis (sejak 8 Nov 2026)
+`.venv\Scripts\python.exe scripts\sync_gdocs.py` (atau `--only <md> ...`, `--dry-run`): Markdown → HTML → `rclone copyto ... .html
+--drive-import-formats html --drive-export-formats html`. Dokumen yang sudah ada **diperbarui di tempat (ID & link tetap)**; judul
+yang belum ada dibuat baru → catat ID-nya di tabel di atas. Daftar dokumen = `SYNC` di skrip (samakan dengan tabel ini).
+Catatan: isi Google Doc ditimpa seluruhnya dari repo — suntingan langsung di Google Docs (termasuk komentar yang menempel di teks)
+dapat hilang; sunting di repo.
