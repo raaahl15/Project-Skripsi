@@ -21,6 +21,8 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 | B5 - 2026-11-04 | Hasil Bimbingan 5 | 1ioOvLGaFdhQ069VtpZbYidA9vUJjwff35eryCB2ZQck | docs/bimbingan/B5_2026-11-04/HASIL.md |
 | B6 - 2026-11-09 | Bahan Bimbingan 6 | 1JI3cJ6YyWEMwLKCn0LzER8r3Cf2T4_HPHIb_nZw3mZo | docs/bimbingan/B6_2026-11-09/BAHAN.md |
 | B6 - 2026-11-09 | Materi WO-14 Fitur heiDATA | 1KpP4Ly4hlI4lhEh3bfzcyJ8R5UarrnpprpTEMi4fxxE | docs/materi/WO-14-fitur-heidata.md |
+| B6 - 2026-11-09 | Hasil Bimbingan 6 | 10LrRQ3krGXc2LfAXQr-N61Oo2RJU-vB_Ts735H0AgFk | docs/bimbingan/B6_2026-11-09/HASIL.md |
+| B6 - 2026-11-09 | Materi WO-15 Metrik Evaluasi | 1CNf8u3hnusuBW759oRiX9j_zHeY2J4eEd3aMLbR7kFg | docs/materi/WO-15-metrik-evaluasi.md |
 | Work Order | 00 Daftar Work Order (dashboard) | 1g44jOiptFFLlyWT23MJbjdQCIzIcuGF7E2Ov2e4Ltsc | docs/WORK-ORDER.md |
 | Work Order | WO-01 Cari dataset | 1YeGpWoV-HOIl1iYomqyeJw8OC5CaeJIF7bQ55Bb4Tzo | docs/work-order/WO-01.md |
 | Work Order | WO-02 Gambaran Bab 1 | 1Yg55dX53eKpOMEJoHMR0EWc2eVZRRLTMxniYKayDaqI | docs/work-order/WO-02.md |
@@ -36,6 +38,7 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 | Work Order | WO-12 Permintaan data tambahan heiDATA | 1kfsO8T-teQNEBF_N3SaBharEiDZfWy_5ih4xgY5_ABk | docs/work-order/WO-12.md |
 | Work Order | WO-13 Ringkasan panduan skripsi | 1f7LmFaDFFwFiILqoLLM5qOtkNfYPlGxrtbcySF6NjnE | docs/work-order/WO-13.md |
 | Work Order | WO-14 Validasi k-fold dan arti fisis fitur | 1j_-_D9wvKN2BzarX__Z90POTJ1aBkCfZOnFh6Xq0Pw0 | docs/work-order/WO-14.md |
+| Work Order | WO-15 Pemilihan metrik evaluasi | 1CD1dY903iya_CvqxEwNwiE1n8_vdkm0mSRyc6Uoting | docs/work-order/WO-15.md |
 
 Link dokumen: `https://docs.google.com/document/d/<Doc ID>/edit`
 

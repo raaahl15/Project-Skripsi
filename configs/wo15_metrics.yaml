@@ -1,0 +1,26 @@
+# WO-15: full metric evaluation (src/wo15_metrics.py)
+seed: 42
+out: results/wo15-metrics
+inner_k: 3            # inner CV (validation) for GridSearch - same as WO-14
+recall_target: 0.90   # operating point "recall90": threshold chosen on training out-of-fold scores
+tasks:
+  A_capsid_hiv_vs_mock:
+    description: "heiDATA 1G+S3B: terpapar HIV-1 (+/-Vpx) vs Mock - fitur kapsid HIV-1"
+    dataset: heidata
+    figures: ["1G", "S3B"]
+    features: CA
+    positive: ["+Vpx", "-Vpx"]
+    labels: ["Mock", "HIV"]
+    schemes: [group, kfold5]       # group = leave-one-figure-out (2 percobaan)
+  A_lamin_hiv_vs_mock:
+    description: "heiDATA semua figure: terpapar HIV-1 vs Mock - fitur inti/Lamin B1 (WO-14 T2)"
+    dataset: heidata
+    features: Lamin
+    positive: ["+Vpx", "-Vpx"]
+    labels: ["Mock", "HIV"]
+    schemes: [group, kfold5]
+  B_essig_dead_vs_live:
+    description: "Essig exp1: sel mati vs sel T hidup - fitur brightfield"
+    dataset: essig
+    labels: ["Hidup", "Mati"]
+    schemes: [group, kfold5]       # group = leave-one-donor-out (2 donor)

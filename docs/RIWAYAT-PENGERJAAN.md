@@ -15,6 +15,26 @@
 
 ---
 
+## 2026-11-09 — Hasil Bimbingan 6 dari rekaman
+**Oleh:** Claude Code (laptop)
+- Rekaman B6 (9 menit, `.m4a`) ditranskripsi dengan faster-whisper *medium* (venv sementara di scratchpad; tidak dipasang di `.venv`
+  proyek; `av` harus versi yang cocok). Transkrip tidak disimpan di repo (repo publik, ada percakapan mahasiswa lain).
+- `docs/bimbingan/B6_2026-11-09/HASIL.md` dibuat. Inti: yang dibahas hanya k-fold heiDATA; pembimbing menganggap evaluasi baku per sel;
+  arahan baru **pilih metrik + alasan (FP vs FN, konteks kesehatan)** → `docs/work-order/WO-15.md`; surat ganti judul belakangan;
+  catatan bimbingan wajib diisi di SIMASTER. Dataset, judul, dan pertanyaan lain belum terbahas → dibawa ke B7.
+- `WORK-ORDER.md`: ringkasan posisi, WO-14, WO-15 baru, Hasil B6, daftar keputusan B7.
+- Isian form SIMASTER B6 (topik, catatan, dokumen PDF 1,96 MB) disiapkan di `HASIL.md` §7; diisi pengguna sendiri.
+- **WO-15:** `src/wo15_metrics.py` + `configs/wo15_metrics.yaml` → `results/wo15-metrics/` (11 metrik + CM, ambang bawaan dan ambang
+  recall ≥ 0,90 dari data latih) untuk kapsid HIV vs Mock, Lamin HIV vs Mock, Essig mati vs hidup. Temuan: F1 Lamin per percobaan 0,72–0,77
+  padahal AUC < 0,5 dan spesifisitas 0; kapsid spesifisitas 1,00 tetapi recall ≤ ~0,75 karena sel HIV tanpa titik kapsid terdeteksi.
+  Materi + usulan metrik: `docs/materi/WO-15-metrik-evaluasi.md` (pustaka masih [perlu pustaka]).
+- WO-14: tanggapan pembimbing B6 dicatat.
+- Google Docs disinkronkan (00 Daftar WO, WO-14, dan baru: Hasil B6, WO-15, Materi WO-15; ID di `DRIVE-DOCS.md`).
+- **Berikutnya:** pengguna mengisi SIMASTER; pelajari materi WO-15 dan putuskan metrik utama; verifikasi pustaka metrik; siapkan
+  gambar penjelasan per sel vs per percobaan untuk B7.
+
+---
+
 ## 2026-11-08 — Dataset Illinois, penelusuran citra HIV, dan heiDATA kapsid vs Mock
 **Oleh:** Claude Code (laptop)
 - Illinois IDB-8103861: README dibaca; data lintasan disalin dari Drive; `src/pilot_illinois.py` → `results/pilot-illinois/`:
