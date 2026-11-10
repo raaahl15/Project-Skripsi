@@ -1,5 +1,5 @@
 # STATUS (update di akhir setiap sesi)
-Terakhir diperbarui: 2026-11-09
+Terakhir diperbarui: 2026-11-10
 
 ## Posisi saat ini
 - Tahap: pengolahan data & eksperimen ML (pasca-Bimbingan 6)
@@ -9,6 +9,8 @@ Terakhir diperbarui: 2026-11-09
   **pilih metrik evaluasi + alasan berdasarkan biaya FP vs FN** (B6 → WO-15); kuasai arti fisis & rumus fitur (B5).
 
 ## Sudah selesai
+- Isian SIMASTER untuk B1 (dicatat sebagai bimbingan ke-3 di SIMASTER, topik draf Bab 1, 10 Nov) + PDF draf Bab 1 → `docs/bimbingan/B1_2026-09-02/`
+- B5 dan B6 sudah tercatat di SIMASTER (konfirmasi pengguna 10 Nov)
 - Bimbingan 6 (9 Nov 2026), catatan dari rekaman di `docs/bimbingan/B6_2026-11-09/HASIL.md` (+ isian SIMASTER §7)
 - WO-15 tahap perhitungan: 11 metrik + *confusion matrix* → `results/wo15-metrics/`; materi & usulan → `docs/materi/WO-15-metrik-evaluasi.md`
 - Bimbingan 5 dicatat di SIMASTER (8 Nov); WO-14 (k-fold, tabel fitur) dipresentasikan di B6
@@ -21,7 +23,7 @@ Terakhir diperbarui: 2026-11-09
 - **WO-14:** mahasiswa mempelajari tabel fitur (belum dibahas di B6)
 
 ## Berikutnya (maks. 3)
-1. Isi catatan Bimbingan 6 di SIMASTER (salin dari `HASIL.md` §7)
+1. Masukkan isian B1 ke SIMASTER (`docs/bimbingan/B1_2026-09-02/HASIL.md` §Isian SIMASTER); lalu B2–B4 menyusul
 2. Pelajari & putuskan metrik WO-15; jawab latihan di materi §6
 3. Siapkan B7: luruskan per sel vs fold per percobaan (gambar), lalu bawa keputusan yang tertunda di awal presentasi
 

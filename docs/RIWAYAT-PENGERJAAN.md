@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-11-10 — Isian SIMASTER bimbingan 1 (draf Bab 1)
+**Oleh:** Claude Code (web)
+- Pengguna: B5 dan B6 sudah masuk SIMASTER; B1–B4 belum. B1 dicatat sebagai bimbingan ke-3 di SIMASTER dengan topik pembuatan draf
+  Bab 1, dilaksanakan 10 Nov 2026 (formalitas).
+- Isian form (tanggal, topik, catatan, dokumen) → `docs/bimbingan/B1_2026-09-02/HASIL.md` §Isian SIMASTER.
+- Dokumen lampiran: `Draf-Bab1_Rahul.pdf` (dari `docs/materi/WO-02-gambaran-bab1.md`, pandoc + Chromium).
+- STATUS diperbarui.
+- **Berikutnya:** pengguna mengisi form SIMASTER; isian B2–B4 bila diminta.
+
+---
+
 ## 2026-11-09 — Hasil Bimbingan 6 dari rekaman
 **Oleh:** Claude Code (laptop)
 - Rekaman B6 (9 menit, `.m4a`) ditranskripsi dengan faster-whisper *medium* (venv sementara di scratchpad; tidak dipasang di `.venv`
