@@ -30,6 +30,19 @@
   (exp1 18,2 GB, exp2 20,2, exp3 38,2, exp4 39,8 GiB) tetapi unduhan perlu login (401); Illinois Data Bank menolak akses otomatis (403)
   → pengguna mengunduh lewat browser. Ruang kosong D: 124 GB. Catatan: arsip 18,8 GB Illinois (`SingleCellData`) = tabel per bingkai
   dari NIS Elements, **bukan citra**.
+- Sinkronisasi: branch `claude/trusting-goodall-6g37g0` (sesi web 10 Nov, isian SIMASTER B1) digabung ke `main`; entri riwayat
+  "tidak ada sesi 10–24 Nov" di atas keliru — ada sesi web 10 Nov (entri berikut).
+
+---
+
+## 2026-11-10 — Isian SIMASTER bimbingan 1 (draf Bab 1)
+**Oleh:** Claude Code (web)
+- Pengguna: B5 dan B6 sudah masuk SIMASTER; B1–B4 belum. B1 dicatat sebagai bimbingan ke-3 di SIMASTER dengan topik pembuatan draf
+  Bab 1, dilaksanakan 10 Nov 2026 (formalitas).
+- Isian form (tanggal, topik, catatan, dokumen) → `docs/bimbingan/B1_2026-09-02/HASIL.md` §Isian SIMASTER.
+- Dokumen lampiran: `Draf-Bab1_Rahul.pdf` (dari `docs/materi/WO-02-gambaran-bab1.md`, pandoc + Chromium).
+- STATUS diperbarui.
+- **Berikutnya:** pengguna mengisi form SIMASTER; isian B2–B4 bila diminta.
 
 ---
 
