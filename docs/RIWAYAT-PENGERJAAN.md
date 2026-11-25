@@ -35,6 +35,12 @@
 - Drive: Google Doc baru "Skenario Dataset untuk Bimbingan 7" (ID di `DRIVE-DOCS.md`), "Hasil Bimbingan 1" diperbarui (ID tetap),
   `Draf-Bab1_Rahul.pdf` diunggah ke `bimbingan/B1 - 2026-09-02/`; keduanya ditambahkan ke `SYNC` di `scripts/sync_gdocs.py`.
   Backup bundle sebelumnya terakhir 3 Nov → dibuat ulang 25 Nov.
+- **Naskah Google Docs digabung:** doc "Bab 1 - Pendahuluan" (ID tetap) diganti nama "Naskah Skripsi - Rahul Ghulam Hidayatulloh",
+  6 tab (Bab I–V + Skripsi Final; tab ID di AGENTS.md). Kerangka subbab dari 5 doc lama dipindahkan (isi masih [ISI NANTI]);
+  format dari `skripsidtntf.cls`: A4, Times New Roman 12, margin 4/2,7/4,26/3,44 cm, spasi 1,5, inden 36 pt, parskip 8 pt, BAB tengah
+  tebal 14 pt, subbab I.1./I.1.1. tebal 12 pt; tab Skripsi Final = urutan halaman muka → bab → pustaka → lampiran (`muka_skripsi.tex`).
+  Render PDF dicek. Belum: nomor halaman (harus lewat menu Docs), 4 doc lama Bab 2–5 belum dihapus (menunggu keputusan pengguna).
+  Temuan: opsi `satusetengahspasi` di class tidak mematikan bawaan `duaspasi` → PDF LaTeX ter-compile spasi ganda.
 
 ---
 

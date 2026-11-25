@@ -1,8 +1,26 @@
 # Panduan Menulis di Google Docs → LaTeX
 
-Draf naskah ditulis di Google Docs (`Drive/Project-Skripsi/naskah/`, satu dokumen per bab), lalu dikonversi ke LaTeX
-(`thesis/`) **per bab setelah bab itu disetujui dosen**. Jangan menunggu semua bab selesai: konversi di akhir menumpuk
+Draf naskah ditulis di **satu Google Doc dengan 6 tab** (`Drive/Project-Skripsi/naskah/`, "Naskah Skripsi - Rahul Ghulam
+Hidayatulloh"; sejak 25 Nov 2026): tab Bab I–V untuk draf per bab, dan tab **Skripsi Final** berisi urutan lengkap naskah
+(halaman muka → Bab I–V → Daftar Pustaka → Lampiran) yang diisi dengan bab yang sudah disetujui. Setiap bab dikonversi ke LaTeX
+(`thesis/`) **setelah bab itu disetujui dosen**. Jangan menunggu semua bab selesai: konversi di akhir menumpuk
 pekerjaan tepat menjelang deadline.
+
+## Format (mengikuti `thesis/skripsidtntf.cls`, opsi `tugasakhir,satusetengahspasi`)
+| Unsur | Pengaturan di Google Docs | Asal di template |
+|---|---|---|
+| Kertas | A4 | `a4paper` |
+| Margin | kiri 4,0 cm · kanan 2,7 cm · atas 4,26 cm · bawah 3,44 cm | 1 in + `oddsidemargin` 1,46 cm; `textwidth` 14,3 cm; `topmargin`/`headsep`; `textheight` 22 cm |
+| Huruf | Times New Roman 12 pt | `times`, `12pt` |
+| Spasi baris | 1,5 | `satusetengahspasi` (lihat catatan) |
+| Paragraf | rata kiri-kanan, inden baris pertama 1,27 cm (36 pt), jarak antarparagraf 8 pt | `parindent` 3em, `parskip` 8pt |
+| Judul bab (Heading 1) | "BAB I" baris baru "PENDAHULUAN", tengah, tebal, 14 pt | `\@makechapterhead` (`\large\bfseries`, huruf kapital) |
+| Subbab (Heading 2/3) | "I.1. Judul" / "I.1.1. Judul", rata kiri, tebal, 12 pt | `\thesection` = I.1., `\thesubsection` = I.1.1. |
+| Nomor halaman | **belum dipasang** — Sisipkan → Nomor halaman, kanan atas (halaman pertama bab: tengah bawah) | `myheadings`; `chapterheading` |
+
+Catatan: class memuat opsi bawaan `duaspasi` dan opsi `satusetengahspasi` tidak mematikannya, sehingga PDF LaTeX saat ini
+ter-*compile* dengan `\doublespacing`. Docs memakai 1,5 sesuai opsi yang dipilih di `main.tex`; pastikan ke pembimbing/panduan.
+Nomor subbab diketik manual (Docs tidak punya penomoran I.1.); saat konversi ke LaTeX nomor dihapus karena dibuat otomatis.
 
 ## Konvensi wajib (supaya konversi mulus)
 
@@ -25,7 +43,8 @@ pekerjaan tepat menjelang deadline.
 
 ## Konversi satu bab ke LaTeX
 1. Pastikan bab sudah disetujui dan semua komentar selesai.
-2. Unduh: **File → Download → Microsoft Word (.docx)**, simpan sementara di luar repo.
+2. Unduh: buka tab bab itu, **File → Download → Microsoft Word (.docx)** (unduhan dapat memuat semua tab; ambil bagian bab
+   yang dimaksud), simpan sementara di luar repo. Alternatif: Claude membaca tab langsung lewat konektor Google Docs (`tabId` di AGENTS.md).
 3. Konversi:
    ```bash
    pandoc "Bab 3 - Pelaksanaan Penelitian.docx" -o thesis/bab3-pelaksanaan-penelitian.tex --top-level-division=chapter

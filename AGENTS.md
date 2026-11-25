@@ -66,11 +66,11 @@
 # Lokasi Google Drive
 - Folder utama: [Project-Skripsi](https://drive.google.com/drive/folders/1L5EdiZuWsGFqOQ64QzMGHmxBUs63yKJ6)
 - Naskah (Google Docs): [naskah/](https://drive.google.com/drive/folders/1B0gIkugJe1yVZWEBZaS62jG9fA5LRTU7)
-  - [Bab 1 - Pendahuluan](https://docs.google.com/document/d/1p69-U7fzbd2Ydz3FTPpsLzeso2VxKKuop7Wu87yZU_c/edit) | status: draf
-  - [Bab 2 - Tinjauan Pustaka](https://docs.google.com/document/d/1LrQ97_Z0-YM3Cp55wuU83Q8QE8rf2Gl69k1UEBV1nGU/edit) | status: draf
-  - [Bab 3 - Pelaksanaan Penelitian](https://docs.google.com/document/d/1PXJV-7R0AnAec47qgtHCnJPVZS0JpDIV5Gif1RwNXU8/edit) | status: draf
-  - [Bab 4 - Hasil dan Pembahasan](https://docs.google.com/document/d/1ACWGzFW2NnN6pc6Vcr2viowCTIJKE5-9y7zd-ioeYVY/edit) | status: draf
-  - [Bab 5 - Kesimpulan dan Saran](https://docs.google.com/document/d/1VnkG_kycJ_thdN9Uccn_WvxQHZ9RjxeLhXWjkjgbrxQ/edit) | status: draf
+  - [Naskah Skripsi - Rahul Ghulam Hidayatulloh](https://docs.google.com/document/d/1p69-U7fzbd2Ydz3FTPpsLzeso2VxKKuop7Wu87yZU_c/edit)
+    — **satu Google Doc, 6 tab** (sejak 25 Nov 2026). Tab ID untuk API (`tabId`):
+    Bab I `t.0` · Bab II `t.52i0hsyuxxgi` · Bab III `t.8pos2clou1fl` · Bab IV `t.w77pao7iakxk` · Bab V `t.ihlxybk2s3x1` ·
+    Skripsi Final `t.mo26i9azzwm5` | status semua bab: draf (kerangka). Format: lihat docs/PANDUAN-GDOCS.md §Format.
+  - Doc lama per bab (Bab 2–5, ID 1LrQ97…, 1PXJV…, 1ACWGz…, 1VnkG…) **tidak dipakai lagi**; isinya sudah dipindah ke tab.
 - Template skripsi resmi (asli, jangan diubah): [template skripsi teknik fisika 2026](https://drive.google.com/drive/folders/1B6cKBuUzV7s64e6OHGQzxSq73vBb5Vo0)
 - Data: [data/](https://drive.google.com/drive/folders/1wcYNg3EGv3t-Ney1ob-lIiztwekcxFx6) (raw/, processed/)
 - [models/](https://drive.google.com/drive/folders/1OSlB-5_Z0mu2WMVoLba3eFAAt44nV-DG) · [papers/](https://drive.google.com/drive/folders/19mvT-mO8oCPxfcoPliSO_SveokBSHWnB) · [backup/](https://drive.google.com/drive/folders/1pPGir4R7OWcgDM2mCi5qs9fsSlCJj5Dl) · [bimbingan/](https://drive.google.com/drive/folders/1YjipHgDX7Wvb2MeyM5nzaiJFYCCO_vSe) · [00-BOOTSTRAP/](https://drive.google.com/drive/folders/1j8f-ELyBuVCOGR1CGci8Y5r3LvNUwRiJ)

@@ -376,6 +376,7 @@ Ritme: awal sesi baca STATUS; akhir sesi update STATUS + commit + push; H-1 bimb
 | 2026-11-03 | Ditambah GitHub Actions compile PDF, skrip `.ps1` untuk Windows, `.gitattributes` | Revisi dari iPad tetap menghasilkan PDF; laptop utama Windows |
 | 2026-11-03 | Naskah: draf di **Google Docs** per bab, LaTeX untuk versi final (konversi per bab setelah disetujui) | Permintaan pengguna: revisi lebih mudah |
 | 2026-11-03 | Struktur Drive `Skripsi-ML/` (kini `Project-Skripsi/`) + folder `naskah/` + 5 Google Docs bab dibuat oleh agent | Permintaan pengguna |
+| 2026-11-25 | Naskah digabung menjadi **1 Google Doc, 6 tab** (Bab I–V + Skripsi Final; doc Bab 1 dipakai ulang, link tetap), format A4/Times 12/margin & penomoran I.1. dari `skripsidtntf.cls` | Permintaan pengguna |
 | 2026-11-03 | Ditambah `docs/RIWAYAT-PENGERJAAN.md`; aturan wajib update riwayat & MASTER tiap sesi | Permintaan pengguna |
 | 2026-11-03 | File MASTER dipindah dari `D:\rahul\Project Skripsi\` ke root repo | Agar ter-versi git dan bisa diperbarui dari iPad/cloud |
 | 2026-11-03 | Folder Drive diganti nama `Skripsi-ML` → `Project-Skripsi` (ID/link tetap); semua rujukan & path rclone (`gdrive:Project-Skripsi/...`) diperbarui | Pilihan pengguna |
