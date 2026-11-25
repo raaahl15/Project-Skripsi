@@ -109,7 +109,8 @@ def evaluate(model, grid, X, y, splits, recall_target):
             agg[mname] = {"mean": round(float(np.mean(v)), 3) if v else None,
                           "sd": round(float(np.std(v, ddof=1)), 3) if len(v) > 1 else None, "n_folds": len(v)}
         yy, pp = np.concatenate(pooled[k]["y"]), np.concatenate(pooled[k]["pred"])
-        out[k] = {"per_fold_mean_sd": agg, "pooled": metric_set(yy, pp, oof_rank), "folds": folds[k]}
+        tested = np.concatenate([te for _, te in splits])  # splits need not cover every sample (e.g. train exp1 -> test exp2)
+        out[k] = {"per_fold_mean_sd": agg, "pooled": metric_set(yy, pp, oof_rank[tested]), "folds": folds[k]}
     return out
 
 
@@ -125,6 +126,16 @@ def load_task(name, spec):
         df = df.reset_index(drop=True)
         y = df.condition.isin(spec["positive"]).astype(int).to_numpy()
         return df[feats].to_numpy(float), y, df.figure.to_numpy()
+    if spec["dataset"] == "illinois_own":
+        # per-cell features from OUR OWN image extraction (src/illinois_zip_parts.py process)
+        from src.pilot_illinois import FEATS
+        files = sorted(Path(spec.get("dir", "results/illinois-own")).glob("*.csv"))
+        df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
+        if spec.get("cap"):
+            df = df.groupby("well", group_keys=False).apply(lambda g: g.sample(min(len(g), spec["cap"]), random_state=SEED))
+        df = df[df.condition.isin(spec["positive"] + spec["negative"])].reset_index(drop=True)
+        y = df.condition.isin(spec["positive"]).astype(int).to_numpy()
+        return df[FEATS].to_numpy(float), y, df[spec.get("group_by", "well")].to_numpy()
     if spec["dataset"] == "illinois":
         # per-cell features from the authors' intensity trajectories (control wells only); see src/pilot_illinois.py
         from src.pilot_illinois import FEATS, load as load_illinois

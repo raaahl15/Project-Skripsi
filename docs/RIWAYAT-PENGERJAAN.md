@@ -63,6 +63,18 @@
   III.2.3 Fitur (13 heiDATA, 19 Essig, 9 Illinois), III.2.4 Definisi kelas, III.2.5 Model (grid hiperparameter dari
   `wo14_kfold_heidata.models()`), III.2.6 Validasi bersarang + skema per sel vs berkelompok + ambang recall90 + permutasi/bootstrap +
   uji ketahanan; III.3 Rencana analisis. Terbuka: diagram alir, Essig exp2–4, bagian arsip Illinois, kelas final (B7), pustaka scikit-learn.
+- **Insiden disk:** unduhan Chrome (exp2.zip, Illinois .003) masuk ke C:\Users\...\Downloads → C: penuh (0 MB). Pengguna membatalkan
+  dan mengunduh ulang ke D:. Pelajaran: data besar selalu diunduh ke D:.
+- **Skrip pemroses data (siap sebelum unduhan selesai):**
+  - `src/essig_exp_features.py`: fitur per percobaan Essig langsung dari zip (sel berlabel ahli + sampel acak per donor×kondisi),
+    *checkpoint* & lanjut bila terputus. Diuji dengan zip tiruan.
+  - `src/essig_cross_exp.py`: label ahli atau label pewarna Live-Dead (ambang Otsu per percobaan, kesepakatan dengan label ahli
+    dilaporkan); skema latih exp1→uji expN, leave-one-experiment-out, leave-one-donor-out; metrik WO-15. Diuji (data tiruan).
+  - `src/wo15_metrics.py`: metrik gabungan hanya pada sel yang diuji (perlu untuk skema latih-uji tetap; hasil lama tidak berubah);
+    pemuat `illinois_own`; config `configs/illinois_own_metrics.yaml` (grup = sumur).
+  - `src/illinois_zip_parts.py`: membaca anggota zip dari potongan arsip `.zip.NNN` via *local header* (zip64/data descriptor),
+    `list` (sumur & kelengkapan) dan `process` (ekstrak .nd2 sumur kontrol ke D:, segmentasi + pelacakan bingkai 4-75, 9 fitur,
+    hapus .nd2). Diuji: zip tiruan dipotong 3 (MD5 cocok), zip demo asli, `process` K16 = 404 lintasan (sama dengan 8 Nov), 804 s.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
   "/" = di luar `bimbingan/`.
 

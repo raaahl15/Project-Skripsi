@@ -1,0 +1,25 @@
+# Skenario 2: Illinois dengan fitur dari EKSTRAKSI CITRA SENDIRI (src/illinois_zip_parts.py process)
+# Usage: python -I src/wo15_metrics.py --config configs/illinois_own_metrics.yaml
+# Grup = sumur (tiap sumur kontrol = satu kelompok; leave-one-well-out bila <= logo_max_groups sumur, selain itu 5 fold berkelompok)
+seed: 42
+out: results/skenario-b7/illinois-own-metrics
+inner_k: 3
+recall_target: 0.90
+logo_max_groups: 12
+tasks:
+  O_tnf_vs_untreated:
+    description: "Illinois (ekstraksi sendiri): ekspresi HIV teraktivasi (TNF-alpha) vs laten (tanpa perlakuan)"
+    dataset: illinois_own
+    positive: ["TNF"]
+    negative: ["untreated"]
+    group_by: well
+    labels: ["Laten", "Aktif"]
+    schemes: [group, kfold5]
+  O_alp_vs_untreated:
+    description: "Illinois (ekstraksi sendiri): ekspresi HIV ditekan (alsterpaullone) vs laten"
+    dataset: illinois_own
+    positive: ["Alp"]
+    negative: ["untreated"]
+    group_by: well
+    labels: ["Laten", "Ditekan"]
+    schemes: [group, kfold5]

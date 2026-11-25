@@ -157,6 +157,19 @@ Risiko: bila arsip berupa *split zip*, satu bagian tidak bisa dibuka biasa → p
 blok A23–B02 ±20,4–24,1 GB → **`.003`**; blok B23–C02 ±42,6–46,3 GB → **`.005`**; blok C23–D02 ±64,8–68,5 GB → `.007` (cadangan).
 Unduh `.003` dulu → isi dipindai (nama sumur per *local header*) → perkiraan dikoreksi sebelum mengunduh `.005`/`.007`.
 
+**Perintah setelah unduhan selesai** (unduh ke D:, bukan C:; C: sempat penuh 25 Nov):
+```
+# Essig (per percobaan; ±beberapa jam, bisa dilanjutkan bila terputus)
+.venv\Scripts\python.exe -I src\essig_exp_features.py --zip data\raw\dryad-essig-2022\exp2.zip --exp exp2
+.venv\Scripts\python.exe -I src\essig_cross_exp.py          # latih exp1 -> uji exp2..; LOEO; LODO; metrik WO-15
+# Illinois
+.venv\Scripts\python.exe -I src\illinois_zip_parts.py list    data\raw\illinois-IDB-8103861\images_DiversitySet3Plate2.zip.003
+.venv\Scripts\python.exe -I src\illinois_zip_parts.py process data\raw\illinois-IDB-8103861\images_DiversitySet3Plate2.zip.003
+.venv\Scripts\python.exe -I src\wo15_metrics.py --config configs\illinois_own_metrics.yaml
+```
+Diuji 25 Nov: Essig dengan zip tiruan (struktur h5 sama); pembaca potongan zip dengan zip tiruan yang dipotong 3 (MD5 cocok) dan
+zip demo asli; `process` pada sumur demo K16.
+
 ## 5. Pertanyaan untuk pembimbing (B7)
 1. Skenario mana yang dipilih: 1 (heiDATA + Essig) atau 2 (Illinois + Essig)?
 2. Bolehkah Essig (tanpa HIV, dikaitkan lewat pustaka kematian sel CD4 pada infeksi HIV) menjadi Bagian B?
