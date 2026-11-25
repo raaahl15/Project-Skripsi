@@ -39,7 +39,8 @@ from sklearn.model_selection import (GridSearchCV, LeaveOneGroupOut, StratifiedG
 from src.pilot_heidata_classify import CA_FEATS, LAMIN_FEATS
 from src.wo14_kfold_heidata import models
 
-CFG = yaml.safe_load(Path("configs/wo15_metrics.yaml").read_text(encoding="utf-8"))
+_cfg_path = sys.argv[sys.argv.index("--config") + 1] if "--config" in sys.argv else "configs/wo15_metrics.yaml"
+CFG = yaml.safe_load(Path(_cfg_path).read_text(encoding="utf-8"))
 SEED = CFG["seed"]
 OUT = Path(CFG["out"])
 METRICS = ["accuracy", "balanced_accuracy", "precision", "recall", "specificity", "npv", "f1", "f2", "mcc",
@@ -124,6 +125,13 @@ def load_task(name, spec):
         df = df.reset_index(drop=True)
         y = df.condition.isin(spec["positive"]).astype(int).to_numpy()
         return df[feats].to_numpy(float), y, df.figure.to_numpy()
+    if spec["dataset"] == "illinois":
+        # per-cell features from the authors' intensity trajectories (control wells only); see src/pilot_illinois.py
+        from src.pilot_illinois import FEATS, load as load_illinois
+        df = load_illinois(Path(spec.get("root", "data/raw/illinois-IDB-8103861")), spec.get("cap", 20))
+        df = df[df.condition.isin(spec["positive"] + spec["negative"])].reset_index(drop=True)
+        y = df.condition.isin(spec["positive"]).astype(int).to_numpy()
+        return df[FEATS].to_numpy(float), y, df[spec.get("group_by", "plate")].to_numpy()
     df = pd.read_csv("results/pilot-essig/features_labeled.csv")
     live, dead = ["T_cell", "T_cell_with_signaling"], ["Dead_Cell"]
     df = df[df.expert_label.isin(live + dead)].reset_index(drop=True)
@@ -133,7 +141,7 @@ def load_task(name, spec):
 
 def splits_for(scheme, X, y, g):
     if scheme == "group":
-        return list(LeaveOneGroupOut().split(X, y, g)) if len(set(g)) <= 5 else \
+        return list(LeaveOneGroupOut().split(X, y, g)) if len(set(g)) <= CFG.get("logo_max_groups", 5) else \
             list(StratifiedGroupKFold(5, shuffle=True, random_state=SEED).split(X, y, g))
     return list(StratifiedKFold(int(scheme.replace("kfold", "")), shuffle=True, random_state=SEED).split(X, y))
 

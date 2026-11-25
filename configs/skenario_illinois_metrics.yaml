@@ -1,0 +1,26 @@
+# Skenario B7 "Illinois + Essig": bagian Illinois dievaluasi dengan metrik WO-15 yang sama (src/wo15_metrics.py)
+# Usage: python -I src/wo15_metrics.py --config configs/skenario_illinois_metrics.yaml
+seed: 42
+out: results/skenario-b7/illinois-metrics
+inner_k: 3
+recall_target: 0.90
+logo_max_groups: 7     # 7 plate -> leave-one-plate-out (plate baru = data uji)
+tasks:
+  I_tnf_vs_untreated:
+    description: "Illinois kontrol: ekspresi HIV teraktivasi (TNF-alpha) vs laten (tanpa perlakuan) - fitur lintasan GFP per sel"
+    dataset: illinois
+    cap: 20
+    positive: ["TNF"]
+    negative: ["untreated"]
+    group_by: plate
+    labels: ["Laten", "Aktif"]
+    schemes: [group, kfold5]
+  I_alp_vs_untreated:
+    description: "Illinois kontrol: ekspresi HIV ditekan (alsterpaullone) vs laten (tanpa perlakuan)"
+    dataset: illinois
+    cap: 20
+    positive: ["Alp"]
+    negative: ["untreated"]
+    group_by: plate
+    labels: ["Laten", "Ditekan"]
+    schemes: [group, kfold5]

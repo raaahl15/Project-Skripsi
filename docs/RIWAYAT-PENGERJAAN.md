@@ -15,6 +15,24 @@
 
 ---
 
+## 2026-11-25 — Cek posisi pengerjaan
+**Oleh:** Claude Code (laptop) berdasarkan laporan pengguna
+- Pengguna mengonfirmasi catatan B6 **sudah diisi di SIMASTER**.
+- Tidak ada sesi tercatat 10–24 Nov. Langkah berikutnya disusun: putuskan metrik WO-15 → siapkan bahan B7 → minta jadwal B7;
+  paralel mulai draf naskah Bab 1–3 (ujian diperkirakan pertengahan–akhir Des).
+- Atas permintaan pengguna: dua skenario dataset **heiDATA + Essig** vs **Illinois + Essig** → `docs/materi/SKENARIO-DATASET-B7.md`
+  (judul, rumusan masalah, fisika, hasil, kelemahan, sisa pekerjaan, rekomendasi, pertanyaan B7).
+- `src/wo15_metrics.py` diberi opsi `--config` + loader dataset `illinois` + `logo_max_groups`; config baru
+  `configs/skenario_illinois_metrics.yaml` → `results/skenario-b7/illinois-metrics/`. Hasil plate baru: TNF vs laten AUC 0,87, MCC 0,56;
+  Alp vs laten AUC 0,95, MCC 0,75; selisih vs k-fold ≤ 0,01; ambang recall ≥ 0,90 stabil di data uji. Hasil WO-15 lama tidak diubah.
+- Rekomendasi draf: Skenario 1 (paling aman untuk tenggat); keputusan di B7.
+- **Keputusan pengguna: kedua skenario dikerjakan.** Rencana kerja di `SKENARIO-DATASET-B7.md` §4b. Dryad API: daftar file Essig terbaca
+  (exp1 18,2 GB, exp2 20,2, exp3 38,2, exp4 39,8 GiB) tetapi unduhan perlu login (401); Illinois Data Bank menolak akses otomatis (403)
+  → pengguna mengunduh lewat browser. Ruang kosong D: 124 GB. Catatan: arsip 18,8 GB Illinois (`SingleCellData`) = tabel per bingkai
+  dari NIS Elements, **bukan citra**.
+
+---
+
 ## 2026-11-09 — Hasil Bimbingan 6 dari rekaman
 **Oleh:** Claude Code (laptop)
 - Rekaman B6 (9 menit, `.m4a`) ditranskripsi dengan faster-whisper *medium* (venv sementara di scratchpad; tidak dipasang di `.venv`
