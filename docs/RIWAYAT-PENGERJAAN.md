@@ -41,6 +41,10 @@
   tebal 14 pt, subbab I.1./I.1.1. tebal 12 pt; tab Skripsi Final = urutan halaman muka → bab → pustaka → lampiran (`muka_skripsi.tex`).
   Render PDF dicek. Belum: nomor halaman (harus lewat menu Docs), 4 doc lama Bab 2–5 belum dihapus (menunggu keputusan pengguna).
   Temuan: opsi `satusetengahspasi` di class tidak mematikan bawaan `duaspasi` → PDF LaTeX ter-compile spasi ganda.
+- **Referensi kelompok 1–2 (HIV/CD4, pencitraan) + dataset:** 29 kandidat; 25 DOI dicek ke Crossref, 3 dataset ke DataCite (semua ada;
+  metadata BibTeX diambil dari API, tahun = tahun cetak), UNAIDS fact sheet (data 2025) dicek di situs UNAIDS.
+  → `thesis/refs-kandidat.bib` + `docs/literatur/DAFTAR-REFERENSI.md` (kegunaan per entri, kolom "Dibaca"). Belum dibaca pengguna,
+  sehingga belum masuk `refs.bib`. Data HIV Indonesia: hanya ada di berita → perlu laporan resmi SIHA Kemenkes.
 
 ---
 
