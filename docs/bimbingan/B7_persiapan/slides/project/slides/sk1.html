@@ -1,0 +1,22 @@
+<section id="sk1" class="light" data-transition="fade">
+<div class="band-l"></div>
+<div class="band-r"></div>
+<p class="band-txt">SUMBER: results/wo15-metrics · results/b6 Bagian A2–A3</p>
+<p class="band-pg">7 / 13</p>
+<div class="head">
+<h2>Skenario 1: Terpapar HIV-1 vs Mock dari Kapsid</h2>
+<div class="rule"></div>
+</div>
+<p class="lead">Latih di satu percobaan, uji di percobaan lain · 100 sel (61 terpapar, 39 Mock) · ambang bawaan</p>
+<table class="t">
+<tr class="h"><th style="width:28%">Skema</th><th style="width:12%">AUC</th><th style="width:15%">Sensitivitas</th><th style="width:15%">Spesifisitas</th><th style="width:12%">MCC</th><th style="width:18%">Bal. accuracy</th></tr>
+<tr class="hl"><td><b>Per percobaan</b></td><td>0,91</td><td>0,80</td><td>1,00</td><td>0,81</td><td>0,90</td></tr>
+<tr><td>k-fold 5 per sel</td><td>0,88</td><td>0,75</td><td>1,00</td><td>0,75</td><td>0,88</td></tr>
+</table>
+<div class="row">
+<div class="stat anim" style="--i:0"><p class="num">0 dari 39</p><p class="cap">Sel Mock diprediksi terpapar (FP = 0)</p></div>
+<div class="stat anim" style="--i:1"><p class="num">16 dari 61</p><p class="cap">Sel terpapar terlewat: titik kapsid redup di bawah ambang</p></div>
+<div class="stat anim" style="--i:2"><p class="num">0,86–0,97</p><p class="cap">AUC pada 28 variasi pengaturan detektor</p></div>
+</div>
+<aside>Batas sensitivitas ditentukan oleh fisika deteksi, bukan model: 45 persen sel +Vpx di S3B tidak punya titik kapsid yang terdeteksi. Menurunkan ambang menangkap kapsid redup tetapi menimbulkan titik palsu di Mock: kompromi sensitivitas dan spesifisitas yang diatur rasio sinyal-derau. Memaksa recall 0,90 lewat ambang membuat spesifisitas runtuh ke 0. Keterbatasan: hanya 2 percobaan yang memuat Mock.</aside>
+</section>

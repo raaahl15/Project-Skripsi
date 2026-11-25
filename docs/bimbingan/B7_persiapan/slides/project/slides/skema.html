@@ -1,0 +1,12 @@
+<section id="skema" class="light" data-transition="fade">
+<div class="band-l"></div>
+<div class="band-r"></div>
+<p class="band-txt">SUMBER: results/b7/split_schemes.png · model terbaik dari LogReg / RF / SVM</p>
+<p class="band-pg">5 / 13</p>
+<div class="head">
+<h2>Per Sel vs Berkelompok: Pelurusan dari B6</h2>
+<div class="rule"></div>
+</div>
+<img class="figure" src="/_blob/096d73242b578f0ef772714bc08c5656" alt="Kiri: skema k-fold per sel (sel uji tersebar di semua percobaan) dan berkelompok (satu percobaan utuh menjadi data uji). Kanan: ROC AUC kedua skema; heiDATA Lamin B1 turun dari 0,79 ke 0,46, empat tugas lain stabil (0,87 sampai 0,96).">
+<aside>Unit yang diklasifikasikan tetap sel, sesuai arahan B6. Yang dipisah per kelompok hanya pembagian lipatan: sel dari satu percobaan tidak boleh sekaligus ada di data latih dan uji, karena sel satu percobaan berbagi kondisi pencitraan (pewarnaan, fokus, intensitas laser). Buktinya: skema berkelompok tidak menghukum model yang benar (kapsid 0,91, Essig 0,94, Illinois 0,87 dan 0,95 tetap tinggi), tetapi membongkar model yang hanya mengenali percobaan (Lamin B1 0,79 menjadi 0,46, rentang tiga model 0,27 sampai 0,46). Usul: keduanya dilaporkan berdampingan, selisihnya sebagai ukuran kebocoran efek batch.</aside>
+</section>

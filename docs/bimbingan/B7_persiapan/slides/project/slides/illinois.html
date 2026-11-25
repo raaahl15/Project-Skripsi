@@ -1,0 +1,22 @@
+<section id="illinois" class="light" data-transition="fade">
+<div class="band-l"></div>
+<div class="band-r"></div>
+<p class="band-txt">SUMBER: results/skenario-b7/illinois-own</p>
+<p class="band-pg">9 / 13</p>
+<div class="head">
+<h2>Skenario 2: Illinois dari Citra Sendiri</h2>
+<div class="rule"></div>
+</div>
+<p class="lead">4 sumur kontrol Plate 2 dari satu potongan arsip (10 GB, bukan 356 GB) · segmentasi + pelacakan sendiri · 1.185 sel</p>
+<table class="t">
+<tr class="h"><th style="width:28%">Tugas</th><th style="width:36%">Fitur sendiri, k-fold per sel</th><th style="width:36%"><b>Transfer</b>: latih fitur penulis 6 plate → uji fitur sendiri</th></tr>
+<tr><td>Aktif (TNF) vs laten</td><td>AUC 0,91–0,92 · MCC 0,63</td><td><b>AUC 0,86–0,89</b> · MCC 0,56–0,61</td></tr>
+<tr class="alt"><td>Ditekan (Alp) vs laten</td><td>AUC 0,99–1,00 · MCC 0,94–0,96</td><td><b>AUC 0,90–0,92</b> · MCC 0,67–0,69</td></tr>
+</table>
+<div class="row">
+<div class="stat anim" style="--i:0"><p class="num">r = 0,97</p><p class="cap">Daya beda tiap fitur: ekstraksi sendiri vs penulis (sumur sama)</p></div>
+<div class="stat anim" style="--i:1"><p class="num">r = 0,985</p><p class="cap">Rata-rata sumur demo vs data penulis</p></div>
+<div class="stat anim" style="--i:2"><p class="num">1 sumur</p><p class="cap">per kelas positif: validasi per sumur belum bisa</p></div>
+</div>
+<aside>Uji transfer adalah plate baru sekaligus cara ekstraksi baru, dan hasilnya setara dengan uji plate baru pada fitur penulis (0,87 dan 0,95). Artinya pipeline ekstraksi sendiri dapat dipercaya. Fitur yang dipakai untuk transfer bebas skala (CV, rasio akhir/awal, autokorelasi, dsb.) karena intensitas absolut ekstraksi sendiri lebih rendah. Fitur terkuat sama dengan penulis: rasio akhir/awal, kemiringan, intensitas akhir. Bila dipilih: unduh bagian .005 (blok B23 sampai C02) untuk menambah sumur dan validasi per sumur.</aside>
+</section>

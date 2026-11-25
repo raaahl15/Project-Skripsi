@@ -1,0 +1,22 @@
+<section id="metrik" class="light" data-transition="fade">
+<div class="band-l"></div>
+<div class="band-r"></div>
+<p class="band-txt">SUMBER: results/wo15-metrics</p>
+<p class="band-pg">4 / 13</p>
+<div class="head">
+<h2>WO-15: Mengapa Bukan Akurasi atau F1</h2>
+<div class="rule"></div>
+</div>
+<p class="lead">Contoh nyata: fitur Lamin B1, terpapar HIV vs Mock, diuji per percobaan (kelas timpang 170 : 39)</p>
+<div class="row">
+<div class="stat anim" style="--i:0"><p class="num">F1 0,72–0,77</p><p class="cap">Tampak “bagus”</p></div>
+<div class="stat anim" style="--i:1"><p class="num">AUC 0,27–0,46</p><p class="cap">Lebih buruk dari acak</p></div>
+<div class="stat anim" style="--i:2"><p class="num">Spesifisitas 0</p><p class="cap">Semua Mock diprediksi HIV</p></div>
+<div class="stat anim" style="--i:3"><p class="num">MCC &lt; 0</p><p class="cap">Langsung terlihat gagal</p></div>
+</div>
+<div class="row">
+<div class="soft"><h3>Usulan metrik utama</h3><p class="body"><b>Sensitivitas</b> (sel terinfeksi / mati tidak terlewat, FN mahal) dan <b>spesifisitas</b> (tidak ada alarm palsu)</p></div>
+<div class="soft"><h3>Pendukung</h3><p class="body">ROC AUC (tak bergantung ambang), <i>balanced accuracy</i> dan MCC (tahan kelas timpang); F1 dan akurasi hanya pelengkap</p></div>
+</div>
+<aside>Kelas positif = kondisi yang tidak boleh terlewat: sel terpapar HIV, sel mati, ekspresi HIV aktif. Pada konteks penapisan, FN (sel terinfeksi dianggap sehat) lebih mahal daripada FP. F1 tinggi di contoh ini hanya karena 81 persen sel adalah kelas positif. Selain ambang bawaan, saya juga melaporkan ambang yang dipilih di data latih agar recall minimal 0,90, untuk menunjukkan pertukaran FN dan FP. Pustaka: Chicco & Jurman 2020 (MCC), Saito & Rehmsmeier 2015 (kurva PR), Altman & Bland 1994 (sensitivitas dan spesifisitas).</aside>
+</section>

@@ -3,6 +3,7 @@ Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **N
 
 > Disusun 25 Nov 2026 (berbantuan AI, wajib ditinjau mahasiswa). Folder diganti nama menjadi `B7_<tanggal>` setelah jadwal pasti.
 > Prinsip B7: **keputusan yang dibutuhkan ditaruh di awal** (B6 hanya sempat membahas k-fold heiDATA).
+> Slide (13, gaya UGM seperti B5–B6): https://claude.ai/artifact/36C74VKWiKGgrMGVVY4xdZ · sumber di slides/project/.
 
 | Kolom | Isi |
 |---|---|

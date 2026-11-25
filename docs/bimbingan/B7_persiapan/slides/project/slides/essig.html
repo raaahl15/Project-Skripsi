@@ -1,0 +1,22 @@
+<section id="essig" class="light" data-transition="fade">
+<div class="band-l"></div>
+<div class="band-r"></div>
+<p class="band-txt">SUMBER: results/essig-exps</p>
+<p class="band-pg">8 / 13</p>
+<div class="head">
+<h2>Essig: Hidup vs Mati di Percobaan Baru</h2>
+<div class="rule"></div>
+</div>
+<p class="lead">Hanya citra <i>brightfield</i> (tanpa pewarna) · 19 fitur fisis · percobaan 2 baru diproses (480.001 citra, donor 3–4)</p>
+<table class="t">
+<tr class="h"><th style="width:40%">Skema</th><th style="width:14%">AUC</th><th style="width:16%">Sensitivitas</th><th style="width:16%">Spesifisitas</th><th style="width:14%">MCC</th></tr>
+<tr class="hl"><td><b>Latih exp1 → uji exp2</b></td><td>0,98–1,00</td><td>0,94–0,98</td><td>0,97–0,99</td><td>0,91–0,96</td></tr>
+<tr><td>Leave-one-experiment-out</td><td>0,95–0,96</td><td>0,89–0,91</td><td>0,92–0,95</td><td>0,81–0,85</td></tr>
+<tr class="alt"><td>Leave-one-donor-out (4 donor)</td><td>0,95–0,96</td><td>0,86–0,89</td><td>0,92–0,93</td><td>0,79–0,82</td></tr>
+</table>
+<div class="row">
+<div class="soft"><h3>Artinya</h3><p class="body">Sinyal hidup/mati berlaku lintas percobaan dan donor: bukan efek <i>batch</i></p></div>
+<div class="soft"><h3>Arti fisis</h3><p class="body">Gradien RMS (ketajaman tepi), sebaran intensitas, dan tekstur GLCM: kontras serapan–pembiasan sel</p></div>
+</div>
+<aside>Rentang = LogReg, RF, SVM. exp2 punya label ahli: hidup 137, mati 79. Catatan jujur: di exp2 label ahli dan pewarna Live-Dead cocok sempurna (kappa 1,00), jadi ahli kemungkinan dibantu kanal pewarna; model hanya memakai brightfield, sehingga tidak ada kebocoran dari pewarna ke fitur. 216 sel berlabel di exp2 membuat selang kepercayaan lebih lebar. exp3 dan exp4 (38 dan 40 GB) belum diproses; menunggu keputusan dataset.</aside>
+</section>

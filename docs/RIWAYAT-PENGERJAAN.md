@@ -85,6 +85,11 @@
 - **Essig exp2** (59 menit; 3.996 baris; label ahli hidup 137 / mati 79; pewarna vs ahli kappa 1,00): latih exp1 → uji exp2 AUC
   0,98–1,00, MCC 0,91–0,96; LOEO 0,95–0,96; LODO (4 donor) 0,95–0,96 → `results/essig-exps/`. Bug diperbaiki: metrik gabungan
   hanya pada sel uji (`wo15_metrics.evaluate`). `exp2.zip` (20 GB) masih ada, menunggu persetujuan hapus.
+- **Slide B7** (13 slide, tipe Slides, gaya UGM B5–B6: Poppins, biru #0B3D6B, emas #F2C200; kali ini dengan `deck.css` bersama):
+  https://claude.ai/artifact/36C74VKWiKGgrMGVVY4xdZ ; sumber `docs/bimbingan/B7_persiapan/slides/project/`. Urutan: sampul, keputusan
+  (7 + laporan), WO, metrik, per sel vs berkelompok (gambar), dua skenario, Sk1 kapsid, Essig exp2, Illinois citra sendiri, judul
+  (Opsi 2 ditambah "dan Imaging Flow Cytometry"), naskah, rencana, ringkasan. Pratinjau Edge headless 6 slide padat: rapi.
+  Publish dari scratchpad ditolak izin → file slide disimpan di repo. Placeholder: tanggal B7 dan tanggal ujian.
 - Bahan B7 (`docs/bimbingan/B7_persiapan/BAHAN.md`) + gambar per sel vs berkelompok (`src/b7_figures.py`, `results/b7/`);
   koreksi teks "per percobaan 0,27" → rentang tiga model 0,27–0,46.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
