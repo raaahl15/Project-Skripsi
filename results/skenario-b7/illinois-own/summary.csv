@@ -1,0 +1,13 @@
+task,scheme,model,accuracy,balanced_accuracy,precision,recall,specificity,npv,f1,f2,mcc,roc_auc,pr_auc,cm_pooled
+TNF_vs_untreated,"kfold5 per sel (fitur sendiri, 9 fitur)",logreg,0.824,0.818,0.733,0.8,0.837,0.888,0.761,0.782,0.628,0.91,0.861,"[[461, 90], [60, 240]]"
+TNF_vs_untreated,"kfold5 per sel (fitur sendiri, 9 fitur)",rf,0.828,0.814,0.763,0.763,0.864,0.872,0.757,0.76,0.63,0.91,0.868,"[[476, 75], [71, 229]]"
+TNF_vs_untreated,"kfold5 per sel (fitur sendiri, 9 fitur)",svm,0.826,0.812,0.755,0.763,0.86,0.871,0.755,0.759,0.625,0.916,0.872,"[[474, 77], [71, 229]]"
+TNF_vs_untreated,transfer penulis 6 plate -> sendiri Plate 2 (5 fitur bebas skala),logreg,0.827,0.792,0.805,0.673,0.911,0.837,0.733,0.696,0.612,0.891,0.832,"[[502, 49], [98, 202]]"
+TNF_vs_untreated,transfer penulis 6 plate -> sendiri Plate 2 (5 fitur bebas skala),rf,0.801,0.778,0.727,0.7,0.857,0.84,0.713,0.705,0.562,0.858,0.772,"[[472, 79], [90, 210]]"
+TNF_vs_untreated,transfer penulis 6 plate -> sendiri Plate 2 (5 fitur bebas skala),svm,0.818,0.808,0.726,0.777,0.84,0.874,0.75,0.766,0.608,0.881,0.8,"[[463, 88], [67, 233]]"
+Alp_vs_untreated,"kfold5 per sel (fitur sendiri, 9 fitur)",logreg,0.972,0.971,0.96,0.967,0.975,0.98,0.963,0.965,0.941,0.992,0.99,"[[537, 14], [11, 323]]"
+Alp_vs_untreated,"kfold5 per sel (fitur sendiri, 9 fitur)",rf,0.969,0.966,0.97,0.949,0.982,0.97,0.959,0.953,0.936,0.995,0.994,"[[541, 10], [17, 317]]"
+Alp_vs_untreated,"kfold5 per sel (fitur sendiri, 9 fitur)",svm,0.98,0.98,0.969,0.979,0.98,0.987,0.973,0.977,0.958,0.998,0.997,"[[540, 11], [7, 327]]"
+Alp_vs_untreated,transfer penulis 6 plate -> sendiri Plate 2 (5 fitur bebas skala),logreg,0.842,0.852,0.741,0.892,0.811,0.925,0.81,0.857,0.685,0.917,0.843,"[[447, 104], [36, 298]]"
+Alp_vs_untreated,transfer penulis 6 plate -> sendiri Plate 2 (5 fitur bebas skala),rf,0.846,0.845,0.773,0.838,0.851,0.897,0.805,0.824,0.68,0.916,0.857,"[[469, 82], [54, 280]]"
+Alp_vs_untreated,transfer penulis 6 plate -> sendiri Plate 2 (5 fitur bebas skala),svm,0.836,0.841,0.744,0.862,0.82,0.908,0.799,0.836,0.667,0.903,0.841,"[[452, 99], [46, 288]]"

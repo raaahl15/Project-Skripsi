@@ -1,0 +1,39 @@
+{
+ "n_own": [
+  [
+   "DiversitySet3Plate2/A23",
+   "untreated",
+   264
+  ],
+  [
+   "DiversitySet3Plate2/A24",
+   "Alp",
+   334
+  ],
+  [
+   "DiversitySet3Plate2/B01",
+   "TNF",
+   300
+  ],
+  [
+   "DiversitySet3Plate2/B02",
+   "untreated",
+   287
+  ]
+ ],
+ "n_authors_same_wells": {
+  "DiversitySet3Plate2/A23": 20,
+  "DiversitySet3Plate2/A24": 20,
+  "DiversitySet3Plate2/B01": 20,
+  "DiversitySet3Plate2/B02": 20
+ },
+ "plate": "DiversitySet3Plate2",
+ "univariate_direction_agreement": {
+  "Alp_vs_untreated": "9/9",
+  "TNF_vs_untreated": "7/9"
+ },
+ "univariate_corr_own_vs_authors": {
+  "Alp_vs_untreated": 0.972,
+  "TNF_vs_untreated": 0.973
+ }
+}

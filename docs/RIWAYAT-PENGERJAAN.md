@@ -75,6 +75,15 @@
   - `src/illinois_zip_parts.py`: membaca anggota zip dari potongan arsip `.zip.NNN` via *local header* (zip64/data descriptor),
     `list` (sumur & kelengkapan) dan `process` (ekstrak .nd2 sumur kontrol ke D:, segmentasi + pelacakan bingkai 4-75, 9 fitur,
     hapus .nd2). Diuji: zip tiruan dipotong 3 (MD5 cocok), zip demo asli, `process` K16 = 404 lintasan (sama dengan 8 Nov), 804 s.
+- Unduhan selesai (di D:\rahul\, dipindah ke data/raw/): `exp2.zip` (21.652.375.381 B, 480.001 sel, donor 3–4; nama file di dalam
+  folder Experiment_2/Donor_3 berawalan "Experiment_4_Donor_9" → donor diambil dari folder) dan `images_DiversitySet3Plate2.zip.003`
+  (10 GiB). `list`: .003 berisi A23–B09 (B09 terpotong); **dugaan sumur kontrol benar** (A23, A24, B01, B02 utuh). Baris B
+  direkam terbalik (B01 = seq 47) tetapi urutan zip alfabetis.
+- **Illinois ekstraksi sendiri** (4 sumur, 1.185 sel, ±34 menit): transfer latih fitur penulis 6 plate → uji fitur sendiri Plate 2:
+  TNF vs laten AUC 0,86–0,89, Alp vs laten 0,90–0,92; k-fold per sel 0,91–0,92 / 0,99–1,00; AUC univariat sendiri vs penulis r = 0,97.
+  `src/illinois_own_analysis.py`, `results/skenario-b7/illinois-own/`. Keterbatasan: 1 sumur per kelas positif.
+- Bahan B7 (`docs/bimbingan/B7_persiapan/BAHAN.md`) + gambar per sel vs berkelompok (`src/b7_figures.py`, `results/b7/`);
+  koreksi teks "per percobaan 0,27" → rentang tiga model 0,27–0,46.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
   "/" = di luar `bimbingan/`.
 

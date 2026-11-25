@@ -47,7 +47,9 @@ kegagalan ini → dipilih sebagai metrik utama/pendukung; F1 dan akurasi tidak.
 
 **Progres setelah keputusan mengerjakan kedua skenario (25 Nov):**
 - Illinois — **ekstraksi citra sendiri** pada 4 sumur kontrol Plate 2 (A23 laten, A24 Alp, B01 TNF, B02 laten) dari potongan arsip
-  `.zip.003` (10 GB, bukan seluruh plate 356 GB): [ISI NANTI: jumlah sel, AUC vs fitur penulis].
+  `.zip.003` (10 GB, bukan seluruh plate 356 GB): **1.185 sel**. Model dilatih dengan fitur penulis dari 6 plate lain lalu diuji pada fitur
+  ekstraksi sendiri Plate 2 (plate baru + ekstraksi baru): aktif vs laten AUC 0,86–0,89, ditekan vs laten 0,90–0,92; AUC per fitur
+  sendiri vs penulis berkorelasi 0,97. Keterbatasan: 1 sumur per kelas positif (`results/skenario-b7/illinois-own/README.md`).
 - Essig — **percobaan 2** (480.001 citra sel, donor 3–4): [ISI NANTI: label ahli tersedia?, AUC latih exp1 → uji exp2].
 
 ## 3. Pelurusan: per sel vs berkelompok (dari B6)
