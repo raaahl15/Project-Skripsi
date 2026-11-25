@@ -48,6 +48,11 @@
 - **Referensi kelompok 3–5** (segmentasi & fitur citra, ML/validasi/metrik, penelitian terkait): 34 kandidat, semua DOI terverifikasi
   Crossref (1 dicari dengan kueri judul: Shao 2024). Ditambahkan ke `refs-kandidat.bib` (total 63 entri) dan DAFTAR-REFERENSI.md,
   termasuk dugaan celah penelitian untuk II.1. scikit-learn (JMLR, tanpa DOI) belum diverifikasi.
+- **Draf Bab I (berbantuan AI)** ditulis ke tab Bab I Google Docs: latar belakang 6 paragraf (UNAIDS 2025, deplesi CD4, keragaman
+  kondisi sel: produktif/laten/mati, pencitraan optik & IFC, fitur + ML vs deep learning, sudut pandang Teknik Fisika, kebocoran
+  evaluasi, dugaan celah), perumusan masalah + 4 batasan, 4 tujuan, 2 manfaat; berlaku untuk kedua skenario. Sitasi [@kunci] hanya dari
+  refs-kandidat.bib; masih terbuka: data Indonesia, 1 [perlu pustaka] (penilaian visual), konfirmasi celah, kelas dataset (B7).
+  Istilah asing dimiringkan; render PDF dicek (±3,5 halaman).
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
   "/" = di luar `bimbingan/`.
 
