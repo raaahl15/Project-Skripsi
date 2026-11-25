@@ -58,6 +58,11 @@
   II.2.5 ML, II.2.6 Validasi, II.2.7 Metrik); subbab lama "Explainable AI (Grad-CAM)" dihapus, IFC digabung ke pembentukan citra.
   Tiap poin berisi [@kunci]; [Sk1]/[Sk2] menandai bagian khusus skenario. 2 [perlu pustaka]: optika brightfield, gradien RMS.
   Catatan template: pustaka sebaiknya ≤ 20 tahun → pustaka lama hanya untuk metode klasik.
+- **Kerangka Bab III (berbantuan AI)** di tab Bab III dari isi repo: III.1 Alat (spesifikasi laptop, Colab, versi pustaka Python dari .venv)
+  & Bahan (3 dataset + ukuran/kanal/kelas); III.2.1 Alur, III.2.2 Praproses & segmentasi (parameter dari PEMROSESAN-DATA & skrip),
+  III.2.3 Fitur (13 heiDATA, 19 Essig, 9 Illinois), III.2.4 Definisi kelas, III.2.5 Model (grid hiperparameter dari
+  `wo14_kfold_heidata.models()`), III.2.6 Validasi bersarang + skema per sel vs berkelompok + ambang recall90 + permutasi/bootstrap +
+  uji ketahanan; III.3 Rencana analisis. Terbuka: diagram alir, Essig exp2–4, bagian arsip Illinois, kelas final (B7), pustaka scikit-learn.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
   "/" = di luar `bimbingan/`.
 
