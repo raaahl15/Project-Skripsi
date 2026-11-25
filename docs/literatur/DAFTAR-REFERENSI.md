@@ -53,7 +53,59 @@ HIV baru Jan–Sep 2024. Untuk naskah, ambil dari laporan resmi di portal SIHA K
 | `shetab2023scifai` | Shetab Boushehri (2023) | Nature Communications | 10.1038/s41467-023-43429-2 | Paper Essig (scifAI) | [ ] |
 | `essig2022dataset` | Essig (2022) | Dryad (dataset) | 10.5061/dryad.ht76hdrk7 | Dataset Essig | [ ] |
 
-## Belum dicari
-- Kelompok 3 (fitur citra: sirkularitas, soliditas, GLCM, LoG) dan kelompok 4 (ML & evaluasi: LogReg/RF/SVM, k-fold berkelompok,
-  MCC — Chicco & Jurman 2020, PR AUC — Saito & Rehmsmeier 2015) → sesi berikutnya.
-- Kelompok 5 (penelitian terkait ML citra sel untuk HIV/viabilitas) → untuk II.1 Tinjauan Pustaka.
+## Kelompok 3 — Segmentasi & fitur citra (Bab II.2.3, III.2.3–III.2.4; materi WO-14)
+
+| Kunci | Penulis pertama (tahun) | Terbitan | DOI | Untuk | Dibaca |
+|---|---|---|---|---|---|
+| `otsu1979threshold` | Otsu (1979) | IEEE Trans. Systems, Man, and Cybernetics | 10.1109/TSMC.1979.4310076 | Ambang Otsu (segmentasi inti/sel; mask sendiri Essig) | [ ] |
+| `vincent1991watershed` | Vincent (1991) | IEEE Trans. Pattern Analysis and Machine Intelligence | 10.1109/34.87344 | *Watershed* untuk memisahkan sel bersentuhan (Illinois) | [ ] |
+| `meijering2012segmentation` | Meijering (2012) | IEEE Signal Processing Magazine | 10.1109/MSP.2012.2204190 | Tinjauan metode segmentasi sel | [ ] |
+| `pincus2007shape` | Pincus (2007) | Journal of Microscopy | 10.1111/j.1365-2818.2007.01799.x | Ukuran bentuk sel (sirkularitas, soliditas, dsb.) — cek definisinya di paper | [ ] |
+| `haralick1973textural` | Haralick (1973) | IEEE Trans. Systems, Man, and Cybernetics | 10.1109/TSMC.1973.4309314 | Fitur tekstur GLCM (Essig) | [ ] |
+| `lindeberg1998scale` | Lindeberg (1998) | International Journal of Computer Vision | 10.1023/A:1008045108935 | Deteksi *blob* LoG & pemilihan skala (titik kapsid) | [ ] |
+| `smal2010spot` | Smal (2010) | IEEE Trans. Medical Imaging | 10.1109/TMI.2009.2025127 | Perbandingan metode deteksi titik pada citra fluoresensi; pengaruh SNR | [ ] |
+| `boland2001patterns` | Boland (2001) | Bioinformatics | 10.1093/bioinformatics/17.12.1213 | Fitur citra fluoresensi untuk klasifikasi (contoh awal fitur + ML) | [ ] |
+| `jaqaman2008tracking` | Jaqaman (2008) | Nature Methods | 10.1038/nmeth.1237 | Pelacakan objek pada citra *time-lapse* (Illinois) | [ ] |
+| `vanderwalt2014skimage` | van der Walt (2014) | PeerJ | 10.7717/peerj.453 | Perangkat lunak scikit-image (Bab III: alat) | [ ] |
+
+## Kelompok 4 — Machine learning, validasi & metrik (Bab II.2.4, II.2.6, III.2.5–III.2.6; materi WO-15)
+
+| Kunci | Penulis pertama (tahun) | Terbitan | DOI | Untuk | Dibaca |
+|---|---|---|---|---|---|
+| `hastie2009elements` | Hastie (2009) | Springer (buku) | 10.1007/978-0-387-84858-7 | Teori: regresi logistik, SVM, RF, k-fold CV, bias–varians | [ ] |
+| `james2013islr` | James (2013) | Springer (buku) | 10.1007/978-1-4614-7138-7 | Pengantar ML, k-fold CV (lebih mudah dibaca) | [ ] |
+| `cox1958logistic` | Cox (1958) | J. Royal Statistical Society B | 10.1111/j.2517-6161.1958.tb00292.x | Asal regresi logistik | [ ] |
+| `breiman2001rf` | Breiman (2001) | Machine Learning | 10.1023/A:1010933404324 | Random Forest | [ ] |
+| `cortes1995svm` | Cortes (1995) | Machine Learning | 10.1007/BF00994018 | Support Vector Machine | [ ] |
+| `varma2006bias` | Varma (2006) | BMC Bioinformatics | 10.1186/1471-2105-7-91 | Bias bila hiperparameter dipilih di data uji → *nested CV* (protokol WO-14) | [ ] |
+| `roberts2017cv` | Roberts (2017) | Ecography | 10.1111/ecog.02881 | CV berkelompok untuk data berstruktur (fold per percobaan/donor/plate) | [ ] |
+| `kapoor2023leakage` | Kapoor (2023) | Patterns | 10.1016/j.patter.2023.100804 | Kebocoran data di sains berbasis ML (kasus *noise* Illinois, per sel vs per percobaan) | [ ] |
+| `leek2010batch` | Leek (2010) | Nature Reviews Genetics | 10.1038/nrg2825 | Efek *batch* (heiDATA) | [ ] |
+| `altmann2010permutation` | Altmann (2010) | Bioinformatics | 10.1093/bioinformatics/btq134 | Uji permutasi / kepentingan fitur dengan permutasi | [ ] |
+| `efron1993bootstrap` | Efron (1993) | Springer (buku) | 10.1007/978-1-4899-4541-9 | Bootstrap → selang kepercayaan AUC | [ ] |
+| `altman1994sensitivity` | Altman (1994) | BMJ | 10.1136/bmj.308.6943.1552 | Sensitivitas & spesifisitas pada uji diagnostik (argumen FP vs FN, WO-15) | [ ] |
+| `fawcett2006roc` | Fawcett (2006) | Pattern Recognition Letters | 10.1016/j.patrec.2005.10.010 | Kurva ROC & AUC | [ ] |
+| `saito2015prc` | Saito (2015) | PLOS ONE | 10.1371/journal.pone.0118432 | Kurva PR pada kelas timpang | [ ] |
+| `chicco2020mcc` | Chicco (2020) | BMC Genomics | 10.1186/s12864-019-6413-7 | MCC lebih informatif daripada F1/akurasi (temuan WO-15 Lamin B1) | [ ] |
+| `brodersen2010balanced` | Brodersen (2010) | ICPR 2010 (prosiding) | 10.1109/ICPR.2010.764 | *Balanced accuracy* | [ ] |
+
+Belum ada DOI (perlu dicek manual bila dipakai): scikit-learn (Pedregosa dkk., 2011, *JMLR* 12) — rujukan perangkat lunak Bab III.
+
+## Kelompok 5 — Penelitian terkait (Bab II.1 Tinjauan Pustaka)
+
+| Kunci | Penulis pertama (tahun) | Terbitan | DOI | Isi singkat (cek saat membaca) | Dibaca |
+|---|---|---|---|---|---|
+| `elfimov2025ifchiv` | Elfimov (2025) | Methods and Protocols | 10.3390/mps8010014 | Tinjauan IFC dalam riset HIV — paling dekat dengan topik | [ ] |
+| `rey2021temnet` | Rey (2021) | Computational and Structural Biotechnology Journal | 10.1016/j.csbj.2021.10.001 | Deep learning klasifikasi morfologi virion HIV-1 (TEM) | [ ] |
+| `shao2024hivtarget` | Shao (2024) | Scientific Reports | 10.1038/s41598-024-52613-3 | Kuantifikasi sel target HIV di jaringan: deep learning vs pixel-based | [ ] |
+| `eulenberg2017deep` | Eulenberg (2017) | Nature Communications | 10.1038/s41467-017-00623-3 | Deep learning pada citra IFC (brightfield/darkfield) | [ ] |
+| `hennig2017ifcml` | Hennig (2017) | Methods | 10.1016/j.ymeth.2016.08.018 | Alur open-source IFC → fitur (CellProfiler) → ML | [ ] |
+| `lippeveld2020wbc` | Lippeveld (2020) | Cytometry Part A | 10.1002/cyto.a.23920 | Sel darah putih tanpa pewarna (IFC) + ML; validasi per subjek | [ ] |
+| `doan2020leukemia` | Doan (2020) | Cytometry Part A | 10.1002/cyto.a.23987 | Pemantauan leukemia *label-free* (IFC + computer vision) | [ ] |
+| `chandrasekaran2021profiling` | Chandrasekaran (2021) | Nature Reviews Drug Discovery | 10.1038/s41573-020-00117-w | Tinjauan *image-based profiling* + ML | [ ] |
+
+Celah yang terlihat dari penelusuran (untuk argumen Bab I/II.1 — **dugaan**, pastikan setelah membaca): penelitian citra HIV
+umumnya memakai deep learning (Rey 2021; Shao 2024) atau menghitung sel target, bukan klasifikasi kondisi sel T CD4 dengan fitur
+fisis yang dapat ditafsirkan; IFC + ML *label-free* sudah mapan untuk sel darah (Blasi 2016; Lippeveld 2020) tetapi belum untuk HIV.
+Juga ditemukan preprint (belum peer-review, tidak disarankan dikutip): VAIruScope (bioRxiv 2026), deteksi sel terinfeksi virus
+termasuk HIV-1 dari brightfield dengan deep learning.

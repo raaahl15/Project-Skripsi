@@ -45,6 +45,9 @@
   metadata BibTeX diambil dari API, tahun = tahun cetak), UNAIDS fact sheet (data 2025) dicek di situs UNAIDS.
   → `thesis/refs-kandidat.bib` + `docs/literatur/DAFTAR-REFERENSI.md` (kegunaan per entri, kolom "Dibaca"). Belum dibaca pengguna,
   sehingga belum masuk `refs.bib`. Data HIV Indonesia: hanya ada di berita → perlu laporan resmi SIHA Kemenkes.
+- **Referensi kelompok 3–5** (segmentasi & fitur citra, ML/validasi/metrik, penelitian terkait): 34 kandidat, semua DOI terverifikasi
+  Crossref (1 dicari dengan kueri judul: Shao 2024). Ditambahkan ke `refs-kandidat.bib` (total 63 entri) dan DAFTAR-REFERENSI.md,
+  termasuk dugaan celah penelitian untuk II.1. scikit-learn (JMLR, tanpa DOI) belum diverifikasi.
 
 ---
 
