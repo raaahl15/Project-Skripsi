@@ -60,6 +60,8 @@ def main():
     for i, n in enumerate(names):
         if a.limit and i >= a.limit:
             break
+        if i % 20000 == 0:
+            print(f"  scanned {i}/{len(names)}, rows {len(buf) + len(done)}, labelled {n_lab}, {time.time() - t0:.0f}s", flush=True)
         if n in done:
             continue
         with z.open(n) as fh, h5py.File(io.BytesIO(fh.read()), "r") as h:
@@ -77,8 +79,6 @@ def main():
             n_lab += 1; labels[lab] += 1
         if len(buf) >= a.flush:
             pd.DataFrame(buf).to_csv(partial, mode="a", header=not partial.exists(), index=False); buf = []
-        if i % 5000 == 0:
-            print(f"  scanned {i}/{len(names)}, labelled {n_lab}, {time.time() - t0:.0f}s", flush=True)
     if buf:
         pd.DataFrame(buf).to_csv(partial, mode="a", header=not partial.exists(), index=False)
 

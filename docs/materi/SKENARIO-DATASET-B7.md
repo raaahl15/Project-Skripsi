@@ -21,7 +21,7 @@ ML klasik → validasi berkelompok → metrik WO-15), dan kerangka fisika kontra
 | Bagian A: fitur | Bentuk & intensitas inti (Lamin B1), jumlah titik kapsid | Dinamika intensitas GFP per sel: rerata, kemiringan, CV, rasio akhir/awal, autokorelasi |
 | Bagian A: ekstraksi citra | **Sendiri, dari citra mentah** (semua sel) | Fitur dari ekstraksi peneliti (NIS Elements); ekstraksi sendiri baru teruji di 1 sumur demo (r = 0,985 vs penulis) |
 | Bagian A: hasil lintas kelompok | Kapsid: AUC 0,91, spesifisitas 1,00, recall 0,80, MCC 0,81 | Aktif vs laten: AUC 0,87, recall 0,83, spesifisitas 0,76, MCC 0,56; ditekan vs laten: AUC 0,95, MCC 0,75 |
-| Bagian A: kebocoran *batch* | Ada pada fitur Lamin B1 (k-fold 0,79 → per percobaan 0,27) | Tidak ada (selisih ≤ 0,01) |
+| Bagian A: kebocoran *batch* | Ada pada fitur Lamin B1 (k-fold 0,79 → per percobaan 0,27–0,46) | Tidak ada (selisih ≤ 0,01) |
 | Bagian A: risiko utama | Data sangat kecil → hasil rapuh, mudah dipertanyakan | Bukan sel primer & bukan virus; perlu ekstraksi citra sumur kontrol (arsip besar → Colab) |
 | Bagian B | Essig: hidup vs mati, AUC 0,91–0,94 pada donor baru | sama |
 | Kecocokan judul Simaster | Tinggi (sel T CD4 primer + HIV-1 utuh) | Sedang (perlu penjelasan Jurkat & reporter di Bab 1/3) |
@@ -108,7 +108,7 @@ Semua model: `results/skenario-b7/illinois-metrics/summary_metrics.csv`; CM: `co
 
 **Temuan:**
 1. Plate baru vs k-fold per sel berselisih ≤ 0,01 di semua metrik → **tidak ada kebocoran *batch***. Bandingkan heiDATA Lamin B1
-   (k-fold 0,79 → per percobaan 0,27).
+   (k-fold 0,79 → per percobaan 0,27–0,46).
 2. Ambang recall ≥ 0,90 yang dipilih di data latih **tercapai di data uji** (0,89–0,90), dengan spesifisitas turun ±0,08–0,10:
    pertukaran FN ↔ FP yang stabil karena data besar. Pada heiDATA kapsid ambang ini runtuh (spesifisitas 0) karena banyak skor seri.
 3. Aktif vs laten lebih sulit (MCC ±0,56) daripada ditekan vs laten (±0,75): tidak semua sel merespons TNF (heterogenitas ekspresi),

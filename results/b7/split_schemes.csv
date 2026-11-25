@@ -1,0 +1,6 @@
+task,auc_kfold5_per_sel,auc_berkelompok
+A_lamin_hiv_vs_mock,0.788,0.456
+A_capsid_hiv_vs_mock,0.876,0.906
+B_essig_dead_vs_live,0.961,0.935
+I_tnf_vs_untreated,0.882,0.874
+I_alp_vs_untreated,0.951,0.95
