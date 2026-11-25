@@ -53,6 +53,11 @@
   evaluasi, dugaan celah), perumusan masalah + 4 batasan, 4 tujuan, 2 manfaat; berlaku untuk kedua skenario. Sitasi [@kunci] hanya dari
   refs-kandidat.bib; masih terbuka: data Indonesia, 1 [perlu pustaka] (penilaian visual), konfirmasi celah, kelas dataset (B7).
   Istilah asing dimiringkan; render PDF dicek (±3,5 halaman).
+- **Kerangka Bab II (berbantuan AI)** di tab Bab II: II.1 Tinjauan Pustaka (6 poin + rencana tabel penelitian terdahulu) dan II.2 Dasar
+  Teori dengan 7 subbab baru (II.2.1 Sel T CD4 & HIV, II.2.2 Pembentukan citra optik, II.2.3 Segmentasi, II.2.4 Fitur fisis,
+  II.2.5 ML, II.2.6 Validasi, II.2.7 Metrik); subbab lama "Explainable AI (Grad-CAM)" dihapus, IFC digabung ke pembentukan citra.
+  Tiap poin berisi [@kunci]; [Sk1]/[Sk2] menandai bagian khusus skenario. 2 [perlu pustaka]: optika brightfield, gradien RMS.
+  Catatan template: pustaka sebaiknya ≤ 20 tahun → pustaka lama hanya untuk metode klasik.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
   "/" = di luar `bimbingan/`.
 
