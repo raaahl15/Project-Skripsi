@@ -32,6 +32,9 @@
   dari NIS Elements, **bukan citra**.
 - Sinkronisasi: branch `claude/trusting-goodall-6g37g0` (sesi web 10 Nov, isian SIMASTER B1) digabung ke `main`; entri riwayat
   "tidak ada sesi 10–24 Nov" di atas keliru — ada sesi web 10 Nov (entri berikut).
+- Drive: Google Doc baru "Skenario Dataset untuk Bimbingan 7" (ID di `DRIVE-DOCS.md`), "Hasil Bimbingan 1" diperbarui (ID tetap),
+  `Draf-Bab1_Rahul.pdf` diunggah ke `bimbingan/B1 - 2026-09-02/`; keduanya ditambahkan ke `SYNC` di `scripts/sync_gdocs.py`.
+  Backup bundle sebelumnya terakhir 3 Nov → dibuat ulang 25 Nov.
 
 ---
 
