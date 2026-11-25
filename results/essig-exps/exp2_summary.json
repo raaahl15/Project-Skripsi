@@ -1,0 +1,34 @@
+{
+ "exp": "exp2",
+ "zip": "data\\raw\\dryad-essig-2022\\exp2.zip",
+ "n_cell_files": 480001,
+ "rows": 3996,
+ "donors": [
+  "Donor_3",
+  "Donor_4"
+ ],
+ "conditions": [
+  "+SEA",
+  "-SEA",
+  "Isotype",
+  "Teplizumab"
+ ],
+ "expert_labels": {
+  "(none)": 3198,
+  "Synapses_with_signaling": 147,
+  "Synapses_without_signaling": 81,
+  "No_cell_cell_interaction": 80,
+  "Dead_Cell": 79,
+  "T_cell_with_B_cell_fragments": 72,
+  "T_cell": 70,
+  "B_T_cell_in_one_layer": 68,
+  "B_cell": 68,
+  "T_cell_with_signaling": 67,
+  "Multiplets": 66
+ },
+ "per_donor": {
+  "Donor_3": 2396,
+  "Donor_4": 1600
+ },
+ "minutes": 59.3
+}

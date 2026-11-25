@@ -43,14 +43,16 @@ kegagalan ini → dipilih sebagai metrik utama/pendukung; F1 dan akurasi tidak.
 | Data | 100 sel, 2 percobaan | ±6.200 sel, 7 plate (fitur penulis) + citra sendiri Plate 2 |
 | Hasil lintas kelompok | Kapsid: AUC 0,91, spesifisitas 1,00, recall 0,80, MCC 0,81 | Aktif vs laten: AUC 0,87, MCC 0,56; ditekan vs laten: AUC 0,95, MCC 0,75 |
 | Kebocoran *batch* | Ada (fitur Lamin B1: per sel 0,79 → per percobaan 0,27–0,46) | Tidak ada (selisih ≤ 0,01) |
-| Bagian Essig (hidup vs mati) | AUC 0,94 pada donor baru (exp1); exp2: [ISI NANTI] | sama |
+| Bagian Essig (hidup vs mati) | Latih exp1 → uji exp2: AUC 0,98–1,00; 4 donor (LODO): 0,95–0,96 | sama |
 
 **Progres setelah keputusan mengerjakan kedua skenario (25 Nov):**
 - Illinois — **ekstraksi citra sendiri** pada 4 sumur kontrol Plate 2 (A23 laten, A24 Alp, B01 TNF, B02 laten) dari potongan arsip
   `.zip.003` (10 GB, bukan seluruh plate 356 GB): **1.185 sel**. Model dilatih dengan fitur penulis dari 6 plate lain lalu diuji pada fitur
   ekstraksi sendiri Plate 2 (plate baru + ekstraksi baru): aktif vs laten AUC 0,86–0,89, ditekan vs laten 0,90–0,92; AUC per fitur
   sendiri vs penulis berkorelasi 0,97. Keterbatasan: 1 sumur per kelas positif (`results/skenario-b7/illinois-own/README.md`).
-- Essig — **percobaan 2** (480.001 citra sel, donor 3–4): [ISI NANTI: label ahli tersedia?, AUC latih exp1 → uji exp2].
+- Essig — **percobaan 2** (480.001 citra sel, donor 3–4; label ahli hidup 137 / mati 79): model *brightfield* dilatih di exp1, diuji di
+  exp2 (percobaan + donor baru): **AUC 0,98–1,00**, recall 0,94–0,98, spesifisitas 0,97–0,99, MCC 0,91–0,96; leave-one-donor-out
+  (4 donor) AUC 0,95–0,96 (`results/essig-exps/README.md`).
 
 ## 3. Pelurusan: per sel vs berkelompok (dari B6)
 Pembimbing di B6: "klasifikasi per sel, evaluasi baku per sel". Usulan pelurusan: **unit yang diklasifikasikan tetap sel**; yang dipisah

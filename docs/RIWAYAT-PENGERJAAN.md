@@ -82,6 +82,9 @@
 - **Illinois ekstraksi sendiri** (4 sumur, 1.185 sel, ±34 menit): transfer latih fitur penulis 6 plate → uji fitur sendiri Plate 2:
   TNF vs laten AUC 0,86–0,89, Alp vs laten 0,90–0,92; k-fold per sel 0,91–0,92 / 0,99–1,00; AUC univariat sendiri vs penulis r = 0,97.
   `src/illinois_own_analysis.py`, `results/skenario-b7/illinois-own/`. Keterbatasan: 1 sumur per kelas positif.
+- **Essig exp2** (59 menit; 3.996 baris; label ahli hidup 137 / mati 79; pewarna vs ahli kappa 1,00): latih exp1 → uji exp2 AUC
+  0,98–1,00, MCC 0,91–0,96; LOEO 0,95–0,96; LODO (4 donor) 0,95–0,96 → `results/essig-exps/`. Bug diperbaiki: metrik gabungan
+  hanya pada sel uji (`wo15_metrics.evaluate`). `exp2.zip` (20 GB) masih ada, menunggu persetujuan hapus.
 - Bahan B7 (`docs/bimbingan/B7_persiapan/BAHAN.md`) + gambar per sel vs berkelompok (`src/b7_figures.py`, `results/b7/`);
   koreksi teks "per percobaan 0,27" → rentang tiga model 0,27–0,46.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan

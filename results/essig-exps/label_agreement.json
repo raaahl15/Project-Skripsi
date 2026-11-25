@@ -1,0 +1,22 @@
+{
+ "exp1": {
+  "n_expert_live": 354,
+  "n_expert_dead": 348,
+  "stain_threshold_log1p": 3.006,
+  "stain_auc_vs_expert": 0.994,
+  "stain_kappa_vs_expert": 0.92,
+  "label_source": "expert",
+  "n_used": 702,
+  "n_dead_used": 348
+ },
+ "exp2": {
+  "n_expert_live": 137,
+  "n_expert_dead": 79,
+  "stain_threshold_log1p": 2.84,
+  "stain_auc_vs_expert": 1.0,
+  "stain_kappa_vs_expert": 1.0,
+  "label_source": "expert",
+  "n_used": 216,
+  "n_dead_used": 79
+ }
+}
