@@ -6,6 +6,7 @@ Sumber utama = file repo. Google Docs diperbarui **di dokumen yang sama** (ID di
 |---|---|---|---|
 | (bimbingan/) | Dokumentasi Pemrosesan Data dan Fitur | 18Xrslc9hT7uQ3t3o11CWW-eDyty79t8vxuikyFelQuo | docs/PEMROSESAN-DATA.md |
 | (bimbingan/) | Skenario Dataset untuk Bimbingan 7 | 1xE4UPUR7oJqY5tPc3uVql-3meBwaLZ45HPYMVoZe4lE | docs/materi/SKENARIO-DATASET-B7.md |
+| (papers/) | Daftar Referensi Kandidat | 1fP4CMgxb40UrSHBbz04Xx9fM9cqt634F7mGsW4HhWgk | docs/literatur/DAFTAR-REFERENSI.md (+ salinan `refs-kandidat.bib`) |
 | 00 Template | Template Bahan Bimbingan | 1l-DeETcolVgHYj-Ruk-RkTuFK2nKG3G4ZPKYPC0LfUU | docs/bimbingan/TEMPLATE-BAHAN.md |
 | 00 Template | Template Hasil Bimbingan | 1M9pjUolcbrzZhXXCPJq9G-A-rFfR6mvkGi24NtbFUs8 | docs/bimbingan/TEMPLATE-HASIL.md |
 | 00 Template | Template Work Order | 1Q1N4HI7LU4--JmdgKOsKufvOA98RN9AktYBu6ctgTUw | docs/work-order/TEMPLATE-WO.md |

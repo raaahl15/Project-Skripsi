@@ -22,6 +22,7 @@ REMOTE = "gdrive:Project-Skripsi/bimbingan"
 SYNC = [  # (repo markdown, Drive folder, Google Doc title)
     ("docs/PEMROSESAN-DATA.md", "", "Dokumentasi Pemrosesan Data dan Fitur"),
     ("docs/materi/SKENARIO-DATASET-B7.md", "", "Skenario Dataset untuk Bimbingan 7"),
+    ("docs/literatur/DAFTAR-REFERENSI.md", "/papers", "Daftar Referensi Kandidat"),
     ("docs/bimbingan/B1_2026-09-02/HASIL.md", "B1 - 2026-09-02", "Hasil Bimbingan 1"),
     ("docs/WORK-ORDER.md", "Work Order", "00 Daftar Work Order"),
     ("docs/work-order/WO-09.md", "Work Order", "WO-09 Fiksasi dataset"),
@@ -53,7 +54,9 @@ def main():
         for md, folder, title in items:
             h = Path(tmp) / f"{abs(hash(md))}.html"
             h.write_text(to_html(Path(md)), encoding="utf-8")
-            dest = f"{REMOTE}/{folder + '/' if folder else ''}{title}.html"
+            # folder starting with "/" = path from Project-Skripsi/ (outside bimbingan/), e.g. "/papers"
+            base = "gdrive:Project-Skripsi" + folder if folder.startswith("/") else f"{REMOTE}/{folder}" if folder else REMOTE
+            dest = f"{base}/{title}.html"
             print(f"{md} -> {dest}", flush=True)
             if a.dry_run:
                 continue

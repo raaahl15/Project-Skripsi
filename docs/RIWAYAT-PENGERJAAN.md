@@ -48,6 +48,8 @@
 - **Referensi kelompok 3–5** (segmentasi & fitur citra, ML/validasi/metrik, penelitian terkait): 34 kandidat, semua DOI terverifikasi
   Crossref (1 dicari dengan kueri judul: Shao 2024). Ditambahkan ke `refs-kandidat.bib` (total 63 entri) dan DAFTAR-REFERENSI.md,
   termasuk dugaan celah penelitian untuk II.1. scikit-learn (JMLR, tanpa DOI) belum diverifikasi.
+- Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
+  "/" = di luar `bimbingan/`.
 
 ---
 
