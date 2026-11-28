@@ -22,7 +22,12 @@ Terakhir diperbarui: 2026-11-28
 - **Draf Bab II** (28 Nov) di Google Docs tab Bab II: II.1 tinjauan pustaka 4 subbab + Tabel II.1 (dari WO-17), II.2 dasar
   teori 7 subbab dengan Persamaan II.1–II.15 (±3.900 kata); ditandai draf berbantuan AI, wajib ditinjau mahasiswa
 
+- **Pipeline ML final untuk Colab siap** (28 Nov): `src/final/`, `configs/final/`, `notebooks/colab/final_ml_colab.ipynb`;
+  rencana `docs/RENCANA-ML-COLAB.md`. Target ML final selesai Senin 30 Nov.
+
 ## Sedang dikerjakan
+- **Run ML final di Colab** (pengguna menjalankan notebook; hasil otomatis ke GitHub `results/final/` + Drive). Essig exp3/exp4 perlu
+  diunduh ke Drive `data/raw/`.
 - **Mahasiswa meninjau draf Bab II** (catatan cek di paragraf atas tab: 3 pustaka belum dibaca, paragraf *brightfield* belum
   berpustaka, angka 1.806 senyawa & kutipan "arbitrary threshold of 35" dicocokkan ke paper)
 - **Mahasiswa membaca & memverifikasi 25 referensi Bab I** (ceklis di `docs/literatur/DAFTAR-REFERENSI.md`); yang sudah dibaca

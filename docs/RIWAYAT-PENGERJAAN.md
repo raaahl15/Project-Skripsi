@@ -15,6 +15,27 @@
 
 ---
 
+## 2026-11-28 — Pipeline ML final untuk Google Colab
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Keputusan pengguna:** seluruh pengolahan data & ML dijalankan di **Colab**, data di **Drive**, hasil terintegrasi ke **GitHub** dan Drive;
+  kelas ditentukan sendiri (7 kelas dalam 3 model, WO-18); Illinois = lintasan penulis untuk ke-7 plate + validasi ekstraksi sendiri;
+  `exp2.zip` boleh diunggah ke Drive; token GitHub *read/write* dibuat pengguna.
+- **Dikerjakan:**
+  - `docs/RENCANA-ML-COLAB.md` (rencana, jadwal Sabtu–Senin, risiko).
+  - Kode baru: `src/final/protocol.py` (nested CV *leave-one-group-out*, lapisan dalam GridSearch berkelompok, metrik WO-15, CI
+    *bootstrap*, uji permutasi label di dalam kelompok, kepentingan fitur permutasi), `src/final/data.py` (pemuat Essig/heiDATA/Illinois),
+    `src/final/run.py` (eksekusi, gambar CM/ROC/kepentingan fitur, README otomatis, model ke Drive), `src/final/report.py` (tabel gabungan
+    `results/final/README.md`), `src/final/features.py` (Illinois tanpa batas sel), `src/final/dryad_download.py` (belum diuji);
+    `configs/final/model_{A,B,C}.yaml`; `requirements-colab.txt` (scikit-learn 1.9.1, scikit-image 0.26.0);
+    notebook `notebooks/colab/final_ml_colab.ipynb` (22 sel; *push* hasil ke GitHub dengan `GITHUB_TOKEN_RW`).
+  - Uji kode dengan **data sintetis** (bukan dataset asli) mode `--quick`: ketiga model + laporan gabungan berjalan tanpa galat.
+  - Illinois: dihitung ada **32.253 sel** sumur kontrol di 7 plate (pilot memakai 8.259 karena batas 20 sel/sumur) → final memakai semua.
+  - `exp2.zip` (20,2 GB) diunggah ke Drive `data/raw/` dengan rclone (proses terpisah, berjalan).
+  - MASTER-SKRIPSI-SETUP.md §10: perubahan sistem dicatat.
+- **Berikutnya:** pengguna membuat token & menjalankan notebook (Run 1: B, C, A dari exp1–2); unduh Essig exp3/exp4 ke Drive.
+
+---
+
 ## 2026-11-28 — Draf Bab II di Google Docs; status SIMASTER & jadwal B8
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Dikerjakan:**

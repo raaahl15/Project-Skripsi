@@ -1,0 +1,26 @@
+# Model C (tahap 3): laten / aktif / ditekan dari lintasan intensitas GFP sirkuit gen HIV (Lu dkk., 2021; Illinois Data Bank)
+model: C
+title: "Model C: laten vs aktif vs ditekan (Illinois, 7 plate)"
+seed: 42
+dataset: illinois
+data:
+  cells: data/processed/illinois/cells_controls_all.csv   # src/final/features.py illinois (ALL cells, no cap)
+  condition_to_class: {untreated: 0, TNF: 1, Alp: 2}
+classes: [laten, aktif, ditekan]
+feature_sets:
+  lintasan_gfp: [I_mean, I_std, I_cv, I_slope, I_start, I_end, I_fold, I_resid_std, I_ac1]
+group_schemes:
+  per_plate: plate
+main_feature_set: lintasan_gfp
+main_scheme: per_plate
+compare_kfold: 5
+models: [logreg, rf, svm]
+svm_max_train: 6000          # RBF-SVM trained on a class-proportional subsample of each training part (tested on all cells)
+bootstrap: 1000
+permutation: {n: 100, model: logreg}   # fast model; RF/SVM x 100 permutations x 7 plates is too slow on Colab CPU
+importance: {n_repeats: 10, max_test: 3000}
+notes:
+  - "Semua sel sumur kontrol dari ke-7 plate (pilot B8 dibatasi 20 sel per sumur)."
+  - "Lintasan intensitas berasal dari analisis citra penulis (NIS Elements); ekstraksi sendiri pada sumur kontrol yang tersedia cocok dengan lintasan penulis (r = 0,985, results/illinois-own)."
+  - "Fitur N_* (lintasan noise penulis) tidak dipakai karena membawa rata-rata sumur (kebocoran)."
+  - "SVM dilatih pada subsampel 6.000 sel per lipatan; uji permutasi memakai regresi logistik."

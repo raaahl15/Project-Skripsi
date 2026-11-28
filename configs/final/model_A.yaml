@@ -1,0 +1,25 @@
+# Model A (tahap 1 kerangka bertingkat): sel hidup vs mati dari citra brightfield IFC (Essig dkk., 2022)
+model: A
+title: "Model A: hidup vs mati (Essig, brightfield)"
+seed: 42
+dataset: essig
+data:
+  features_dir: data/processed/essig      # exp1..exp4 _features.csv (src/essig_exp_features.py)
+  min_expert: 50                          # per class; below this the Live-Dead stain label is used for that experiment
+classes: [hidup, mati]                    # index = label; positive class = mati
+feature_sets:
+  brightfield: {prefix: "BF_"}            # 19 BF_* features; the Live-Dead channel only defines labels, never a feature
+group_schemes:
+  per_percobaan: exp
+  per_donor: donor_id
+main_feature_set: brightfield
+main_scheme: per_percobaan
+compare_kfold: 5
+models: [logreg, rf, svm]
+svm_max_train: 6000
+bootstrap: 1000
+permutation: {n: 100, model: best}
+importance: {n_repeats: 10, max_test: 2000}
+notes:
+  - "Label per percobaan: label ahli (h5 'label') bila tiap kelas >= 50 sel, selain itu label pewarna Live-Dead (ambang Otsu)."
+  - "Sel berlabel ahli semuanya dipakai; sel tanpa label diambil acak 400 per donor x kondisi (seed 42)."

@@ -1,0 +1,8 @@
+# Final ML runs on Google Colab (docs/RENCANA-ML-COLAB.md). Libraries that change results are pinned;
+# the rest use Colab's preinstalled versions and are recorded per run in pip_freeze.txt.
+scikit-learn==1.9.1
+scikit-image==0.26.0
+tifffile
+h5py
+pyyaml
+joblib

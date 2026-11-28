@@ -1,0 +1,30 @@
+# Model B (tahap 2): sel tidak terinfeksi (Mock) vs terinfeksi (terpapar HIV-1) dari citra fluoresensi heiDATA (Ananth dkk., 2024)
+model: B
+title: "Model B: tidak terinfeksi vs terinfeksi (heiDATA)"
+seed: 42
+dataset: heidata
+data:
+  cells: data/processed/heidata/cells.csv   # src/pilot_heidata_features.py (shared CA scale per figure)
+  figures: ["1G", "S3B"]                    # the only figures with both Mock and a capsid (CA) channel
+  positive: ["+Vpx", "-Vpx"]
+  negative: ["Mock"]
+classes: [tidak_terinfeksi, terinfeksi]
+feature_sets:
+  kapsid: [ca_puncta_nucleus, ca_puncta_perinuclear]
+  kapsid_lamin: [ca_puncta_nucleus, ca_puncta_perinuclear, area_um2, perimeter_um, eq_diameter_um, major_axis_um,
+                 minor_axis_um, eccentricity, solidity, circularity, lamin_mean, lamin_std, lamin_rim_core_ratio]
+  lamin: [area_um2, perimeter_um, eq_diameter_um, major_axis_um, minor_axis_um, eccentricity, solidity, circularity,
+          lamin_mean, lamin_std, lamin_rim_core_ratio]
+group_schemes:
+  per_percobaan: figure                     # train on one figure, test on the other (2 folds)
+main_feature_set: kapsid
+main_scheme: per_percobaan
+compare_kfold: 5
+models: [logreg, rf, svm]
+svm_max_train: null
+bootstrap: 1000
+permutation: {n: 200, model: best}
+importance: {n_repeats: 20, max_test: null}
+notes:
+  - "Label = kondisi paparan (terpapar HIV-1 vs Mock), bukan konfirmasi infeksi per sel; S3B +EFV tetap kelas terpapar (WO-18 §5)."
+  - "Hanya 2 percobaan berisi Mock dan kanal kapsid, sehingga lapisan dalam memakai StratifiedKFold(3) di dalam satu percobaan latih."

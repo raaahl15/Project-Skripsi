@@ -1,6 +1,10 @@
 # Rencana Penyelesaian Machine Learning di Google Colab
 Disusun 28 Nov 2026 (Claude Code / Rakai) atas permintaan pengguna. Target: ML final selesai **Senin 30 Nov 2026** (B8).
-Status: **konsep, menunggu persetujuan** (keputusan di §10).
+Status: **disetujui 28 Nov** (keputusan §10: ya semua). Kode siap: `src/final/`, `configs/final/`, `requirements-colab.txt`,
+`notebooks/colab/final_ml_colab.ipynb` (diuji dengan data sintetis di laptop hanya untuk memastikan kode berjalan; tidak ada data asli
+yang diolah di laptop).
+
+**Perubahan dari konsep:** Model C memakai **semua 32.253 sel** sumur kontrol ke-7 plate (pilot B8 dibatasi 20 sel per sumur = 8.259 sel).
 
 ## 1. Prinsip
 Semua pengolahan data dan pelatihan ML **dijalankan di Google Colab**, bukan di laptop. Laptop hanya dipakai untuk menulis kode dan
