@@ -1,4 +1,4 @@
-# Riwayat Pengerjaan
+﻿# Riwayat Pengerjaan
 
 > Log setiap sesi pengerjaan (oleh pengguna maupun agent). **Wajib ditambah di akhir setiap sesi.**
 > Entri terbaru di paling atas. Perubahan *sistem* juga dicatat di `MASTER-SKRIPSI-SETUP.md` bagian 10.
@@ -12,6 +12,133 @@
 > **File/Drive berubah:** ...
 > **Berikutnya:** ...
 > ```
+
+---
+
+## 2026-11-28 — Pemeriksaan hasil Raven, STATUS, sinkron Drive & commit/push
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Dikerjakan:**
+  - Memeriksa klaim sesi Raven: 25 sitasi unik Bab I cocok & semua ada di `refs-kandidat.bib`; 7 PDF valid (header `%PDF`) dan ada di
+    Drive `papers/pdf-bab1/`; Google Doc "Daftar Referensi Kandidat" terbarui. Catatan: `refs-kandidat.bib` di Drive tidak diunggah
+    ulang hari ini, tetapi isinya sudah sama dengan lokal (versi 26 Nov). Peringatan lama "data Indonesia dari SIHA, bukan berita"
+    dihapus Raven → angka Kemenkes perlu dicocokkan pengguna ke sumbernya.
+  - `docs/STATUS.md` diperbarui (terakhir 10 Nov → kondisi pasca-B7, jadwal ujian resmi, syarat 12 SIMASTER).
+  - `scripts/sync_gdocs.py`: +B7 BAHAN/HASIL, WO-16/17/18. Sinkron dashboard Work Order (ID tetap) + 5 Google Doc baru; ID dicatat di
+    `docs/DRIVE-DOCS.md`.
+  - Commit seluruh pekerjaan 26–28 Nov yang belum di-*commit*, push ke GitHub, backup bundle ke Drive `backup/`.
+- **File/Drive berubah:** `docs/STATUS.md`, `docs/DRIVE-DOCS.md`, `scripts/sync_gdocs.py`, Drive `bimbingan/` (Work Order, B7 - 2026-11-26).
+- **Berikutnya:** jadwalkan B8; verifikasi referensi Bab I; draf Bab II.
+
+---
+
+## 2026-11-28 — Pemetaan sitasi Bab I, unduh PDF OA, & sinkron Drive `papers/`
+**Oleh:** Raven (Antigravity, laptop) bersama pengguna
+- **Dikerjakan:**
+  - Cek status pengerjaan lokal pasca-27 Nov (git masih menyimpan perubahan 26–27 Nov yang belum di-*commit*; `docs/STATUS.md` terakhir 10 Nov).
+  - Memetakan seluruh **25 sitasi unik** di `thesis/bab1-pendahuluan.tex` per paragraf & baris (20 artikel jurnal, 3 dataset, 2 laman web resmi).
+  - Memperbarui `docs/literatur/DAFTAR-REFERENSI.md`: menambahkan `kemenkes2025hiv` (rilis Kemenkes 20 Jun 2025), menandai **`[Bab I]`** pada tabel kelompok, dan menambahkan tabel **Ceklis Cepat Referensi Bab I (25 sitasi)** di bagian atas agar mudah dicek di iPad.
+  - Mengunduh 6 PDF *open access* Bab I ke `docs/literatur/pdf/` (melengkapi `ananth2024spatial.pdf` → total **7 PDF**: `ananth2024spatial`, `doitsh2014pyroptosis`, `cummins2010apoptosis`, `caicedo2017profiling`, `blasi2016labelfree`, `shetab2023scifai`, `shao2024hivtarget`).
+  - Mengunggah ke-7 PDF ke Drive `Project-Skripsi/papers/pdf-bab1/`, memperbarui salinan `refs-kandidat.bib` di Drive `papers/`, dan menyinkronkan Google Doc `Daftar Referensi Kandidat` (ID tetap `1fP4CMgxb40UrSHBbz04Xx9fM9cqt634F7mGsW4HhWgk`) via `scripts/sync_gdocs.py`.
+- **File/Drive berubah:** `docs/literatur/DAFTAR-REFERENSI.md`, `docs/RIWAYAT-PENGERJAAN.md`, `docs/literatur/pdf/*.pdf` (tidak di-*commit*), Drive `Project-Skripsi/papers/` (`Daftar Referensi Kandidat`, `refs-kandidat.bib`, `pdf-bab1/`).
+- **Berikutnya:** mahasiswa memeriksa Bab I dan membaca/memverifikasi 25 referensi Bab I di iPad → pindahkan entri yang sudah dibaca dari `refs-kandidat.bib` ke `refs.bib`; perbarui `docs/STATUS.md` dan *commit* perubahan lokal; lanjut draf Bab II–IV dan persiapan B8.
+
+---
+
+## 2026-11-27 — Usulan pipeline bertingkat (modalitas → hidup/mati → terinfeksi → aktif/laten/ditekan)
+**Oleh:** Claude Code (laptop) bersama pengguna
+- Pengguna mengusulkan ML bertingkat: deteksi modalitas (IFC / mikroskopi fluoresensi / lain) → hidup/mati → terinfeksi/tidak →
+  aktif/laten/ditekan.
+- Penilaian: tidak ada dataset yang memuat semua label (hidup/mati hanya Essig-IFC, terinfeksi/tidak hanya heiDATA, aktif/laten/ditekan
+  hanya Illinois); modalitas ≈ asal dataset (tertebak 0,99–1,00, `results/b8/`) → rantai utuh tak bisa dievaluasi.
+- **Keputusan (disetujui pengguna):** hasil inti tetap 3 sub-tugas; pipeline bertingkat dipakai sebagai kerangka sistem di Bab III
+  (diagram), tahap modalitas sebagai "pengarah" yang dilaporkan jujur; pengujian end-to-end → Batasan Masalah & Saran; dilaporkan di B8.
+- Diagram dibuat: `scripts/fig_pipeline_bertingkat.py` → `thesis/figures/pipeline-bertingkat.png` (Gambar III.2); salinan PNG diunggah
+  ke Drive `naskah/` (ID 1omTHOuPG_nYRdGB9eUquSVblcgAyBC5v) untuk disisipkan manual oleh pengguna (API Docs butuh URL publik).
+- Google Docs tab Bab III, subbab III.2.1: +3 poin (kerangka bertingkat; Tahap 0 hanya pengarah, asal dataset tertebak 0,99–1,00;
+  model dilatih/diuji per dataset, rantai utuh belum dapat diuji → Bab V), ditandai "[usulan mahasiswa, dilaporkan di B8]".
+- **WO-18:** `docs/work-order/WO-18.md` dibuat: 7 kelas dalam 3 model (5 keluaran akhir), definisi biologis & operasional, sumber,
+  jumlah sel dari `results/`, poin klarifikasi (aktif ≠ baru terinfeksi, Alp ≠ ARV, label heiDATA = paparan), jawaban singkat "kelasnya
+  ada berapa". Temuan: heiDATA S3B diberi **efavirenz (ARV)** → kandidat arti "ditekan obat", tetapi tercampur efek percobaan; perlu
+  baca keterangan Gambar S3 Ananth 2024. Dashboard WO-18 → 🔄. Google Docs III.2.4: placeholder kelas final diganti definisi kelas.
+- **PDF Ananth dkk. (2024) dibaca** (pengguna mengunduh bundel "Cell Press_20261127.zip"; berkas diekstrak ke
+  `docs/literatur/pdf/ananth2024spatial.pdf`, folder itu masuk `.gitignore` — hak cipta & ukuran). Temuan:
+  **EFV = kontrol negatif praperlakuan 10 µM, 30 menit sebelum infeksi**; rasio kapsid inti EdU+ pada +EFV = 0 (Gambar 3D) → **bukan**
+  kelas "ditekan obat"; sel S3B +EFV tetap kelas terpapar HIV-1. Struktur kelas WO-18 tidak berubah. Catatan untuk Bab IV: +EFV = kapsid
+  masuk inti tanpa transkripsi balik → kandidat penjelasan sel terpapar tanpa kapsid inti.
+- **WO-16 dibuat** (`docs/work-order/WO-16.md`): cerita latar belakang 5 babak (sel T CD4 → virus di bawah batas resolusi optik →
+  sebab pewarnaan fluoresen → flow cytometry grafik vs mikroskopi citra & arti sumbu → masalah), jawaban 30 detik, tabel koreksi cerita
+  B7. Bukti masalah manual diambil langsung dari paper: kurasi titik kapsid per bidang-z di Fiji dan *"an arbitrary threshold of 35"*.
+  Pustaka pendukung lain ditandai belum dibaca.
+- **WO-17 dibuat** (`docs/work-order/WO-17.md`). 8 teks lengkap akses terbuka diunduh dari Europe PMC (`scripts/fetch_oa_literatur.py`)
+  dan dibaca; tabel 3 kelompok diisi dengan pernyataan dari papernya sendiri:
+  - **Celah utama ditopang dua sumber:** Elfimov dkk. (2025) — tinjauan IFC untuk HIV, Tabel 1-nya hanya memuat perkakas **berbasis
+    aturan** di IDEAS (*spot counting*, *nuclear localization*, *mask*), sedangkan contoh ML yang disebut justru di luar HIV;
+    Hennig dkk. (2017) — analisis citra sel umumnya "*highly manual and subjective*" dan "*not scalable*".
+  - Blasi dkk. (2016): metode berlaku pada mikroskopi lain "*provided the ground truth is measured using the same microscopy platform*"
+    → **pustaka pendukung keputusan tidak menggabungkan dataset**.
+  - Eulenberg 2017 (CNN, galat 6× lebih kecil tetapi tak dapat ditafsirkan), Doan 2020 ("*laborious, manual gating*"), Shetab 2023
+    (scifAI, sasaran sinaps imunologis), Shao 2024 (*deep learning* **menghitung** sel, bukan kondisi), Lu 2021 (sasaran: menemukan
+    senyawa, bukan pengklasifikasi).
+  - Sikap atas klaim "lebih baik": **tidak mengklaim**, karena tak ada penelitian terdahulu dengan tugas+dataset sama; pembanding sah
+    hanya antar-model dan antar-skema validasi di dalam penelitian ini.
+  - Gagal/belum: Rey 2021 (Europe PMC HTTP 500), Lippeveld 2020 (bukan akses terbuka).
+- **WO-16 diperkuat:** poin "tidak dapat diperbesar skalanya" kini bersumber pada Hennig 2017 & Doan 2020, bukan asumsi.
+- **Berikutnya:** draf Bab II (tabel WO-17 → II.1); Bab III–IV; jadwalkan B8. Mahasiswa wajib membaca sendiri Elfimov 2025, Hennig 2017,
+  Shetab 2023 (peringatan pembimbing B7 soal ketergantungan pada AI).
+
+---
+
+## 2026-11-26 — Isian SIMASTER B2 (draf Bab 2) dan B7
+**Oleh:** Claude Code (laptop)
+- Atas permintaan pengguna: B2 dicatat di SIMASTER sebagai formalitas dengan topik **pembuatan draf Bab 2** (pola sama dengan B1 → draf Bab 1).
+  Dokumen `docs/bimbingan/B2_2026-09-04/Draf-Bab2_Rahul.pdf` (3 hlm, ±160 KB) dari kerangka tab Bab II Google Docs; sitasi [@kunci]
+  diubah ke penulis-tahun dari `refs-kandidat.bib`; render markdown (.venv) → Edge headless. Isian form di `B2.../HASIL.md` §Isian SIMASTER.
+- Isian SIMASTER B7 (draf) di `B7_2026-11-26/BAHAN.md` §6: poin 1–4 dari bahan; poin arahan pembimbing masih placeholder (belum ada catatan
+  hasil B7). Dokumen: PDF slide B7 diunduh dari artifact.
+- Catatan SIMASTER B2 & B7 diubah menjadi satu paragraf (permintaan pengguna).
+- **Bimbingan 7 berlangsung 26 Nov** (rekaman ±34 menit). Transkrip Whisper *medium* (faster-whisper di venv scratchpad; `av` baru tidak
+  cocok → audio di-decode manual). Pembimbing minta rekaman tidak disebar → rekaman/transkrip **tidak** disimpan di repo/Drive.
+  `docs/bimbingan/B7_persiapan` → `B7_2026-11-26`; `HASIL.md` B7 (parafrase, keputusan, WO, isian SIMASTER §7 menggantikan draf BAHAN §6).
+- Isi B7: kelas **4 kondisi** (tidak terinfeksi, aktif, laten, ditekan obat); pembimbing men-*drill* alur ujian: latar belakang → masalah →
+  penelitian terdahulu & kekurangannya → metode → latih/validasi/uji → metrik. Target ujian Desember [tanggal perlu konfirmasi].
+- `WORK-ORDER.md`: WO-16 (latar belakang), WO-17 (metode terdahulu), WO-18 (4 kelas); Hasil B7; daftar keputusan B8.
+- Catatan risiko: Illinois tidak punya kelas tidak terinfeksi → 4 kelas lintas dataset berisiko efek dataset; cerita lisan latar belakang
+  (dokter menghitung titik flow cytometry manual) dan arti kelas (Alp ≠ ARV, TNF ≠ "baru terinfeksi") perlu diluruskan.
+- **Berikutnya:** pengguna mengisi SIMASTER B2 dan B7; kerjakan WO-16–18; konfirmasi skema 4 kelas di B8.
+- Keputusan pengguna: dataset **tidak digabung** jadi satu model; satu alur, tiga sub-tugas (heiDATA terinfeksi vs Mock, Illinois
+  aktif/laten/ditekan 3 kelas, Essig hidup/mati). Skrip `src/b8_gabung_vs_terpisah.py` (Illinois 3 kelas + uji gabungan) → `results/b8/`.
+  Hasil: Illinois 3 kelas per plate SVM bAcc 0,78, AUC 0,90, MCC 0,63 (per sel 0,79; tanpa kebocoran). Uji gabungan: asal dataset tertebak
+  0,99–1,00; label diacak di dalam dataset masih bAcc 0,44–0,45 vs peluang 0,20–0,25 → model gabungan mengenali dataset. Rincian
+  `results/b8/README.md`. (Bug pandas `groupby.apply` membuang kolom grup → diganti `groupby().sample`.)
+- **Bab I (Google Docs, tab Bab I):** subbab baru **I.3. Batasan Masalah** setelah Perumusan Masalah (kalimat pembuka + 7 poin: data
+  sekunder 3 repositori, kelas per dataset, tidak digabung, Jurkat/reporter, ML klasik, fitur 2D, pembagian latih-uji per kelompok);
+  kalimat "Batasan penelitian…" dihapus dari Perumusan Masalah; Tujuan → I.4, Manfaat → I.5.
+- **Keputusan mahasiswa ditetapkan tanpa menunggu B8** (pengguna: pembimbing pasti setuju): 3 sub-tugas tanpa penggabungan, validasi per
+  kelompok, metrik sensitivitas–spesifisitas (+bAcc, MCC, AUC), judul naskah Opsi 3 "Citra Mikroskopi Optik", format ikut template.
+  Dicatat di `WORK-ORDER.md` sebagai keputusan mahasiswa yang **dilaporkan** di B8. Judul resmi SIMASTER menunggu surat bertanda tangan.
+- **Jadwal resmi ujian** (pengumuman DTNTF 17 Nov): draf PDF 9 Des, hardcopy 11 Des, ujian 21–23 Des; syarat ≥ 12 catatan SIMASTER dinilai
+  pembimbing → `docs/JADWAL-UJIAN-2026.md`; rencana B8–B12 satu bab per pertemuan; naskah GDocs sampai 5 Des lalu LaTeX 6–8 Des (disetujui).
+- Isian SIMASTER **B3** (judul & ekstraksi fitur) dan **B4** (judul, DL → ML, dataset) dari isi asli, lampiran PDF `Fitur-Citra_Rahul.pdf` dan
+  `Kandidat-Dataset_Rahul.pdf`. Total catatan siap: 7 → perlu 5 pertemuan baru.
+- **Bab I final (Google Docs):** data Indonesia dari rilis Kemenkes 20 Jun 2025 (±564.000 ODHIV 2025; 63% tahu status; 67% ARV; 55%
+  tersupresi; dicek langsung di kemkes.go.id) → entri baru `kemenkes2025hiv` di `refs-kandidat.bib`; [perlu pustaka] penilaian visual →
+  contoh kurasi manual kapsid [@ananth2024spatial]; celah ditulis "belum ditemukan dalam penelusuran pustaka"; paragraf dataset diisi
+  3 dataset + kelasnya. Istilah asing dimiringkan. `thesis/data_skripsi.tex`: judul → Opsi 3 (judul lama di komentar).
+- Referensi format: Bab I skripsi M. Athhar Aulia (bimbingan Pak Nopriadi, 7 foto Flipbook di Drive `naskah/`) →
+  `docs/materi/REFERENSI-SKRIPSI-BIMBINGAN-NOPRIADI.md`.
+- **Bab I direvisi mengikuti pola itu:** +paragraf cara konvensional (flow cytometry, tanpa citra) [@basiji2007ifc; @barteneva2012ifc];
+  +paragraf penelitian terdahulu fitur+ML pada IFC (Blasi, Hennig, Lippeveld, Shetab Boushehri) + kekurangannya; +paragraf penutup
+  "Dengan begitu, penelitian ini bertujuan…"; Perumusan Masalah = kalimat pembuka + 3 pertanyaan "Bagaimana…?" bernomor; Batasan →
+  **I.2.1** (Heading 3, TNR 12 tebal) daftar bernomor; Tujuan I.3 (+target ROC AUC ≥ 0,80 pada data uji kelompok baru); Manfaat I.4
+  (bagi penulis / peneliti & akademisi / institusi). Dicek lewat ekspor PDF. Menunggu foto daftar pustaka skripsi referensi untuk
+  menambah penelitian Tim Studio Sensor Visual DTNTF.
+- Atas permintaan pengguna, Batasan Masalah dikembalikan menjadi **subbab I.3** (Heading 2), bukan I.2.1; Tujuan I.4, Manfaat I.5.
+- **Bab I dikonversi ke LaTeX** (`thesis/bab1-pendahuluan.tex`) dengan skrip baru `scripts/gdoc_tab_to_latex.py` (JSON `read_doc` →
+  `\chapter/\section/\subsection`, `\textit`, `[@a; @b]` → `\cite{a,b}`, daftar → enumerate/itemize). `main.tex`: `\adapustakatrue`,
+  `\bibliography{refs,refs-kandidat}` (kandidat sementara; pindahkan ke refs.bib setelah dibaca). `refs-kandidat.bib`: singkatan di judul
+  dilindungi kurung kurawal ({HIV-1}, {CD4}, {T}, {Tat}, …) karena skripsi.bst menjadikan judul huruf kecil; `packages.tex`: `xurl`.
+  Compile lokal OK (29 hlm, Bab I 6 hlm, sitasi [1]–[25], tanpa sitasi tak terdefinisi). Catatan: abstrak/kata kunci di
+  `data_skripsi.tex` masih lama (IFC, Explainable AI).
 
 ---
 
@@ -86,11 +213,11 @@
   0,98–1,00, MCC 0,91–0,96; LOEO 0,95–0,96; LODO (4 donor) 0,95–0,96 → `results/essig-exps/`. Bug diperbaiki: metrik gabungan
   hanya pada sel uji (`wo15_metrics.evaluate`). `exp2.zip` (20 GB) masih ada, menunggu persetujuan hapus.
 - **Slide B7** (13 slide, tipe Slides, gaya UGM B5–B6: Poppins, biru #0B3D6B, emas #F2C200; kali ini dengan `deck.css` bersama):
-  https://claude.ai/artifact/36C74VKWiKGgrMGVVY4xdZ ; sumber `docs/bimbingan/B7_persiapan/slides/project/`. Urutan: sampul, keputusan
+  https://claude.ai/artifact/36C74VKWiKGgrMGVVY4xdZ ; sumber `docs/bimbingan/B7_2026-11-26/slides/project/`. Urutan: sampul, keputusan
   (7 + laporan), WO, metrik, per sel vs berkelompok (gambar), dua skenario, Sk1 kapsid, Essig exp2, Illinois citra sendiri, judul
   (Opsi 2 ditambah "dan Imaging Flow Cytometry"), naskah, rencana, ringkasan. Pratinjau Edge headless 6 slide padat: rapi.
   Publish dari scratchpad ditolak izin → file slide disimpan di repo. Placeholder: tanggal B7 dan tanggal ujian.
-- Bahan B7 (`docs/bimbingan/B7_persiapan/BAHAN.md`) + gambar per sel vs berkelompok (`src/b7_figures.py`, `results/b7/`);
+- Bahan B7 (`docs/bimbingan/B7_2026-11-26/BAHAN.md`) + gambar per sel vs berkelompok (`src/b7_figures.py`, `results/b7/`);
   koreksi teks "per percobaan 0,27" → rentang tiga model 0,27–0,46.
 - Drive `papers/`: Google Doc "Daftar Referensi Kandidat" (DOI bisa diklik) + `refs-kandidat.bib`. `sync_gdocs.py`: folder berawalan
   "/" = di luar `bimbingan/`.

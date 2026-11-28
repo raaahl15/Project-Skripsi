@@ -35,6 +35,11 @@ SYNC = [  # (repo markdown, Drive folder, Google Doc title)
     ("docs/bimbingan/B6_2026-11-09/HASIL.md", "B6 - 2026-11-09", "Hasil Bimbingan 6"),
     ("docs/work-order/WO-15.md", "Work Order", "WO-15 Pemilihan metrik evaluasi"),
     ("docs/materi/WO-15-metrik-evaluasi.md", "B6 - 2026-11-09", "Materi WO-15 Metrik Evaluasi"),
+    ("docs/bimbingan/B7_2026-11-26/BAHAN.md", "B7 - 2026-11-26", "Bahan Bimbingan 7"),
+    ("docs/bimbingan/B7_2026-11-26/HASIL.md", "B7 - 2026-11-26", "Hasil Bimbingan 7"),
+    ("docs/work-order/WO-16.md", "Work Order", "WO-16 Latar belakang sebagai cerita utuh"),
+    ("docs/work-order/WO-17.md", "Work Order", "WO-17 Tinjauan metode terdahulu"),
+    ("docs/work-order/WO-18.md", "Work Order", "WO-18 Kelas kondisi sel"),
 ]
 CSS = ("body{font-family:Arial,sans-serif;font-size:11pt;line-height:1.4}table{border-collapse:collapse}"
        "th,td{border:1px solid #9FB3CF;padding:4px 6px;vertical-align:top}th{background:#E6F0FA}"
