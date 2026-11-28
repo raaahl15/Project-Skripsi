@@ -25,6 +25,9 @@
   ±2.600 kata, Times New Roman, tanpa angka hasil (kecuali hasil pemeriksaan data yang mendasari keputusan metode).
 - **Perlu dicek pengguna** (catatan abu-abu di atas tab): jumlah sel Essig exp3–4 & Illinois dari run final; Gambar III.1 belum ada,
   Gambar III.2 disisipkan manual; pustaka scikit-learn belum ada di bib; spesifikasi ImageStreamX Mark II 60× dicocokkan ke paper.
+- **Gambar III.1** (diagram alir 8 langkah + umpan balik pemeriksaan kualitas, langkah 3–7 di Colab):
+  `scripts/fig_alur_penelitian.py` → `thesis/figures/alur-penelitian.png`. Gambar III.1 dan III.2 disisipkan langsung ke tab Bab III
+  dari URL raw GitHub (repo publik), di atas keterangan gambarnya.
 - **Perubahan isi dibanding kerangka:** skor lapisan dalam = *balanced accuracy* (bukan ROC AUC); ambang recall ≥ 0,90 tidak dipakai
   (kelas = peluang terbesar), sesuai `src/final/`.
 
