@@ -15,6 +15,20 @@
 
 ---
 
+## 2026-11-28 — Pustaka scikit-learn, kerangka Bab V, Intisari/Abstract
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- `pedregosa2011sklearn` ditambahkan ke `thesis/refs-kandidat.bib` + baris di `DAFTAR-REFERENSI.md` (JMLR 12(85):2825–2830, 2011,
+  16 penulis; tanpa DOI, metadata diverifikasi dari laman JMLR). Bab III.1.1: sitasi dipasang setelah "scikit-learn untuk *machine
+  learning*"; catatan abu-abu Bab III butir pustaka scikit-learn dihapus.
+- **Bab V** (tab `t.ihlxybk2s3x1`): V.1 Kesimpulan tiga butir menjawab Perumusan Masalah (butir ekstraksi fitur sudah ditulis; butir
+  kinerja & fitur terpenting = penanda [ISI] ke `results/final/`); V.2 Saran lima butir (dataset berlabel lengkap untuk rantai utuh,
+  konfirmasi infeksi per sel, Model C pada sel primer + ekstraksi sendiri, fitur 3D & SNR kapsid/dekonvolusi, validasi eksternal).
+- **Intisari/Abstract** (tab Skripsi Final): alinea 1 (latar & tujuan) dan 2 (metode) sudah ditulis (±100 kata), alinea 3 hasil = penanda;
+  kata kunci baru (sel T CD4, infeksi HIV, mikroskopi optik, fitur fisis citra, *machine learning*, validasi berkelompok); Abstract =
+  penanda terjemahan + *keywords*. `thesis/abstrakind.tex` masih kata kunci lama → diperbarui saat konversi LaTeX.
+
+---
+
 ## 2026-11-28 — Lampiran A (rumus fitur) di tab baru Google Docs
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Dikerjakan:** tab baru **Lampiran** (`t.e5fgmrsho4q9`, setelah Bab V) pada Google Doc naskah. Isi: "LAMPIRAN A — Definisi, Rumus,

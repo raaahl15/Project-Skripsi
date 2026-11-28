@@ -109,6 +109,7 @@ Urutan mengikuti kemunculan di `thesis/bab1-pendahuluan.tex` (20 artikel jurnal,
 | `cox1958logistic` | Cox (1958) | J. Royal Statistical Society B | [10.1111/j.2517-6161.1958.tb00292.x](https://doi.org/10.1111/j.2517-6161.1958.tb00292.x) | Asal regresi logistik | [ ] |
 | `breiman2001rf` | Breiman (2001) | Machine Learning | [10.1023/A:1010933404324](https://doi.org/10.1023/A:1010933404324) | Random Forest | [ ] |
 | `cortes1995svm` | Cortes (1995) | Machine Learning | [10.1007/BF00994018](https://doi.org/10.1007/BF00994018) | Support Vector Machine | [ ] |
+| `pedregosa2011sklearn` | Pedregosa (2011) | Journal of Machine Learning Research 12 | — ([JMLR](https://jmlr.org/papers/v12/pedregosa11a.html), tanpa DOI) | Pustaka scikit-learn (Bab III.1.1) | [ ] |
 | `varma2006bias` | Varma (2006) | BMC Bioinformatics | [10.1186/1471-2105-7-91](https://doi.org/10.1186/1471-2105-7-91) | Bias bila hiperparameter dipilih di data uji → *nested CV* (protokol WO-14) | [ ] |
 | `roberts2017cv` | Roberts (2017) | Ecography | [10.1111/ecog.02881](https://doi.org/10.1111/ecog.02881) | CV berkelompok untuk data berstruktur (fold per percobaan/donor/plate) | [ ] |
 | `kapoor2023leakage` | Kapoor (2023) | Patterns | [10.1016/j.patter.2023.100804](https://doi.org/10.1016/j.patter.2023.100804) | **[Bab I]** Kebocoran data di sains berbasis ML (kasus *noise* Illinois, per sel vs per percobaan) | [ ] |
