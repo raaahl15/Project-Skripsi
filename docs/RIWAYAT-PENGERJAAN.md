@@ -15,6 +15,25 @@
 
 ---
 
+## 2026-11-28 — Draf Bab II di Google Docs; status SIMASTER & jadwal B8
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Dikerjakan:**
+  - Laporan pengguna: SIMASTER sudah memuat B1, B2, B5, B6, B7; **B3 dan B8 dimasukkan Senin 30 Nov**; **B8 dijadwalkan Senin
+    30 Nov**. `docs/JADWAL-UJIAN-2026.md` & `docs/STATUS.md` diperbarui (setelah 30 Nov + B4 = 8 → perlu 4 lagi sebelum 9 Des).
+  - **Draf Bab II** menggantikan kerangka poin di tab Bab II (`t.52i0hsyuxxgi`) Naskah Skripsi: II.1 Tinjauan Pustaka (II.1.1 fitur
+    citra + ML di luar HIV, II.1.2 analisis citra dalam riset HIV, II.1.3 penelitian sumber data, II.1.4 keandalan evaluasi & posisi
+    penelitian) + **Tabel II.1** (10 baris); II.2 Dasar Teori (II.2.1–II.2.7) dengan **Persamaan II.1–II.15** ($$…$$). ±3.900 kata,
+    Times New Roman, format sesuai PANDUAN-GDOCS. Isi II.1 dari WO-17 (paper yang sudah dibaca); rumus dari WO-14/WO-15. Tidak ada
+    angka hasil penelitian di Bab II. Sitasi hanya kunci yang ada di `refs-kandidat.bib`.
+  - Paragraf catatan (abu-abu) di atas tab memuat hal yang wajib dicek: Lippeveld 2020, Rey 2021, Chandrasekaran 2021 belum dibaca
+    (disebut umum saja); paragraf optika *brightfield* belum berpustaka; angka 1.806 senyawa (Lu 2021) dan kutipan "an arbitrary
+    threshold of 35" (Ananth 2024) dicocokkan ke paper.
+  - WO-17 langkah 5 selesai.
+- **File/Drive berubah:** Google Docs naskah tab Bab II; `docs/STATUS.md`, `docs/JADWAL-UJIAN-2026.md`, `docs/work-order/WO-17.md`.
+- **Berikutnya:** mahasiswa meninjau Bab II sebelum B8 (30 Nov); draf Bab III.
+
+---
+
 ## 2026-11-28 — Pemeriksaan hasil Raven, STATUS, sinkron Drive & commit/push
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Dikerjakan:**

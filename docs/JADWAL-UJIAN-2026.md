@@ -17,14 +17,15 @@ Waktu ujian: presentasi **15 menit**, tanya jawab **40 menit**, penilaian 5 meni
 - [ ] **Catatan bimbingan SIMASTER terisi minimal 12 kali dan sudah dinilai pembimbing (pelaksanaan 100%)**
 - [ ] PPT ujian skripsi
 
-## Status catatan SIMASTER (26 Nov 2026)
+## Status catatan SIMASTER (28 Nov 2026, laporan pengguna)
 | Internal | Tanggal | Topik SIMASTER | Status |
 |---|---|---|---|
 | B5 | 6 Nov | Arahan dataset citra, fitur, k-fold | tercatat |
 | B6 | 9 Nov | k-fold heiDATA & metrik | tercatat |
 | B1 | (10 Nov) | Draf Bab 1 | tercatat |
-| B2 | (26 Nov) | Draf Bab 2 | isian siap (`B2.../HASIL.md`) |
-| B7 | 26 Nov | Kelas & alur penelitian | isian siap (`B7.../HASIL.md` §7) |
-| B3 | 9 Sep | Penyesuaian judul & ekstraksi fitur | isian siap (B3.../HASIL.md) |
-| B4 | 23 Sep | Judul, DL → ML, dataset | isian siap (B4.../HASIL.md) |
-Total bila semua dicatat: **7** → perlu **5 pertemuan baru** (B8–B12) sebelum 9 Des, dan semuanya harus **disetujui/dinilai pembimbing**.
+| B2 | (26 Nov) | Draf Bab 2 | tercatat |
+| B7 | 26 Nov | Kelas & alur penelitian | tercatat |
+| B3 | 9 Sep | Penyesuaian judul & ekstraksi fitur | dimasukkan **Senin 30 Nov** |
+| B8 | **Senin 30 Nov** | Bimbingan B8 (pipeline bertingkat, results/b8, draf Bab II) | dijadwalkan; dicatat hari itu |
+| B4 | 23 Sep | Judul, DL → ML, dataset | isian siap (B4.../HASIL.md), belum dimasukkan |
+Tercatat 5 → setelah 30 Nov **7**, +B4 = **8** → perlu **4 pertemuan baru** (B9–B12) sebelum 9 Des, semuanya harus **disetujui/dinilai pembimbing**.
