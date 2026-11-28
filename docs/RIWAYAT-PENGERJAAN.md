@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-11-28 — Kerangka Bab IV di Google Docs
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Dikerjakan:** tab Bab IV (`t.w77pao7iakxk`) diisi kerangka yang mengikuti keluaran `results/final/`: IV.1 Hasil (IV.1.1 data &
+  fitur + Tabel IV.1 jumlah sel; IV.1.2–IV.1.4 Model A/B/C masing-masing dengan tabel kinerja (Tabel IV.2–IV.4), tempat Gambar
+  IV.1–IV.6 (CM+ROC, kepentingan fitur) berikut path berkasnya; IV.1.5 skema validasi & uji permutasi + Tabel IV.5; IV.1.6 uji ketahanan),
+  IV.2 Pembahasan (tafsiran fisis, efek *batch*, kerangka bertingkat, keterbatasan, posisi terhadap penelitian terdahulu).
+  Tabel berisi tajuk + label baris, angka "…"; setiap bagian diberi penanda [ISI: berkas sumber]. Tidak ada angka hasil yang ditulis.
+- **Berikutnya:** isi Bab IV dari `results/final/` setelah run final Colab.
+
+---
+
 ## 2026-11-28 — Draf Bab III di Google Docs
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Dikerjakan:** kerangka poin tab Bab III (`t.8pos2clou1fl`) diganti draf paragraf yang mengikuti pipeline final (Colab, semua data,
