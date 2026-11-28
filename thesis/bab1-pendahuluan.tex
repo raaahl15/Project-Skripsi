@@ -1,17 +1,68 @@
+% Dikonversi otomatis dari Google Docs (tab t.0) dengan scripts/gdoc_tab_to_latex.py.
+% Sejak konversi, revisi bab ini dilakukan di file .tex ini (docs/PANDUAN-GDOCS.md).
 \chapter{PENDAHULUAN}\label{pendahuluan}
-% Structure follows template-kampus/Bab1.tex.
 
 \section{Latar Belakang}\label{latar-belakang}
-% Gambaran permasalahan/kebutuhan dan alasan mengapa penelitian ini penting.
-[ISI NANTI]
+
+HIV masih menjadi masalah kesehatan global. Pada tahun 2025 terdapat 41,0 juta orang hidup dengan HIV, 1,2 juta orang yang baru terinfeksi, dan 570 ribu kematian akibat penyakit terkait AIDS di seluruh dunia \cite{unaids2026factsheet}. Di Indonesia, diperkirakan terdapat sekitar 564.000 orang dengan HIV (ODHIV) pada tahun 2025, tetapi baru 63\% yang mengetahui statusnya; dari jumlah tersebut, 67\% telah menjalani terapi antiretroviral dan hanya 55\% yang mencapai \textit{viral load} tersupresi \cite{kemenkes2025hiv}. Ciri utama perjalanan infeksi HIV adalah berkurangnya jumlah sel T CD4 secara bertahap sehingga sistem imun melemah hingga tahap AIDS \cite{deeks2015hiv}.
+
+Sel T CD4 menjadi sasaran utama karena HIV-1 masuk ke dalam sel melalui pengikatan protein selubung virus pada reseptor CD4 dan koreseptornya \cite{engelman2012structural}. Setelah terpapar virus, kondisi sel tidak selalu sama. Sebagian sel terinfeksi secara produktif, sebagian menyimpan provirus dalam keadaan laten yang bertahan walaupun pasien menjalani terapi antiretroviral \cite{finzi1997reservoir,siliciano2011latency}, dan banyak sel mati, termasuk sel yang tidak terinfeksi secara produktif \cite{doitsh2014pyroptosis,cummins2010apoptosis}. Pada sel dengan genom virus yang sama pun, ekspresi gen HIV dapat berfluktuasi secara stokastik sehingga menghasilkan keadaan sel yang berbeda \cite{weinberger2005stochastic}. Keragaman ini membuat kondisi sel T CD4 perlu diamati pada tingkat sel tunggal.
+
+Selama ini, keadaan sel T CD4 pada infeksi HIV umumnya diukur dengan \textit{flow cytometry}. Sel diberi antibodi atau pewarna berlabel fluoresen agar molekul tertentu, misalnya penanda CD4 atau protein virus, dapat dikenali, lalu intensitas fluoresensi setiap sel diukur ketika sel melintasi berkas laser. Hasilnya berupa sebaran intensitas dalam bentuk histogram atau diagram titik, dan populasi sel dipisahkan berdasarkan ambang intensitas. Cara ini cepat untuk menghitung banyak sel, tetapi tidak menghasilkan citra, sehingga bentuk sel dan letak sinyal di dalam sel tidak dapat diamati \cite{basiji2007ifc,barteneva2012ifc}.
+
+Kondisi sel dapat diamati secara optik. Mikroskopi fluoresensi menampilkan letak molekul tertentu yang diberi penanda fluoresen, misalnya protein virus atau struktur inti sel \cite{lichtman2005fluorescence}. \textit{Imaging flow cytometry} (IFC) menggabungkan laju pengukuran \textit{flow cytometry} dengan citra mikroskop untuk setiap sel, termasuk citra \textit{brightfield} tanpa pewarna \cite{basiji2007ifc,barteneva2012ifc}, dan telah dimanfaatkan dalam riset HIV \cite{elfimov2025ifchiv}. Citra tersebut memuat besaran fisis yang dapat diukur, yaitu ukuran dan bentuk sel atau inti, sebaran intensitas, tekstur, serta jumlah dan letak sinyal virus \cite{caicedo2017profiling}.
+
+Penilaian kondisi sel dari citra masih sering dilakukan secara manual. Sebagai contoh, letak titik kapsid HIV-1 di dalam atau di luar batas inti sel pada citra mikroskopi fluoresensi dikurasi secara manual \cite{ananth2024spatial}. Cara ini lambat untuk jumlah sel yang besar dan hasilnya bergantung pada pengamat. Ekstraksi fitur yang dipadukan dengan \textit{machine learning} memungkinkan klasifikasi otomatis sekaligus menunjukkan fitur yang membedakan kondisi sel. Sebagai contoh, fitur citra \textit{brightfield} dan \textit{darkfield} IFC tanpa pewarna dapat dipakai untuk memprediksi fase siklus sel \cite{blasi2016labelfree}. Berbeda dengan \textit{deep learning} yang mempelajari fiturnya sendiri, fitur yang didefinisikan secara eksplisit memiliki arti fisis dan rumus matematis yang dapat ditafsirkan. Dari sudut pandang Teknik Fisika, sel diperlakukan sebagai objek optik dan citranya sebagai hasil pengukuran instrumen optik, sehingga yang diteliti adalah besaran fisis yang membedakan kondisi sel dan keandalan pengukuran besaran tersebut.
+
+Keandalan hasil juga ditentukan oleh cara evaluasi model. Model yang diuji pada sel dari percobaan atau donor yang sama dengan data latih dapat memberikan kinerja yang terlalu optimistis karena kebocoran informasi \cite{kapoor2023leakage}. Oleh karena itu, evaluasi perlu memisahkan data latih dan data uji berdasarkan percobaan atau donor, bukan hanya berdasarkan sel.
+
+Pendekatan ekstraksi fitur dan \textit{machine learning} telah diterapkan pada citra sel dari \textit{imaging flow cytometry}. Blasi dkk.\ memprediksi fase siklus sel dari citra \textit{brightfield} dan \textit{darkfield} tanpa pewarna \cite{blasi2016labelfree}, Hennig dkk.\ menyusun alur analisis terbuka berbasis fitur CellProfiler dan \textit{machine learning} \cite{hennig2017ifcml}, dan Lippeveld dkk.\ mengklasifikasikan jenis sel darah putih tanpa pewarna \cite{lippeveld2020wbc}. Pada sel T, Shetab Boushehri dkk.\ memprofilkan sinaps imunologis menggunakan fitur citra IFC dan \textit{machine learning} yang dapat dijelaskan \cite{shetab2023scifai}. Penelitian-penelitian tersebut menunjukkan bahwa fitur citra dapat membedakan keadaan sel, tetapi tidak membahas kondisi sel T CD4 pada infeksi HIV.
+
+Penelitian berbasis citra yang berkaitan dengan HIV sejauh ini banyak memakai \textit{deep learning}, misalnya untuk mengklasifikasikan morfologi virion pada citra mikroskop elektron \cite{rey2021temnet} atau menghitung sel target HIV pada jaringan \cite{shao2024hivtarget}. Dalam penelusuran pustaka penelitian ini, belum ditemukan kajian yang mengklasifikasikan kondisi sel T CD4 pada infeksi HIV menggunakan fitur fisis citra yang dapat ditafsirkan, dengan evaluasi yang memisahkan data latih dan data uji berdasarkan percobaan. Penelitian ini memanfaatkan tiga data citra publik, yaitu citra mikroskopi fluoresensi sel T CD4 primer yang terpapar HIV-1 \cite{ananth2024dataset}, citra mikroskopi fluoresensi \textit{time-lapse} sel Jurkat yang membawa sirkuit gen HIV dengan \textit{reporter} GFP \cite{lu2022dataset}, serta citra \textit{brightfield} IFC sel T CD4 memori hidup dan mati \cite{essig2022dataset}. Setiap data dipakai untuk membedakan kondisi sel yang tersedia labelnya, yaitu terpapar HIV-1 atau tidak; ekspresi HIV aktif, laten, atau ditekan; serta sel hidup atau mati.
+
+Dengan begitu, penelitian ini bertujuan mengklasifikasikan kondisi sel T CD4 pada infeksi HIV dari citra mikroskopi optik menggunakan fitur fisis yang dapat ditafsirkan dan \textit{machine learning} klasik, serta mengetahui fitur yang paling membedakan setiap kondisi. Dengan evaluasi yang memisahkan data latih dan data uji berdasarkan percobaan, donor, atau \textit{plate}, kinerja yang dilaporkan diharapkan mencerminkan kemampuan model pada data baru.
 
 \section{Perumusan Masalah}\label{perumusan-masalah}
-% (1) identifikasi akar permasalahan/kebutuhan, (2) pendekatan penyelesaiannya,
-% termasuk pembatasan pendekatan yang dianggap layak dalam kerangka skripsi.
-[ISI NANTI]
+
+Berdasarkan pemaparan latar belakang di atas, permasalahan dalam penelitian ini dirumuskan sebagai berikut.
+
+\begin{enumerate}
+  \item Bagaimana mengekstraksi fitur fisis yang dapat ditafsirkan, yaitu fitur morfometri, intensitas, tekstur, sinyal virus, dan deret waktu intensitas, dari citra mikroskopi optik sel T CD4 pada infeksi HIV?
+  \item Bagaimana kinerja model \textit{machine learning} klasik dalam mengklasifikasikan kondisi sel T CD4, yaitu terpapar HIV-1 atau tidak; ekspresi HIV aktif, laten, atau ditekan; serta sel hidup atau mati, ketika diuji pada data dari percobaan, donor, atau \textit{plate} yang berbeda?
+  \item Fitur fisis apa yang paling membedakan setiap kondisi sel dan bagaimana arti fisisnya?
+\end{enumerate}
+
+\section{Batasan Masalah}\label{batasan-masalah}
+
+Adapun batasan masalah dalam penelitian ini adalah sebagai berikut.
+
+\begin{enumerate}
+  \item Data yang digunakan adalah data citra sekunder dari tiga repositori publik, yaitu heiDATA \cite{ananth2024dataset}, Illinois Data Bank \cite{lu2022dataset}, dan Dryad \cite{essig2022dataset}; tidak dilakukan pengambilan citra baru.
+  \item Kondisi sel yang diklasifikasikan mengikuti label yang tersedia pada tiap dataset, yaitu sel tidak terpapar (Mock) dan sel terpapar HIV-1 pada data heiDATA, ekspresi HIV aktif, laten, dan ditekan pada data Illinois, serta sel hidup dan sel mati pada data Essig.
+  \item Setiap tugas klasifikasi dilatih dan diuji di dalam dataset sumbernya. Dataset tidak digabung menjadi satu model karena jenis sel, alat pencitraan, dan pewarnanya berbeda, sehingga model gabungan berisiko mengenali asal dataset, bukan kondisi sel.
+  \item Sel pada data Illinois adalah lini sel Jurkat (sel T CD4+) yang membawa sirkuit gen HIV dengan \textit{reporter} GFP, bukan sel T CD4 primer yang terinfeksi virus HIV-1 utuh.
+  \item Model yang digunakan adalah \textit{machine learning} klasik (regresi logistik, \textit{random forest}, dan \textit{support vector machine}), bukan \textit{deep learning}.
+  \item Fitur diekstraksi dari citra dua dimensi per sel, berupa fitur morfometri, intensitas, tekstur, sinyal virus, dan deret waktu intensitas GFP.
+  \item Kinerja model dievaluasi dengan memisahkan data latih dan data uji berdasarkan percobaan, donor, atau \textit{plate}, sehingga sel dari kelompok yang sama tidak sekaligus berada di data latih dan data uji.
+\end{enumerate}
 
 \section{Tujuan}\label{tujuan}
-[ISI NANTI]
+
+Tujuan penelitian ini adalah sebagai berikut.
+
+\begin{enumerate}
+  \item Mengekstraksi fitur fisis (morfometri, intensitas, tekstur, dan sinyal virus) dari citra sel T CD4 hasil mikroskopi fluoresensi dan \textit{imaging flow cytometry}, beserta definisi fisis dan rumus matematisnya.
+  \item Membangun model \textit{machine learning} untuk mengklasifikasikan kondisi sel T CD4 pada infeksi HIV, yaitu status paparan atau ekspresi HIV serta sel hidup atau mati, dengan target ROC AUC minimal 0,80 pada data uji yang berasal dari percobaan, donor, atau \textit{plate} yang tidak digunakan untuk melatih model.
+  \item Mengevaluasi model dengan validasi silang \textit{k-fold} berkelompok dan metrik yang sesuai dengan biaya kesalahan klasifikasi pada konteks kesehatan.
+  \item Mengidentifikasi fitur yang paling berpengaruh terhadap klasifikasi dan menafsirkan arti fisisnya.
+\end{enumerate}
 
 \section{Manfaat}\label{manfaat}
-[ISI NANTI]
+
+Manfaat penelitian ini adalah sebagai berikut.
+
+\begin{enumerate}
+  \item Bagi penulis, penelitian ini menambah pengetahuan dan keterampilan dalam pengolahan citra optik sel, ekstraksi fitur fisis, dan \textit{machine learning}, serta pemahaman tentang biologi sel T CD4 pada infeksi HIV.
+  \item Bagi peneliti dan akademisi, penelitian ini memberikan pemahaman kuantitatif tentang besaran bio-optik yang membedakan kondisi sel T CD4 pada infeksi HIV dan cara evaluasi yang mencegah hasil yang terlalu optimistis, sehingga dapat menjadi acuan penelitian analisis citra sel berikutnya.
+  \item Bagi institusi, penelitian ini menambah literatur ilmiah Universitas Gadjah Mada, khususnya penerapan sistem optika dan kecerdasan buatan pada analisis citra sel di Departemen Teknik Nuklir dan Teknik Fisika.
+\end{enumerate}

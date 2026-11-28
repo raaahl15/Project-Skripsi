@@ -2,7 +2,7 @@
 Mahasiswa: **Rahul Ghulam Hidayatulloh** (23/519760/TK/57266) · Pembimbing: **Nopriadi, S.T., M.Sc.**
 Judul (Simaster, ditetapkan bimbingan 4): *Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra Imaging Flow Cytometry
 Menggunakan Machine Learning*
-Terakhir diperbarui: **2026-11-09**
+Terakhir diperbarui: **2026-11-26**
 
 > Dokumen ini ditunjukkan saat bimbingan: (1) arahan dari setiap bimbingan, (2) status eksekusinya, (3) bukti/keluaran.
 > Diperbarui setiap selesai bimbingan (tambah WO baru) dan setiap ada progres (ubah status & bukti).
@@ -15,10 +15,10 @@ Terakhir diperbarui: **2026-11-09**
 | Indikator | Nilai |
 |---|---|
 | Minggu semester (asumsi mulai 1 Sep 2026) | **Minggu ke-11 dari 16** (panduan: minggu 7–10 = pengambilan data tahap akhir) |
-| Bimbingan formal tercatat | **6** (2 Sep, 4 Sep, 9 Sep, 23 Sep, 6 Nov, 9 Nov) · target rubrik CPMK 2 "Sangat Baik": **> 8** |
-| Jeda sejak bimbingan terakhir | B6 9 Nov 2026; bimbingan berikutnya: **[ISI NANTI]** |
-| Ujian (perkiraan) | Periode akhir semester ±minggu 15–16 (pertengahan–akhir Des 2026); tanggal & tenggat daftar: **[ISI NANTI]** |
-| Status WO | ✅ 4 · 🔄 10 · ➖ 1 (total 15) |
+| Bimbingan formal tercatat | **7** (2 Sep, 4 Sep, 9 Sep, 23 Sep, 6 Nov, 9 Nov, 26 Nov) · target rubrik CPMK 2 "Sangat Baik": **> 8** |
+| Jeda sejak bimbingan terakhir | B7 26 Nov 2026; bimbingan berikutnya: **[ISI NANTI]** |
+| Ujian (RESMI) | Draf PDF **9 Des** · hardcopy **11 Des** · ujian **21–23 Des 2026** · syarat **≥ 12 catatan SIMASTER dinilai pembimbing** → `docs/JADWAL-UJIAN-2026.md` |
+| Status WO | ✅ 4 · 🔄 13 · ⏳ 0 · ➖ 1 (total 18) |
 
 ## Daftar Work Order
 
@@ -38,7 +38,17 @@ Terakhir diperbarui: **2026-11-09**
 | WO-12 | Inisiatif | Permintaan citra tambahan ke pemilik dataset heiDATA (Heidelberg) | 🔄 | Email sudah dikirim mahasiswa (dicatat 7 Nov); draf: `docs/korespondensi/permintaan-data-heidata.md` | Balasan tidak diharapkan → rencana tidak bergantung pada data tambahan |
 | WO-13 | Inisiatif | Ringkasan Panduan Skripsi TF 2026 | ✅ | `docs/PANDUAN-KAMPUS.md` | — |
 | WO-14 | B5 · 6 Nov | **Validasi k-fold + arti fisis & rumus matematis fitur citra** | 🔄 | Tabel 13 fitur → `docs/materi/WO-14-fitur-heidata.md`; k-fold → `results/wo14-kfold/`: per sel AUC 0,65–0,80, per percobaan 0,27–0,58. Dipresentasikan di B6 | B6: pembimbing menganggap evaluasi baku = per sel; isu kebocoran *batch* perlu diluruskan di B7 |
-| WO-15 | B6 · 9 Nov | **Pilih metrik evaluasi + alasannya** (konteks uji kesehatan: FP vs FN) | 🔄 | 11 metrik + CM → `results/wo15-metrics/`; materi & usulan → `docs/materi/WO-15-metrik-evaluasi.md` | Usulan: sensitivitas + spesifisitas (utama), ROC AUC, *balanced acc*, MCC; F1/akurasi menyesatkan bila kelas timpang |
+| WO-15 | B6 · 9 Nov | **Pilih metrik evaluasi + alasannya** (konteks uji kesehatan: FP vs FN) | 🔄 | 11 metrik + CM → `results/wo15-metrics/`; materi & usulan → `docs/materi/WO-15-metrik-evaluasi.md` | B7: mahasiswa harus bisa menjelaskan latih/validasi/uji dan metrik paling cocok "di luar kepala" |
+| WO-16 | B7 · 26 Nov | **Kuasai latar belakang** sebagai cerita utuh: cara identifikasi sel terinfeksi selama ini, prosedur (pewarnaan, alat, citra/grafik & arti sumbu), masalahnya | 🔄 | Cerita 5 babak + jawaban 30 detik → `docs/work-order/WO-16.md`; bukti kurasi manual & "arbitrary threshold" dari PDF Ananth 2024 yang sudah dibaca | Mahasiswa perlu menghafal; 5 pustaka pendukung belum dibaca |
+| WO-17 | B7 · 26 Nov | **Tinjauan metode terdahulu** + kekurangannya → posisi penelitian; banding pada dataset yang sama bila klaim lebih baik | 🔄 | 8 paper akses terbuka dibaca; tabel 3 kelompok + paragraf posisi penelitian + sikap atas klaim "lebih baik" → `docs/work-order/WO-17.md` | Celah ditopang Elfimov 2025 (IFC-HIV masih berbasis aturan) & Hennig 2017 ("highly manual and subjective"); mahasiswa wajib baca sendiri 3 paper penopang |
+| WO-18 | B7 · 26 Nov | **Kelas 4 kondisi** (tidak terinfeksi, aktif, laten, ditekan obat): definisi + sumber data, model multikelas | 🔄 | Definisi 7 kelas dalam 3 model bertingkat (Gambar III.2) + sumber & jumlah sel → `docs/work-order/WO-18.md`; EFV di heiDATA S3B diperiksa lewat paper Ananth 2024 → kontrol negatif praperlakuan, bukan kelas "ditekan obat" | Illinois tidak punya kelas tidak terinfeksi (hanya heiDATA Mock) → risiko model mengenali dataset; konfirmasi di B8 |
+
+## Hasil Bimbingan 7 (26 Nov 2026) — rincian: `docs/bimbingan/B7_2026-11-26/HASIL.md`
+1. **Kelas:** 4 kondisi — tidak terinfeksi, terinfeksi (aktif), laten, ditekan obat → model 4 kelas; data dinilai cukup [ucapan akhir perlu konfirmasi] → WO-18.
+2. **Latar belakang** harus dikuasai sebagai cerita (praktik saat ini → prosedur → masalah) → WO-16.
+3. **Penelitian terdahulu** + kekurangannya = pintu masuk penelitian; klaim lebih baik harus dibandingkan pada dataset sama → WO-17.
+4. Latih / validasi / uji dan metrik harus dijawab "di luar kepala" (lanjutan WO-15). Target ujian **Desember** [tanggal perlu konfirmasi].
+5. Tidak dibahas: per sel vs berkelompok, hasil skenario, judul, format naskah. Rekaman tidak boleh disebarkan.
 
 ## Hasil Bimbingan 6 (9 Nov 2026) — rincian: `docs/bimbingan/B6_2026-11-09/HASIL.md`
 1. Hanya hasil k-fold heiDATA yang dibahas. Pembimbing: klasifikasi dilakukan per sel, **evaluasi baku per sel**.
@@ -56,7 +66,18 @@ Terakhir diperbarui: **2026-11-09**
 5. **Judul:** boleh diganti; prosedur (dicek 7 Nov): surat persetujuan dosen pembimbing — surat sudah diselesaikan mahasiswa.
 6. Belum terbahas: izin email Heidelberg, periode ujian, pembimbing pendamping & NIP, judul Bab 3.
 
-## Keputusan yang dibutuhkan di bimbingan berikutnya (B7) — terbawa dari B6 (taruh di awal presentasi)
+## Keputusan mahasiswa (26 Nov 2026) — dijalankan sekarang, **dilaporkan** ke pembimbing di B8 (belum dikonfirmasi pembimbing)
+| # | Keputusan | Dasar |
+|---|---|---|
+| 1 | **Satu alur metode, tiga sub-tugas; dataset tidak digabung**: heiDATA terpapar HIV-1 vs Mock · Illinois aktif (TNF) / laten / ditekan (Alp), 3 kelas · Essig hidup vs mati. Empat kondisi arahan B7 tercakup | `results/b8/README.md`: asal dataset tertebak 0,99–1,00; label diacak masih bAcc 0,44–0,45 vs peluang 0,20–0,25 |
+| 2 | **Validasi**: unit klasifikasi = sel; data uji = percobaan/donor/plate yang tidak dipakai melatih; k-fold dalam data latih = validasi (pemilihan parameter); k-fold per sel dilaporkan sebagai pembanding | Kebocoran *batch* heiDATA Lamin B1 (0,79 → 0,27–0,46) |
+| 3 | **Metrik**: utama sensitivitas & spesifisitas (per kelas untuk multikelas); pendukung *balanced accuracy*, MCC, ROC AUC; F1/akurasi tidak dipakai sebagai metrik utama | WO-15 (Lamin B1: F1 0,72–0,77 padahal spesifisitas 0) |
+| 4 | **Judul naskah**: "Klasifikasi Kondisi Sel CD4 pada Infeksi HIV Berdasarkan Citra Mikroskopi Optik Menggunakan Machine Learning" (Opsi 3). Judul resmi SIMASTER tetap lama sampai surat persetujuan ganti judul ditandatangani pembimbing | heiDATA & Illinois = mikroskopi, Essig = IFC |
+| 5 | **Format naskah**: ikuti template `skripsidtntf.cls` (spasi 1,5; Bab III "Pelaksanaan Penelitian") | Template resmi DTNTF |
+
+Masih perlu pembimbing (formal): tanda tangan surat ganti judul; tanggal ujian & tenggat pendaftaran.
+
+### Daftar lama (dari B6)
 Usulan mahasiswa: heiDATA (paparan HIV) + Essig (hidup vs mati); tiga opsi judul (Bahan B6 §3).
 1. Pakai Essig sebagai pelengkap (sel mati; Essig tanpa infeksi HIV) atau heiDATA saja (atau Illinois)?
 2. Kelas heiDATA untuk "terinfeksi vs tidak": usulan HIV vs Mock dari kapsid (AUC 0,91 lintas percobaan).

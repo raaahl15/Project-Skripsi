@@ -11,7 +11,7 @@
 % Set to \adapustakatrue once refs.bib contains at least one entry that is
 % cited with \cite{...}. (BibTeX fails on an empty bibliography.)
 \newif\ifadapustaka
-\adapustakafalse
+\adapustakatrue
 
 \begin{document}
 
@@ -26,7 +26,9 @@
 \ifadapustaka
 \begin{singlespace}
 \bibliographystyle{skripsi}
-\bibliography{refs}
+% refs-kandidat.bib: DOI-verified candidates not yet read in full (docs/literatur/DAFTAR-REFERENSI.md).
+% Move each entry to refs.bib once read; drop refs-kandidat before the final submission.
+\bibliography{refs,refs-kandidat}
 \end{singlespace}
 \fi
 

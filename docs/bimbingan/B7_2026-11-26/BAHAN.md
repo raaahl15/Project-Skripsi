@@ -78,3 +78,20 @@ Illinois dan Essig hampir sama di kedua skema (sinyal nyata). Gambar: `results/b
 | 3 – 9 Des | Bab II dan III menjadi naskah; Bab IV (hasil) mulai |
 | 10 – 16 Des | Bab IV pembahasan, Bab V, intisari/*abstract*; konversi LaTeX; revisi pembimbing |
 | 17 Des – … | Pendaftaran & ujian [ISI NANTI] |
+
+## 6. Isian SIMASTER (draf sebelum bimbingan) — **DIGANTIKAN** oleh `HASIL.md` §7 (berdasarkan rekaman B7)
+> Satu paragraf (permintaan pengguna 26 Nov): isi = yang dipaparkan mahasiswa dari bahan ini; tidak memuat arahan pembimbing
+> karena belum ada catatan hasil B7. Nomor di SIMASTER mengikuti urutan pengisian
+> (B5 = 1, B6 = 2, B1 = 3, B2 = 4 → B7 = 5).
+
+| Kolom form | Isi |
+|---|---|
+| Dosen Pembimbing | Nopriadi, S.T., M.Sc. |
+| Tanggal | [tanggal pertemuan B7] |
+| Topik Bimbingan | Pemilihan metrik evaluasi, validasi per sel vs berkelompok, dan penetapan skenario dataset |
+| Dokumen | PDF slide B7 — unduh dari artifact slide (menu unduh → PDF), pastikan ≤ 2 MB; simpan di folder B7 |
+
+**Catatan Bimbingan** (teks polos):
+```
+Mahasiswa melaporkan hasil WO-15 tentang pemilihan metrik evaluasi: sebelas metrik beserta confusion matrix dihitung untuk semua tugas klasifikasi, dan diusulkan sensitivitas serta spesifisitas sebagai metrik utama dengan ROC AUC, balanced accuracy, dan MCC sebagai pendukung, karena pada data dengan kelas timpang (fitur Lamin B1, 170:39) nilai F1 0,72-0,77 tampak baik padahal spesifisitasnya 0 dan MCC negatif. Mahasiswa juga menjelaskan bahwa unit klasifikasi tetap per sel, tetapi pembagian data latih dan uji perlu dipisah per percobaan, donor, atau plate agar tidak terjadi kebocoran efek batch; pada heiDATA fitur Lamin B1 AUC turun dari 0,79 (per sel) menjadi 0,27-0,46 (per percobaan), sedangkan pada dataset Illinois dan Essig hasil kedua skema hampir sama. Selanjutnya dipaparkan dua skenario dataset, yaitu Skenario 1 (heiDATA + Essig) dengan fitur kapsid HIV-1 vs Mock mencapai AUC 0,91 dan MCC 0,81 lintas percobaan, serta Skenario 2 (Illinois + Essig) dengan ekspresi HIV aktif vs laten AUC 0,87 dan ditekan vs laten AUC 0,95, yang juga diuji pada 1.185 sel hasil ekstraksi citra sendiri (AUC 0,86-0,92); klasifikasi hidup vs mati pada data Essig yang dilatih pada percobaan 1 dan diuji pada percobaan 2 dengan donor baru mencapai AUC 0,98-1,00. Mahasiswa juga melaporkan progres naskah (Bab I draf, Bab II dan III kerangka, 63 pustaka terverifikasi), usulan judul, dan rencana pengerjaan sampai ujian. Tindak lanjutnya adalah menetapkan skenario dataset yang digunakan, menyelesaikan hasil akhir, dan menulis Bab II dan III menjadi naskah.
+```

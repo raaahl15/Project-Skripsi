@@ -1,0 +1,34 @@
+{
+ "gabungan": [
+  {
+   "gabungan": "A_heiDATA+Illinois (5 kelas, 3 fitur intensitas)",
+   "n": 809,
+   "n_kelas": 5,
+   "fitur": "mean, std, cv",
+   "akurasi_tebak_dataset": 0.991,
+   "bAcc_model_gabungan": 0.548,
+   "salah_lintas_dataset": 9,
+   "bAcc_label_diacak_dalam_dataset": 0.439,
+   "peluang_1/K": 0.2,
+   "bAcc_dalam_tiap_dataset": {
+    "Illinois": 0.537,
+    "heiDATA": 0.566
+   }
+  },
+  {
+   "gabungan": "B_heiDATA+Essig (4 kelas, 9 fitur bentuk+intensitas)",
+   "n": 609,
+   "n_kelas": 4,
+   "fitur": "area, perimeter, major, minor, eccentricity, solidity, circularity, mean, std",
+   "akurasi_tebak_dataset": 1.0,
+   "bAcc_model_gabungan": 0.764,
+   "salah_lintas_dataset": 0,
+   "bAcc_label_diacak_dalam_dataset": 0.455,
+   "peluang_1/K": 0.25,
+   "bAcc_dalam_tiap_dataset": {
+    "Essig": 0.897,
+    "heiDATA": 0.631
+   }
+  }
+ ]
+}

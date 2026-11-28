@@ -1,0 +1,3 @@
+gabungan,n,n_kelas,fitur,akurasi_tebak_dataset,bAcc_model_gabungan,salah_lintas_dataset,bAcc_label_diacak_dalam_dataset,peluang_1/K,bAcc_dalam_tiap_dataset
+"A_heiDATA+Illinois (5 kelas, 3 fitur intensitas)",809,5,"mean, std, cv",0.991,0.548,9,0.439,0.2,"{'Illinois': 0.537, 'heiDATA': 0.566}"
+"B_heiDATA+Essig (4 kelas, 9 fitur bentuk+intensitas)",609,4,"area, perimeter, major, minor, eccentricity, solidity, circularity, mean, std",1.0,0.764,0,0.455,0.25,"{'Essig': 0.897, 'heiDATA': 0.631}"

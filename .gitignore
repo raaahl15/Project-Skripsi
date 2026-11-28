@@ -51,3 +51,6 @@ results/pilot-essig/features*.csv
 results/pilot-essig/classify_log.txt
 
 results/pilot-illinois/demo/objects_*.csv.gz
+
+# PDF pustaka (hak cipta penerbit, ukuran besar) - simpan lokal & di Drive papers/
+docs/literatur/pdf/
