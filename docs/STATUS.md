@@ -29,8 +29,10 @@ Terakhir diperbarui: 2026-11-28
   rencana `docs/RENCANA-ML-COLAB.md`. Target ML final selesai Senin 30 Nov.
 
 ## Sedang dikerjakan
-- **Run ML final di Colab** (pengguna menjalankan notebook; hasil otomatis ke GitHub `results/final/` + Drive). Essig exp3/exp4 perlu
-  diunduh ke Drive `data/raw/`.
+- **Run ML final di Colab: Minggu pagi 29 Nov** setelah Essig exp3/exp4 selesai diunggah ke Drive `data/raw/` (exp1, exp2 sudah ada).
+  Perkiraan ±8–9 jam (ekstraksi Essig ±6 jam). Opsi hemat waktu: jalankan sekali malam ini (heiDATA, Illinois, exp1–2 + Model B/C/A)
+  lalu Run all lagi besok (ekstraksi yang selesai dilewati). Setelah run: isi Bab IV, V.1, Intisari, lalu bahan B8.
+- Naskah 28 Nov: Bab I selaras desain final; Bab II–III draf; Bab IV kerangka; Bab V kerangka + saran; Intisari alinea 1–2; Lampiran A.
 - **Mahasiswa meninjau draf Bab II** (catatan cek di paragraf atas tab: 3 pustaka belum dibaca, paragraf *brightfield* belum
   berpustaka, angka 1.806 senyawa & kutipan "arbitrary threshold of 35" dicocokkan ke paper)
 - **Mahasiswa membaca & memverifikasi 25 referensi Bab I** (ceklis di `docs/literatur/DAFTAR-REFERENSI.md`); yang sudah dibaca
