@@ -15,6 +15,21 @@
 
 ---
 
+## 2026-11-28 — Draf Bab III di Google Docs
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Dikerjakan:** kerangka poin tab Bab III (`t.8pos2clou1fl`) diganti draf paragraf yang mengikuti pipeline final (Colab, semua data,
+  protokol `src/final/`, kelas WO-18): III.1.1 Alat, III.1.2 Bahan + **Tabel III.1** (3 dataset), III.2.1 Alur (kerangka bertingkat,
+  tahap pengarah, batasan rantai utuh), III.2.2 Praproses & segmentasi, III.2.3 Ekstraksi fitur, III.2.4 Definisi kelas + **Tabel III.2**
+  (7 kelas) + batasan definisi (label paparan, EFV, aktif ≠ baru terinfeksi, alsterpaullone ≠ ARV, aturan label Essig), III.2.5 Model,
+  III.2.6 Validasi bersarang per kelompok, uji permutasi, *bootstrap*, uji ketahanan, reprodusibilitas; III.3 Rencana analisis.
+  ±2.600 kata, Times New Roman, tanpa angka hasil (kecuali hasil pemeriksaan data yang mendasari keputusan metode).
+- **Perlu dicek pengguna** (catatan abu-abu di atas tab): jumlah sel Essig exp3–4 & Illinois dari run final; Gambar III.1 belum ada,
+  Gambar III.2 disisipkan manual; pustaka scikit-learn belum ada di bib; spesifikasi ImageStreamX Mark II 60× dicocokkan ke paper.
+- **Perubahan isi dibanding kerangka:** skor lapisan dalam = *balanced accuracy* (bukan ROC AUC); ambang recall ≥ 0,90 tidak dipakai
+  (kelas = peluang terbesar), sesuai `src/final/`.
+
+---
+
 ## 2026-11-28 — Pipeline ML final untuk Google Colab
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Keputusan pengguna:** seluruh pengolahan data & ML dijalankan di **Colab**, data di **Drive**, hasil terintegrasi ke **GitHub** dan Drive;

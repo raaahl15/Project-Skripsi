@@ -22,6 +22,9 @@ Terakhir diperbarui: 2026-11-28
 - **Draf Bab II** (28 Nov) di Google Docs tab Bab II: II.1 tinjauan pustaka 4 subbab + Tabel II.1 (dari WO-17), II.2 dasar
   teori 7 subbab dengan Persamaan II.1–II.15 (±3.900 kata); ditandai draf berbantuan AI, wajib ditinjau mahasiswa
 
+- **Draf Bab III** (28 Nov) di tab Bab III: III.1 alat (Colab/Drive/GitHub) & bahan + Tabel III.1 dataset; III.2.1–III.2.6
+  (alur bertingkat, praproses, fitur, definisi kelas + Tabel III.2, model, validasi bersarang per kelompok); III.3 rencana analisis
+  (±2.600 kata). Gambar III.1 belum dibuat; Gambar III.2 disisipkan manual.
 - **Pipeline ML final untuk Colab siap** (28 Nov): `src/final/`, `configs/final/`, `notebooks/colab/final_ml_colab.ipynb`;
   rencana `docs/RENCANA-ML-COLAB.md`. Target ML final selesai Senin 30 Nov.
 
