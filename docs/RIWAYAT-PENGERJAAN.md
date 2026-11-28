@@ -15,6 +15,21 @@
 
 ---
 
+## 2026-11-28 — Bab I diselaraskan dengan desain final
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Dikerjakan:** 7 perubahan kecil di tab Bab I (Google Docs, `replaceAllText`, kalimat lain tidak diubah), lalu
+  `thesis/bab1-pendahuluan.tex` dibuat ulang dengan `scripts/gdoc_tab_to_latex.py` (perbaikan manual `dkk.\ ` dipertahankan):
+  - Perumusan Masalah 2: klasifikasi "dalam kerangka bertingkat" dengan urutan hidup/mati → terinfeksi/tidak → aktif/laten/ditekan.
+  - Batasan 2: urutan kelas mengikuti kerangka + "Label kelas berasal dari kondisi percobaan, bukan konfirmasi kondisi setiap sel."
+  - Batasan 3: + kerangka bertingkat; rantai utuh pada satu citra tidak diuji karena belum ada dataset dengan seluruh label.
+  - Batasan 4: + fitur deret waktu dihitung dari lintasan intensitas GFP yang disediakan penulis dataset.
+  - Tujuan 1: + deret waktu intensitas GFP; Tujuan 2: kerangka bertingkat tiga model + kelas lengkap (target ROC AUC ≥ 0,80 tetap);
+    Tujuan 3: "validasi silang *k-fold* berkelompok" → "validasi silang berkelompok" (sesuai *leave-one-group-out* di Bab III).
+  - Compile lokal OK (30 hlm, tanpa galat/sitasi tak terdefinisi).
+- **Catatan:** abstrak/kata kunci di `thesis/data_skripsi.tex` masih versi lama (IFC, Explainable AI) → ditulis ulang bersama Intisari.
+
+---
+
 ## 2026-11-28 — Kerangka Bab IV di Google Docs
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Dikerjakan:** tab Bab IV (`t.w77pao7iakxk`) diisi kerangka yang mengikuti keluaran `results/final/`: IV.1 Hasil (IV.1.1 data &

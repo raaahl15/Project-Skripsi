@@ -28,7 +28,7 @@ Berdasarkan pemaparan latar belakang di atas, permasalahan dalam penelitian ini 
 
 \begin{enumerate}
   \item Bagaimana mengekstraksi fitur fisis yang dapat ditafsirkan, yaitu fitur morfometri, intensitas, tekstur, sinyal virus, dan deret waktu intensitas, dari citra mikroskopi optik sel T CD4 pada infeksi HIV?
-  \item Bagaimana kinerja model \textit{machine learning} klasik dalam mengklasifikasikan kondisi sel T CD4, yaitu terpapar HIV-1 atau tidak; ekspresi HIV aktif, laten, atau ditekan; serta sel hidup atau mati, ketika diuji pada data dari percobaan, donor, atau \textit{plate} yang berbeda?
+  \item Bagaimana kinerja model \textit{machine learning} klasik dalam mengklasifikasikan kondisi sel T CD4 dalam kerangka bertingkat, yaitu sel hidup atau mati, sel terinfeksi (terpapar HIV-1) atau tidak terinfeksi, serta ekspresi HIV aktif, laten, atau ditekan, ketika diuji pada data dari percobaan, donor, atau \textit{plate} yang berbeda?
   \item Fitur fisis apa yang paling membedakan setiap kondisi sel dan bagaimana arti fisisnya?
 \end{enumerate}
 
@@ -38,9 +38,9 @@ Adapun batasan masalah dalam penelitian ini adalah sebagai berikut.
 
 \begin{enumerate}
   \item Data yang digunakan adalah data citra sekunder dari tiga repositori publik, yaitu heiDATA \cite{ananth2024dataset}, Illinois Data Bank \cite{lu2022dataset}, dan Dryad \cite{essig2022dataset}; tidak dilakukan pengambilan citra baru.
-  \item Kondisi sel yang diklasifikasikan mengikuti label yang tersedia pada tiap dataset, yaitu sel tidak terpapar (Mock) dan sel terpapar HIV-1 pada data heiDATA, ekspresi HIV aktif, laten, dan ditekan pada data Illinois, serta sel hidup dan sel mati pada data Essig.
-  \item Setiap tugas klasifikasi dilatih dan diuji di dalam dataset sumbernya. Dataset tidak digabung menjadi satu model karena jenis sel, alat pencitraan, dan pewarnanya berbeda, sehingga model gabungan berisiko mengenali asal dataset, bukan kondisi sel.
-  \item Sel pada data Illinois adalah lini sel Jurkat (sel T CD4+) yang membawa sirkuit gen HIV dengan \textit{reporter} GFP, bukan sel T CD4 primer yang terinfeksi virus HIV-1 utuh.
+  \item Kondisi sel yang diklasifikasikan mengikuti label yang tersedia pada tiap dataset, yaitu sel hidup dan sel mati pada data Essig, sel tidak terinfeksi (Mock) dan sel terinfeksi (terpapar HIV-1) pada data heiDATA, serta ekspresi HIV aktif, laten, dan ditekan pada data Illinois. Label kelas berasal dari kondisi percobaan, bukan konfirmasi kondisi setiap sel.
+  \item Setiap tugas klasifikasi dilatih dan diuji di dalam dataset sumbernya. Dataset tidak digabung menjadi satu model karena jenis sel, alat pencitraan, dan pewarnanya berbeda, sehingga model gabungan berisiko mengenali asal dataset, bukan kondisi sel. Ketiga model disusun sebagai kerangka bertingkat (hidup atau mati, terinfeksi atau tidak, lalu aktif, laten, atau ditekan), tetapi rantai utuh pada satu citra yang sama tidak diuji karena belum ada dataset yang memuat seluruh label.
+  \item Sel pada data Illinois adalah lini sel Jurkat (sel T CD4+) yang membawa sirkuit gen HIV dengan \textit{reporter} GFP, bukan sel T CD4 primer yang terinfeksi virus HIV-1 utuh. Fitur deret waktu dihitung dari lintasan intensitas GFP per sel yang disediakan penulis dataset.
   \item Model yang digunakan adalah \textit{machine learning} klasik (regresi logistik, \textit{random forest}, dan \textit{support vector machine}), bukan \textit{deep learning}.
   \item Fitur diekstraksi dari citra dua dimensi per sel, berupa fitur morfometri, intensitas, tekstur, sinyal virus, dan deret waktu intensitas GFP.
   \item Kinerja model dievaluasi dengan memisahkan data latih dan data uji berdasarkan percobaan, donor, atau \textit{plate}, sehingga sel dari kelompok yang sama tidak sekaligus berada di data latih dan data uji.
@@ -51,9 +51,9 @@ Adapun batasan masalah dalam penelitian ini adalah sebagai berikut.
 Tujuan penelitian ini adalah sebagai berikut.
 
 \begin{enumerate}
-  \item Mengekstraksi fitur fisis (morfometri, intensitas, tekstur, dan sinyal virus) dari citra sel T CD4 hasil mikroskopi fluoresensi dan \textit{imaging flow cytometry}, beserta definisi fisis dan rumus matematisnya.
-  \item Membangun model \textit{machine learning} untuk mengklasifikasikan kondisi sel T CD4 pada infeksi HIV, yaitu status paparan atau ekspresi HIV serta sel hidup atau mati, dengan target ROC AUC minimal 0,80 pada data uji yang berasal dari percobaan, donor, atau \textit{plate} yang tidak digunakan untuk melatih model.
-  \item Mengevaluasi model dengan validasi silang \textit{k-fold} berkelompok dan metrik yang sesuai dengan biaya kesalahan klasifikasi pada konteks kesehatan.
+  \item Mengekstraksi fitur fisis (morfometri, intensitas, tekstur, sinyal virus, dan deret waktu intensitas GFP) dari citra sel T CD4 hasil mikroskopi fluoresensi dan \textit{imaging flow cytometry}, beserta definisi fisis dan rumus matematisnya.
+  \item Membangun model \textit{machine learning} untuk mengklasifikasikan kondisi sel T CD4 pada infeksi HIV dalam kerangka bertingkat tiga model, yaitu sel hidup atau mati, terinfeksi atau tidak terinfeksi, serta ekspresi HIV aktif, laten, atau ditekan, dengan target ROC AUC minimal 0,80 pada data uji yang berasal dari percobaan, donor, atau \textit{plate} yang tidak digunakan untuk melatih model.
+  \item Mengevaluasi model dengan validasi silang berkelompok dan metrik yang sesuai dengan biaya kesalahan klasifikasi pada konteks kesehatan.
   \item Mengidentifikasi fitur yang paling berpengaruh terhadap klasifikasi dan menafsirkan arti fisisnya.
 \end{enumerate}
 
