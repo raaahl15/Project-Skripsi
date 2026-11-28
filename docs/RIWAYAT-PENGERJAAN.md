@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-11-28 — Lampiran A (rumus fitur) di tab baru Google Docs
+**Oleh:** Claude Code / Rakai (laptop) bersama pengguna
+- **Dikerjakan:** tab baru **Lampiran** (`t.e5fgmrsho4q9`, setelah Bab V) pada Google Doc naskah. Isi: "LAMPIRAN A — Definisi, Rumus,
+  dan Arti Fisis Fitur Citra"; **Tabel A.1** 13 fitur heiDATA, **Tabel A.2** 19 fitur Essig, **Tabel A.3** 9 fitur Illinois (total 41),
+  kolom No/Fitur/Rumus/Satuan/Arti fisis + keterangan (nilai eigen, *convex hull*, erosi tepi/tengah, cincin 1,5 µm, GLCM 32 tingkat,
+  beda pusat, definisi r̄/σ_r). Sumber WO-14; rumus yang rawan dicocokkan langsung dengan kode (`src/pilot_essig_features.py`,
+  `src/data/heidata_cells.py`). AGENTS.md: ID tab Lampiran + status bab.
+- **Belum:** konversi ke `thesis/lampiran-a.tex` (menunggu persetujuan pembimbing, sesuai alur Docs → LaTeX).
+
+---
+
 ## 2026-11-28 — Bab I diselaraskan dengan desain final
 **Oleh:** Claude Code / Rakai (laptop) bersama pengguna
 - **Dikerjakan:** 7 perubahan kecil di tab Bab I (Google Docs, `replaceAllText`, kalimat lain tidak diubah), lalu

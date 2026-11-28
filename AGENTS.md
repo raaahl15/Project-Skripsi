@@ -69,7 +69,8 @@
   - [Naskah Skripsi - Rahul Ghulam Hidayatulloh](https://docs.google.com/document/d/1p69-U7fzbd2Ydz3FTPpsLzeso2VxKKuop7Wu87yZU_c/edit)
     — **satu Google Doc, 6 tab** (sejak 25 Nov 2026). Tab ID untuk API (`tabId`):
     Bab I `t.0` · Bab II `t.52i0hsyuxxgi` · Bab III `t.8pos2clou1fl` · Bab IV `t.w77pao7iakxk` · Bab V `t.ihlxybk2s3x1` ·
-    Skripsi Final `t.mo26i9azzwm5` | status semua bab: draf (kerangka). Format: lihat docs/PANDUAN-GDOCS.md §Format.
+    Lampiran `t.e5fgmrsho4q9` (sejak 28 Nov) · Skripsi Final `t.mo26i9azzwm5` | status 28 Nov: Bab I LaTeX + Docs; Bab II–III draf
+    paragraf; Bab IV kerangka; Bab V kerangka lama; Lampiran A draf. Format: lihat docs/PANDUAN-GDOCS.md §Format.
   - Doc lama per bab (Bab 2–5, ID 1LrQ97…, 1PXJV…, 1ACWGz…, 1VnkG…) **tidak dipakai lagi**; isinya sudah dipindah ke tab.
 - Template skripsi resmi (asli, jangan diubah): [template skripsi teknik fisika 2026](https://drive.google.com/drive/folders/1B6cKBuUzV7s64e6OHGQzxSq73vBb5Vo0)
 - Data: [data/](https://drive.google.com/drive/folders/1wcYNg3EGv3t-Ney1ob-lIiztwekcxFx6) (raw/, processed/)
